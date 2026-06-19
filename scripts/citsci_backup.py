@@ -67,6 +67,10 @@ MAX_RETRIES = 4
 # the binaries can be downloaded once at the end (de-duplicated by URL).
 FILE_REFS: dict[str, dict] = {}
 
+# Observation detail files retained on disk that the current snapshot no longer
+# returns (removed upstream). Preserved, and listed in the manifest.
+ORPHANED_OBSERVATIONS: list[dict] = []
+
 # Records what the API actually returned for fields flagged isPrivate, so a run
 # can confirm whether the account's token is served private content at all.
 PRIVATE_STATS: dict = {
@@ -564,18 +568,49 @@ def backup_observations(client: CitSciClient, pid: str, proj_dir: str,
     live."""
     obs = safe("project observations", lambda: client.collect(f"/projects/{pid}/observations"))
     if obs is None:
+        # Fetch failed — do NOT treat existing files as orphaned this run.
         return
     write_json(f"{proj_dir}/observations.json", obs)
     counts["observations"] += len(obs)
+    current_ids = set()
     for o in obs:
         oid = (o.get("id") or o.get("@id", "")).rsplit("/", 1)[-1]
         if not oid:
             continue
+        current_ids.add(oid)
         detail = safe(f"observation {oid}", lambda i=oid: client.get(f"/observations/{i}"))
         if detail is not None:
             write_json(f"{proj_dir}/observations/{oid}.json",
                        redact_private_records(detail))
             counts["observation_records"] += len(detail.get("records") or [])
+
+    record_orphaned_observations(proj_dir, current_ids, counts)
+
+
+def record_orphaned_observations(proj_dir: str, current_ids: set,
+                                 counts: dict) -> None:
+    """List observation detail files preserved on disk that the current
+    snapshot no longer returns (i.e. removed from CitSci). Files are kept;
+    they are recorded in the manifest so the deletion is visible."""
+    obs_dir = os.path.join(OUTPUT_DIR, proj_dir, "observations")
+    if not os.path.isdir(obs_dir):
+        return
+    for name in sorted(os.listdir(obs_dir)):
+        if not name.endswith(".json"):
+            continue
+        oid = name[:-5]
+        if oid in current_ids:
+            continue
+        entry = {"id": oid, "project": proj_dir.split("/", 1)[-1],
+                 "local_path": f"{proj_dir}/observations/{name}"}
+        try:  # surface a little context from the retained file
+            with open(os.path.join(obs_dir, name), encoding="utf-8") as f:
+                saved = json.load(f)
+            entry["observedAt"] = saved.get("observedAt")
+        except (json.JSONDecodeError, OSError):
+            pass
+        ORPHANED_OBSERVATIONS.append(entry)
+    counts["observations_orphaned"] = len(ORPHANED_OBSERVATIONS)
 
 
 def backup_files(client: CitSciClient, counts: dict) -> None:
@@ -691,12 +726,16 @@ def main() -> int:
 
     manifest["counts"] = counts
     manifest["private_fields"] = PRIVATE_STATS
+    manifest["orphaned_observations"] = sorted(
+        ORPHANED_OBSERVATIONS, key=lambda e: e["id"])
     manifest["completed_at"] = datetime.now(timezone.utc).isoformat()
     manifest["duration_seconds"] = round(
         (datetime.now(timezone.utc) - started).total_seconds(), 1)
     write_json("manifest.json", manifest, harvest=False)
 
     log(f"Backup complete: {json.dumps(counts)}")
+    if ORPHANED_OBSERVATIONS:
+        log(f"Orphaned observations retained: {len(ORPHANED_OBSERVATIONS)}")
     if PRIVATE_STATS["private_records_seen"]:
         log(f"Private fields: API returned content for "
             f"{PRIVATE_STATS['private_records_with_content']}/"

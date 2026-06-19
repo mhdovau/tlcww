@@ -85,6 +85,13 @@ retained and flagged `"orphaned": true` in `files/index.json` (the prior URL is
 carried forward where known), and the manifest reports `files_referenced` vs
 `files_orphaned` counts.
 
+Observation detail files are handled the same way: an observation that
+disappears upstream keeps its `projects/<slug>/observations/<id>.json` on disk
+and is listed under `orphaned_observations` in `manifest.json` (with its id,
+project and `observedAt`), so removals are visible at a glance. Orphans are only
+recorded when the observation list was fetched successfully — a failed fetch
+never flags existing files as removed.
+
 ### Notes
 
 - **Credentials are never written to disk.** Password and third-party tokens
