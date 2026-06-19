@@ -1,0 +1,63 @@
+name: CitSci Backup
+
+# Backs up the CitSci.org account, projects, datasheets, records, observations
+# and files/photos into this repository.
+#
+# Required secrets (Settings -> Secrets and variables -> Actions):
+#   CITSCI_USER  - account email
+#   CITSCI_PASS  - account password
+# Optional secrets / variables:
+#   CITSCI_USER_ID    - account user id, if it cannot be auto-resolved
+#   CITSCI_FILES_BASE - base URL for downloading photo/file binaries
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      download_files:
+        description: "Download photo/file binaries (1) or metadata only (0)"
+        required: false
+        default: "1"
+
+concurrency:
+  group: citsci-backup
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run backup
+        env:
+          CITSCI_USER: ${{ secrets.CITSCI_USER }}
+          CITSCI_PASS: ${{ secrets.CITSCI_PASS }}
+          CITSCI_USER_ID: ${{ secrets.CITSCI_USER_ID }}
+          CITSCI_FILES_BASE: ${{ secrets.CITSCI_FILES_BASE }}
+          CITSCI_OUTPUT_DIR: data
+          CITSCI_DOWNLOAD_FILES: ${{ github.event.inputs.download_files || '1' }}
+        run: python3 scripts/citsci_backup.py
+
+      - name: Commit backup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No changes in backup."
+          else
+            git commit -m "chore(backup): CitSci snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
