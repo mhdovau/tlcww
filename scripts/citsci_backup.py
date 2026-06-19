@@ -40,6 +40,10 @@ API_BASE = os.environ.get("CITSCI_API_BASE", "https://api.citsci.org").rstrip("/
 FILES_BASE = os.environ.get("CITSCI_FILES_BASE", "").rstrip("/")
 OUTPUT_DIR = os.environ.get("CITSCI_OUTPUT_DIR", "data")
 DOWNLOAD_FILES = os.environ.get("CITSCI_DOWNLOAD_FILES", "1") != "0"
+# Include the values of observation fields flagged isPrivate (e.g. the
+# "Monitor's Name(s) - NOT published publically" field). Off by default so
+# private volunteer data is not written to a public repository.
+INCLUDE_PRIVATE = os.environ.get("CITSCI_INCLUDE_PRIVATE", "0") == "1"
 
 # Account fields that must never be written to disk even if the API returns
 # them. These are credentials / third-party tokens, not backup data.
@@ -48,10 +52,17 @@ SENSITIVE_KEYS = {
     "refreshToken", "googleToken", "airtableToken", "airtableRefresh",
     "sciStarterToken", "recaptchaToken",
 }
+# Personal data fields masked (not dropped) in saved JSON. Only the backup
+# account's own profile carries an email; mask it rather than publish it.
+EMAIL_KEYS = {"email"}
 
 USER_AGENT = "citsci-backup/1.0 (+github-actions)"
 PAGE_SIZE = 100
 MAX_RETRIES = 4
+
+# Accumulates every file/photo reference discovered while walking the API so
+# the binaries can be downloaded once at the end (de-duplicated by URL).
+FILE_REFS: dict[str, dict] = {}
 
 
 def log(msg: str) -> None:
@@ -70,14 +81,16 @@ class CitSciClient:
     # -- low level ---------------------------------------------------------
     def _request(self, method: str, path: str, *, body: dict | None = None,
                  accept: str = "application/ld+json", raw: bool = False,
-                 _retry_auth: bool = True):
+                 auth: bool = True, _retry_auth: bool = True):
         url = path if path.startswith("http") else f"{API_BASE}{path}"
         data = None
         headers = {"Accept": "*/*" if raw else accept, "User-Agent": USER_AGENT}
         if body is not None:
             data = json.dumps(body).encode()
             headers["Content-Type"] = "application/ld+json"
-        if self.token:
+        # Only attach our bearer token to the API host; never leak it to
+        # third-party file hosts (e.g. the public S3 bucket).
+        if self.token and auth and url.startswith(API_BASE):
             headers["Authorization"] = f"Bearer {self.token}"
 
         last_err = None
@@ -170,17 +183,82 @@ class CitSciClient:
         return items
 
 
+def mask_email(value):
+    """Mask an email like a***@e***.com, preserving shape but not the address."""
+    if not isinstance(value, str) or "@" not in value:
+        return "***REDACTED***"
+    local, _, domain = value.partition("@")
+    return f"{local[:1]}***@{domain[:1]}***"
+
+
 def redact(obj):
-    """Recursively strip credential/token fields from a structure."""
+    """Recursively strip credentials and mask personal data in a structure."""
     if isinstance(obj, dict):
-        return {k: ("***REDACTED***" if k in SENSITIVE_KEYS else redact(v))
-                for k, v in obj.items()}
+        out = {}
+        for k, v in obj.items():
+            if k in SENSITIVE_KEYS:
+                out[k] = "***REDACTED***"
+            elif k in EMAIL_KEYS and v:
+                out[k] = mask_email(v)
+            else:
+                out[k] = redact(v)
+        return out
     if isinstance(obj, list):
         return [redact(v) for v in obj]
     return obj
 
 
-def write_json(rel_path: str, data) -> None:
+def harvest_files(obj) -> None:
+    """Recursively record file/photo references (FileObjects) for download.
+
+    CitSci embeds uploads as objects with an S3 `path` (and sometimes a
+    `filename`/`mimeType`); the listable `/file_objects` collection only covers
+    files the account owns, so photos must be gathered from the resources they
+    are attached to (observations, records, project resources, avatars)."""
+    if isinstance(obj, dict):
+        # A FileObject carries an http `path`; `file` may be a string URL too.
+        path = obj.get("path")
+        if not isinstance(path, str):
+            path = obj.get("file") if isinstance(obj.get("file"), str) else None
+        if isinstance(path, str) and path.startswith("http"):
+            iri = obj.get("@id", "")
+            FILE_REFS.setdefault(path, {
+                "url": path,
+                "id": iri.rsplit("/", 1)[-1] or obj.get("id", ""),
+                "filename": obj.get("filename") or path.rsplit("/", 1)[-1],
+            })
+        for v in obj.values():
+            harvest_files(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            harvest_files(v)
+
+
+def redact_private_records(observation: dict) -> dict:
+    """Blank the value/files of observation records flagged isPrivate unless
+    CITSCI_INCLUDE_PRIVATE=1. Keeps the field definition, drops the content."""
+    if INCLUDE_PRIVATE or not isinstance(observation, dict):
+        return observation
+
+    def walk(rec):
+        if isinstance(rec, dict):
+            if rec.get("isPrivate") and ("value" in rec or "files" in rec):
+                rec = dict(rec)
+                if rec.get("value") is not None:
+                    rec["value"] = "***PRIVATE — withheld from backup***"
+                if rec.get("files"):
+                    rec["files"] = []
+            return {k: walk(v) for k, v in rec.items()}
+        if isinstance(rec, list):
+            return [walk(v) for v in rec]
+        return rec
+
+    return walk(observation)
+
+
+def write_json(rel_path: str, data, *, harvest: bool = True) -> None:
+    if harvest:
+        harvest_files(data)
     full = os.path.join(OUTPUT_DIR, rel_path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f:
@@ -256,7 +334,7 @@ def safe(label: str, fn):
 def download_file(client: CitSciClient, record: dict, dest_dir: str,
                   errors: list) -> str | None:
     """Best-effort download of a file/photo binary."""
-    file_url = record.get("file") or ""
+    file_url = record.get("url") or record.get("file") or ""
     path = record.get("path") or ""
     fid = record.get("id", "")
     filename = record.get("filename") or (path.rsplit("/", 1)[-1] if path else f"{fid}")
@@ -386,7 +464,6 @@ def backup_projects(client: CitSciClient, uid: str, counts: dict) -> None:
             "resources": (f"/projects/{pid}/resources", True),
             "project_posts": (f"/projects/{pid}/project_posts", True),
             "invites": (f"/projects/{pid}/invites", True),
-            "observations": (f"/projects/{pid}/observations", True),
         }
         for fname, (path, is_collection) in sub.items():
             fetch = (lambda p=path: client.collect(p)) if is_collection \
@@ -394,32 +471,70 @@ def backup_projects(client: CitSciClient, uid: str, counts: dict) -> None:
             data = safe(f"project {fname}", fetch)
             if data is not None:
                 write_json(f"{proj_dir}/{fname}.json", data)
-                if fname == "observations":
-                    counts["observations"] += len(data)
+                if fname == "locations":
+                    counts["locations"] += len(data)
 
+        backup_observations(client, pid, proj_dir, counts)
         backup_datasheets(client, pid, proj_dir, counts)
         counts["projects"] += 1
 
 
+def backup_observations(client: CitSciClient, pid: str, proj_dir: str,
+                        counts: dict) -> None:
+    """Save the observation list plus full per-observation detail.
+
+    The collection endpoint omits the submitted field values and attached
+    photos; `/observations/{id}` returns `records[].value`, `records[].files[]`
+    and the observation `files[]`, which is where the real data and most photos
+    live."""
+    obs = safe("project observations", lambda: client.collect(f"/projects/{pid}/observations"))
+    if obs is None:
+        return
+    write_json(f"{proj_dir}/observations.json", obs)
+    counts["observations"] += len(obs)
+    for o in obs:
+        oid = (o.get("id") or o.get("@id", "")).rsplit("/", 1)[-1]
+        if not oid:
+            continue
+        detail = safe(f"observation {oid}", lambda i=oid: client.get(f"/observations/{i}"))
+        if detail is not None:
+            write_json(f"{proj_dir}/observations/{oid}.json",
+                       redact_private_records(detail))
+            counts["observation_records"] += len(detail.get("records") or [])
+
+
 def backup_files(client: CitSciClient, counts: dict) -> None:
+    """Download every file/photo referenced anywhere in the backup.
+
+    `harvest_files` (called from `write_json`) has already collected every
+    embedded FileObject URL — observation photos, record attachments, project
+    resources, avatars — so we download from that set rather than the
+    owner-only `/file_objects` collection."""
     log("Backing up files / photos…")
-    files = safe("file list", lambda: client.collect("/file_objects"))
-    if files is None:
+    # Also include the account's own owned files, if any.
+    owned = safe("owned file list", lambda: client.collect("/file_objects")) or []
+    harvest_files(owned)
+
+    refs = list(FILE_REFS.values())
+    write_json("files/index.json", refs, harvest=False)
+    counts["files"] = len(refs)
+    if not refs:
+        log("  No file references discovered.")
         return
-    write_json("files/index.json", files)
-    counts["files"] = len(files)
     if not DOWNLOAD_FILES:
-        log("  Binary downloads disabled (CITSCI_DOWNLOAD_FILES=0).")
+        log(f"  {len(refs)} file(s) referenced; binary downloads disabled "
+            "(CITSCI_DOWNLOAD_FILES=0).")
         return
+
     errors: list = []
     downloaded = 0
     photo_dir = os.path.join(OUTPUT_DIR, "files", "photos")
-    for rec in files:
-        if download_file(client, rec, photo_dir, errors):
+    for ref in refs:
+        if download_file(client, ref, photo_dir, errors):
             downloaded += 1
-    log(f"  Downloaded {downloaded}/{len(files)} file(s); {len(errors)} error(s).")
+    log(f"  Downloaded {downloaded}/{len(refs)} file(s); {len(errors)} error(s).")
     if errors:
-        write_json("files/_download_errors.json", errors)
+        write_json("files/_download_errors.json", errors, harvest=False)
     counts["files_downloaded"] = downloaded
 
 
@@ -437,7 +552,9 @@ def main() -> int:
         "api_base": API_BASE,
     }
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
-              "observations": 0, "files": 0, "files_downloaded": 0}
+              "observations": 0, "observation_records": 0, "locations": 0,
+              "files": 0, "files_downloaded": 0}
+    manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)
     client.login()
