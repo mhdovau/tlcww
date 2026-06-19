@@ -18,6 +18,7 @@
     "@id": "/file_objects/bb88b025-ecb4-4629-96f8-63d48d038b32",
     "@type": "https://schema.org/MediaObject",
     "createdAt": "2024-06-22T05:49:51+00:00",
+    "localFile": "files/photos_and_files/bb88b025-ecb4-4629-96f8-63d48d038b32-4eec80a9dece907869f6a072a87eed30ca41a4aa.heic",
     "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4eec80a9dece907869f6a072a87eed30ca41a4aa.HEIC",
     "updatedAt": "2024-06-22T05:49:51+00:00"
   },
@@ -208,6 +209,7 @@
           "@id": "/file_objects/bb88b025-ecb4-4629-96f8-63d48d038b32",
           "@type": "https://schema.org/MediaObject",
           "createdAt": "2024-06-22T05:49:51+00:00",
+          "localFile": "files/photos_and_files/bb88b025-ecb4-4629-96f8-63d48d038b32-4eec80a9dece907869f6a072a87eed30ca41a4aa.heic",
           "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4eec80a9dece907869f6a072a87eed30ca41a4aa.HEIC",
           "updatedAt": "2024-06-22T05:49:51+00:00"
         }
@@ -237,6 +239,7 @@
       "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
       "@type": "https://schema.org/MediaObject",
       "createdAt": "2024-06-18T11:38:35+00:00",
+      "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
       "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
       "updatedAt": "2024-06-18T11:38:35+00:00"
     },

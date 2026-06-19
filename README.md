@@ -63,10 +63,16 @@ data/
 │               ├── datasheet.json
 │               └── records.json   # field definitions for the datasheet
 └── files/
-    ├── index.json                 # every file/photo reference discovered
+    ├── index.json                 # URL → local_path map (+ download status)
     ├── _download_errors.json      # any binaries that couldn't be fetched
-    └── photos/                    # downloaded photo / resource binaries
+    └── photos_and_files/          # downloaded photos / documents / resources
 ```
+
+Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
+a record's attached photo, a project resource) keeps its original `path` URL
+**and** gains a `localFile` property pointing at the downloaded copy under
+`files/photos_and_files/`. `files/index.json` is the authoritative map of every
+referenced URL to its `local_path` and whether the binary was `downloaded`.
 
 ### Notes
 
