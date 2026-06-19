@@ -62,11 +62,28 @@ data/
 │           └── <datasheet-slug>/
 │               ├── datasheet.json
 │               └── records.json   # field definitions for the datasheet
+├── projects/<project-slug>/README.md                  # rendered project summary
+├── projects/<project-slug>/datasheets/<ds>/README.md  # rendered observations
 └── files/
     ├── index.json                 # URL → local_path map (+ download status)
     ├── _download_errors.json      # any binaries that couldn't be fetched
     └── photos_and_files/          # downloaded photos / documents / resources
 ```
+
+### Human-readable views
+
+Each run also renders browsable markdown (so the archive is legible without
+parsing JSON, and GitHub shows it automatically when you open a folder):
+
+- `projects/<slug>/README.md` — project summary (description, counts) with links
+  to each datasheet's view.
+- `projects/<slug>/datasheets/<ds>/README.md` — the datasheet's field list plus
+  every observation, with all collected values in a table and inline photo
+  thumbnails / document links resolved to the local copies under
+  `files/photos_and_files/`.
+
+The renderer is generic: it reflects whatever fields and record types each
+datasheet defines, with no project-specific assumptions.
 
 Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
 a record's attached photo, a project resource) keeps its original `path` URL

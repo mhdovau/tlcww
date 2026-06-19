@@ -26,6 +26,7 @@ CITSCI_DOWNLOAD_FILES (optional) "0" to skip binary photo/file downloads
 from __future__ import annotations
 
 import base64
+import html
 import json
 import os
 import re
@@ -696,6 +697,253 @@ def collect_orphans(referenced: list[dict]) -> list[dict]:
     return orphans
 
 
+# ---------------------------------------------------------------------------
+# Human-readable markdown rendering
+#
+# Generic: driven entirely by whatever fields/records each datasheet defines —
+# no assumptions about specific field names or record types.
+# ---------------------------------------------------------------------------
+
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".svg")
+
+
+def _load(path: str):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _txt(value) -> str:
+    """Plain text from a possibly-HTML string, collapsed to one line."""
+    if value is None:
+        return ""
+    s = re.sub(r"<[^>]+>", " ", str(value))
+    return re.sub(r"\s+", " ", html.unescape(s)).strip()
+
+
+def _cell(value) -> str:
+    """Escape a value for use inside a markdown table cell."""
+    return _txt(value).replace("\\", "\\\\").replace("|", "\\|") or "—"
+
+
+def _relurl(base: str, local_path: str, md_dir: str) -> str:
+    return os.path.relpath(os.path.join(base, local_path), md_dir).replace(os.sep, "/")
+
+
+def _file_links(files, base: str, md_dir: str) -> str:
+    """Render a record's attached files as image embeds / document links,
+    chosen generically by file extension."""
+    out = []
+    for fobj in files or []:
+        if not isinstance(fobj, dict):
+            continue
+        local = fobj.get("localFile")
+        name = fobj.get("filename") or (
+            os.path.basename(local) if local else None) or "file"
+        if local:
+            rel = _relurl(base, local, md_dir)
+            if name.lower().endswith(IMAGE_EXTS):
+                out.append(f"[![{_txt(name)}]({rel})]({rel})")
+            else:
+                out.append(f"[{_txt(name)}]({rel})")
+        else:
+            url = fobj.get("path") or fobj.get("file")
+            if isinstance(url, str):
+                out.append(f"[{_txt(name)}]({url})")
+    return " ".join(out)
+
+
+def _record_value_md(rec: dict, base: str, md_dir: str) -> str:
+    """Best-effort generic rendering of whatever value a record holds."""
+    if rec.get("files"):
+        links = _file_links(rec["files"], base, md_dir)
+        if links:
+            return links
+    value = rec.get("value")
+    if value not in (None, ""):
+        if isinstance(value, str) and value.startswith("http"):
+            return f"[link]({value})"
+        return _cell(value)
+    opt = rec.get("optionValue")
+    if isinstance(opt, dict):
+        disp = opt.get("value") or opt.get("label") or opt.get("name")
+        if disp:
+            return _cell(disp)
+    multi = rec.get("multiSelectOptionValues")
+    if isinstance(multi, list) and multi:
+        vals = [o.get("value") or o.get("label") or o.get("name")
+                for o in multi if isinstance(o, dict)]
+        vals = [v for v in vals if v]
+        if vals:
+            return _cell(", ".join(map(str, vals)))
+    return "—"
+
+
+def _iter_records(records, depth=0):
+    for r in sorted(records or [], key=lambda x: (x.get("orderNumber") or 0)):
+        if isinstance(r, dict):
+            yield depth, r
+            if r.get("records"):
+                yield from _iter_records(r["records"], depth + 1)
+
+
+def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
+    when = _txt(obs.get("observedAt")) or _txt(obs.get("createdAt")) or "(undated)"
+    loc = (obs.get("location") or {}).get("name") if isinstance(obs.get("location"), dict) else None
+    who = (obs.get("user") or {}).get("displayName") if isinstance(obs.get("user"), dict) else None
+    oid = obs.get("id") or (obs.get("@id", "").rsplit("/", 1)[-1])
+
+    lines = [f"### {when}" + (f" — {_txt(loc)}" if loc else "")]
+    meta = []
+    if who:
+        meta.append(f"**Observer:** {_txt(who)}")
+    ll = obs.get("lngLat")
+    if isinstance(ll, dict) and ll.get("lat") is not None:
+        meta.append(f"**Location:** {ll.get('lat')}, {ll.get('lng')}")
+    meta.append(f"**ID:** `{oid}`")
+    lines.append("  ·  ".join(meta))
+
+    fp = obs.get("featuredPhoto")
+    if isinstance(fp, dict) and (fp.get("localFile") or fp.get("path")):
+        lines += ["", _file_links([fp], base, md_dir)]
+    if obs.get("comments"):
+        lines += ["", f"> {_txt(obs['comments'])}"]
+
+    rows = []
+    for depth, rec in _iter_records(obs.get("records")):
+        label = _txt(rec.get("label"))
+        val = _record_value_md(rec, base, md_dir)
+        if not label and val == "—":
+            continue
+        prefix = "&nbsp;&nbsp;&nbsp;&nbsp;" * depth
+        rows.append(f"| {prefix}{_cell(label) if label else '—'} | {val} |")
+    if rows:
+        lines += ["", "| Field | Value |", "| --- | --- |", *rows]
+    lines.append("")
+    return lines
+
+
+def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
+                        field_defs: list, observations: list) -> None:
+    md_dir = os.path.dirname(os.path.join(base, ds_dir, "README.md"))
+    lines = [f"# {_txt(ds_name) or 'Datasheet'}", "",
+             "_Auto-generated from the backup. Do not edit — regenerated each run._",
+             "", f"**Observations:** {len(observations)}", ""]
+
+    if field_defs:
+        lines += ["## Fields", ""]
+        for _, fd in _iter_records(field_defs):
+            label = _txt(fd.get("label"))
+            if not label:
+                continue
+            t = fd.get("recordType")
+            priv = " _(private)_" if fd.get("isPrivate") else ""
+            lines.append(f"- **{label}**" + (f" — `{t}`" if t else "") + priv)
+        lines.append("")
+
+    lines += ["## Observations", ""]
+    if not observations:
+        lines.append("_No observations._")
+    else:
+        for obs in sorted(observations,
+                          key=lambda o: o.get("observedAt") or "", reverse=True):
+            lines += render_observation_md(obs, base, md_dir)
+
+    out = os.path.join(base, ds_dir, "README.md")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines).rstrip() + "\n")
+
+
+def render_project_md(base: str, slug: str) -> None:
+    pdir = os.path.join(base, "projects", slug)
+    project = _load(os.path.join(pdir, "project.json")) or {}
+    locations = _load(os.path.join(pdir, "locations.json")) or []
+    members = _load(os.path.join(pdir, "members.json")) or []
+
+    # Load all observation detail files (includes preserved/orphaned ones).
+    observations = []
+    obs_dir = os.path.join(pdir, "observations")
+    if os.path.isdir(obs_dir):
+        for name in sorted(os.listdir(obs_dir)):
+            if name.endswith(".json"):
+                o = _load(os.path.join(obs_dir, name))
+                if isinstance(o, dict):
+                    observations.append(o)
+
+    # Datasheets: map id -> (dir, name); group observations by datasheet id.
+    ds_dir_root = os.path.join(pdir, "datasheets")
+    datasheets = []  # (ds_slug, name, id, field_defs)
+    if os.path.isdir(ds_dir_root):
+        for ds_slug in sorted(os.listdir(ds_dir_root)):
+            dpath = os.path.join(ds_dir_root, ds_slug)
+            if not os.path.isdir(dpath):
+                continue
+            ds = _load(os.path.join(dpath, "datasheet.json")) or {}
+            ds_id = (ds.get("id") or ds.get("@id", "")).rsplit("/", 1)[-1]
+            fields = _load(os.path.join(dpath, "records.json")) or []
+            datasheets.append((ds_slug, ds.get("name") or ds_slug, ds_id, fields))
+
+    grouped: dict[str, list] = {}
+    for o in observations:
+        d = o.get("datasheet") or {}
+        did = (d.get("id") or d.get("@id", "")).rsplit("/", 1)[-1] if isinstance(d, dict) else ""
+        grouped.setdefault(did, []).append(o)
+
+    # Render each datasheet view and collect links.
+    ds_links = []
+    for ds_slug, ds_name, ds_id, fields in datasheets:
+        obs = grouped.get(ds_id, [])
+        render_datasheet_md(base, f"projects/{slug}/datasheets/{ds_slug}",
+                            ds_name, fields, obs)
+        ds_links.append((ds_name, f"datasheets/{ds_slug}/README.md", len(obs)))
+
+    # Project summary.
+    name = _txt(project.get("name")) or slug
+    lines = [f"# {name}", "",
+             "_Auto-generated from the backup. Do not edit — regenerated each run._", ""]
+    desc = _txt(project.get("description"))
+    if desc:
+        lines += [desc, ""]
+    lines += ["## Overview", "",
+              f"- **Observations:** {len(observations)}",
+              f"- **Locations:** {len(locations)}",
+              f"- **Members:** {len(members)}",
+              f"- **Datasheets:** {len(datasheets)}"]
+    if project.get("urlField"):
+        lines.append(f"- **CitSci URL:** https://citsci.org/projects/{project['urlField']}")
+    lines.append("")
+
+    lines += ["## Datasheets", ""]
+    if ds_links:
+        for ds_name, link, n in ds_links:
+            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s)")
+    else:
+        lines.append("_No datasheets._")
+    lines.append("")
+
+    out = os.path.join(pdir, "README.md")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines).rstrip() + "\n")
+
+
+def render_markdown(base: str | None = None) -> int:
+    """Render human-readable markdown views for every backed-up project."""
+    base = base or OUTPUT_DIR
+    projects_dir = os.path.join(base, "projects")
+    if not os.path.isdir(projects_dir):
+        return 0
+    n = 0
+    for slug in sorted(os.listdir(projects_dir)):
+        if os.path.isdir(os.path.join(projects_dir, slug)):
+            render_project_md(base, slug)
+            n += 1
+    log(f"Rendered markdown views for {n} project(s).")
+    return n
+
+
 def main() -> int:
     email = os.environ.get("CITSCI_USER")
     password = os.environ.get("CITSCI_PASS")
@@ -723,6 +971,7 @@ def main() -> int:
     backup_account(client, uid, manifest)
     backup_projects(client, uid, counts)
     backup_files(client, counts)
+    render_markdown()
 
     manifest["counts"] = counts
     manifest["private_fields"] = PRIVATE_STATS
