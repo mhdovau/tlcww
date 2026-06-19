@@ -331,16 +331,49 @@ def backup_datasheets(client: CitSciClient, pid: str, proj_dir: str,
         counts["datasheets"] += 1
 
 
+def discover_projects(client: CitSciClient, uid: str) -> list[dict]:
+    """Build the list of projects to back up.
+
+    `/users/{id}/projects` only returns projects the account *owns/manages*, so
+    a member-only account would back up nothing. We merge that with the
+    projects referenced by the account's memberships, de-duplicated by id.
+    """
+    found: dict[str, dict] = {}
+
+    def add(pid: str, name: str, slug: str, source: str) -> None:
+        pid = (pid or "").rsplit("/", 1)[-1]
+        if not pid:
+            return
+        entry = found.setdefault(pid, {"id": pid, "name": name, "slug": slug,
+                                       "sources": set()})
+        entry["sources"].add(source)
+        entry["name"] = entry.get("name") or name
+        entry["slug"] = entry.get("slug") or slug
+
+    owned = safe("owned projects", lambda: client.collect(f"/users/{uid}/projects")) or []
+    for p in owned:
+        add(p.get("id", ""), p.get("name") or p.get("urlField") or "",
+            p.get("urlField") or p.get("name") or "", "owned")
+
+    members = safe("memberships", lambda: client.collect(f"/users/{uid}/memberships")) or []
+    for m in members:
+        add(m.get("projectId", ""), m.get("projectName") or "",
+            m.get("projectUrl") or m.get("projectName") or "", "member")
+
+    log(f"Found {len(found)} project(s): "
+        + ", ".join(f"{e['name']} [{'/'.join(sorted(e['sources']))}]"
+                    for e in found.values()))
+    for e in found.values():
+        e["sources"] = sorted(e["sources"])
+    return list(found.values())
+
+
 def backup_projects(client: CitSciClient, uid: str, counts: dict) -> None:
     log("Backing up projects…")
-    projects = client.collect(f"/users/{uid}/projects")
-    log(f"Found {len(projects)} project(s).")
-    for proj in projects:
-        pid = (proj.get("id") or "").rsplit("/", 1)[-1]
-        if not pid:
-            continue
-        name = proj.get("name") or proj.get("urlField") or pid
-        proj_dir = f"projects/{slugify(proj.get('urlField') or name, pid)}"
+    for proj in discover_projects(client, uid):
+        pid = proj["id"]
+        name = proj["name"] or pid
+        proj_dir = f"projects/{slugify(proj['slug'] or name, pid)}"
         log(f"  Project: {name}")
 
         detail = safe(f"project {pid}", lambda: client.get(f"/projects/{pid}"))
