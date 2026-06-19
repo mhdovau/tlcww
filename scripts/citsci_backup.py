@@ -40,6 +40,9 @@ API_BASE = os.environ.get("CITSCI_API_BASE", "https://api.citsci.org").rstrip("/
 FILES_BASE = os.environ.get("CITSCI_FILES_BASE", "").rstrip("/")
 OUTPUT_DIR = os.environ.get("CITSCI_OUTPUT_DIR", "data")
 DOWNLOAD_FILES = os.environ.get("CITSCI_DOWNLOAD_FILES", "1") != "0"
+# Downloaded binaries live here (relative to OUTPUT_DIR); every file reference
+# in the saved JSON is cross-linked to its local copy via a `localFile` key.
+FILES_SUBDIR = "files/photos_and_files"
 # Include the values of observation fields flagged isPrivate (e.g. the
 # "Monitor's Name(s) - NOT published publically" field). Off by default so
 # private volunteer data is not written to a public repository.
@@ -216,6 +219,22 @@ def redact(obj):
     return obj
 
 
+def file_url_of(obj: dict):
+    """Return the http file URL of a FileObject-like dict, or None."""
+    path = obj.get("path")
+    if not isinstance(path, str):
+        path = obj.get("file") if isinstance(obj.get("file"), str) else None
+    return path if isinstance(path, str) and path.startswith("http") else None
+
+
+def local_name_for(url: str, fid: str = "", filename: str = "") -> str:
+    """Deterministic on-disk filename for a downloaded file. Used identically
+    by the harvester, the inline annotator and the downloader so the cross
+    references always agree."""
+    filename = filename or url.rsplit("/", 1)[-1]
+    return f"{slugify(str(fid), 'file')}-{slugify(filename, 'photo')}"
+
+
 def harvest_files(obj) -> None:
     """Recursively record file/photo references (FileObjects) for download.
 
@@ -224,22 +243,40 @@ def harvest_files(obj) -> None:
     files the account owns, so photos must be gathered from the resources they
     are attached to (observations, records, project resources, avatars)."""
     if isinstance(obj, dict):
-        # A FileObject carries an http `path`; `file` may be a string URL too.
-        path = obj.get("path")
-        if not isinstance(path, str):
-            path = obj.get("file") if isinstance(obj.get("file"), str) else None
-        if isinstance(path, str) and path.startswith("http"):
-            iri = obj.get("@id", "")
-            FILE_REFS.setdefault(path, {
-                "url": path,
-                "id": iri.rsplit("/", 1)[-1] or obj.get("id", ""),
-                "filename": obj.get("filename") or path.rsplit("/", 1)[-1],
+        url = file_url_of(obj)
+        if url:
+            fid = obj.get("@id", "").rsplit("/", 1)[-1] or obj.get("id", "")
+            filename = obj.get("filename") or url.rsplit("/", 1)[-1]
+            name = local_name_for(url, fid, filename)
+            FILE_REFS.setdefault(url, {
+                "url": url,
+                "id": fid,
+                "filename": filename,
+                "local_path": f"{FILES_SUBDIR}/{name}",
+                "downloaded": False,
             })
         for v in obj.values():
             harvest_files(v)
     elif isinstance(obj, list):
         for v in obj:
             harvest_files(v)
+
+
+def annotate_local_files(obj) -> None:
+    """Add a `localFile` key beside every embedded file reference, pointing at
+    the local copy (path relative to the backup root). Makes each saved record
+    self-contained for preservation without consulting the file index."""
+    if isinstance(obj, dict):
+        url = file_url_of(obj)
+        if url and "localFile" not in obj:
+            fid = obj.get("@id", "").rsplit("/", 1)[-1] or obj.get("id", "")
+            filename = obj.get("filename") or url.rsplit("/", 1)[-1]
+            obj["localFile"] = f"{FILES_SUBDIR}/{local_name_for(url, fid, filename)}"
+        for v in obj.values():
+            annotate_local_files(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            annotate_local_files(v)
 
 
 # The content-bearing keys of an observation record. For a record flagged
@@ -293,10 +330,13 @@ def redact_private_records(observation: dict) -> dict:
 def write_json(rel_path: str, data, *, harvest: bool = True) -> None:
     if harvest:
         harvest_files(data)
+    payload = redact(data)
+    if harvest:
+        annotate_local_files(payload)  # cross-link file refs to local copies
     full = os.path.join(OUTPUT_DIR, rel_path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f:
-        json.dump(redact(data), f, indent=2, ensure_ascii=False, sort_keys=True)
+        json.dump(payload, f, indent=2, ensure_ascii=False, sort_keys=True)
         f.write("\n")
 
 
@@ -365,9 +405,9 @@ def safe(label: str, fn):
     return None
 
 
-def download_file(client: CitSciClient, record: dict, dest_dir: str,
-                  errors: list) -> str | None:
-    """Best-effort download of a file/photo binary."""
+def download_file(client: CitSciClient, record: dict, errors: list) -> str | None:
+    """Best-effort download of a file/photo binary. Returns the relative
+    local path on success (the same `local_path` recorded in the index)."""
     file_url = record.get("url") or record.get("file") or ""
     path = record.get("path") or ""
     fid = record.get("id", "")
@@ -384,14 +424,15 @@ def download_file(client: CitSciClient, record: dict, dest_dir: str,
                        "reason": "no resolvable URL (set CITSCI_FILES_BASE)"})
         return None
 
-    safe_name = f"{slugify(str(fid), 'file')}-{slugify(filename, 'photo')}"
-    out_path = os.path.join(dest_dir, safe_name)
+    rel_path = record.get("local_path") or \
+        f"{FILES_SUBDIR}/{local_name_for(url, fid, filename)}"
+    out_path = os.path.join(OUTPUT_DIR, rel_path)
     try:
         payload, _ = client._request("GET", url, raw=True)
-        os.makedirs(dest_dir, exist_ok=True)
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
         with open(out_path, "wb") as f:
             f.write(payload)
-        return safe_name
+        return rel_path
     except Exception as e:  # noqa: BLE001
         errors.append({"id": fid, "filename": filename, "url": url, "reason": str(e)})
         return None
@@ -550,22 +591,26 @@ def backup_files(client: CitSciClient, counts: dict) -> None:
     harvest_files(owned)
 
     refs = list(FILE_REFS.values())
-    write_json("files/index.json", refs, harvest=False)
     counts["files"] = len(refs)
     if not refs:
+        write_json("files/index.json", refs, harvest=False)
         log("  No file references discovered.")
         return
     if not DOWNLOAD_FILES:
+        write_json("files/index.json", refs, harvest=False)
         log(f"  {len(refs)} file(s) referenced; binary downloads disabled "
             "(CITSCI_DOWNLOAD_FILES=0).")
         return
 
     errors: list = []
     downloaded = 0
-    photo_dir = os.path.join(OUTPUT_DIR, "files", "photos")
     for ref in refs:
-        if download_file(client, ref, photo_dir, errors):
+        local = download_file(client, ref, errors)
+        ref["downloaded"] = local is not None
+        if local:
             downloaded += 1
+    # Index is the authoritative URL -> local_path map (with download status).
+    write_json("files/index.json", refs, harvest=False)
     log(f"  Downloaded {downloaded}/{len(refs)} file(s); {len(errors)} error(s).")
     if errors:
         write_json("files/_download_errors.json", errors, harvest=False)

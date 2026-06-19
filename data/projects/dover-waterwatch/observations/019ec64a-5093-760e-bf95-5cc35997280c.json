@@ -18,6 +18,7 @@
     "@id": "/file_objects/019ec64a-430f-7985-bf9f-4a29691c5373",
     "@type": "https://schema.org/MediaObject",
     "createdAt": "2026-06-14T13:20:15+00:00",
+    "localFile": "files/photos_and_files/019ec64a-430f-7985-bf9f-4a29691c5373-d7d56e9ed38dc992c8ab6c5fc1a5a58c814a229e.jpg",
     "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d7d56e9ed38dc992c8ab6c5fc1a5a58c814a229e.jpg",
     "updatedAt": "2026-06-14T13:20:19+00:00"
   },
@@ -493,6 +494,7 @@
           "@id": "/file_objects/019ec64a-430f-7985-bf9f-4a29691c5373",
           "@type": "https://schema.org/MediaObject",
           "createdAt": "2026-06-14T13:20:15+00:00",
+          "localFile": "files/photos_and_files/019ec64a-430f-7985-bf9f-4a29691c5373-d7d56e9ed38dc992c8ab6c5fc1a5a58c814a229e.jpg",
           "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d7d56e9ed38dc992c8ab6c5fc1a5a58c814a229e.jpg",
           "updatedAt": "2026-06-14T13:20:19+00:00"
         },
@@ -500,6 +502,7 @@
           "@id": "/file_objects/019ec64a-4dd7-7684-9c57-92712606242a",
           "@type": "https://schema.org/MediaObject",
           "createdAt": "2026-06-14T13:20:17+00:00",
+          "localFile": "files/photos_and_files/019ec64a-4dd7-7684-9c57-92712606242a-078fd264247d6edb36a41d476487ea74a43d5e04.jpg",
           "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/078fd264247d6edb36a41d476487ea74a43d5e04.jpg",
           "updatedAt": "2026-06-14T13:20:19+00:00"
         }
@@ -529,6 +532,7 @@
       "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
       "@type": "https://schema.org/MediaObject",
       "createdAt": "2024-06-18T11:38:35+00:00",
+      "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
       "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
       "updatedAt": "2024-06-18T11:38:35+00:00"
     },
