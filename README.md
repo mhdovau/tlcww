@@ -72,7 +72,18 @@ Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
 a record's attached photo, a project resource) keeps its original `path` URL
 **and** gains a `localFile` property pointing at the downloaded copy under
 `files/photos_and_files/`. `files/index.json` is the authoritative map of every
-referenced URL to its `local_path` and whether the binary was `downloaded`.
+referenced URL to its `local_path`, whether the binary was `downloaded`, and
+whether it is now `orphaned`.
+
+### Nothing is ever deleted (preservation)
+
+This is an archival backup, so data removed upstream is **kept**, not dropped.
+The script never deletes files, and the workflow stages with `git add` (never
+`git add -A`), so a photo, file or observation removed from CitSci stays on disk
+and in git history. Files no longer referenced by the current snapshot are
+retained and flagged `"orphaned": true` in `files/index.json` (the prior URL is
+carried forward where known), and the manifest reports `files_referenced` vs
+`files_orphaned` counts.
 
 ### Notes
 

@@ -590,31 +590,75 @@ def backup_files(client: CitSciClient, counts: dict) -> None:
     owned = safe("owned file list", lambda: client.collect("/file_objects")) or []
     harvest_files(owned)
 
-    refs = list(FILE_REFS.values())
-    counts["files"] = len(refs)
-    if not refs:
-        write_json("files/index.json", refs, harvest=False)
-        log("  No file references discovered.")
-        return
-    if not DOWNLOAD_FILES:
-        write_json("files/index.json", refs, harvest=False)
-        log(f"  {len(refs)} file(s) referenced; binary downloads disabled "
-            "(CITSCI_DOWNLOAD_FILES=0).")
-        return
+    refs = list(FILE_REFS.values())  # referenced by the current snapshot
+    for ref in refs:
+        ref["orphaned"] = False
 
     errors: list = []
     downloaded = 0
-    for ref in refs:
-        local = download_file(client, ref, errors)
-        ref["downloaded"] = local is not None
-        if local:
-            downloaded += 1
-    # Index is the authoritative URL -> local_path map (with download status).
-    write_json("files/index.json", refs, harvest=False)
-    log(f"  Downloaded {downloaded}/{len(refs)} file(s); {len(errors)} error(s).")
+    if refs and DOWNLOAD_FILES:
+        for ref in refs:
+            local = download_file(client, ref, errors)
+            ref["downloaded"] = local is not None
+            if local:
+                downloaded += 1
+
+    # Preservation: files downloaded by earlier runs but no longer referenced
+    # (removed from CitSci) are kept on disk and retained in the index, flagged
+    # orphaned, rather than dropped. We never delete previously backed-up files.
+    orphans = collect_orphans(refs)
+
+    index = refs + orphans
+    write_json("files/index.json", index, harvest=False)
+    counts["files"] = len(index)
+    counts["files_referenced"] = len(refs)
+    counts["files_orphaned"] = len(orphans)
+    if not DOWNLOAD_FILES:
+        log(f"  {len(refs)} file(s) referenced; downloads disabled. "
+            f"{len(orphans)} orphan(s) retained.")
+        return
+    counts["files_downloaded"] = downloaded
+    log(f"  Downloaded {downloaded}/{len(refs)} referenced file(s); "
+        f"{len(errors)} error(s); {len(orphans)} orphan(s) retained.")
     if errors:
         write_json("files/_download_errors.json", errors, harvest=False)
-    counts["files_downloaded"] = downloaded
+
+
+def collect_orphans(referenced: list[dict]) -> list[dict]:
+    """Return entries for files preserved on disk that the current snapshot no
+    longer references. Metadata (url/id/filename) is carried forward from the
+    prior index where available; bare on-disk files are listed too."""
+    known_locals = {r.get("local_path") for r in referenced}
+    known_urls = {r.get("url") for r in referenced if r.get("url")}
+    orphans: list[dict] = []
+
+    prior_index = os.path.join(OUTPUT_DIR, "files", "index.json")
+    if os.path.exists(prior_index):
+        try:
+            with open(prior_index, encoding="utf-8") as f:
+                for e in json.load(f):
+                    lp = e.get("local_path")
+                    if (e.get("url") in known_urls) or (lp in known_locals):
+                        continue
+                    if lp and os.path.exists(os.path.join(OUTPUT_DIR, lp)):
+                        e["orphaned"] = True
+                        e["downloaded"] = True
+                        orphans.append(e)
+                        known_locals.add(lp)
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Any binary on disk with no index entry at all (e.g. older backups).
+    files_dir = os.path.join(OUTPUT_DIR, FILES_SUBDIR)
+    if os.path.isdir(files_dir):
+        for name in sorted(os.listdir(files_dir)):
+            lp = f"{FILES_SUBDIR}/{name}"
+            if lp not in known_locals:
+                orphans.append({"url": None, "id": "", "filename": name,
+                                "local_path": lp, "downloaded": True,
+                                "orphaned": True})
+                known_locals.add(lp)
+    return orphans
 
 
 def main() -> int:
@@ -632,7 +676,8 @@ def main() -> int:
     }
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
               "observations": 0, "observation_records": 0, "locations": 0,
-              "files": 0, "files_downloaded": 0}
+              "files": 0, "files_referenced": 0, "files_orphaned": 0,
+              "files_downloaded": 0}
     manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)
