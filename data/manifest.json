@@ -1,0 +1,17 @@
+{
+  "account_display_name": "DL W",
+  "account_email": "stadia_strolls.2s@icloud.com",
+  "api_base": "https://api.citsci.org",
+  "completed_at": "2026-06-19T15:47:19.245182+00:00",
+  "counts": {
+    "datasheet_records": 0,
+    "datasheets": 0,
+    "files": 0,
+    "files_downloaded": 0,
+    "observations": 0,
+    "projects": 0
+  },
+  "duration_seconds": 4.8,
+  "generated_at": "2026-06-19T15:47:14.398842+00:00",
+  "user_id": "019ee083-5d66-7a17-83d4-5409fe68c389"
+}

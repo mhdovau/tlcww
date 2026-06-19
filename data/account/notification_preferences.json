@@ -1,0 +1,90 @@
+[
+  {
+    "@id": "/notification_preferences/62331",
+    "@type": "NotificationPreference",
+    "createdAt": "2026-06-19T15:32:49+00:00",
+    "emailNotify": false,
+    "id": 62331,
+    "notificationType": "project_forum_post",
+    "projectMember": {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "updatedAt": "2026-06-19T15:32:49+00:00",
+    "user": {
+      "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+      "@type": "User",
+      "createdAt": "2026-06-19T15:32:46+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "webNotify": true
+  },
+  {
+    "@id": "/notification_preferences/62332",
+    "@type": "NotificationPreference",
+    "createdAt": "2026-06-19T15:32:49+00:00",
+    "emailNotify": false,
+    "id": 62332,
+    "notificationType": "project_forum_reply",
+    "projectMember": {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "updatedAt": "2026-06-19T15:32:49+00:00",
+    "user": {
+      "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+      "@type": "User",
+      "createdAt": "2026-06-19T15:32:46+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "webNotify": true
+  },
+  {
+    "@id": "/notification_preferences/62333",
+    "@type": "NotificationPreference",
+    "createdAt": "2026-06-19T15:32:49+00:00",
+    "emailNotify": false,
+    "id": 62333,
+    "notificationType": "project_observation",
+    "projectMember": {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "updatedAt": "2026-06-19T15:32:49+00:00",
+    "user": {
+      "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+      "@type": "User",
+      "createdAt": "2026-06-19T15:32:46+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "webNotify": true
+  },
+  {
+    "@id": "/notification_preferences/62334",
+    "@type": "NotificationPreference",
+    "createdAt": "2026-06-19T15:32:49+00:00",
+    "emailNotify": false,
+    "id": 62334,
+    "notificationType": "project_resource",
+    "projectMember": {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "updatedAt": "2026-06-19T15:32:49+00:00",
+    "user": {
+      "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+      "@type": "User",
+      "createdAt": "2026-06-19T15:32:46+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "webNotify": true
+  }
+]

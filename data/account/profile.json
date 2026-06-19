@@ -1,0 +1,69 @@
+{
+  "@context": "/contexts/User",
+  "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+  "@type": "User",
+  "changeEmailPending": false,
+  "createdAt": "2026-06-19T15:32:46+00:00",
+  "displayName": "DL W",
+  "email": "stadia_strolls.2s@icloud.com",
+  "firstName": "DL",
+  "id": "019ee083-5d66-7a17-83d4-5409fe68c389",
+  "isAdmin": false,
+  "isAirtable": false,
+  "isAirtableExpired": null,
+  "isVerified": true,
+  "lastName": "WW",
+  "memberships": [
+    {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "approved": true,
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "id": 17310,
+      "notificationPreferences": [
+        {
+          "@id": "/notification_preferences/62331",
+          "@type": "NotificationPreference",
+          "createdAt": "2026-06-19T15:32:49+00:00",
+          "updatedAt": "2026-06-19T15:32:49+00:00"
+        },
+        {
+          "@id": "/notification_preferences/62332",
+          "@type": "NotificationPreference",
+          "createdAt": "2026-06-19T15:32:49+00:00",
+          "updatedAt": "2026-06-19T15:32:49+00:00"
+        },
+        {
+          "@id": "/notification_preferences/62333",
+          "@type": "NotificationPreference",
+          "createdAt": "2026-06-19T15:32:49+00:00",
+          "updatedAt": "2026-06-19T15:32:49+00:00"
+        },
+        {
+          "@id": "/notification_preferences/62334",
+          "@type": "NotificationPreference",
+          "createdAt": "2026-06-19T15:32:49+00:00",
+          "updatedAt": "2026-06-19T15:32:49+00:00"
+        }
+      ],
+      "projectApproveContact": true,
+      "projectId": "ac46a1a9-6755-486d-847c-a4249734819d",
+      "projectName": "Dover Waterwatch",
+      "projectState": 1,
+      "projectUrl": "dover-waterwatch",
+      "role": "member",
+      "updatedAt": "2026-06-19T15:32:49+00:00",
+      "userId": "019ee083-5d66-7a17-83d4-5409fe68c389"
+    }
+  ],
+  "organizationMemberships": [],
+  "picture": null,
+  "privacySetting": 2,
+  "projects": [],
+  "receivesNewsletter": false,
+  "sciStarterId": null,
+  "updatedAt": "2026-06-19T15:32:49+00:00",
+  "userLikes": [],
+  "username": "dlcww",
+  "zooniverseUsername": null
+}
