@@ -1,0 +1,116 @@
+{
+  "@context": "/contexts/Project",
+  "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
+  "@type": "Project",
+  "announcement": null,
+  "announcementDate": "2026-06-14T13:57:26+00:00",
+  "approveContacts": true,
+  "bannerPicture": {
+    "@id": "/file_objects/93da8382-7666-40cc-9d5a-df8bc0aeaa04",
+    "@type": "https://schema.org/MediaObject",
+    "createdAt": "2024-06-19T21:58:24+00:00",
+    "id": "93da8382-7666-40cc-9d5a-df8bc0aeaa04",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/37a99372c960755c6e28c26c7b212fe2e486b565.jpeg",
+    "updatedAt": "2024-06-19T21:58:24+00:00"
+  },
+  "createdAt": "2024-06-18T12:06:05+00:00",
+  "datasheets": [
+    {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "id": "603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "instructions": "",
+      "isPrivate": false,
+      "locationAutoAssign": 1,
+      "locationFormat": 1,
+      "name": "Dover Rivulet Mouth Observations",
+      "published": true,
+      "status": "published",
+      "updatedAt": "2026-06-14T12:36:19+00:00",
+      "zooniverseHistory": []
+    },
+    {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "id": "019ec5b5-2190-7af3-9821-dffd2381df46",
+      "instructions": "<p>Water quality monitoring in association with Dover Landcare</p>",
+      "isPrivate": false,
+      "locationAutoAssign": 0,
+      "locationFormat": 1,
+      "name": "Dover Landcare Water Quality",
+      "published": true,
+      "status": "published",
+      "updatedAt": "2026-06-19T00:16:56+00:00",
+      "zooniverseHistory": []
+    }
+  ],
+  "description": "Dover Waterwatch, Tasmania, Australia - Collecting long term scientific observations of Dover’s waterways.\n\nAll data, photos and other contents of Dover Landcare Water Watch project © 2024 by Dover Landcare Tasmania is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ - This license requires that reusers give credit to the creator (Dover Landcare Tasmania). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.",
+  "facebookLink": null,
+  "gettingStarted": "",
+  "goals": "- Develop a record of the waterways and coast of Dover, Tasmania, Australia\n- Collect contemporary observations aligned with historic records for comparative analysis\n- Collect relevant observations and develop photographic records\n- Provide data and analysis to support decision making and support sustainable management of the environment and natural heritage of the area",
+  "id": "ac46a1a9-6755-486d-847c-a4249734819d",
+  "instagramLink": null,
+  "isAirtable": false,
+  "isFeatured": false,
+  "isPrivate": false,
+  "isSciStarter": true,
+  "isSciStarterParticipation": false,
+  "isStripImageMetadata": false,
+  "isZooniverse": true,
+  "lastObservationDatetime": "2026-06-19T04:36:33+00:00",
+  "latitude": -43.31617,
+  "longitude": 147.02354,
+  "measurementsTotal": 68,
+  "name": "Dover Waterwatch",
+  "organizationProjects": [],
+  "organizations": [],
+  "picture": {
+    "@id": "/file_objects/bb85a77e-49e1-4013-b286-2c501e7d661e",
+    "@type": "https://schema.org/MediaObject",
+    "createdAt": "2024-06-19T22:22:05+00:00",
+    "id": "bb85a77e-49e1-4013-b286-2c501e7d661e",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/5749ab31ce335b175ada92cf40cc4ee8c6b3f06e.jpeg",
+    "updatedAt": "2024-06-19T22:22:05+00:00"
+  },
+  "projectState": 1,
+  "sciStarterID": 100009222,
+  "sciStarterUrl": "dover-waterwatch",
+  "tasks": "- Collect and analyse water samples\n- Record observations of conditions\n- Record relevant contextual observations (tides and weather)\n- Submit photographs from standard locations / aspects to develop long term record\n",
+  "topics": [
+    "Water"
+  ],
+  "totalLikes": [
+    {
+      "@id": "/project_likes/788",
+      "@type": "ProjectLike",
+      "createdAt": "2026-06-15T01:05:54+00:00",
+      "id": 788,
+      "projectId": "ac46a1a9-6755-486d-847c-a4249734819d",
+      "updatedAt": "2026-06-15T01:05:54+00:00",
+      "userId": "a1758e0d-c0ac-4f9a-b31f-555772ccbc28"
+    }
+  ],
+  "twitterLink": null,
+  "updatedAt": "2026-06-19T04:36:33+00:00",
+  "urlField": "dover-waterwatch",
+  "user": {
+    "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+    "@type": "User",
+    "createdAt": "2024-06-18T04:24:45+00:00",
+    "displayName": "mhdoverlc",
+    "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+    "picture": {
+      "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-18T11:38:35+00:00",
+      "id": "d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+      "updatedAt": "2024-06-18T11:38:35+00:00"
+    },
+    "updatedAt": "2026-06-19T12:59:47+00:00"
+  },
+  "website": null,
+  "zooniverseID": null
+}

@@ -1,0 +1,1520 @@
+[
+  {
+    "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
+    "@type": "Area",
+    "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
+    "lngLat": {
+      "lat": -43.3155877,
+      "lng": 147.0230454
+    },
+    "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
+    "observationsTotal": 1
+  },
+  {
+    "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
+    "@type": "Area",
+    "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
+    "lngLat": {
+      "lat": -43.3105898,
+      "lng": 147.0170049
+    },
+    "name": "DOV110 Dover Rivulet South Gate Market",
+    "observationsTotal": 2
+  },
+  {
+    "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
+    "@type": "Area",
+    "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
+    "lngLat": {
+      "lat": -43.2976765,
+      "lng": 147.0103537
+    },
+    "name": "DOV070 Dover Rivulet Huon Highway",
+    "observationsTotal": 1
+  },
+  {
+    "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
+    "@type": "Area",
+    "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
+    "lngLat": {
+      "lat": -43.334185,
+      "lng": 146.9657096
+    },
+    "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
+    "observationsTotal": 1
+  },
+  {
+    "@id": "/areas/019ec5dc-10f0-7cc0-a687-192ac165ba8e",
+    "@type": "Area",
+    "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
+    "lngLat": {
+      "lat": -43.298965,
+      "lng": 146.9134378
+    },
+    "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
+    "observationsTotal": 1
+  },
+  {
+    "@id": "/areas/019edd20-b6be-7edd-a86c-f994ef15ab56",
+    "@type": "Area",
+    "id": "019edd20-b6be-7edd-a86c-f994ef15ab56",
+    "lngLat": {
+      "lat": -43.157584,
+      "lng": 147.076414
+    },
+    "name": "AGN130 (Otley 2000: E 506100 / N 5221500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-b6be-7ee7-aa55-54874af344b0",
+    "@type": "Area",
+    "id": "019edd20-b6be-7ee7-aa55-54874af344b0",
+    "lngLat": {
+      "lat": -43.129665,
+      "lng": 147.081297
+    },
+    "name": "AGN016 (Otley 2000: E 506500 / N 5224600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bc45-75da-a78f-9e7ffbb1e1e2",
+    "@type": "Area",
+    "id": "019edd20-bc45-75da-a78f-9e7ffbb1e1e2",
+    "lngLat": {
+      "lat": -43.123801,
+      "lng": 147.096041
+    },
+    "name": "AGN010 (Otley 2000: E 507700 / N 5225250 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bc4a-7042-bf42-a2339f730533",
+    "@type": "Area",
+    "id": "019edd20-bc4a-7042-bf42-a2339f730533",
+    "lngLat": {
+      "lat": -43.16006,
+      "lng": 147.076109
+    },
+    "name": "AGN200 (Otley 2000: E 506075 / N 5221225 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bc9b-708d-a0a8-6ed83d3a3b04",
+    "@type": "Area",
+    "id": "019edd20-bc9b-708d-a0a8-6ed83d3a3b04",
+    "lngLat": {
+      "lat": -43.155093,
+      "lng": 147.095783
+    },
+    "name": "A6N245 (Otley 2000: E 507675 / N 5221775 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bdba-7ce2-8d37-7f4cf470a46c",
+    "@type": "Area",
+    "id": "019edd20-bdba-7ce2-8d37-7f4cf470a46c",
+    "lngLat": {
+      "lat": -43.157129,
+      "lng": 147.083178
+    },
+    "name": "AGN260 (Otley 2000: E 506650 / N 5221550 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bdbb-7887-813c-a98b1b4f951f",
+    "@type": "Area",
+    "id": "019edd20-bdbb-7887-813c-a98b1b4f951f",
+    "lngLat": {
+      "lat": -43.157581,
+      "lng": 147.081334
+    },
+    "name": "AGN300 (Otley 2000: E 506500 / N 5221500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-be94-7f44-8e6d-7bc53322d305",
+    "@type": "Area",
+    "id": "019edd20-be94-7f44-8e6d-7bc53322d305",
+    "lngLat": {
+      "lat": -43.162983,
+      "lng": 147.082263
+    },
+    "name": "AGN400 (Otley 2000: E 506575 / N 5220900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bfa5-7338-a70d-7d0ac3f7723c",
+    "@type": "Area",
+    "id": "019edd20-bfa5-7338-a70d-7d0ac3f7723c",
+    "lngLat": {
+      "lat": -43.177322,
+      "lng": 147.150263
+    },
+    "name": "ALB100 (Otley 2000: E 512100 / N 5219300 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-bfdb-7244-b86b-6cf05a3db8d5",
+    "@type": "Area",
+    "id": "019edd20-bfdb-7244-b86b-6cf05a3db8d5",
+    "lngLat": {
+      "lat": -43.210514,
+      "lng": 146.773633
+    },
+    "name": "ARV005 (Otley 2000: E 481500 / N 5215600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c02c-73b6-ad83-7d855916fdfd",
+    "@type": "Area",
+    "id": "019edd20-c02c-73b6-ad83-7d855916fdfd",
+    "lngLat": {
+      "lat": -43.067423,
+      "lng": 146.823289
+    },
+    "name": "ARV100 (Otley 2000: E 485500 / N 5231500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c046-7dcb-b43d-6c43ce4c47cf",
+    "@type": "Area",
+    "id": "019edd20-c046-7dcb-b43d-6c43ce4c47cf",
+    "lngLat": {
+      "lat": -43.157809,
+      "lng": 147.076414
+    },
+    "name": "AGN120 (Otley 2000: E 506100 / N 5221475 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c262-7d36-b9ae-a2b702fdd3a7",
+    "@type": "Area",
+    "id": "019edd20-c262-7d36-b9ae-a2b702fdd3a7",
+    "lngLat": {
+      "lat": -42.951844,
+      "lng": 147.007508
+    },
+    "name": "BAK015 (Otley 2000: E 500500 / N 5244350 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c263-7a2b-b17d-b233baaf494b",
+    "@type": "Area",
+    "id": "019edd20-c263-7a2b-b17d-b233baaf494b",
+    "lngLat": {
+      "lat": -42.964898,
+      "lng": 147.030193
+    },
+    "name": "BAK060 (Otley 2000: E 502350 / N 5242900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c264-7206-b90c-a140c242eb77",
+    "@type": "Area",
+    "id": "019edd20-c264-7206-b90c-a140c242eb77",
+    "lngLat": {
+      "lat": -42.968948,
+      "lng": 147.03694
+    },
+    "name": "BAK100 (Otley 2000: E 502900 / N 5242450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c3d3-761d-9d5a-7fa24b6a2c61",
+    "@type": "Area",
+    "id": "019edd20-c3d3-761d-9d5a-7fa24b6a2c61",
+    "lngLat": {
+      "lat": -42.973898,
+      "lng": 147.045527
+    },
+    "name": "BAK150 (Otley 2000: E 503600 / N 5241900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c419-724f-b3f1-7691af4f5eef",
+    "@type": "Area",
+    "id": "019edd20-c419-724f-b3f1-7691af4f5eef",
+    "lngLat": {
+      "lat": -42.985145,
+      "lng": 147.065774
+    },
+    "name": "BAK250 (Otley 2000: E 505250 / N 5240650 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c419-764d-b8cd-f9dd0637eb4f",
+    "@type": "Area",
+    "id": "019edd20-c419-764d-b8cd-f9dd0637eb4f",
+    "lngLat": {
+      "lat": -42.979747,
+      "lng": 147.05473
+    },
+    "name": "BAK200 (Otley 2000: E 504350 / N 5241250 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c500-747c-a14e-56b5048ea0c4",
+    "@type": "Area",
+    "id": "019edd20-c500-747c-a14e-56b5048ea0c4",
+    "lngLat": {
+      "lat": -43.154644,
+      "lng": 147.094552
+    },
+    "name": "AGN249 (Otley 2000: E 507575 / N 5221825 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c503-7c90-abed-41cf15812ae7",
+    "@type": "Area",
+    "id": "019edd20-c503-7c90-abed-41cf15812ae7",
+    "lngLat": {
+      "lat": -43.153969,
+      "lng": 147.093628
+    },
+    "name": "AGN250 (Otley 2000: E 507500 / N 5221900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c56f-7bbb-ab2c-d93f04d75225",
+    "@type": "Area",
+    "id": "019edd20-c56f-7bbb-ab2c-d93f04d75225",
+    "lngLat": {
+      "lat": -43.115158,
+      "lng": 146.949756
+    },
+    "name": "CFB010 (Otley 2000: E 495800 / N 5226213 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c5e8-79bb-a7bf-37ab49c450a3",
+    "@type": "Area",
+    "id": "019edd20-c5e8-79bb-a7bf-37ab49c450a3",
+    "lngLat": {
+      "lat": -43.125184,
+      "lng": 146.958354
+    },
+    "name": "CFB020 (Otley 2000: E 496500 / N 5225100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c5f4-7871-bc98-816867e48cd6",
+    "@type": "Area",
+    "id": "019edd20-c5f4-7871-bc98-816867e48cd6",
+    "lngLat": {
+      "lat": -43.133293,
+      "lng": 146.971873
+    },
+    "name": "CFB030 (Otley 2000: E 497600 / N 5224200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c658-7edc-adb3-895611fcd540",
+    "@type": "Area",
+    "id": "019edd20-c658-7edc-adb3-895611fcd540",
+    "lngLat": {
+      "lat": -42.93292,
+      "lng": 147.055301
+    },
+    "name": "CRB080 (Otley 2000: E 504400 / N 5246450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c6b3-7ec3-a281-a4224f508ba1",
+    "@type": "Area",
+    "id": "019edd20-c6b3-7ec3-a281-a4224f508ba1",
+    "lngLat": {
+      "lat": -42.936071,
+      "lng": 147.057755
+    },
+    "name": "CRB100 (Otley 2000: E 504600 / N 5246100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c710-76d9-89c4-785994c8d92a",
+    "@type": "Area",
+    "id": "019edd20-c710-76d9-89c4-785994c8d92a",
+    "lngLat": {
+      "lat": -42.94642,
+      "lng": 147.070636
+    },
+    "name": "CRB150 (Otley 2000: E 505650 / N 5244950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c76e-7a7e-9989-8abd766f405a",
+    "@type": "Area",
+    "id": "019edd20-c76e-7a7e-9989-8abd766f405a",
+    "lngLat": {
+      "lat": -42.955869,
+      "lng": 147.079229
+    },
+    "name": "CRB250 (Otley 2000: E 506350 / N 5243900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c77e-7f01-99a3-42110b3ac26e",
+    "@type": "Area",
+    "id": "019edd20-c77e-7f01-99a3-42110b3ac26e",
+    "lngLat": {
+      "lat": -42.969371,
+      "lng": 147.087217
+    },
+    "name": "CRB300 (Otley 2000: E 507000 / N 5242400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c805-7838-9f73-52526785dec3",
+    "@type": "Area",
+    "id": "019edd20-c805-7838-9f73-52526785dec3",
+    "lngLat": {
+      "lat": -43.009009,
+      "lng": 146.935118
+    },
+    "name": "DIC500 (Otley 2000: E 494600 / N 5238000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c887-75ef-b743-2f830804ee54",
+    "@type": "Area",
+    "id": "019edd20-c887-75ef-b743-2f830804ee54",
+    "lngLat": {
+      "lat": -42.965291,
+      "lng": 147.118479
+    },
+    "name": "DIP040 (Otley 2000: E 509550 / N 5242850 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c8d6-7e06-82ad-05af3962cd73",
+    "@type": "Area",
+    "id": "019edd20-c8d6-7e06-82ad-05af3962cd73",
+    "lngLat": {
+      "lat": -42.960792,
+      "lng": 147.115405
+    },
+    "name": "DIP060 (Otley 2000: E 509300 / N 5243350 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c91e-76c5-b61f-1d80f2a1fd48",
+    "@type": "Area",
+    "id": "019edd20-c91e-76c5-b61f-1d80f2a1fd48",
+    "lngLat": {
+      "lat": -42.961248,
+      "lng": 147.109275
+    },
+    "name": "DIP080 (Otley 2000: E 508800 / N 5243300 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c945-7b6d-a518-a06d8a9ef57e",
+    "@type": "Area",
+    "id": "019edd20-c945-7b6d-a518-a06d8a9ef57e",
+    "lngLat": {
+      "lat": -42.960798,
+      "lng": 147.109274
+    },
+    "name": "DIP100 (Otley 2000: E 508800 / N 5243350 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-c974-7dfe-9787-9e3f32c16c18",
+    "@type": "Area",
+    "id": "019edd20-c974-7dfe-9787-9e3f32c16c18",
+    "lngLat": {
+      "lat": -43.298083,
+      "lng": 147.009399
+    },
+    "name": "DOV070 (Otley 2000: E 500650 / N 5205900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ca79-7904-8a14-ff49953851b8",
+    "@type": "Area",
+    "id": "019edd20-ca79-7904-8a14-ff49953851b8",
+    "lngLat": {
+      "lat": -43.306412,
+      "lng": 147.011866
+    },
+    "name": "DOV090 (Otley 2000: E 500850 / N 5204975 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ca7b-7470-b743-cf6885df840b",
+    "@type": "Area",
+    "id": "019edd20-ca7b-7470-b743-cf6885df840b",
+    "lngLat": {
+      "lat": -43.311139,
+      "lng": 147.017724
+    },
+    "name": "DOV110 (Otley 2000: E 501325 / N 5204450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ca9f-7e25-9983-75102d1c4991",
+    "@type": "Area",
+    "id": "019edd20-ca9f-7e25-9983-75102d1c4991",
+    "lngLat": {
+      "lat": -43.31429,
+      "lng": 147.021363
+    },
+    "name": "DOV120 (Otley 2000: E 501620 / N 5204100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cae3-78b2-9220-dcc48f31a36b",
+    "@type": "Area",
+    "id": "019edd20-cae3-78b2-9220-dcc48f31a36b",
+    "lngLat": {
+      "lat": -43.310239,
+      "lng": 147.012484
+    },
+    "name": "DOV100 (Otley 2000: E 500900 / N 5204550 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cb36-731c-ae70-b50510c57185",
+    "@type": "Area",
+    "id": "019edd20-cb36-731c-ae70-b50510c57185",
+    "lngLat": {
+      "lat": -43.31564,
+      "lng": 147.022967
+    },
+    "name": "DOV130 (Otley 2000: E 501750 / N 5203950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cbf2-7653-b5f8-d1d32bc2a11c",
+    "@type": "Area",
+    "id": "019edd20-cbf2-7653-b5f8-d1d32bc2a11c",
+    "lngLat": {
+      "lat": -43.325985,
+      "lng": 146.944649
+    },
+    "name": "ESP002 (Otley 2000: E 495400 / N 5202800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cc50-7d2d-80c4-bc8f41fcd87f",
+    "@type": "Area",
+    "id": "019edd20-cc50-7d2d-80c4-bc8f41fcd87f",
+    "lngLat": {
+      "lat": -43.232188,
+      "lng": 146.808036
+    },
+    "name": "ESP001 (Otley 2000: E 484300 / N 5213200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cc6d-7b58-9816-7351cf87f255",
+    "@type": "Area",
+    "id": "019edd20-cc6d-7b58-9816-7351cf87f255",
+    "lngLat": {
+      "lat": -42.983774,
+      "lng": 147.094596
+    },
+    "name": "FOU100 (Otley 2000: E 507600 / N 5240800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ccb7-7564-a0af-2dd20f980548",
+    "@type": "Area",
+    "id": "019edd20-ccb7-7564-a0af-2dd20f980548",
+    "lngLat": {
+      "lat": -43.113035,
+      "lng": 146.994621
+    },
+    "name": "FLU100 (Otley 2000: E 499450 / N 5226450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cd2f-727b-87ee-9ef5b858f780",
+    "@type": "Area",
+    "id": "019edd20-cd2f-727b-87ee-9ef5b858f780",
+    "lngLat": {
+      "lat": -42.982432,
+      "lng": 147.082942
+    },
+    "name": "FOU150 (Otley 2000: E 506650 / N 5240950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cdb7-7c88-bdab-daa5a929bdba",
+    "@type": "Area",
+    "id": "019edd20-cdb7-7c88-bdab-daa5a929bdba",
+    "lngLat": {
+      "lat": -42.98154,
+      "lng": 147.06945
+    },
+    "name": "FOU200 (Otley 2000: E 505550 / N 5241050 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cdf6-7f6e-9c6d-b5f3b16cf717",
+    "@type": "Area",
+    "id": "019edd20-cdf6-7f6e-9c6d-b5f3b16cf717",
+    "lngLat": {
+      "lat": -43.180966,
+      "lng": 147.113357
+    },
+    "name": "GDR150 (Otley 2000: E 509100 / N 5218900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ce34-718b-a302-8f6bfb8806e8",
+    "@type": "Area",
+    "id": "019edd20-ce34-718b-a302-8f6bfb8806e8",
+    "lngLat": {
+      "lat": -43.172813,
+      "lng": 147.155173
+    },
+    "name": "GDR100 (Otley 2000: E 512500 / N 5219800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ceaf-75ec-822a-7e1bf3b5411c",
+    "@type": "Area",
+    "id": "019edd20-ceaf-75ec-822a-7e1bf3b5411c",
+    "lngLat": {
+      "lat": -43.184575,
+      "lng": 147.105981
+    },
+    "name": "GDR200 (Otley 2000: E 508500 / N 5218500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cf2f-7680-a0e0-cce13f6abda3",
+    "@type": "Area",
+    "id": "019edd20-cf2f-7680-a0e0-cce13f6abda3",
+    "lngLat": {
+      "lat": -43.155109,
+      "lng": 147.074258
+    },
+    "name": "GVC115 (Otley 2000: E 505925 / N 5221775 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-cfc5-7457-8eb2-4beba9e0b3a6",
+    "@type": "Area",
+    "id": "019edd20-cfc5-7457-8eb2-4beba9e0b3a6",
+    "lngLat": {
+      "lat": -43.183661,
+      "lng": 147.119515
+    },
+    "name": "HOL100 (Otley 2000: E 509600 / N 5218600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d001-72e7-85fc-4334b57bf9a7",
+    "@type": "Area",
+    "id": "019edd20-d001-72e7-85fc-4334b57bf9a7",
+    "lngLat": {
+      "lat": -43.013066,
+      "lng": 146.943851
+    },
+    "name": "HUO150 (Otley 2000: E 495312 / N 5237550 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d02e-7f93-a565-8dc64956676e",
+    "@type": "Area",
+    "id": "019edd20-d02e-7f93-a565-8dc64956676e",
+    "lngLat": {
+      "lat": -42.999099,
+      "lng": 146.928995
+    },
+    "name": "HUO140 (Otley 2000: E 494100 / N 5239100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d055-746a-b571-09adbad77f88",
+    "@type": "Area",
+    "id": "019edd20-d055-746a-b571-09adbad77f88",
+    "lngLat": {
+      "lat": -43.022752,
+      "lng": 146.95873
+    },
+    "name": "HUO200 (Otley 2000: E 496525 / N 5236475 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d08e-747c-8f32-9205ce383b9c",
+    "@type": "Area",
+    "id": "019edd20-d08e-747c-8f32-9205ce383b9c",
+    "lngLat": {
+      "lat": -43.024104,
+      "lng": 146.95965
+    },
+    "name": "HUO240 (Otley 2000: E 496600 / N 5236325 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d18d-7664-830a-0bf32877c84c",
+    "@type": "Area",
+    "id": "019edd20-d18d-7664-830a-0bf32877c84c",
+    "lngLat": {
+      "lat": -42.933378,
+      "lng": 146.965224
+    },
+    "name": "JUD020 (Otley 2000: E 497050 / N 5246400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d190-708d-b854-2a894847bd72",
+    "@type": "Area",
+    "id": "019edd20-d190-708d-b854-2a894847bd72",
+    "lngLat": {
+      "lat": -42.977945,
+      "lng": 146.943123
+    },
+    "name": "JUD070 (Otley 2000: E 495250 / N 5241450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d1c8-72e1-b655-7f573912a29b",
+    "@type": "Area",
+    "id": "019edd20-d1c8-72e1-b655-7f573912a29b",
+    "lngLat": {
+      "lat": -42.964442,
+      "lng": 146.952332
+    },
+    "name": "JUD025 (Otley 2000: E 496000 / N 5242950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d1f0-7dd9-9d94-8984b63f9505",
+    "@type": "Area",
+    "id": "019edd20-d1f0-7dd9-9d94-8984b63f9505",
+    "lngLat": {
+      "lat": -42.969394,
+      "lng": 146.951715
+    },
+    "name": "JUD100 (Otley 2000: E 495950 / N 5242400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d20b-7cf3-bc4c-431f62a000ea",
+    "@type": "Area",
+    "id": "019edd20-d20b-7cf3-bc4c-431f62a000ea",
+    "lngLat": {
+      "lat": -42.992793,
+      "lng": 146.924095
+    },
+    "name": "JUD200 (Otley 2000: E 493700 / N 5239800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d2f0-74d2-a53a-9245fc6adc72",
+    "@type": "Area",
+    "id": "019edd20-d2f0-74d2-a53a-9245fc6adc72",
+    "lngLat": {
+      "lat": -42.957247,
+      "lng": 147.014864
+    },
+    "name": "BAK025 (Otley 2000: E 501100 / N 5243750 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d32d-7419-a8aa-0e24aa2ba141",
+    "@type": "Area",
+    "id": "019edd20-d32d-7419-a8aa-0e24aa2ba141",
+    "lngLat": {
+      "lat": -43.07474,
+      "lng": 147.073854
+    },
+    "name": "KEL750 (Otley 2000: E 505900 / N 5230700 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d32f-7392-b0ea-71d1e6a79961",
+    "@type": "Area",
+    "id": "019edd20-d32f-7392-b0ea-71d1e6a79961",
+    "lngLat": {
+      "lat": -43.043186,
+      "lng": 147.118015
+    },
+    "name": "KEL400 (Otley 2000: E 509500 / N 5234200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d369-7a94-8076-3e53204f6846",
+    "@type": "Area",
+    "id": "019edd20-d369-7a94-8076-3e53204f6846",
+    "lngLat": {
+      "lat": -43.035052,
+      "lng": 147.143778
+    },
+    "name": "KEL250 (Otley 2000: E 511600 / N 5235100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d393-7f40-9ad9-8be667733704",
+    "@type": "Area",
+    "id": "019edd20-d393-7f40-9ad9-8be667733704",
+    "lngLat": {
+      "lat": -43.188156,
+      "lng": 146.873397
+    },
+    "name": "KER010 (Otley 2000: E 489600 / N 5218100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d3ac-7ec8-8972-0305a06e9a1e",
+    "@type": "Area",
+    "id": "019edd20-d3ac-7ec8-8972-0305a06e9a1e",
+    "lngLat": {
+      "lat": -43.219639,
+      "lng": 146.846244
+    },
+    "name": "KER001 (Otley 2000: E 487400 / N 5214600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d497-7737-b898-7966d029a74f",
+    "@type": "Area",
+    "id": "019edd20-d497-7737-b898-7966d029a74f",
+    "lngLat": {
+      "lat": -43.171992,
+      "lng": 146.924488
+    },
+    "name": "KER400 (Otley 2000: E 493750 / N 5219900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d4bc-7f79-b0dd-6918f211d9a2",
+    "@type": "Area",
+    "id": "019edd20-d4bc-7f79-b0dd-6918f211d9a2",
+    "lngLat": {
+      "lat": -43.179634,
+      "lng": 146.907868
+    },
+    "name": "KER200 (Otley 2000: E 492400 / N 5219050 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d4ed-7cc8-b9c8-d158b2a9f1d2",
+    "@type": "Area",
+    "id": "019edd20-d4ed-7cc8-b9c8-d158b2a9f1d2",
+    "lngLat": {
+      "lat": -43.168843,
+      "lng": 146.928798
+    },
+    "name": "KER450 (Otley 2000: E 494100 / N 5220250 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d525-7f03-9045-02a6ec5a43ea",
+    "@type": "Area",
+    "id": "019edd20-d525-7f03-9045-02a6ec5a43ea",
+    "lngLat": {
+      "lat": -43.161186,
+      "lng": 146.923272
+    },
+    "name": "KER650 (Otley 2000: E 493650 / N 5221100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d532-7b68-9d20-b39d1631164f",
+    "@type": "Area",
+    "id": "019edd20-d532-7b68-9d20-b39d1631164f",
+    "lngLat": {
+      "lat": -43.163895,
+      "lng": 146.9368
+    },
+    "name": "KER750 (Otley 2000: E 494750 / N 5220800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d54a-7d72-a0eb-21598745214b",
+    "@type": "Area",
+    "id": "019edd20-d54a-7d72-a0eb-21598745214b",
+    "lngLat": {
+      "lat": -43.164793,
+      "lng": 146.931263
+    },
+    "name": "KER700 (Otley 2000: E 494300 / N 5220700 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d641-79fe-a6a0-fd41e189d770",
+    "@type": "Area",
+    "id": "019edd20-d641-79fe-a6a0-fd41e189d770",
+    "lngLat": {
+      "lat": -43.274563,
+      "lng": 147.157896
+    },
+    "name": "LAS060 (Otley 2000: E 512700 / N 5208500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d65f-70ce-9166-8b97620f6f34",
+    "@type": "Area",
+    "id": "019edd20-d65f-70ce-9166-8b97620f6f34",
+    "lngLat": {
+      "lat": -43.1666,
+      "lng": 146.942333
+    },
+    "name": "KER800 (Otley 2000: E 495200 / N 5220500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d694-795c-a554-a54e92128ec2",
+    "@type": "Area",
+    "id": "019edd20-d694-795c-a554-a54e92128ec2",
+    "lngLat": {
+      "lat": -43.274111,
+      "lng": 147.159128
+    },
+    "name": "LAS040 (Otley 2000: E 512800 / N 5208550 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d6b5-7670-b2d1-6a62e3076215",
+    "@type": "Area",
+    "id": "019edd20-d6b5-7670-b2d1-6a62e3076215",
+    "lngLat": {
+      "lat": -42.954643,
+      "lng": 146.715727
+    },
+    "name": "LDR001 (Otley 2000: E 476700 / N 5244000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d714-75a1-949e-647356bc67ad",
+    "@type": "Area",
+    "id": "019edd20-d714-75a1-949e-647356bc67ad",
+    "lngLat": {
+      "lat": -43.275463,
+      "lng": 147.157899
+    },
+    "name": "LAS080 (Otley 2000: E 512700 / N 5208400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d722-71b1-80c8-896e4d1404d4",
+    "@type": "Area",
+    "id": "019edd20-d722-71b1-80c8-896e4d1404d4",
+    "lngLat": {
+      "lat": -43.275465,
+      "lng": 147.156666
+    },
+    "name": "LAS100 (Otley 2000: E 512600 / N 5208400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d7cb-727c-a58d-7460f2afceb6",
+    "@type": "Area",
+    "id": "019edd20-d7cb-727c-a58d-7460f2afceb6",
+    "lngLat": {
+      "lat": -42.977996,
+      "lng": 146.797508
+    },
+    "name": "LDR100 (Otley 2000: E 483377 / N 5241426 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d817-7e38-85ca-0672608d1f2b",
+    "@type": "Area",
+    "id": "019edd20-d817-7e38-85ca-0672608d1f2b",
+    "lngLat": {
+      "lat": -42.983642,
+      "lng": 146.802372
+    },
+    "name": "LDR220 (Otley 2000: E 483775 / N 5240800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d84d-733e-a747-befbc14c21e3",
+    "@type": "Area",
+    "id": "019edd20-d84d-733e-a747-befbc14c21e3",
+    "lngLat": {
+      "lat": -42.967396,
+      "lng": 146.781884
+    },
+    "name": "LDR002 (Otley 2000: E 482100 / N 5242600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d87f-7b23-93f0-0c36be06d063",
+    "@type": "Area",
+    "id": "019edd20-d87f-7b23-93f0-0c36be06d063",
+    "lngLat": {
+      "lat": -42.982747,
+      "lng": 146.805379
+    },
+    "name": "LDR300 (Otley 2000: E 484020 / N 5240900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d903-78d9-b266-b1f23452f109",
+    "@type": "Area",
+    "id": "019edd20-d903-78d9-b266-b1f23452f109",
+    "lngLat": {
+      "lat": -43.415909,
+      "lng": 146.824749
+    },
+    "name": "LUN010 (Otley 2000: E 485700 / N 5192800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d904-73a3-9e3f-b486962d4c09",
+    "@type": "Area",
+    "id": "019edd20-d904-73a3-9e3f-b486962d4c09",
+    "lngLat": {
+      "lat": -42.983875,
+      "lng": 146.806664
+    },
+    "name": "LDR400 (Otley 2000: E 484125 / N 5240775 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d987-74d9-898e-cabea0f572e3",
+    "@type": "Area",
+    "id": "019edd20-d987-74d9-898e-cabea0f572e3",
+    "lngLat": {
+      "lat": -43.415103,
+      "lng": 146.905041
+    },
+    "name": "LUN020 (Otley 2000: E 492200 / N 5192900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d9e2-73d4-bf72-7cd7672579db",
+    "@type": "Area",
+    "id": "019edd20-d9e2-73d4-bf72-7cd7672579db",
+    "lngLat": {
+      "lat": -42.960347,
+      "lng": 147.109274
+    },
+    "name": "MOU400 (Otley 2000: E 508800 / N 5243400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-d9e4-71db-b862-df24709fd7db",
+    "@type": "Area",
+    "id": "019edd20-d9e4-71db-b862-df24709fd7db",
+    "lngLat": {
+      "lat": -42.938709,
+      "lng": 147.133748
+    },
+    "name": "MOU250 (Otley 2000: E 510800 / N 5245800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-da18-7279-8ac2-45b24c52082e",
+    "@type": "Area",
+    "id": "019edd20-da18-7279-8ac2-45b24c52082e",
+    "lngLat": {
+      "lat": -42.937808,
+      "lng": 147.134359
+    },
+    "name": "MOU200 (Otley 2000: E 510850 / N 5245900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-daf7-7ef9-b2ab-3a1932276faf",
+    "@type": "Area",
+    "id": "019edd20-daf7-7ef9-b2ab-3a1932276faf",
+    "lngLat": {
+      "lat": -42.971172,
+      "lng": 147.087219
+    },
+    "name": "MOU600 (Otley 2000: E 507000 / N 5242200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-db13-7056-8587-b577bb390806",
+    "@type": "Area",
+    "id": "019edd20-db13-7056-8587-b577bb390806",
+    "lngLat": {
+      "lat": -43.013519,
+      "lng": 147.049238
+    },
+    "name": "MOU700 (Otley 2000: E 503900 / N 5237500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-db93-701f-939f-838fce15f2f0",
+    "@type": "Area",
+    "id": "019edd20-db93-701f-939f-838fce15f2f0",
+    "lngLat": {
+      "lat": -43.018025,
+      "lng": 147.041878
+    },
+    "name": "MOU850 (Otley 2000: E 503300 / N 5237000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dc31-7e24-a05d-daebe8dd5593",
+    "@type": "Area",
+    "id": "019edd20-dc31-7e24-a05d-daebe8dd5593",
+    "lngLat": {
+      "lat": -43.148504,
+      "lng": 147.151422
+    },
+    "name": "NIC300 (Otley 2000: E 512200 / N 5222500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dc38-7e5d-8c3f-4e479fbd1e35",
+    "@type": "Area",
+    "id": "019edd20-dc38-7e5d-8c3f-4e479fbd1e35",
+    "lngLat": {
+      "lat": -42.9955,
+      "lng": 147.066398
+    },
+    "name": "MOU650 (Otley 2000: E 505300 / N 5239500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dc40-7647-bb74-3ec62de7c469",
+    "@type": "Area",
+    "id": "019edd20-dc40-7647-bb74-3ec62de7c469",
+    "lngLat": {
+      "lat": -43.126432,
+      "lng": 147.158744
+    },
+    "name": "NIC100 (Otley 2000: E 512800 / N 5224950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dc6b-7219-b4b1-e7975a36bc43",
+    "@type": "Area",
+    "id": "019edd20-dc6b-7219-b4b1-e7975a36bc43",
+    "lngLat": {
+      "lat": -43.162029,
+      "lng": 147.137925
+    },
+    "name": "NIC500 (Otley 2000: E 511100 / N 5221000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dc9c-7057-b7cc-23d113cc5e20",
+    "@type": "Area",
+    "id": "019edd20-dc9c-7057-b7cc-23d113cc5e20",
+    "lngLat": {
+      "lat": -43.170171,
+      "lng": 147.102265
+    },
+    "name": "NIC700 (Otley 2000: E 508200 / N 5220100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dd1e-7b25-9464-dd1fedebb9db",
+    "@type": "Area",
+    "id": "019edd20-dd1e-7b25-9464-dd1fedebb9db",
+    "lngLat": {
+      "lat": -42.985127,
+      "lng": 147.091532
+    },
+    "name": "PAR100 (Otley 2000: E 507350 / N 5240650 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ddb3-7b2b-abb1-f7374bc9657e",
+    "@type": "Area",
+    "id": "019edd20-ddb3-7b2b-abb1-f7374bc9657e",
+    "lngLat": {
+      "lat": -43.081962,
+      "lng": 146.963911
+    },
+    "name": "PCK010 (Otley 2000: E 496950 / N 5229900 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ddbd-70e1-8b02-42a37e041870",
+    "@type": "Area",
+    "id": "019edd20-ddbd-70e1-8b02-42a37e041870",
+    "lngLat": {
+      "lat": -43.082868,
+      "lng": 146.98541
+    },
+    "name": "PCK020 (Otley 2000: E 498700 / N 5229800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-ddea-70f6-b7e1-6b445267f465",
+    "@type": "Area",
+    "id": "019edd20-ddea-70f6-b7e1-6b445267f465",
+    "lngLat": {
+      "lat": -43.085569,
+      "lng": 147.011824
+    },
+    "name": "PCK030 (Otley 2000: E 500850 / N 5229500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-de23-7938-8819-c2a32f10d968",
+    "@type": "Area",
+    "id": "019edd20-de23-7938-8819-c2a32f10d968",
+    "lngLat": {
+      "lat": -43.106805,
+      "lng": 146.706421
+    },
+    "name": "PIC002 (Otley 2000: E 476000 / N 5227100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-de25-7337-b17e-25e8501daa96",
+    "@type": "Area",
+    "id": "019edd20-de25-7337-b17e-25e8501daa96",
+    "lngLat": {
+      "lat": -43.230114,
+      "lng": 146.684894
+    },
+    "name": "PIC001 (Otley 2000: E 474300 / N 5213400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-de9b-7734-8ba0-9aede481fa5c",
+    "@type": "Area",
+    "id": "019edd20-de9b-7734-8ba0-9aede481fa5c",
+    "lngLat": {
+      "lat": -43.198112,
+      "lng": 146.933072
+    },
+    "name": "RIL200 (Otley 2000: E 494450 / N 5217000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-df17-75f1-adcf-bc876051a895",
+    "@type": "Area",
+    "id": "019edd20-df17-75f1-adcf-bc876051a895",
+    "lngLat": {
+      "lat": -42.878991,
+      "lng": 146.712401
+    },
+    "name": "RUS005 (Otley 2000: E 476400 / N 5252400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-df58-7e34-aebb-c4bb41e9c713",
+    "@type": "Area",
+    "id": "019edd20-df58-7e34-aebb-c4bb41e9c713",
+    "lngLat": {
+      "lat": -43.176044,
+      "lng": 146.923868
+    },
+    "name": "RIL400 (Otley 2000: E 493700 / N 5219450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-df96-75af-9ecc-7859958ccbd4",
+    "@type": "Area",
+    "id": "019edd20-df96-75af-9ecc-7859958ccbd4",
+    "lngLat": {
+      "lat": -42.945808,
+      "lng": 146.795444
+    },
+    "name": "RUS055 (Otley 2000: E 483200 / N 5245000 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dfc8-7c89-8db6-4f35dd3e93e9",
+    "@type": "Area",
+    "id": "019edd20-dfc8-7c89-8db6-4f35dd3e93e9",
+    "lngLat": {
+      "lat": -42.945854,
+      "lng": 146.796057
+    },
+    "name": "RUS060 (Otley 2000: E 483250 / N 5244995 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-dfe1-71f7-b661-292ff3a96b0b",
+    "@type": "Area",
+    "id": "019edd20-dfe1-71f7-b661-292ff3a96b0b",
+    "lngLat": {
+      "lat": -42.940412,
+      "lng": 146.799139
+    },
+    "name": "RUS010 (Otley 2000: E 483500 / N 5245600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e084-77fa-8de1-f0ef4bd337ab",
+    "@type": "Area",
+    "id": "019edd20-e084-77fa-8de1-f0ef4bd337ab",
+    "lngLat": {
+      "lat": -42.950784,
+      "lng": 146.808913
+    },
+    "name": "RUS070 (Otley 2000: E 484300 / N 5244450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e0de-756a-8e3c-aa5de6406c23",
+    "@type": "Area",
+    "id": "019edd20-e0de-756a-8e3c-aa5de6406c23",
+    "lngLat": {
+      "lat": -42.960714,
+      "lng": 146.823595
+    },
+    "name": "RUS075 (Otley 2000: E 485500 / N 5243350 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e139-7671-a105-79d3f00d6707",
+    "@type": "Area",
+    "id": "019edd20-e139-7671-a105-79d3f00d6707",
+    "lngLat": {
+      "lat": -42.961165,
+      "lng": 146.824207
+    },
+    "name": "RUS080 (Otley 2000: E 485550 / N 5243300 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e13c-74f4-8743-dca27161acac",
+    "@type": "Area",
+    "id": "019edd20-e13c-74f4-8743-dca27161acac",
+    "lngLat": {
+      "lat": -43.407031,
+      "lng": 146.958778
+    },
+    "name": "SOU010 (Otley 2000: E 496550 / N 5193800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e19b-7cc5-8d14-d0fa44eb5d65",
+    "@type": "Area",
+    "id": "019edd20-e19b-7cc5-8d14-d0fa44eb5d65",
+    "lngLat": {
+      "lat": -42.98373,
+      "lng": 146.862779
+    },
+    "name": "RUS100 (Otley 2000: E 488700 / N 5240800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e1c6-7d20-8a79-967ad8f95f24",
+    "@type": "Area",
+    "id": "019edd20-e1c6-7d20-8a79-967ad8f95f24",
+    "lngLat": {
+      "lat": -43.412433,
+      "lng": 146.955069
+    },
+    "name": "SOU050 (Otley 2000: E 496250 / N 5193200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e25c-7368-a73c-5edd5dad940a",
+    "@type": "Area",
+    "id": "019edd20-e25c-7368-a73c-5edd5dad940a",
+    "lngLat": {
+      "lat": -43.41874,
+      "lng": 146.9668
+    },
+    "name": "SOU100 (Otley 2000: E 497200 / N 5192500 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e2af-7b9b-b889-59aad157f808",
+    "@type": "Area",
+    "id": "019edd20-e2af-7b9b-b889-59aad157f808",
+    "lngLat": {
+      "lat": -43.428647,
+      "lng": 146.974207
+    },
+    "name": "SOU150 (Otley 2000: E 497800 / N 5191400 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e2e0-77b5-bed4-ce27a8b09025",
+    "@type": "Area",
+    "id": "019edd20-e2e0-77b5-bed4-ce27a8b09025",
+    "lngLat": {
+      "lat": -43.430448,
+      "lng": 146.974207
+    },
+    "name": "SOU200 (Otley 2000: E 497800 / N 5191200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e310-7d88-9a90-8741d4d43c63",
+    "@type": "Area",
+    "id": "019edd20-e310-7d88-9a90-8741d4d43c63",
+    "lngLat": {
+      "lat": -43.133713,
+      "lng": 146.91224
+    },
+    "name": "STT100 (Otley 2000: E 492750 / N 5224150 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e341-7a42-b82d-af052218108b",
+    "@type": "Area",
+    "id": "019edd20-e341-7a42-b82d-af052218108b",
+    "lngLat": {
+      "lat": -43.161185,
+      "lng": 146.922657
+    },
+    "name": "STT400 (Otley 2000: E 493600 / N 5221100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e3ba-7391-ab59-4fef16d02de7",
+    "@type": "Area",
+    "id": "019edd20-e3ba-7391-ab59-4fef16d02de7",
+    "lngLat": {
+      "lat": -43.147674,
+      "lng": 146.917754
+    },
+    "name": "STT300 (Otley 2000: E 493200 / N 5222600 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e3e4-7a10-9abb-933526a4e334",
+    "@type": "Area",
+    "id": "019edd20-e3e4-7a10-9abb-933526a4e334",
+    "lngLat": {
+      "lat": -43.135534,
+      "lng": 147.055791
+    },
+    "name": "SUP010 (Otley 2000: E 504425 / N 5223950 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e408-79ac-bf20-cdf86157fa60",
+    "@type": "Area",
+    "id": "019edd20-e408-79ac-bf20-cdf86157fa60",
+    "lngLat": {
+      "lat": -43.136075,
+      "lng": 147.054562
+    },
+    "name": "SUP020 (Otley 2000: E 504325 / N 5223890 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e48a-7c64-ba9d-b39230d039f1",
+    "@type": "Area",
+    "id": "019edd20-e48a-7c64-ba9d-b39230d039f1",
+    "lngLat": {
+      "lat": -43.138233,
+      "lng": 147.060281
+    },
+    "name": "SUP050 (Otley 2000: E 504790 / N 5223650 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e4df-7566-8d1a-8f66fd5499ff",
+    "@type": "Area",
+    "id": "019edd20-e4df-7566-8d1a-8f66fd5499ff",
+    "lngLat": {
+      "lat": -43.139128,
+      "lng": 147.07055
+    },
+    "name": "SUP100 (Otley 2000: E 505625 / N 5223550 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e50c-7c36-a492-7f8e71903ba7",
+    "@type": "Area",
+    "id": "019edd20-e50c-7c36-a492-7f8e71903ba7",
+    "lngLat": {
+      "lat": -43.150834,
+      "lng": 147.071178
+    },
+    "name": "SUP200 (Otley 2000: E 505675 / N 5222250 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e564-7698-b248-d44fb1d6c69b",
+    "@type": "Area",
+    "id": "019edd20-e564-7698-b248-d44fb1d6c69b",
+    "lngLat": {
+      "lat": -43.154884,
+      "lng": 147.074258
+    },
+    "name": "SUP300 (Otley 2000: E 505925 / N 5221800 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e5c2-72b8-a433-e3f409e0135c",
+    "@type": "Area",
+    "id": "019edd20-e5c2-72b8-a433-e3f409e0135c",
+    "lngLat": {
+      "lat": -43.031978,
+      "lng": 146.947983
+    },
+    "name": "WAT050 (Otley 2000: E 495650 / N 5235450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e5c4-7606-bb49-cba4197130eb",
+    "@type": "Area",
+    "id": "019edd20-e5c4-7606-bb49-cba4197130eb",
+    "lngLat": {
+      "lat": -43.155667,
+      "lng": 147.086866
+    },
+    "name": "SUP350 (Otley 2000: E 506950 / N 5221712 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e5f6-7260-996b-72b390503355",
+    "@type": "Area",
+    "id": "019edd20-e5f6-7260-996b-72b390503355",
+    "lngLat": {
+      "lat": -43.031978,
+      "lng": 146.947983
+    },
+    "name": "WAT055 (Otley 2000: E 495650 / N 5235450 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e6a7-7cde-88f1-6976c8f55eec",
+    "@type": "Area",
+    "id": "019edd20-e6a7-7cde-88f1-6976c8f55eec",
+    "lngLat": {
+      "lat": -43.025228,
+      "lng": 146.957194
+    },
+    "name": "WAT200 (Otley 2000: E 496400 / N 5236200 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e6d4-7300-8a11-e719251afea3",
+    "@type": "Area",
+    "id": "019edd20-e6d4-7300-8a11-e719251afea3",
+    "lngLat": {
+      "lat": -43.179147,
+      "lng": 147.13058
+    },
+    "name": "WOL100 (Otley 2000: E 510500 / N 5219100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/019edd20-e720-7976-a498-e5998e83077e",
+    "@type": "Area",
+    "id": "019edd20-e720-7976-a498-e5998e83077e",
+    "lngLat": {
+      "lat": -43.179147,
+      "lng": 147.13058
+    },
+    "name": "WOL100 (Otley 2000: E 510500 / N 5219100 [AGD66 UTM Z55])",
+    "observationsTotal": 0
+  },
+  {
+    "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+    "@type": "Area",
+    "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "name": "Dover Rivulet Mouth",
+    "observationsTotal": 12
+  },
+  {
+    "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+    "@type": "Area",
+    "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "name": "Dover Rivulet Lower Lagoon",
+    "observationsTotal": 8
+  }
+]

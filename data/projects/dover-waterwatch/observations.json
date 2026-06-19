@@ -1,0 +1,1452 @@
+[
+  {
+    "@id": "/observations/019ec62d-2b1e-70b0-8e4c-afaedbf2ebae",
+    "@type": "Observation",
+    "createdAt": "2026-06-14T12:48:29+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": 20,
+    "durationTravel": 10,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ec62d-2866-707c-89db-117aa6141ef0",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-14T12:48:27+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/b7ed5103e7577015492e6a92185f33f3650a9ba6.jpg",
+      "updatedAt": "2026-06-14T12:48:29+00:00"
+    },
+    "id": "019ec62d-2b1e-70b0-8e4c-afaedbf2ebae",
+    "lngLat": {
+      "lat": -43.3105898,
+      "lng": 147.0170049
+    },
+    "location": {
+      "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
+      "@type": "Area",
+      "createdAt": "2026-06-14T10:49:47+00:00",
+      "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
+      "lngLat": {
+        "lat": -43.3105898,
+        "lng": 147.0170049
+      },
+      "name": "DOV110 Dover Rivulet South Gate Market",
+      "updatedAt": "2026-06-19T00:04:43+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-14T10:20:00+00:00",
+    "updatedAt": "2026-06-14T12:50:14+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ec637-17d2-74db-b524-e148df0e251a",
+    "@type": "Observation",
+    "createdAt": "2026-06-14T12:59:19+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": 10,
+    "durationTravel": 30,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ec637-1503-7903-a2b6-9314cf911ba4",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-14T12:59:18+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/8c3519561e4aa2903288d0bf413784edf44883d8.jpg",
+      "updatedAt": "2026-06-14T12:59:19+00:00"
+    },
+    "id": "019ec637-17d2-74db-b524-e148df0e251a",
+    "lngLat": {
+      "lat": -43.2976765,
+      "lng": 147.0103537
+    },
+    "location": {
+      "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
+      "@type": "Area",
+      "createdAt": "2026-06-14T11:00:50+00:00",
+      "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
+      "lngLat": {
+        "lat": -43.2976765,
+        "lng": 147.0103537
+      },
+      "name": "DOV070 Dover Rivulet Huon Highway",
+      "updatedAt": "2026-06-14T12:59:19+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-14T11:02:00+00:00",
+    "updatedAt": "2026-06-14T12:59:19+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ec63f-1b33-7206-8be6-94b3d18c8812",
+    "@type": "Observation",
+    "createdAt": "2026-06-14T13:08:05+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": 10,
+    "durationTravel": 10,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ec63f-1159-7d6f-8994-df079a712d29",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-14T13:08:01+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/5e30dace50883b278d89d2a137b6abd071287e0f.jpg",
+      "updatedAt": "2026-06-14T13:08:05+00:00"
+    },
+    "id": "019ec63f-1b33-7206-8be6-94b3d18c8812",
+    "lngLat": {
+      "lat": -43.3155877,
+      "lng": 147.0230454
+    },
+    "location": {
+      "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
+      "@type": "Area",
+      "createdAt": "2026-06-14T10:44:34+00:00",
+      "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
+      "lngLat": {
+        "lat": -43.3155877,
+        "lng": 147.0230454
+      },
+      "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
+      "updatedAt": "2026-06-14T13:08:05+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-14T11:40:00+00:00",
+    "updatedAt": "2026-06-14T13:08:05+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ec64a-5093-760e-bf95-5cc35997280c",
+    "@type": "Observation",
+    "createdAt": "2026-06-14T13:20:19+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": 10,
+    "durationTravel": 20,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ec64a-430f-7985-bf9f-4a29691c5373",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-14T13:20:15+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d7d56e9ed38dc992c8ab6c5fc1a5a58c814a229e.jpg",
+      "updatedAt": "2026-06-14T13:20:19+00:00"
+    },
+    "id": "019ec64a-5093-760e-bf95-5cc35997280c",
+    "lngLat": {
+      "lat": -43.298965,
+      "lng": 146.9134378
+    },
+    "location": {
+      "@id": "/areas/019ec5dc-10f0-7cc0-a687-192ac165ba8e",
+      "@type": "Area",
+      "createdAt": "2026-06-14T11:19:54+00:00",
+      "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
+      "lngLat": {
+        "lat": -43.298965,
+        "lng": 146.9134378
+      },
+      "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
+      "updatedAt": "2026-06-14T13:20:19+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-14T12:50:00+00:00",
+    "updatedAt": "2026-06-14T13:20:19+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ec650-0f2e-7cad-9f82-beb9494685fc",
+    "@type": "Observation",
+    "createdAt": "2026-06-14T13:26:36+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": 15,
+    "durationTravel": 30,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ec650-0c3b-723a-a28b-508bca84140c",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-14T13:26:34+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d13af59804df274182c672065f3d3b2e0e4ab677.jpg",
+      "updatedAt": "2026-06-14T13:26:36+00:00"
+    },
+    "id": "019ec650-0f2e-7cad-9f82-beb9494685fc",
+    "lngLat": {
+      "lat": -43.334185,
+      "lng": 146.9657096
+    },
+    "location": {
+      "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
+      "@type": "Area",
+      "createdAt": "2026-06-14T11:17:02+00:00",
+      "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
+      "lngLat": {
+        "lat": -43.334185,
+        "lng": 146.9657096
+      },
+      "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
+      "updatedAt": "2026-06-14T13:26:36+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-14T12:25:00+00:00",
+    "updatedAt": "2026-06-14T13:26:36+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ed2a1-440c-7f53-bb45-18d8c8590863",
+    "@type": "Observation",
+    "createdAt": "2026-06-16T22:50:44+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ed2a1-4280-77e6-89a7-b2c1b5ba47ec",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-16T22:50:43+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/164e99f855996b0f6afbf5861372a7c400cc7c2d.jpg",
+      "updatedAt": "2026-06-16T22:50:44+00:00"
+    },
+    "id": "019ed2a1-440c-7f53-bb45-18d8c8590863",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-17T08:48:42+00:00",
+    "updatedAt": "2026-06-16T22:50:44+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ed989-865d-77f6-8200-9a713ef2ecce",
+    "@type": "Observation",
+    "createdAt": "2026-06-18T07:02:09+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ed989-84c7-789e-ae8b-ad43c5a1af1d",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-18T07:02:08+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/7ee715198288501e34c888b60308c7cbcc33aea3.jpg",
+      "updatedAt": "2026-06-18T07:02:09+00:00"
+    },
+    "id": "019ed989-865d-77f6-8200-9a713ef2ecce",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-18T16:52:00+00:00",
+    "updatedAt": "2026-06-18T07:02:09+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019edd31-b841-79d1-bb48-e7b21a2d1822",
+    "@type": "Observation",
+    "createdAt": "2026-06-19T00:04:43+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ec5b5-2190-7af3-9821-dffd2381df46",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-14T10:37:22+00:00",
+      "name": "Dover Landcare Water Quality",
+      "updatedAt": "2026-06-19T00:16:56+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": null,
+    "id": "019edd31-b841-79d1-bb48-e7b21a2d1822",
+    "lngLat": {
+      "lat": -43.3105898,
+      "lng": 147.0170049
+    },
+    "location": {
+      "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
+      "@type": "Area",
+      "createdAt": "2026-06-14T10:49:47+00:00",
+      "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
+      "lngLat": {
+        "lat": -43.3105898,
+        "lng": 147.0170049
+      },
+      "name": "DOV110 Dover Rivulet South Gate Market",
+      "updatedAt": "2026-06-19T00:04:43+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2025-11-29T10:27:00+00:00",
+    "updatedAt": "2026-06-19T00:05:24+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ede2a-9619-7b7b-828b-d98714849f07",
+    "@type": "Observation",
+    "createdAt": "2026-06-19T04:36:33+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ede2a-947a-7645-a2da-22b1836db3be",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-19T04:36:32+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/f391a6a670a42aa51e1aeea56cc4c2b9d908f115.jpg",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "id": "019ede2a-9619-7b7b-828b-d98714849f07",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-19T14:34:29+00:00",
+    "updatedAt": "2026-06-19T04:36:33+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/30c48741-cac5-4f0c-8a3d-f064e40b8912",
+    "@type": "Observation",
+    "createdAt": "2024-06-25T02:31:11+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/3f061585-6a69-48c5-9e1a-cde0fee8fb6d",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-25T02:31:10+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/7e44128ec88ec3f763b1257e3449b6e852414c48.jpg",
+      "updatedAt": "2024-06-25T02:31:10+00:00"
+    },
+    "id": "30c48741-cac5-4f0c-8a3d-f064e40b8912",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-25T12:31:04+00:00",
+    "updatedAt": "2024-06-25T02:31:11+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/474af194-3376-42a3-a0b1-a9ad97403ad0",
+    "@type": "Observation",
+    "createdAt": "2024-06-30T09:57:57+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/b8e0b38b-9fdd-4607-9ede-d9a49270c7a8",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-30T09:57:56+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/511e6982ae1bcb7d2ff43a93eb8b51fef09e862b.HEIC",
+      "updatedAt": "2024-06-30T09:57:56+00:00"
+    },
+    "id": "474af194-3376-42a3-a0b1-a9ad97403ad0",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-30T19:57:09+00:00",
+    "updatedAt": "2024-06-30T09:57:57+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/4fdc1c47-2dda-404a-bb5f-4f3384b41a73",
+    "@type": "Observation",
+    "createdAt": "2024-06-22T05:49:58+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/dcb152f0-29ab-425a-aef8-daf8ede0b074",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-22T05:49:57+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/042d9098dfd4b05896eea6a2ff18ef8eed8f1a7c.HEIC",
+      "updatedAt": "2024-06-22T05:49:57+00:00"
+    },
+    "id": "4fdc1c47-2dda-404a-bb5f-4f3384b41a73",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-22T15:49:00+00:00",
+    "updatedAt": "2024-06-22T05:49:58+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/8aac3014-0fdd-4b70-8cf6-c501caf06b3e",
+    "@type": "Observation",
+    "createdAt": "2024-06-24T02:53:18+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/ba64f069-0cbf-4410-ada9-8e8cd44e162f",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-24T02:53:17+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/fe1357da52a4074fb9dd6a74c75add3d7c30caaa.HEIC",
+      "updatedAt": "2024-06-24T02:53:17+00:00"
+    },
+    "id": "8aac3014-0fdd-4b70-8cf6-c501caf06b3e",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-24T12:52:57+00:00",
+    "updatedAt": "2024-06-24T02:53:18+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/962476b6-baed-4da2-8ef8-53584eb9843b",
+    "@type": "Observation",
+    "createdAt": "2024-06-25T02:29:48+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/62f852b7-2265-410d-8f41-3811854baa00",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-25T02:29:47+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/a8735f9e96fbbb4cf60fa394da53d02157ae55fb.jpg",
+      "updatedAt": "2024-06-25T02:29:47+00:00"
+    },
+    "id": "962476b6-baed-4da2-8ef8-53584eb9843b",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-25T12:23:54+00:00",
+    "updatedAt": "2024-06-25T02:29:48+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/a28cd0c6-97fc-472e-a7df-644a024ec551",
+    "@type": "Observation",
+    "createdAt": "2024-06-29T11:15:33+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/8961d3e5-c80f-4473-99d5-11c30ebf5789",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-29T11:15:32+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/c89cf4ae666d7470e90337cedc64dc6e48702218.jpg",
+      "updatedAt": "2024-06-29T11:15:32+00:00"
+    },
+    "id": "a28cd0c6-97fc-472e-a7df-644a024ec551",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-28T12:52:42+00:00",
+    "updatedAt": "2024-06-29T11:15:33+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/a9462e59-0bb7-432d-a69e-ce22151e535c",
+    "@type": "Observation",
+    "createdAt": "2024-06-24T02:53:04+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/c284d53a-c5c2-435a-a526-bbc79c77a57c",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-24T02:53:03+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/beb5e2429eb9bbc931f3383cef3331f21cc26404.HEIC",
+      "updatedAt": "2024-06-24T02:53:03+00:00"
+    },
+    "id": "a9462e59-0bb7-432d-a69e-ce22151e535c",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-24T12:52:05+00:00",
+    "updatedAt": "2024-06-24T02:53:04+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/b0e9f7e8-292b-462a-99a1-a500bf54c9e0",
+    "@type": "Observation",
+    "createdAt": "2024-06-26T01:11:29+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/f750a700-c1c5-484c-a5f0-3559f7264ad7",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-26T01:11:28+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/882798f182366d41d067980878a266a13d163c7d.jpg",
+      "updatedAt": "2024-06-26T01:11:28+00:00"
+    },
+    "id": "b0e9f7e8-292b-462a-99a1-a500bf54c9e0",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-26T11:11:00+00:00",
+    "updatedAt": "2024-06-26T01:11:29+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/b20337f9-f937-4ec0-8a9b-b64d9a748587",
+    "@type": "Observation",
+    "createdAt": "2024-06-22T05:49:52+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/bb88b025-ecb4-4629-96f8-63d48d038b32",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-22T05:49:51+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4eec80a9dece907869f6a072a87eed30ca41a4aa.HEIC",
+      "updatedAt": "2024-06-22T05:49:51+00:00"
+    },
+    "id": "b20337f9-f937-4ec0-8a9b-b64d9a748587",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-22T15:46:52+00:00",
+    "updatedAt": "2024-06-22T05:49:52+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/b26c74ec-48ef-4bfd-a2b6-04c26f10a3d2",
+    "@type": "Observation",
+    "createdAt": "2024-06-30T09:58:11+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/f597ab78-91d9-4060-8fb5-93b9644549bb",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-30T09:58:10+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d61cf353509a27e1203e54331a5d2258f2612073.HEIC",
+      "updatedAt": "2024-06-30T09:58:10+00:00"
+    },
+    "id": "b26c74ec-48ef-4bfd-a2b6-04c26f10a3d2",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-30T19:57:49+00:00",
+    "updatedAt": "2024-06-30T09:58:11+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/b9ab6b05-d206-4efb-91ce-5990279fe8b0",
+    "@type": "Observation",
+    "createdAt": "2024-06-23T03:32:23+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/0d782f55-a94d-41c7-a8b6-ea49ff0705de",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-23T03:32:22+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/c7eb1d9da909d10525764648f7c97e3e73c8b45f.HEIC",
+      "updatedAt": "2024-06-23T03:32:22+00:00"
+    },
+    "id": "b9ab6b05-d206-4efb-91ce-5990279fe8b0",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-14T13:39:41+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-23T13:29:50+00:00",
+    "updatedAt": "2024-06-23T03:32:23+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/bc3f4dbd-968a-4a1c-aac2-6e768fee4b04",
+    "@type": "Observation",
+    "createdAt": "2024-06-26T01:11:23+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/53b77002-598e-49c2-affe-fc7cb495e2b7",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-26T01:11:22+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/7796e3dbc6a2fd3957f709b4a7432d897a60c143.jpg",
+      "updatedAt": "2024-06-26T01:11:22+00:00"
+    },
+    "id": "bc3f4dbd-968a-4a1c-aac2-6e768fee4b04",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-26T11:08:45+00:00",
+    "updatedAt": "2024-06-26T01:11:23+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/bdf16026-1354-451b-a554-8853414ba6db",
+    "@type": "Observation",
+    "createdAt": "2024-06-23T03:32:35+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/4133e1dd-c7fd-4152-b9b7-ba55ed94ae31",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-23T03:32:34+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/fe8007b028559c5e2c9ecab4e126653e10d5da3b.HEIC",
+      "updatedAt": "2024-06-23T03:32:34+00:00"
+    },
+    "id": "bdf16026-1354-451b-a554-8853414ba6db",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-23T13:32:12+00:00",
+    "updatedAt": "2024-06-23T03:32:35+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/c1f89577-7d15-4b34-8270-f4966f4edd6d",
+    "@type": "Observation",
+    "createdAt": "2024-06-23T03:32:28+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/96cac612-b6de-4987-9477-4b84c355f6c7",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-23T03:32:27+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1595361a15b11c6e5a329dc285f74da7995cb0e2.HEIC",
+      "updatedAt": "2024-06-23T03:32:27+00:00"
+    },
+    "id": "c1f89577-7d15-4b34-8270-f4966f4edd6d",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-23T13:30:51+00:00",
+    "updatedAt": "2024-06-23T03:32:28+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/e814ec6a-87ab-408d-8c08-9395c4862244",
+    "@type": "Observation",
+    "createdAt": "2024-06-29T11:15:28+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/92bc62b4-0c34-4f73-baca-735b713074ca",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-29T11:15:28+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/0bcb457e62e7624cd6d54d0cab546f2387d7fb66.jpg",
+      "updatedAt": "2024-06-29T11:15:28+00:00"
+    },
+    "id": "e814ec6a-87ab-408d-8c08-9395c4862244",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-28T12:51:52+00:00",
+    "updatedAt": "2024-06-29T11:15:28+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/e91e15bc-be06-442a-ad76-92438bb52f6a",
+    "@type": "Observation",
+    "createdAt": "2024-06-22T05:49:46+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/31c5ef88-69ef-451b-8cef-cc68270e6c2c",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-22T05:49:45+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/024555b09c8cb816964bc79dedfbdca0b35156f7.HEIC",
+      "updatedAt": "2024-06-22T05:49:45+00:00"
+    },
+    "id": "e91e15bc-be06-442a-ad76-92438bb52f6a",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-20T13:15:26+00:00",
+    "updatedAt": "2024-06-22T05:49:46+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/f09810d8-2698-4261-97f4-32e1d117fde4",
+    "@type": "Observation",
+    "createdAt": "2024-06-25T02:30:01+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/b24975a6-b7c3-4ff2-bdf8-fecdef1f36d8",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-25T02:30:00+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/903ac11ca262ec76c27febb94a71f601d9a2c0d5.jpg",
+      "updatedAt": "2024-06-25T02:30:00+00:00"
+    },
+    "id": "f09810d8-2698-4261-97f4-32e1d117fde4",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-19T04:36:33+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2024-06-25T12:28:38+00:00",
+    "updatedAt": "2024-06-25T02:30:01+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  }
+]

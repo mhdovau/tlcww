@@ -1,0 +1,90 @@
+[
+  {
+    "@id": "/project_members/12032",
+    "@type": "ProjectMember",
+    "approved": true,
+    "approvedAt": "2024-06-18T12:06:05+00:00",
+    "createdAt": "2024-06-18T12:06:05+00:00",
+    "displayName": "mhdoverlc",
+    "id": 12032,
+    "notificationPreferences": [
+      {
+        "@id": "/notification_preferences/54032",
+        "@type": "NotificationPreference",
+        "createdAt": "2025-08-27T21:34:35+00:00",
+        "updatedAt": "2026-06-14T11:34:42+00:00"
+      },
+      {
+        "@id": "/notification_preferences/40314",
+        "@type": "NotificationPreference",
+        "createdAt": "2025-08-27T21:34:35+00:00",
+        "updatedAt": "2026-06-14T13:37:09+00:00"
+      },
+      {
+        "@id": "/notification_preferences/26596",
+        "@type": "NotificationPreference",
+        "createdAt": "2025-08-27T21:34:35+00:00",
+        "updatedAt": "2026-06-14T13:37:10+00:00"
+      },
+      {
+        "@id": "/notification_preferences/12878",
+        "@type": "NotificationPreference",
+        "createdAt": "2025-08-27T21:34:35+00:00",
+        "updatedAt": "2026-06-14T13:37:11+00:00"
+      }
+    ],
+    "projectApproveContact": true,
+    "projectId": "ac46a1a9-6755-486d-847c-a4249734819d",
+    "projectName": "Dover Waterwatch",
+    "projectState": 1,
+    "projectUrl": "dover-waterwatch",
+    "role": "manager",
+    "updatedAt": "2024-06-18T12:06:05+00:00",
+    "userId": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+    "zooniverseUsername": null
+  },
+  {
+    "@id": "/project_members/17310",
+    "@type": "ProjectMember",
+    "approved": true,
+    "approvedAt": "2026-06-19T15:32:49+00:00",
+    "createdAt": "2026-06-19T15:32:49+00:00",
+    "displayName": "DL W",
+    "id": 17310,
+    "notificationPreferences": [
+      {
+        "@id": "/notification_preferences/62331",
+        "@type": "NotificationPreference",
+        "createdAt": "2026-06-19T15:32:49+00:00",
+        "updatedAt": "2026-06-19T15:32:49+00:00"
+      },
+      {
+        "@id": "/notification_preferences/62332",
+        "@type": "NotificationPreference",
+        "createdAt": "2026-06-19T15:32:49+00:00",
+        "updatedAt": "2026-06-19T15:32:49+00:00"
+      },
+      {
+        "@id": "/notification_preferences/62333",
+        "@type": "NotificationPreference",
+        "createdAt": "2026-06-19T15:32:49+00:00",
+        "updatedAt": "2026-06-19T15:32:49+00:00"
+      },
+      {
+        "@id": "/notification_preferences/62334",
+        "@type": "NotificationPreference",
+        "createdAt": "2026-06-19T15:32:49+00:00",
+        "updatedAt": "2026-06-19T15:32:49+00:00"
+      }
+    ],
+    "projectApproveContact": true,
+    "projectId": "ac46a1a9-6755-486d-847c-a4249734819d",
+    "projectName": "Dover Waterwatch",
+    "projectState": 1,
+    "projectUrl": "dover-waterwatch",
+    "role": "member",
+    "updatedAt": "2026-06-19T15:32:49+00:00",
+    "userId": "019ee083-5d66-7a17-83d4-5409fe68c389",
+    "zooniverseUsername": null
+  }
+]
