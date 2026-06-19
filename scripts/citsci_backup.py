@@ -26,6 +26,7 @@ CITSCI_DOWNLOAD_FILES (optional) "0" to skip binary photo/file downloads
 from __future__ import annotations
 
 import base64
+import html
 import json
 import os
 import re
@@ -66,6 +67,10 @@ MAX_RETRIES = 4
 # Accumulates every file/photo reference discovered while walking the API so
 # the binaries can be downloaded once at the end (de-duplicated by URL).
 FILE_REFS: dict[str, dict] = {}
+
+# Observation detail files retained on disk that the current snapshot no longer
+# returns (removed upstream). Preserved, and listed in the manifest.
+ORPHANED_OBSERVATIONS: list[dict] = []
 
 # Records what the API actually returned for fields flagged isPrivate, so a run
 # can confirm whether the account's token is served private content at all.
@@ -564,18 +569,49 @@ def backup_observations(client: CitSciClient, pid: str, proj_dir: str,
     live."""
     obs = safe("project observations", lambda: client.collect(f"/projects/{pid}/observations"))
     if obs is None:
+        # Fetch failed — do NOT treat existing files as orphaned this run.
         return
     write_json(f"{proj_dir}/observations.json", obs)
     counts["observations"] += len(obs)
+    current_ids = set()
     for o in obs:
         oid = (o.get("id") or o.get("@id", "")).rsplit("/", 1)[-1]
         if not oid:
             continue
+        current_ids.add(oid)
         detail = safe(f"observation {oid}", lambda i=oid: client.get(f"/observations/{i}"))
         if detail is not None:
             write_json(f"{proj_dir}/observations/{oid}.json",
                        redact_private_records(detail))
             counts["observation_records"] += len(detail.get("records") or [])
+
+    record_orphaned_observations(proj_dir, current_ids, counts)
+
+
+def record_orphaned_observations(proj_dir: str, current_ids: set,
+                                 counts: dict) -> None:
+    """List observation detail files preserved on disk that the current
+    snapshot no longer returns (i.e. removed from CitSci). Files are kept;
+    they are recorded in the manifest so the deletion is visible."""
+    obs_dir = os.path.join(OUTPUT_DIR, proj_dir, "observations")
+    if not os.path.isdir(obs_dir):
+        return
+    for name in sorted(os.listdir(obs_dir)):
+        if not name.endswith(".json"):
+            continue
+        oid = name[:-5]
+        if oid in current_ids:
+            continue
+        entry = {"id": oid, "project": proj_dir.split("/", 1)[-1],
+                 "local_path": f"{proj_dir}/observations/{name}"}
+        try:  # surface a little context from the retained file
+            with open(os.path.join(obs_dir, name), encoding="utf-8") as f:
+                saved = json.load(f)
+            entry["observedAt"] = saved.get("observedAt")
+        except (json.JSONDecodeError, OSError):
+            pass
+        ORPHANED_OBSERVATIONS.append(entry)
+    counts["observations_orphaned"] = len(ORPHANED_OBSERVATIONS)
 
 
 def backup_files(client: CitSciClient, counts: dict) -> None:
@@ -590,31 +626,322 @@ def backup_files(client: CitSciClient, counts: dict) -> None:
     owned = safe("owned file list", lambda: client.collect("/file_objects")) or []
     harvest_files(owned)
 
-    refs = list(FILE_REFS.values())
-    counts["files"] = len(refs)
-    if not refs:
-        write_json("files/index.json", refs, harvest=False)
-        log("  No file references discovered.")
-        return
-    if not DOWNLOAD_FILES:
-        write_json("files/index.json", refs, harvest=False)
-        log(f"  {len(refs)} file(s) referenced; binary downloads disabled "
-            "(CITSCI_DOWNLOAD_FILES=0).")
-        return
+    refs = list(FILE_REFS.values())  # referenced by the current snapshot
+    for ref in refs:
+        ref["orphaned"] = False
 
     errors: list = []
     downloaded = 0
-    for ref in refs:
-        local = download_file(client, ref, errors)
-        ref["downloaded"] = local is not None
-        if local:
-            downloaded += 1
-    # Index is the authoritative URL -> local_path map (with download status).
-    write_json("files/index.json", refs, harvest=False)
-    log(f"  Downloaded {downloaded}/{len(refs)} file(s); {len(errors)} error(s).")
+    if refs and DOWNLOAD_FILES:
+        for ref in refs:
+            local = download_file(client, ref, errors)
+            ref["downloaded"] = local is not None
+            if local:
+                downloaded += 1
+
+    # Preservation: files downloaded by earlier runs but no longer referenced
+    # (removed from CitSci) are kept on disk and retained in the index, flagged
+    # orphaned, rather than dropped. We never delete previously backed-up files.
+    orphans = collect_orphans(refs)
+
+    index = refs + orphans
+    write_json("files/index.json", index, harvest=False)
+    counts["files"] = len(index)
+    counts["files_referenced"] = len(refs)
+    counts["files_orphaned"] = len(orphans)
+    if not DOWNLOAD_FILES:
+        log(f"  {len(refs)} file(s) referenced; downloads disabled. "
+            f"{len(orphans)} orphan(s) retained.")
+        return
+    counts["files_downloaded"] = downloaded
+    log(f"  Downloaded {downloaded}/{len(refs)} referenced file(s); "
+        f"{len(errors)} error(s); {len(orphans)} orphan(s) retained.")
     if errors:
         write_json("files/_download_errors.json", errors, harvest=False)
-    counts["files_downloaded"] = downloaded
+
+
+def collect_orphans(referenced: list[dict]) -> list[dict]:
+    """Return entries for files preserved on disk that the current snapshot no
+    longer references. Metadata (url/id/filename) is carried forward from the
+    prior index where available; bare on-disk files are listed too."""
+    known_locals = {r.get("local_path") for r in referenced}
+    known_urls = {r.get("url") for r in referenced if r.get("url")}
+    orphans: list[dict] = []
+
+    prior_index = os.path.join(OUTPUT_DIR, "files", "index.json")
+    if os.path.exists(prior_index):
+        try:
+            with open(prior_index, encoding="utf-8") as f:
+                for e in json.load(f):
+                    lp = e.get("local_path")
+                    if (e.get("url") in known_urls) or (lp in known_locals):
+                        continue
+                    if lp and os.path.exists(os.path.join(OUTPUT_DIR, lp)):
+                        e["orphaned"] = True
+                        e["downloaded"] = True
+                        orphans.append(e)
+                        known_locals.add(lp)
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Any binary on disk with no index entry at all (e.g. older backups).
+    files_dir = os.path.join(OUTPUT_DIR, FILES_SUBDIR)
+    if os.path.isdir(files_dir):
+        for name in sorted(os.listdir(files_dir)):
+            lp = f"{FILES_SUBDIR}/{name}"
+            if lp not in known_locals:
+                orphans.append({"url": None, "id": "", "filename": name,
+                                "local_path": lp, "downloaded": True,
+                                "orphaned": True})
+                known_locals.add(lp)
+    return orphans
+
+
+# ---------------------------------------------------------------------------
+# Human-readable markdown rendering
+#
+# Generic: driven entirely by whatever fields/records each datasheet defines —
+# no assumptions about specific field names or record types.
+# ---------------------------------------------------------------------------
+
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".svg")
+
+
+def _load(path: str):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _txt(value) -> str:
+    """Plain text from a possibly-HTML string, collapsed to one line."""
+    if value is None:
+        return ""
+    s = re.sub(r"<[^>]+>", " ", str(value))
+    return re.sub(r"\s+", " ", html.unescape(s)).strip()
+
+
+def _cell(value) -> str:
+    """Escape a value for use inside a markdown table cell."""
+    return _txt(value).replace("\\", "\\\\").replace("|", "\\|") or "—"
+
+
+def _relurl(base: str, local_path: str, md_dir: str) -> str:
+    return os.path.relpath(os.path.join(base, local_path), md_dir).replace(os.sep, "/")
+
+
+def _file_links(files, base: str, md_dir: str) -> str:
+    """Render a record's attached files as image embeds / document links,
+    chosen generically by file extension."""
+    out = []
+    for fobj in files or []:
+        if not isinstance(fobj, dict):
+            continue
+        local = fobj.get("localFile")
+        name = fobj.get("filename") or (
+            os.path.basename(local) if local else None) or "file"
+        if local:
+            rel = _relurl(base, local, md_dir)
+            if name.lower().endswith(IMAGE_EXTS):
+                out.append(f"[![{_txt(name)}]({rel})]({rel})")
+            else:
+                out.append(f"[{_txt(name)}]({rel})")
+        else:
+            url = fobj.get("path") or fobj.get("file")
+            if isinstance(url, str):
+                out.append(f"[{_txt(name)}]({url})")
+    return " ".join(out)
+
+
+def _record_value_md(rec: dict, base: str, md_dir: str) -> str:
+    """Best-effort generic rendering of whatever value a record holds."""
+    if rec.get("files"):
+        links = _file_links(rec["files"], base, md_dir)
+        if links:
+            return links
+    value = rec.get("value")
+    if value not in (None, ""):
+        if isinstance(value, str) and value.startswith("http"):
+            return f"[link]({value})"
+        return _cell(value)
+    opt = rec.get("optionValue")
+    if isinstance(opt, dict):
+        disp = opt.get("value") or opt.get("label") or opt.get("name")
+        if disp:
+            return _cell(disp)
+    multi = rec.get("multiSelectOptionValues")
+    if isinstance(multi, list) and multi:
+        vals = [o.get("value") or o.get("label") or o.get("name")
+                for o in multi if isinstance(o, dict)]
+        vals = [v for v in vals if v]
+        if vals:
+            return _cell(", ".join(map(str, vals)))
+    return "—"
+
+
+def _iter_records(records, depth=0):
+    for r in sorted(records or [], key=lambda x: (x.get("orderNumber") or 0)):
+        if isinstance(r, dict):
+            yield depth, r
+            if r.get("records"):
+                yield from _iter_records(r["records"], depth + 1)
+
+
+def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
+    when = _txt(obs.get("observedAt")) or _txt(obs.get("createdAt")) or "(undated)"
+    loc = (obs.get("location") or {}).get("name") if isinstance(obs.get("location"), dict) else None
+    who = (obs.get("user") or {}).get("displayName") if isinstance(obs.get("user"), dict) else None
+    oid = obs.get("id") or (obs.get("@id", "").rsplit("/", 1)[-1])
+
+    lines = [f"### {when}" + (f" — {_txt(loc)}" if loc else "")]
+    meta = []
+    if who:
+        meta.append(f"**Observer:** {_txt(who)}")
+    ll = obs.get("lngLat")
+    if isinstance(ll, dict) and ll.get("lat") is not None:
+        meta.append(f"**Location:** {ll.get('lat')}, {ll.get('lng')}")
+    meta.append(f"**ID:** `{oid}`")
+    lines.append("  ·  ".join(meta))
+
+    fp = obs.get("featuredPhoto")
+    if isinstance(fp, dict) and (fp.get("localFile") or fp.get("path")):
+        lines += ["", _file_links([fp], base, md_dir)]
+    if obs.get("comments"):
+        lines += ["", f"> {_txt(obs['comments'])}"]
+
+    rows = []
+    for depth, rec in _iter_records(obs.get("records")):
+        label = _txt(rec.get("label"))
+        val = _record_value_md(rec, base, md_dir)
+        if not label and val == "—":
+            continue
+        prefix = "&nbsp;&nbsp;&nbsp;&nbsp;" * depth
+        rows.append(f"| {prefix}{_cell(label) if label else '—'} | {val} |")
+    if rows:
+        lines += ["", "| Field | Value |", "| --- | --- |", *rows]
+    lines.append("")
+    return lines
+
+
+def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
+                        field_defs: list, observations: list) -> None:
+    md_dir = os.path.dirname(os.path.join(base, ds_dir, "README.md"))
+    lines = [f"# {_txt(ds_name) or 'Datasheet'}", "",
+             "_Auto-generated from the backup. Do not edit — regenerated each run._",
+             "", f"**Observations:** {len(observations)}", ""]
+
+    if field_defs:
+        lines += ["## Fields", ""]
+        for _, fd in _iter_records(field_defs):
+            label = _txt(fd.get("label"))
+            if not label:
+                continue
+            t = fd.get("recordType")
+            priv = " _(private)_" if fd.get("isPrivate") else ""
+            lines.append(f"- **{label}**" + (f" — `{t}`" if t else "") + priv)
+        lines.append("")
+
+    lines += ["## Observations", ""]
+    if not observations:
+        lines.append("_No observations._")
+    else:
+        for obs in sorted(observations,
+                          key=lambda o: o.get("observedAt") or "", reverse=True):
+            lines += render_observation_md(obs, base, md_dir)
+
+    out = os.path.join(base, ds_dir, "README.md")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines).rstrip() + "\n")
+
+
+def render_project_md(base: str, slug: str) -> None:
+    pdir = os.path.join(base, "projects", slug)
+    project = _load(os.path.join(pdir, "project.json")) or {}
+    locations = _load(os.path.join(pdir, "locations.json")) or []
+    members = _load(os.path.join(pdir, "members.json")) or []
+
+    # Load all observation detail files (includes preserved/orphaned ones).
+    observations = []
+    obs_dir = os.path.join(pdir, "observations")
+    if os.path.isdir(obs_dir):
+        for name in sorted(os.listdir(obs_dir)):
+            if name.endswith(".json"):
+                o = _load(os.path.join(obs_dir, name))
+                if isinstance(o, dict):
+                    observations.append(o)
+
+    # Datasheets: map id -> (dir, name); group observations by datasheet id.
+    ds_dir_root = os.path.join(pdir, "datasheets")
+    datasheets = []  # (ds_slug, name, id, field_defs)
+    if os.path.isdir(ds_dir_root):
+        for ds_slug in sorted(os.listdir(ds_dir_root)):
+            dpath = os.path.join(ds_dir_root, ds_slug)
+            if not os.path.isdir(dpath):
+                continue
+            ds = _load(os.path.join(dpath, "datasheet.json")) or {}
+            ds_id = (ds.get("id") or ds.get("@id", "")).rsplit("/", 1)[-1]
+            fields = _load(os.path.join(dpath, "records.json")) or []
+            datasheets.append((ds_slug, ds.get("name") or ds_slug, ds_id, fields))
+
+    grouped: dict[str, list] = {}
+    for o in observations:
+        d = o.get("datasheet") or {}
+        did = (d.get("id") or d.get("@id", "")).rsplit("/", 1)[-1] if isinstance(d, dict) else ""
+        grouped.setdefault(did, []).append(o)
+
+    # Render each datasheet view and collect links.
+    ds_links = []
+    for ds_slug, ds_name, ds_id, fields in datasheets:
+        obs = grouped.get(ds_id, [])
+        render_datasheet_md(base, f"projects/{slug}/datasheets/{ds_slug}",
+                            ds_name, fields, obs)
+        ds_links.append((ds_name, f"datasheets/{ds_slug}/README.md", len(obs)))
+
+    # Project summary.
+    name = _txt(project.get("name")) or slug
+    lines = [f"# {name}", "",
+             "_Auto-generated from the backup. Do not edit — regenerated each run._", ""]
+    desc = _txt(project.get("description"))
+    if desc:
+        lines += [desc, ""]
+    lines += ["## Overview", "",
+              f"- **Observations:** {len(observations)}",
+              f"- **Locations:** {len(locations)}",
+              f"- **Members:** {len(members)}",
+              f"- **Datasheets:** {len(datasheets)}"]
+    if project.get("urlField"):
+        lines.append(f"- **CitSci URL:** https://citsci.org/projects/{project['urlField']}")
+    lines.append("")
+
+    lines += ["## Datasheets", ""]
+    if ds_links:
+        for ds_name, link, n in ds_links:
+            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s)")
+    else:
+        lines.append("_No datasheets._")
+    lines.append("")
+
+    out = os.path.join(pdir, "README.md")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines).rstrip() + "\n")
+
+
+def render_markdown(base: str | None = None) -> int:
+    """Render human-readable markdown views for every backed-up project."""
+    base = base or OUTPUT_DIR
+    projects_dir = os.path.join(base, "projects")
+    if not os.path.isdir(projects_dir):
+        return 0
+    n = 0
+    for slug in sorted(os.listdir(projects_dir)):
+        if os.path.isdir(os.path.join(projects_dir, slug)):
+            render_project_md(base, slug)
+            n += 1
+    log(f"Rendered markdown views for {n} project(s).")
+    return n
 
 
 def main() -> int:
@@ -632,7 +959,8 @@ def main() -> int:
     }
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
               "observations": 0, "observation_records": 0, "locations": 0,
-              "files": 0, "files_downloaded": 0}
+              "files": 0, "files_referenced": 0, "files_orphaned": 0,
+              "files_downloaded": 0}
     manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)
@@ -643,15 +971,20 @@ def main() -> int:
     backup_account(client, uid, manifest)
     backup_projects(client, uid, counts)
     backup_files(client, counts)
+    render_markdown()
 
     manifest["counts"] = counts
     manifest["private_fields"] = PRIVATE_STATS
+    manifest["orphaned_observations"] = sorted(
+        ORPHANED_OBSERVATIONS, key=lambda e: e["id"])
     manifest["completed_at"] = datetime.now(timezone.utc).isoformat()
     manifest["duration_seconds"] = round(
         (datetime.now(timezone.utc) - started).total_seconds(), 1)
     write_json("manifest.json", manifest, harvest=False)
 
     log(f"Backup complete: {json.dumps(counts)}")
+    if ORPHANED_OBSERVATIONS:
+        log(f"Orphaned observations retained: {len(ORPHANED_OBSERVATIONS)}")
     if PRIVATE_STATS["private_records_seen"]:
         log(f"Private fields: API returned content for "
             f"{PRIVATE_STATS['private_records_with_content']}/"

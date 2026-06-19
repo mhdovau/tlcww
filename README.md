@@ -62,17 +62,52 @@ data/
 │           └── <datasheet-slug>/
 │               ├── datasheet.json
 │               └── records.json   # field definitions for the datasheet
+├── projects/<project-slug>/README.md                  # rendered project summary
+├── projects/<project-slug>/datasheets/<ds>/README.md  # rendered observations
 └── files/
     ├── index.json                 # URL → local_path map (+ download status)
     ├── _download_errors.json      # any binaries that couldn't be fetched
     └── photos_and_files/          # downloaded photos / documents / resources
 ```
 
+### Human-readable views
+
+Each run also renders browsable markdown (so the archive is legible without
+parsing JSON, and GitHub shows it automatically when you open a folder):
+
+- `projects/<slug>/README.md` — project summary (description, counts) with links
+  to each datasheet's view.
+- `projects/<slug>/datasheets/<ds>/README.md` — the datasheet's field list plus
+  every observation, with all collected values in a table and inline photo
+  thumbnails / document links resolved to the local copies under
+  `files/photos_and_files/`.
+
+The renderer is generic: it reflects whatever fields and record types each
+datasheet defines, with no project-specific assumptions.
+
 Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
 a record's attached photo, a project resource) keeps its original `path` URL
 **and** gains a `localFile` property pointing at the downloaded copy under
 `files/photos_and_files/`. `files/index.json` is the authoritative map of every
-referenced URL to its `local_path` and whether the binary was `downloaded`.
+referenced URL to its `local_path`, whether the binary was `downloaded`, and
+whether it is now `orphaned`.
+
+### Nothing is ever deleted (preservation)
+
+This is an archival backup, so data removed upstream is **kept**, not dropped.
+The script never deletes files, and the workflow stages with `git add` (never
+`git add -A`), so a photo, file or observation removed from CitSci stays on disk
+and in git history. Files no longer referenced by the current snapshot are
+retained and flagged `"orphaned": true` in `files/index.json` (the prior URL is
+carried forward where known), and the manifest reports `files_referenced` vs
+`files_orphaned` counts.
+
+Observation detail files are handled the same way: an observation that
+disappears upstream keeps its `projects/<slug>/observations/<id>.json` on disk
+and is listed under `orphaned_observations` in `manifest.json` (with its id,
+project and `observedAt`), so removals are visible at a glance. Orphans are only
+recorded when the observation list was fetched successfully — a failed fetch
+never flags existing files as removed.
 
 ### Notes
 

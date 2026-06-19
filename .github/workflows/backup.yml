@@ -54,6 +54,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # `git add` (not `git add -A`) stages new/updated files only and never
+          # removes files. Combined with the script not deleting anything, data
+          # removed from CitSci is preserved on disk as an orphan, not dropped.
           git add data
           if git diff --cached --quiet; then
             echo "No changes in backup."
