@@ -64,6 +64,14 @@ MAX_RETRIES = 4
 # the binaries can be downloaded once at the end (de-duplicated by URL).
 FILE_REFS: dict[str, dict] = {}
 
+# Records what the API actually returned for fields flagged isPrivate, so a run
+# can confirm whether the account's token is served private content at all.
+PRIVATE_STATS: dict = {
+    "private_records_seen": 0,
+    "private_records_with_content": 0,
+    "content_keys_returned": {},
+}
+
 
 def log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc):%H:%M:%S}] {msg}", flush=True)
@@ -234,20 +242,46 @@ def harvest_files(obj) -> None:
             harvest_files(v)
 
 
+# The content-bearing keys of an observation record. For a record flagged
+# isPrivate we blank these and leave every other key (label, recordType,
+# orderNumber, description, isPrivate, timestamps, nested structure) intact.
+PRIVATE_VALUE_KEYS = ("value", "optionValue", "multiSelectOptionValues",
+                      "organism", "files")
+
+
 def redact_private_records(observation: dict) -> dict:
-    """Blank the value/files of observation records flagged isPrivate unless
-    CITSCI_INCLUDE_PRIVATE=1. Keeps the field definition, drops the content."""
-    if INCLUDE_PRIVATE or not isinstance(observation, dict):
+    """Withhold the *content* of records flagged isPrivate (unless
+    CITSCI_INCLUDE_PRIVATE=1), preserving all other field metadata.
+
+    Always records, in PRIVATE_STATS, whether the API actually returned any
+    content for private fields — so a run can prove what the account can see."""
+    if not isinstance(observation, dict):
         return observation
 
     def walk(rec):
         if isinstance(rec, dict):
-            if rec.get("isPrivate") and ("value" in rec or "files" in rec):
-                rec = dict(rec)
-                if rec.get("value") is not None:
-                    rec["value"] = "***PRIVATE — withheld from backup***"
-                if rec.get("files"):
-                    rec["files"] = []
+            if rec.get("isPrivate"):
+                # Did the API actually send content for this private field?
+                returned = [k for k in PRIVATE_VALUE_KEYS
+                            if rec.get(k) not in (None, [], "", {})]
+                if rec.get("isPrivate") and "recordType" in rec:
+                    PRIVATE_STATS["private_records_seen"] += 1
+                    if returned:
+                        PRIVATE_STATS["private_records_with_content"] += 1
+                        for k in returned:
+                            PRIVATE_STATS["content_keys_returned"][k] = \
+                                PRIVATE_STATS["content_keys_returned"].get(k, 0) + 1
+                if returned and not INCLUDE_PRIVATE:
+                    rec = dict(rec)
+                    if rec.get("value") not in (None, ""):
+                        rec["value"] = "***PRIVATE — withheld from backup***"
+                    for k in ("optionValue", "organism"):
+                        if rec.get(k) not in (None, {}):
+                            rec[k] = None
+                    if rec.get("multiSelectOptionValues"):
+                        rec["multiSelectOptionValues"] = []
+                    if rec.get("files"):
+                        rec["files"] = []
             return {k: walk(v) for k, v in rec.items()}
         if isinstance(rec, list):
             return [walk(v) for v in rec]
@@ -566,12 +600,18 @@ def main() -> int:
     backup_files(client, counts)
 
     manifest["counts"] = counts
+    manifest["private_fields"] = PRIVATE_STATS
     manifest["completed_at"] = datetime.now(timezone.utc).isoformat()
     manifest["duration_seconds"] = round(
         (datetime.now(timezone.utc) - started).total_seconds(), 1)
-    write_json("manifest.json", manifest)
+    write_json("manifest.json", manifest, harvest=False)
 
     log(f"Backup complete: {json.dumps(counts)}")
+    if PRIVATE_STATS["private_records_seen"]:
+        log(f"Private fields: API returned content for "
+            f"{PRIVATE_STATS['private_records_with_content']}/"
+            f"{PRIVATE_STATS['private_records_seen']} private record(s) "
+            f"(withheld={not INCLUDE_PRIVATE}).")
     return 0
 
 
