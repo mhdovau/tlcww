@@ -1,0 +1,220 @@
+{
+  "@context": "/contexts/Observation",
+  "@id": "/observations/bdf16026-1354-451b-a554-8853414ba6db",
+  "@type": "Observation",
+  "comments": null,
+  "createdAt": "2024-06-23T03:32:35+00:00",
+  "datasheet": {
+    "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+    "@type": "Datasheet",
+    "createdAt": "2024-06-19T22:01:25+00:00",
+    "dateFormat": "datetime",
+    "name": "Dover Rivulet Mouth Observations",
+    "updatedAt": "2026-06-14T12:36:19+00:00"
+  },
+  "durationSetup": null,
+  "durationTravel": null,
+  "featuredPhoto": {
+    "@id": "/file_objects/4133e1dd-c7fd-4152-b9b7-ba55ed94ae31",
+    "@type": "https://schema.org/MediaObject",
+    "createdAt": "2024-06-23T03:32:34+00:00",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/fe8007b028559c5e2c9ecab4e126653e10d5da3b.HEIC",
+    "updatedAt": "2024-06-23T03:32:34+00:00"
+  },
+  "files": [],
+  "id": "bdf16026-1354-451b-a554-8853414ba6db",
+  "isPrivate": false,
+  "lngLat": {
+    "lat": -43.31622,
+    "lng": 147.02357
+  },
+  "location": {
+    "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+    "@type": "Area",
+    "createdAt": "2024-06-22T05:49:46+00:00",
+    "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "name": "Dover Rivulet Mouth",
+    "updatedAt": "2026-06-19T04:36:33+00:00"
+  },
+  "observationEndedAt": null,
+  "observedAt": "2024-06-23T13:32:12+00:00",
+  "project": {
+    "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
+    "@type": "Project",
+    "createdAt": "2024-06-18T12:06:05+00:00",
+    "id": "ac46a1a9-6755-486d-847c-a4249734819d",
+    "isPrivate": false,
+    "isSciStarter": true,
+    "isSciStarterParticipation": false,
+    "name": "Dover Waterwatch",
+    "sciStarterID": 100009222,
+    "updatedAt": "2026-06-19T04:36:33+00:00",
+    "urlField": "dover-waterwatch"
+  },
+  "records": [
+    {
+      "@id": "/observation_records/2071723",
+      "@type": "ObservationRecord",
+      "createdAt": "2024-06-23T03:32:35+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/13432",
+        "@type": "DatasheetRecord",
+        "createdAt": "2024-06-19T22:13:57+00:00",
+        "updatedAt": "2024-06-19T22:18:15+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2071723,
+      "isPrivate": false,
+      "label": "Rivulet Mouth State",
+      "multiSelectOptionValues": [],
+      "optionValue": {
+        "@id": "/option_values/18795",
+        "@type": "OptionValue",
+        "createdAt": "2024-06-19T22:13:57+00:00",
+        "dataType": "text",
+        "id": 18795,
+        "isCustomValue": false,
+        "isDefault": false,
+        "orderNumber": 4,
+        "updatedAt": "2024-06-19T22:19:14+00:00",
+        "value": "Open - Flowing Into Lagoon"
+      },
+      "orderNumber": 1,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "radio",
+      "records": [],
+      "updatedAt": "2024-06-23T03:32:35+00:00",
+      "value": "Open - Flowing Into Lagoon"
+    },
+    {
+      "@id": "/observation_records/2071724",
+      "@type": "ObservationRecord",
+      "createdAt": "2024-06-23T03:32:35+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/13433",
+        "@type": "DatasheetRecord",
+        "createdAt": "2024-06-19T22:13:57+00:00",
+        "updatedAt": "2024-06-19T22:18:15+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2071724,
+      "isPrivate": false,
+      "label": "Tide Height (m)",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 2,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "number",
+      "records": [],
+      "updatedAt": "2024-06-23T03:32:35+00:00",
+      "value": "0.8"
+    },
+    {
+      "@id": "/observation_records/2071725",
+      "@type": "ObservationRecord",
+      "createdAt": "2024-06-23T03:32:35+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/13434",
+        "@type": "DatasheetRecord",
+        "createdAt": "2024-06-19T22:13:57+00:00",
+        "updatedAt": "2024-06-19T22:18:15+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2071725,
+      "isPrivate": false,
+      "label": "Lagoon Height (m)",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 3,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "number",
+      "records": [],
+      "updatedAt": "2024-06-23T03:32:35+00:00",
+      "value": "0.8"
+    },
+    {
+      "@id": "/observation_records/2071726",
+      "@type": "ObservationRecord",
+      "createdAt": "2024-06-23T03:32:35+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/13437",
+        "@type": "DatasheetRecord",
+        "createdAt": "2024-06-19T22:18:14+00:00",
+        "updatedAt": "2024-06-19T23:03:32+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2071726,
+      "isPrivate": false,
+      "label": "Dover Rainfall (24h to observation mm)",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 4,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "number",
+      "records": [],
+      "updatedAt": "2024-06-23T03:32:35+00:00",
+      "value": "2"
+    },
+    {
+      "@id": "/observation_records/2071727",
+      "@type": "ObservationRecord",
+      "createdAt": "2024-06-23T03:32:35+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/13436",
+        "@type": "DatasheetRecord",
+        "createdAt": "2024-06-19T22:13:57+00:00",
+        "updatedAt": "2024-06-19T22:25:53+00:00"
+      },
+      "description": null,
+      "files": [
+        {
+          "@id": "/file_objects/4133e1dd-c7fd-4152-b9b7-ba55ed94ae31",
+          "@type": "https://schema.org/MediaObject",
+          "createdAt": "2024-06-23T03:32:34+00:00",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/fe8007b028559c5e2c9ecab4e126653e10d5da3b.HEIC",
+          "updatedAt": "2024-06-23T03:32:34+00:00"
+        }
+      ],
+      "id": 2071727,
+      "isPrivate": false,
+      "label": "Noteworthy Photograph",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 6,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "image",
+      "records": [],
+      "updatedAt": "2024-06-23T03:32:35+00:00",
+      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/fe8007b028559c5e2c9ecab4e126653e10d5da3b.HEIC"
+    }
+  ],
+  "updatedAt": "2024-06-23T03:32:35+00:00",
+  "user": {
+    "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+    "@type": "User",
+    "createdAt": "2024-06-18T04:24:45+00:00",
+    "displayName": "mhdoverlc",
+    "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+    "picture": {
+      "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2024-06-18T11:38:35+00:00",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+      "updatedAt": "2024-06-18T11:38:35+00:00"
+    },
+    "updatedAt": "2026-06-19T12:59:47+00:00"
+  }
+}
