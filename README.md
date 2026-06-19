@@ -18,7 +18,8 @@ account and every project you own/manage, and commits a structured snapshot
    | `CITSCI_USER` | yes | Account email used to log in |
    | `CITSCI_PASS` | yes | Account password |
    | `CITSCI_USER_ID` | optional | Your user id — only needed if it can't be auto-resolved from the login token |
-   | `CITSCI_FILES_BASE` | optional | Base URL for downloading photo/file binaries when a file record stores only a relative path |
+   | `CITSCI_FILES_BASE` | optional | Base URL for downloading file binaries that store only a relative path (most are already absolute S3 URLs) |
+   | `CITSCI_INCLUDE_PRIVATE` | optional | `1` to include the values of fields flagged *private* (e.g. "Monitor's Name(s) - NOT published publically"). Default `0` — withheld so they aren't published. Only set this if the repo is private. |
 
 3. Run it: **Actions → CitSci Backup → Run workflow** (or wait for the weekly
    schedule). The first manual run is the easiest way to confirm credentials
@@ -50,29 +51,41 @@ data/
 │       ├── project.json           # full project settings
 │       ├── stats.json
 │       ├── members.json
-│       ├── locations.json
+│       ├── locations.json         # every project area/location
 │       ├── resources.json
 │       ├── project_posts.json
 │       ├── invites.json
-│       ├── observations.json      # all observations in the project
+│       ├── observations.json      # observation list (summary)
+│       ├── observations/
+│       │   └── <id>.json          # full detail: field values + attached files
 │       └── datasheets/
 │           └── <datasheet-slug>/
 │               ├── datasheet.json
-│               └── records.json
+│               └── records.json   # field definitions for the datasheet
 └── files/
-    ├── index.json                 # metadata for every file object
+    ├── index.json                 # every file/photo reference discovered
     ├── _download_errors.json      # any binaries that couldn't be fetched
-    └── photos/                    # downloaded photo/file binaries
+    └── photos/                    # downloaded photo / resource binaries
 ```
 
 ### Notes
 
 - **Credentials are never written to disk.** Password and third-party tokens
-  (Google, Airtable, SciStarter, reCAPTCHA, JWTs) are stripped from saved JSON.
-- **Photo/file downloads are best-effort.** File records expose a `file` /
-  `path`; if the binary lives at a relative path, set `CITSCI_FILES_BASE` so
-  the script can build the full URL. Anything that fails to download is recorded
-  in `files/_download_errors.json` and does not stop the run.
+  (Google, Airtable, SciStarter, reCAPTCHA, JWTs) are stripped from saved JSON,
+  and email addresses are masked (e.g. `s***@i***`).
+- **Observation detail.** The project observation *list* omits submitted values
+  and photos, so each observation is also fetched individually
+  (`/observations/{id}`) to capture `records[].value`, attached photos and
+  comments.
+- **Photos / files.** Uploads are absolute S3 URLs embedded across observations,
+  records, project resources and avatars (the `/file_objects` collection only
+  lists files the account *owns*). The script harvests every referenced URL,
+  lists them in `files/index.json`, and downloads the binaries to
+  `files/photos/`. Our auth token is never sent to the file host. Failures are
+  recorded in `files/_download_errors.json` and don't stop the run.
+- **Private fields.** Values of fields the datasheet marks *private* are
+  withheld by default (see `CITSCI_INCLUDE_PRIVATE`) so volunteer PII isn't
+  published to a public repo.
 - **Resilient by design.** A single failing endpoint is logged and skipped
   rather than aborting the whole backup. Network/5xx/429 responses are retried
   with exponential backoff, and an expired access token is refreshed mid-run.
