@@ -97,13 +97,16 @@ class CitSciClient:
     # -- low level ---------------------------------------------------------
     def _request(self, method: str, path: str, *, body: dict | None = None,
                  accept: str = "application/ld+json", raw: bool = False,
-                 auth: bool = True, _retry_auth: bool = True):
+                 auth: bool = True, headers_extra: dict | None = None,
+                 not_modified_ok: bool = False, _retry_auth: bool = True):
         url = path if path.startswith("http") else f"{API_BASE}{path}"
         data = None
         headers = {"Accept": "*/*" if raw else accept, "User-Agent": USER_AGENT}
         if body is not None:
             data = json.dumps(body).encode()
             headers["Content-Type"] = "application/ld+json"
+        if headers_extra:
+            headers.update(headers_extra)
         # Only attach our bearer token to the API host; never leak it to
         # third-party file hosts (e.g. the public S3 bucket).
         if self.token and auth and url.startswith(API_BASE):
@@ -119,6 +122,9 @@ class CitSciClient:
                         return payload, resp.headers
                     return json.loads(payload) if payload else None
             except urllib.error.HTTPError as e:
+                # Conditional request: object unchanged since the stored ETag.
+                if not_modified_ok and e.code == 304:
+                    return (None, e.headers) if raw else None
                 # Token expired mid-run: refresh once and retry.
                 if e.code == 401 and _retry_auth and self.refresh_token and self.token:
                     log("Access token rejected (401); refreshing…")
@@ -410,9 +416,14 @@ def safe(label: str, fn):
     return None
 
 
-def download_file(client: CitSciClient, record: dict, errors: list) -> str | None:
-    """Best-effort download of a file/photo binary. Returns the relative
-    local path on success (the same `local_path` recorded in the index)."""
+def download_file(client: CitSciClient, record: dict, errors: list,
+                  prior_etag: str | None = None) -> str | None:
+    """Best-effort download of a file/photo binary. Returns "downloaded" or
+    "cached" on success (the file is on disk either way), or None on failure.
+
+    Uses a conditional GET (`If-None-Match`) against the S3 object's ETag so an
+    unchanged file is not re-fetched — S3 returns 304 and we keep the local
+    copy. The ETag/size are recorded on the record for the index."""
     file_url = record.get("url") or record.get("file") or ""
     path = record.get("path") or ""
     fid = record.get("id", "")
@@ -432,12 +443,24 @@ def download_file(client: CitSciClient, record: dict, errors: list) -> str | Non
     rel_path = record.get("local_path") or \
         f"{FILES_SUBDIR}/{local_name_for(url, fid, filename)}"
     out_path = os.path.join(OUTPUT_DIR, rel_path)
+
+    # Only send If-None-Match if we still hold the matching local file.
+    cond = {}
+    if prior_etag and os.path.exists(out_path):
+        cond["If-None-Match"] = prior_etag
     try:
-        payload, _ = client._request("GET", url, raw=True)
+        payload, hdrs = client._request("GET", url, raw=True, headers_extra=cond or None,
+                                        not_modified_ok=True)
+        if payload is None:  # 304 Not Modified — keep cached copy
+            record["etag"] = prior_etag
+            record["content_length"] = os.path.getsize(out_path)
+            return "cached"
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
         with open(out_path, "wb") as f:
             f.write(payload)
-        return rel_path
+        record["etag"] = hdrs.get("ETag")
+        record["content_length"] = len(payload)
+        return "downloaded"
     except Exception as e:  # noqa: BLE001
         errors.append({"id": fid, "filename": filename, "url": url, "reason": str(e)})
         return None
@@ -630,14 +653,20 @@ def backup_files(client: CitSciClient, counts: dict) -> None:
     for ref in refs:
         ref["orphaned"] = False
 
+    # Prior ETags from the last run's index let us skip unchanged downloads.
+    prior_etags = load_prior_etags()
+
     errors: list = []
-    downloaded = 0
+    downloaded = cached = 0
     if refs and DOWNLOAD_FILES:
         for ref in refs:
-            local = download_file(client, ref, errors)
-            ref["downloaded"] = local is not None
-            if local:
+            status = download_file(client, ref, errors,
+                                   prior_etag=prior_etags.get(ref.get("url")))
+            ref["downloaded"] = status is not None
+            if status == "downloaded":
                 downloaded += 1
+            elif status == "cached":
+                cached += 1
 
     # Preservation: files downloaded by earlier runs but no longer referenced
     # (removed from CitSci) are kept on disk and retained in the index, flagged
@@ -654,10 +683,26 @@ def backup_files(client: CitSciClient, counts: dict) -> None:
             f"{len(orphans)} orphan(s) retained.")
         return
     counts["files_downloaded"] = downloaded
-    log(f"  Downloaded {downloaded}/{len(refs)} referenced file(s); "
+    counts["files_unchanged"] = cached
+    log(f"  Files: {downloaded} downloaded, {cached} unchanged (304), "
         f"{len(errors)} error(s); {len(orphans)} orphan(s) retained.")
     if errors:
         write_json("files/_download_errors.json", errors, harvest=False)
+
+
+def load_prior_etags() -> dict:
+    """Map url -> ETag from the previous run's files/index.json, if present."""
+    prior = os.path.join(OUTPUT_DIR, "files", "index.json")
+    out: dict = {}
+    if os.path.exists(prior):
+        try:
+            with open(prior, encoding="utf-8") as f:
+                for e in json.load(f):
+                    if e.get("url") and e.get("etag"):
+                        out[e["url"]] = e["etag"]
+        except (json.JSONDecodeError, OSError):
+            pass
+    return out
 
 
 def collect_orphans(referenced: list[dict]) -> list[dict]:
@@ -989,7 +1034,7 @@ def main() -> int:
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
               "observations": 0, "observation_records": 0, "locations": 0,
               "files": 0, "files_referenced": 0, "files_orphaned": 0,
-              "files_downloaded": 0}
+              "files_downloaded": 0, "files_unchanged": 0}
     manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)

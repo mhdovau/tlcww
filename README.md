@@ -89,8 +89,17 @@ Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
 a record's attached photo, a project resource) keeps its original `path` URL
 **and** gains a `localFile` property pointing at the downloaded copy under
 `files/photos_and_files/`. `files/index.json` is the authoritative map of every
-referenced URL to its `local_path`, whether the binary was `downloaded`, and
-whether it is now `orphaned`.
+referenced URL to its `local_path`, its `etag` and `content_length`, whether the
+binary was `downloaded`, and whether it is now `orphaned`.
+
+### Efficient re-fetches (conditional GET)
+
+File downloads use the stored S3 `ETag` with an `If-None-Match` conditional
+`GET`: unchanged files return `304 Not Modified` and are not re-downloaded, so
+repeated/daily runs transfer almost nothing. A genuinely changed object returns
+`200` and is re-fetched (and its ETag updated). The manifest reports
+`files_downloaded` vs `files_unchanged`. Because each backup is idempotent and
+the commit step skips no-op manifest-only changes, running daily is cheap.
 
 ### Nothing is ever deleted (preservation)
 
