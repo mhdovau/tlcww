@@ -20,5 +20,93 @@
     "type": "file",
     "updatedAt": "2026-06-20T00:52:14+00:00",
     "url": null
+  },
+  {
+    "@id": "/project_resources/019ee2d3-67b7-7f49-bf24-e385549f6dfc",
+    "@type": "ProjectResource",
+    "createdAt": "2026-06-20T02:19:26+00:00",
+    "file": {
+      "@id": "/file_objects/019ee2d3-63db-71c4-8523-7c439fa392aa",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T02:19:23+00:00",
+      "filename": "4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+      "id": "019ee2d3-63db-71c4-8523-7c439fa392aa",
+      "localFile": "files/photos_and_files/019ee2d3-63db-71c4-8523-7c439fa392aa-4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+      "mimeType": "application/pdf",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+      "updatedAt": "2026-06-20T02:19:25+00:00"
+    },
+    "id": "019ee2d3-67b7-7f49-bf24-e385549f6dfc",
+    "name": "part_3_developing_a_monitoring_plan",
+    "tags": [],
+    "type": "file",
+    "updatedAt": "2026-06-20T02:19:26+00:00",
+    "url": null
+  },
+  {
+    "@id": "/project_resources/019ee2d4-1c0c-7b96-8c32-5518fd601093",
+    "@type": "ProjectResource",
+    "createdAt": "2026-06-20T02:20:12+00:00",
+    "file": {
+      "@id": "/file_objects/019ee2d4-199b-7b65-94fa-5d78ad97ff33",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T02:20:08+00:00",
+      "filename": "b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+      "id": "019ee2d4-199b-7b65-94fa-5d78ad97ff33",
+      "localFile": "files/photos_and_files/019ee2d4-199b-7b65-94fa-5d78ad97ff33-b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+      "mimeType": "application/pdf",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+      "updatedAt": "2026-06-20T02:20:11+00:00"
+    },
+    "id": "019ee2d4-1c0c-7b96-8c32-5518fd601093",
+    "name": "Huon Waterwatch report 2022_23 Final 31July23",
+    "tags": [],
+    "type": "file",
+    "updatedAt": "2026-06-20T02:20:12+00:00",
+    "url": null
+  },
+  {
+    "@id": "/project_resources/019ee2e0-eea4-7d93-acab-9aefdddf990f",
+    "@type": "ProjectResource",
+    "createdAt": "2026-06-20T02:34:12+00:00",
+    "file": {
+      "@id": "/file_objects/019ee2e0-eb37-7f4c-b650-c98e52b2d857",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T02:34:10+00:00",
+      "filename": "0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+      "id": "019ee2e0-eb37-7f4c-b650-c98e52b2d857",
+      "localFile": "files/photos_and_files/019ee2e0-eb37-7f4c-b650-c98e52b2d857-0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+      "mimeType": "application/pdf",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+      "updatedAt": "2026-06-20T02:34:11+00:00"
+    },
+    "id": "019ee2e0-eea4-7d93-acab-9aefdddf990f",
+    "name": "The short monitoring plan",
+    "tags": [],
+    "type": "file",
+    "updatedAt": "2026-06-20T02:34:12+00:00",
+    "url": null
+  },
+  {
+    "@id": "/project_resources/019ee2e2-aaba-7e28-9927-80918e8ae10e",
+    "@type": "ProjectResource",
+    "createdAt": "2026-06-20T02:36:06+00:00",
+    "file": {
+      "@id": "/file_objects/019ee2e2-a917-7473-b09f-deeadb8e06d5",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T02:36:04+00:00",
+      "filename": "667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+      "id": "019ee2e2-a917-7473-b09f-deeadb8e06d5",
+      "localFile": "files/photos_and_files/019ee2e2-a917-7473-b09f-deeadb8e06d5-667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+      "mimeType": "application/pdf",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+      "updatedAt": "2026-06-20T02:36:05+00:00"
+    },
+    "id": "019ee2e2-aaba-7e28-9927-80918e8ae10e",
+    "name": "Water Watch Physcio-chemical Monitoring Data Sheet",
+    "tags": [],
+    "type": "file",
+    "updatedAt": "2026-06-20T02:36:06+00:00",
+    "url": null
   }
 ]

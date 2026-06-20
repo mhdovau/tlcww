@@ -40,6 +40,46 @@
     "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx"
   },
   {
+    "content_length": 226977,
+    "downloaded": true,
+    "etag": "\"b6e571b9d10b4b65539b76255d546261\"",
+    "filename": "4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+    "id": "019ee2d3-63db-71c4-8523-7c439fa392aa",
+    "local_path": "files/photos_and_files/019ee2d3-63db-71c4-8523-7c439fa392aa-4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf"
+  },
+  {
+    "content_length": 882789,
+    "downloaded": true,
+    "etag": "\"9ab5c7216ee51d24811b18065e78c37b\"",
+    "filename": "b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+    "id": "019ee2d4-199b-7b65-94fa-5d78ad97ff33",
+    "local_path": "files/photos_and_files/019ee2d4-199b-7b65-94fa-5d78ad97ff33-b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf"
+  },
+  {
+    "content_length": 1876627,
+    "downloaded": true,
+    "etag": "\"3476807e273e6528eb81419f10ba6c7e\"",
+    "filename": "0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+    "id": "019ee2e0-eb37-7f4c-b650-c98e52b2d857",
+    "local_path": "files/photos_and_files/019ee2e0-eb37-7f4c-b650-c98e52b2d857-0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/0daf3ae652320891a099fddf0ae61ed60d592fda.pdf"
+  },
+  {
+    "content_length": 1001048,
+    "downloaded": true,
+    "etag": "\"6a5b3b482efeb0264411b7228e2114f5\"",
+    "filename": "667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+    "id": "019ee2e2-a917-7473-b09f-deeadb8e06d5",
+    "local_path": "files/photos_and_files/019ee2e2-a917-7473-b09f-deeadb8e06d5-667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf"
+  },
+  {
     "content_length": 1067201,
     "downloaded": true,
     "etag": "\"9b4e9ca83351e99cf55453f5f944eb1b\"",
