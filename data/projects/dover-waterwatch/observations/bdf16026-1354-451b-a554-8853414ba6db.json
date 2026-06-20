@@ -10,7 +10,7 @@
     "createdAt": "2024-06-19T22:01:25+00:00",
     "dateFormat": "datetime",
     "name": "Dover Rivulet Mouth Observations",
-    "updatedAt": "2026-06-14T12:36:19+00:00"
+    "updatedAt": "2026-06-20T11:04:42+00:00"
   },
   "durationSetup": null,
   "durationTravel": null,
@@ -39,7 +39,7 @@
       "lng": 147.02357
     },
     "name": "Dover Rivulet Mouth",
-    "updatedAt": "2026-06-20T08:22:37+00:00"
+    "updatedAt": "2026-06-20T11:38:27+00:00"
   },
   "observationEndedAt": null,
   "observedAt": "2024-06-23T13:32:12+00:00",
@@ -53,7 +53,7 @@
     "isSciStarterParticipation": false,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
-    "updatedAt": "2026-06-20T08:22:37+00:00",
+    "updatedAt": "2026-06-20T11:38:27+00:00",
     "urlField": "dover-waterwatch"
   },
   "records": [

@@ -230,7 +230,18 @@
     "recordType": "image",
     "records": [],
     "updatedAt": "2024-06-19T22:25:53+00:00",
-    "validators": []
+    "validators": [
+      {
+        "@id": "/field_validators/3416",
+        "@type": "FieldValidator",
+        "createdAt": "2026-06-20T11:04:42+00:00",
+        "id": 3416,
+        "options": null,
+        "updatedAt": "2026-06-20T11:04:42+00:00",
+        "validatorType": "max",
+        "value": "8"
+      }
+    ]
   },
   {
     "@id": "/datasheet_records/13437",

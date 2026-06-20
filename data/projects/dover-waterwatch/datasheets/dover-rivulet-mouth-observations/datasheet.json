@@ -19,7 +19,7 @@
     "latitude": -43.31617,
     "longitude": 147.02354,
     "name": "Dover Waterwatch",
-    "updatedAt": "2026-06-20T08:22:37+00:00",
+    "updatedAt": "2026-06-20T11:38:27+00:00",
     "urlField": "dover-waterwatch"
   },
   "projection": "geographic",
@@ -299,7 +299,18 @@
       "recordType": "image",
       "records": [],
       "updatedAt": "2024-06-19T22:25:53+00:00",
-      "validators": []
+      "validators": [
+        {
+          "@id": "/field_validators/3416",
+          "@type": "FieldValidator",
+          "createdAt": "2026-06-20T11:04:42+00:00",
+          "id": 3416,
+          "options": null,
+          "updatedAt": "2026-06-20T11:04:42+00:00",
+          "validatorType": "max",
+          "value": "8"
+        }
+      ]
     }
   ],
   "setupDurationDescription": "Duration spent on setup to conduct the observation. This includes any equipment setup or preparation work. When submitting multiple observations, please submit the setup duration specific to this observation. ",
@@ -307,6 +318,6 @@
   "status": "published",
   "travelDurationDescription": "Duration spent traveling to the observation site. This includes driving, hiking, etc. When submitting multiple observations, please submit the travel duration since the last observation.",
   "travelDurationFormat": "disabled",
-  "updatedAt": "2026-06-14T12:36:19+00:00",
+  "updatedAt": "2026-06-20T11:04:42+00:00",
   "zooniverseHistory": []
 }
