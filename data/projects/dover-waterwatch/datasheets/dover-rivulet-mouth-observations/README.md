@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 20
+**Observations:** 22
 
 ## Fields
 
@@ -14,6 +14,32 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Noteworthy Photograph** — `image`
 
 ## Observations
+
+### 2026-06-20T13:01:00+00:00 — Dover Rivulet Lower Lagoon
+**Observer:** mhdoverlc  ·  **Location:** -43.3158, 147.02321  ·  **ID:** `019ee41e-8957-759d-89d2-4110cb97e222`
+
+[![019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg](../../../../files/photos_and_files/019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg)](../../../../files/photos_and_files/019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Out to Sea |
+| Tide Height (m) | 0.9 |
+| Lagoon Height (m) | 0.9 |
+| Dover Rainfall (24h to observation mm) | 3 |
+| Noteworthy Photograph | [![019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg](../../../../files/photos_and_files/019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg)](../../../../files/photos_and_files/019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg) |
+
+### 2026-06-20T13:01:00+00:00 — Dover Rivulet Mouth
+**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019ee41f-ea50-7f3f-ba75-72771f6ad4fb`
+
+[![019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg](../../../../files/photos_and_files/019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg)](../../../../files/photos_and_files/019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Out to Sea |
+| Tide Height (m) | 0.9 |
+| Lagoon Height (m) | 0.9 |
+| Dover Rainfall (24h to observation mm) | 3 |
+| Noteworthy Photograph | [![019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg](../../../../files/photos_and_files/019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg)](../../../../files/photos_and_files/019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg) |
 
 ### 2026-06-19T14:34:29+00:00 — Dover Rivulet Mouth
 **Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019ede2a-9619-7b7b-828b-d98714849f07`

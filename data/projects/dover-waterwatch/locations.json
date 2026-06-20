@@ -1504,7 +1504,7 @@
       "lng": 147.02357
     },
     "name": "Dover Rivulet Mouth",
-    "observationsTotal": 12
+    "observationsTotal": 13
   },
   {
     "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
@@ -1515,6 +1515,6 @@
       "lng": 147.02321
     },
     "name": "Dover Rivulet Lower Lagoon",
-    "observationsTotal": 8
+    "observationsTotal": 9
   }
 ]

@@ -325,7 +325,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2026-06-17T08:48:42+00:00",
@@ -383,7 +383,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2026-06-18T16:52:00+00:00",
@@ -492,11 +492,127 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2026-06-19T14:34:29+00:00",
     "updatedAt": "2026-06-19T04:36:33+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ee41e-8957-759d-89d2-4110cb97e222",
+    "@type": "Observation",
+    "createdAt": "2026-06-20T08:21:07+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ee41e-8690-7bc0-810d-72f2561130a0",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T08:21:05+00:00",
+      "localFile": "files/photos_and_files/019ee41e-8690-7bc0-810d-72f2561130a0-89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/89fe637112578d29dfbc2fafb0a4ed21287d3eaa.jpg",
+      "updatedAt": "2026-06-20T08:21:07+00:00"
+    },
+    "id": "019ee41e-8957-759d-89d2-4110cb97e222",
+    "lngLat": {
+      "lat": -43.3158,
+      "lng": 147.02321
+    },
+    "location": {
+      "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:58+00:00",
+      "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+      "lngLat": {
+        "lat": -43.3158,
+        "lng": 147.02321
+      },
+      "name": "Dover Rivulet Lower Lagoon",
+      "updatedAt": "2026-06-20T08:21:07+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-20T13:01:00+00:00",
+    "updatedAt": "2026-06-20T08:21:07+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019ee41f-ea50-7f3f-ba75-72771f6ad4fb",
+    "@type": "Observation",
+    "createdAt": "2026-06-20T08:22:37+00:00",
+    "datasheet": {
+      "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
+      "@type": "Datasheet",
+      "createdAt": "2024-06-19T22:01:25+00:00",
+      "name": "Dover Rivulet Mouth Observations",
+      "updatedAt": "2026-06-14T12:36:19+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ee41f-e79e-70b5-86a0-3774e0153cb5",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-20T08:22:35+00:00",
+      "localFile": "files/photos_and_files/019ee41f-e79e-70b5-86a0-3774e0153cb5-db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/db36d9de3f488ea7b41bf632963ba2eb3bf445ed.jpg",
+      "updatedAt": "2026-06-20T08:22:37+00:00"
+    },
+    "id": "019ee41f-ea50-7f3f-ba75-72771f6ad4fb",
+    "lngLat": {
+      "lat": -43.31622,
+      "lng": 147.02357
+    },
+    "location": {
+      "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "@type": "Area",
+      "createdAt": "2024-06-22T05:49:46+00:00",
+      "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
+      "lngLat": {
+        "lat": -43.31622,
+        "lng": 147.02357
+      },
+      "name": "Dover Rivulet Mouth",
+      "updatedAt": "2026-06-20T08:22:37+00:00"
+    },
+    "observationEndedAt": null,
+    "observedAt": "2026-06-20T13:01:00+00:00",
+    "updatedAt": "2026-06-20T08:22:37+00:00",
     "user": {
       "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
       "@type": "User",
@@ -550,7 +666,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-25T12:31:04+00:00",
@@ -608,7 +724,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-30T19:57:09+00:00",
@@ -666,7 +782,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-22T15:49:00+00:00",
@@ -724,7 +840,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-24T12:52:57+00:00",
@@ -782,7 +898,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-25T12:23:54+00:00",
@@ -840,7 +956,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-28T12:52:42+00:00",
@@ -898,7 +1014,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-24T12:52:05+00:00",
@@ -956,7 +1072,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-26T11:11:00+00:00",
@@ -1014,7 +1130,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-22T15:46:52+00:00",
@@ -1072,7 +1188,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-30T19:57:49+00:00",
@@ -1130,7 +1246,7 @@
         "lng": 147.02321
       },
       "name": "Dover Rivulet Lower Lagoon",
-      "updatedAt": "2026-06-14T13:39:41+00:00"
+      "updatedAt": "2026-06-20T08:21:07+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-23T13:29:50+00:00",
@@ -1188,7 +1304,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-26T11:08:45+00:00",
@@ -1246,7 +1362,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-23T13:32:12+00:00",
@@ -1304,7 +1420,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-23T13:30:51+00:00",
@@ -1362,7 +1478,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-28T12:51:52+00:00",
@@ -1420,7 +1536,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-20T13:15:26+00:00",
@@ -1478,7 +1594,7 @@
         "lng": 147.02357
       },
       "name": "Dover Rivulet Mouth",
-      "updatedAt": "2026-06-19T04:36:33+00:00"
+      "updatedAt": "2026-06-20T08:22:37+00:00"
     },
     "observationEndedAt": null,
     "observedAt": "2024-06-25T12:28:38+00:00",
