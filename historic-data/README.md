@@ -13,7 +13,7 @@ its own subdirectory with its own README, copyright/use notice, and provenance.
 
 | Directory | Dataset | Period | Source |
 | --- | --- | --- | --- |
-| [`huon-valley-wq-1996-2000/`](huon-valley-wq-1996-2000/) | Huon Valley Water Quality Report — site coordinates and summary statistics | 1996–2000 | Otley, H. (2001), Huon Healthy Rivers Project |
+| [`huon-valley-wq-1996-2000/`](huon-valley-wq-1996-2000/) | Huon Valley Water Quality Report — site coordinates, summary statistics, and a partial extract of the original report (chs 4.10–4.18) | 1996–2000 | Otley, H. (2001), Huon Healthy Rivers Project |
 
 ## Use / copyright
 

@@ -7,7 +7,9 @@
 > reference copy). For convenience, the same documentation and every data table
 > are also bundled into a single Markdown file,
 > `Otley_2001_single-file_archive.md`, for tools or repositories that prefer one
-> file over many.
+> file over many. A scanned **partial extract of the original report**
+> (chapters 4.10–4.18) is also included as
+> `Otley_2000_Huon_water_quality_report_ch4.10_to_4.18.pdf`.
 
 This archive preserves the water-quality dataset underlying the **Huon Valley
 Water Quality Report 1996–2000** (Tasmania). The data covers monitoring sites
@@ -76,6 +78,7 @@ Practical implications for reuse:
 ├── COPYRIGHT.md                                           <- copyright / use notice
 ├── AGD66_to_GDA94_Conversion_Methodology.md               <- how lat/long + links were derived
 ├── Otley_2001_single-file_archive.md                      <- all docs + every table bundled in one file
+├── Otley_2000_Huon_water_quality_report_ch4.10_to_4.18.pdf <- ORIGINAL report (partial extract, chs 4.10–4.18)
 ├── Otley_2001_site_coordinates_and_summary_stats.xlsx     <- ORIGINAL source workbook (unaltered)
 ├── 01_original_verbatim/         <- every sheet of the enhanced workbook, dumped exactly as-is
 │   ├── site_coordinates.csv
@@ -268,6 +271,11 @@ transcription slip. Handle them in your own analysis as appropriate.
 - **Original source workbook:** `Otley_2001_site_coordinates_and_summary_stats.xlsx`
   — contains site identifiers, easting/northing (AGD66 UTM Z55), and the
   water-quality summary statistics. Retained unaltered as the reference copy.
+- **Original report (partial extract):**
+  `Otley_2000_Huon_water_quality_report_ch4.10_to_4.18.pdf` — a partial extract
+  of the original report (chapters 4.10–4.18), included as supporting context for
+  the data. This is a copyrighted source document, not data derived by this
+  archive; see `COPYRIGHT.md`.
 - **Enhancement:** latitude/longitude (GDA94) and Google/Apple Maps links were
   derived from the original eastings/northings in a separate effort. Method
   documented in `AGD66_to_GDA94_Conversion_Methodology.md`. These derived fields
