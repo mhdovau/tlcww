@@ -4,21 +4,21 @@
     "@type": "ProjectResource",
     "createdAt": "2026-06-19T11:39:56+00:00",
     "file": {
-      "@id": "/file_objects/019edfae-32cc-76ef-9925-88746c521e6c",
+      "@id": "/file_objects/019ee283-9163-7a06-94ce-5ec429d63dfe",
       "@type": "https://schema.org/MediaObject",
-      "createdAt": "2026-06-19T11:39:55+00:00",
-      "filename": "a60aeb9216c6bb26b2d7f76bae817ea3ecb6baa7.xlsx",
-      "id": "019edfae-32cc-76ef-9925-88746c521e6c",
-      "localFile": "files/photos_and_files/019edfae-32cc-76ef-9925-88746c521e6c-a60aeb9216c6bb26b2d7f76bae817ea3ecb6baa7.xlsx",
+      "createdAt": "2026-06-20T00:52:13+00:00",
+      "filename": "542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx",
+      "id": "019ee283-9163-7a06-94ce-5ec429d63dfe",
+      "localFile": "files/photos_and_files/019ee283-9163-7a06-94ce-5ec429d63dfe-542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx",
       "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/a60aeb9216c6bb26b2d7f76bae817ea3ecb6baa7.xlsx",
-      "updatedAt": "2026-06-19T11:39:55+00:00"
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx",
+      "updatedAt": "2026-06-20T00:52:13+00:00"
     },
     "id": "019edfae-3575-74e1-805c-1293a76286fc",
     "name": "Huon Valley Water Quality Data 1996-2000",
     "tags": [],
     "type": "file",
-    "updatedAt": "2026-06-19T11:39:56+00:00",
+    "updatedAt": "2026-06-20T00:52:14+00:00",
     "url": null
   }
 ]
