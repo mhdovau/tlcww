@@ -3,14 +3,19 @@
 Automated backups of a [CitSci.org](https://citsci.org) account and its
 projects, using the CitSci API (`https://api.citsci.org`).
 
-A scheduled GitHub Action logs in with your account credentials, walks the
-account and every project you own/manage, and commits a structured snapshot
-(JSON metadata **and** photo/file binaries) back into this repository.
+A scheduled GitHub Action logs in with a CitSci account's credentials, walks the
+account and every project it owns, manages or is a member of, and commits a
+structured snapshot (JSON metadata **and** photo/file binaries) back into this
+repository.
 
 ## Setup
 
-1. Create (or reuse) a CitSci account that has access to the projects you want
-   to back up.
+1. **Use a dedicated, low-privilege CitSci account for backups — not a personal
+   or admin account.** Create a separate, single-purpose account and add it to
+   the project(s) you want to back up at the **lowest role that can still see
+   the data** you want to preserve (a regular *member*/contributor is usually
+   enough). See [Account & privacy](#account--privacy-important) below for why
+   this matters.
 2. In this repo, go to **Settings → Secrets and variables → Actions** and add:
 
    | Secret | Required | Purpose |
@@ -21,13 +26,35 @@ account and every project you own/manage, and commits a structured snapshot
    | `CITSCI_FILES_BASE` | optional | Base URL for downloading file binaries that store only a relative path (most are already absolute S3 URLs) |
    | `CITSCI_INCLUDE_PRIVATE` | optional | `1` to include the values of fields flagged *private* (e.g. "Monitor's Name(s) - NOT published publically"). Default `0` — withheld so they aren't published. Only set this if the repo is private. |
 
-3. Run it: **Actions → CitSci Backup → Run workflow** (or wait for the weekly
+3. Run it: **Actions → CitSci Backup → Run workflow** (or wait for the daily
    schedule). The first manual run is the easiest way to confirm credentials
    and the resolved user id are correct.
 
+## Account & privacy (important)
+
+Use a **dedicated, low-privilege CitSci account** for backups. Two reasons:
+
+- **Least privilege / blast radius.** The account's email and password live in
+  GitHub Actions secrets. A single-purpose account used only for backups means a
+  leak can't touch a personal identity or other projects, and it's trivially
+  rotated. **Don't use a personal account, and don't grant it site-admin.**
+- **Data minimization.** CitSci returns *less* data to lower-privilege accounts.
+  Fields a datasheet marks *private* (e.g. monitors' real names) are **withheld
+  by the API** from a regular member/contributor — they never reach the backup.
+  A manager/admin account, by contrast, can read that private content, which
+  would then be committed to this repository. Grant only the role needed to see
+  the data you actually want to preserve.
+
+As an extra safeguard the script masks email addresses, and values of
+private-flagged fields are withheld unless `CITSCI_INCLUDE_PRIVATE=1` (only set
+that on a private repo). But choosing a low-privilege account is the primary
+control — the API simply won't hand it sensitive data in the first place. If you
+do need the richer data a manager account can see, **make this repository
+private.**
+
 ## Schedule
 
-- **Weekly**, Mondays at 06:00 UTC (`.github/workflows/backup.yml`).
+- **Daily**, at 06:00 UTC (`.github/workflows/backup.yml`).
 - **On demand** via the *Run workflow* button, with an option to skip binary
   downloads (metadata only).
 
