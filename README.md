@@ -143,6 +143,15 @@ export CITSCI_PASS="your-password"
 python3 scripts/citsci_backup.py     # writes to ./data
 ```
 
+## Historic data
+
+Curated historic datasets that predate (or sit outside) the automated CitSci
+backup live under [`historic-data/`](historic-data/), kept separate from `data/`
+so a backup run never touches them. The backup script only ever writes under
+`data/`. See [`historic-data/README.md`](historic-data/README.md) for the
+catalogue; each dataset carries its own copyright/use notice and is **not**
+covered by this repository's `LICENSE.md`.
+
 ## API reference
 
 The CitSci OpenAPI 3.1 specification is vendored at
