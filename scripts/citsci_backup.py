@@ -862,6 +862,7 @@ def render_project_md(base: str, slug: str) -> None:
     project = _load(os.path.join(pdir, "project.json")) or {}
     locations = _load(os.path.join(pdir, "locations.json")) or []
     members = _load(os.path.join(pdir, "members.json")) or []
+    resources = _load(os.path.join(pdir, "resources.json")) or []
 
     # Load all observation detail files (includes preserved/orphaned ones).
     observations = []
@@ -922,6 +923,34 @@ def render_project_md(base: str, slug: str) -> None:
             lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s)")
     else:
         lines.append("_No datasheets._")
+    lines.append("")
+
+    # Project-level resources only (the files/links attached to the project,
+    # not every photo in the project). Each is a file (download) or a link.
+    lines += ["## Files & resources", ""]
+    res_lines = []
+    for r in resources if isinstance(resources, list) else []:
+        if not isinstance(r, dict):
+            continue
+        title = _txt(r.get("name"))
+        fobj = r.get("file") if isinstance(r.get("file"), dict) else None
+        if fobj and (fobj.get("localFile") or fobj.get("path")):
+            label = title or _txt(fobj.get("filename")) or "file"
+            if fobj.get("localFile"):
+                target = _relurl(base, fobj["localFile"], pdir)
+            else:
+                target = fobj.get("path")
+            extra = _txt(fobj.get("filename")) if title else ""
+            res_lines.append(f"- [{label}]({target})"
+                             + (f" — `{extra}`" if extra and extra != label else ""))
+        elif r.get("url"):
+            res_lines.append(f"- [{title or _txt(r['url'])}]({r['url']})")
+        elif title:
+            res_lines.append(f"- {title}")
+    if res_lines:
+        lines += res_lines
+    else:
+        lines.append("_No project resources._")
     lines.append("")
 
     out = os.path.join(pdir, "README.md")

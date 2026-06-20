@@ -16,3 +16,7 @@ Dover Waterwatch, Tasmania, Australia - Collecting long term scientific observat
 
 - [Dover Landcare Water Quality](datasheets/dover-landcare-water-quality/README.md) — 6 observation(s)
 - [Dover Rivulet Mouth Observations](datasheets/dover-rivulet-mouth-observations/README.md) — 20 observation(s)
+
+## Files & resources
+
+- [Huon Valley Water Quality Data 1996-2000](../../files/photos_and_files/019ee283-9163-7a06-94ce-5ec429d63dfe-542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx) — `542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx`
