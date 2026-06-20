@@ -149,8 +149,22 @@ Curated historic datasets that predate (or sit outside) the automated CitSci
 backup live under [`historic-data/`](historic-data/), kept separate from `data/`
 so a backup run never touches them. The backup script only ever writes under
 `data/`. See [`historic-data/README.md`](historic-data/README.md) for the
-catalogue; each dataset carries its own copyright/use notice and is **not**
-covered by this repository's `LICENSE.md`.
+catalogue.
+
+### Licensing of historic data (important)
+
+This repository's [`LICENSE.md`](LICENSE.md) (CC BY 4.0) covers **only** Dover
+Landcare Tasmania's own content — the CitSci backup under `data/` and the code.
+It does **not** cover the third-party material under `historic-data/`, which is
+owned by others. Each dataset there carries its own `COPYRIGHT.md`; read it
+before reusing the data.
+
+- **Huon Valley Water Quality 1996–2000**
+  ([`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/)):
+  © Helen Otley and/or the Huon Healthy Rivers Project. Copyright is **not** held
+  by Dover Landcare, and **no license is granted** — seek permission from the
+  original author / project before any use. See its
+  [`COPYRIGHT.md`](historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md).
 
 ## API reference
 
