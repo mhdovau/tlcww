@@ -1,0 +1,32 @@
+Zone,Site,Parameter,No.samples,Median,Minimum,25%quartile,75%quartile,Maximum,Mean 
+East,GVC115,% saturation,3,78,24,80,61,,
+East,GVC115,Dissolved oxygen (mg/L),3,10.2,2.6,10.3,7.7,,
+East,SUP010,% saturation,9,90,78,87,95,104,91
+East,SUP010,Dissolved oxygen (mg/L),9,9.5,7.8,9.1,9.8,11.7,9.6
+East,SUP020,% saturation,10,73,52,66,81,84,71
+East,SUP020,Dissolved oxygen (mg/L),10,7.6,5,7.2,8,9.7,7.6
+East,SUP050,% saturation,10,79,68,75,84,88,79
+East,SUP050,Dissolved oxygen  (mg/L)  10,8.4,7.5,7.9,8.8,10.8,8.6,
+East,SUP100,% saturation,10,83,68,74,85,89,80
+East,SUP100,Dissolved oxygen (mg/L),10,8.4,7.2,8.1,8.9,10.4,8.6
+East,SUP200,% saturation,9,89,75,79,96,99,87
+East,SUP200,Dissolved oxygen (mg/L),9,9,7.4,8.8,9.6,10.2,9
+East,SUP300,% saturation,10,79,66,75,86,94,80
+East,SUP300,Dissolved oxygen (mg/L),10,8.6,7.4,7.7,9.2,10.7,8.7
+North,BAK025,Dissolved oxygen (mg/L),2,9.8,9.6,10,9.8,,
+North,BAK150,Dissolved oxygen (mg/L),2,8,7.8,8.2,8,,
+North,BAK200,Dissolved oxygen (mg/L),2,7.7,7.6,7.8,7.7,,
+North,CRB080,Dissolved oxygen (mg/L),4,10.7,8.5,9.2,12,12.5,10.6
+North,CRB100,Dissolved oxygen (mg/L),3,8.5,7.2,11.9,9.2,,
+North,CRB150,Dissolved oxygen (mg/L),6,9.8,7.9,8,10.8,10.8,9.5
+North,CRB250,Dissolved oxygen (mg/L),5,9.5,7.2,8.2,10.4,10.4,9.1
+North,CRB300,%  saturation,4,95,92,92,102,106,97
+North,CRB300,Dissolved oxygen (mg/L),8,9.9,7.7,8.7,11.2,12.2,9.9
+North,MOU200,Dissolved oxygen (mg/L),4,10.8,8.6,9.7,11.6,12.3,10.6
+North,MOU250,Dissolved oxygen (mg/L),2,10.3,8.2,12.4,10.3,,
+North,MOU400,Dissolved oxygen (mg/L),5,10.4,9,9,10.7,12.4,10.3
+North,MOU600,Dissolved oxygen (mg/L),4,10.3,8.5,9.3,11.4,12.3,10.3
+North,MOU650,Dissolved oxygen (mg/L),4,10.6,8.5,9.3,11.8,12.3,10.5
+North,MOU700,Dissolved oxygen (mg/L),2,10,7.4,12.5,10,,
+North,MOU850,Dissolved oxygen (mg/L),18,10.3,8.6,9,10.9,12.3,10.2
+Upper,WAT200,Dissolved oxygen (mg/L),16,9.4,8,8.6,10.2,12.7,9.5

@@ -1,6 +1,13 @@
 # Huon Valley Water Quality Report 1996–2000 — Dataset Archive
 
-> **About this package.** This is the *clean-set* distribution: the curated, corrected CSV tables plus documentation and the original source workbook. It does **not** include the `01_original_verbatim/` CSV dump referenced in some sections below; for cell-for-cell verbatim copies, see the full archive. The original source workbook (`Otley_2001_site_coordinates_and_summary_stats.xlsx`) is included here as the authoritative reference copy.
+> **About this package.** This is the *full archive*: the curated clean tables
+> (`02_clean/`), the cell-for-cell verbatim worksheet dump (`01_original_verbatim/`),
+> the documentation, and the original source workbook
+> (`Otley_2001_site_coordinates_and_summary_stats.xlsx`, the authoritative
+> reference copy). For convenience, the same documentation and every data table
+> are also bundled into a single Markdown file,
+> `Otley_2001_single-file_archive.md`, for tools or repositories that prefer one
+> file over many.
 
 This archive preserves the water-quality dataset underlying the **Huon Valley
 Water Quality Report 1996–2000** (Tasmania). The data covers monitoring sites
@@ -68,6 +75,7 @@ Practical implications for reuse:
 ├── README.md                                              <- this file
 ├── COPYRIGHT.md                                           <- copyright / use notice
 ├── AGD66_to_GDA94_Conversion_Methodology.md               <- how lat/long + links were derived
+├── Otley_2001_single-file_archive.md                      <- all docs + every table bundled in one file
 ├── Otley_2001_site_coordinates_and_summary_stats.xlsx     <- ORIGINAL source workbook (unaltered)
 ├── 01_original_verbatim/         <- every sheet of the enhanced workbook, dumped exactly as-is
 │   ├── site_coordinates.csv
