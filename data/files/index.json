@@ -33,6 +33,38 @@
   },
   {
     "downloaded": true,
+    "filename": "4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+    "id": "019ee2d3-63db-71c4-8523-7c439fa392aa",
+    "local_path": "files/photos_and_files/019ee2d3-63db-71c4-8523-7c439fa392aa-4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf"
+  },
+  {
+    "downloaded": true,
+    "filename": "b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+    "id": "019ee2d4-199b-7b65-94fa-5d78ad97ff33",
+    "local_path": "files/photos_and_files/019ee2d4-199b-7b65-94fa-5d78ad97ff33-b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf"
+  },
+  {
+    "downloaded": true,
+    "filename": "0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+    "id": "019ee2e0-eb37-7f4c-b650-c98e52b2d857",
+    "local_path": "files/photos_and_files/019ee2e0-eb37-7f4c-b650-c98e52b2d857-0daf3ae652320891a099fddf0ae61ed60d592fda.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/0daf3ae652320891a099fddf0ae61ed60d592fda.pdf"
+  },
+  {
+    "downloaded": true,
+    "filename": "667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+    "id": "019ee2e2-a917-7473-b09f-deeadb8e06d5",
+    "local_path": "files/photos_and_files/019ee2e2-a917-7473-b09f-deeadb8e06d5-667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf"
+  },
+  {
+    "downloaded": true,
     "filename": "b7ed5103e7577015492e6a92185f33f3650a9ba6.jpg",
     "id": "019ec62d-2866-707c-89db-117aa6141ef0",
     "local_path": "files/photos_and_files/019ec62d-2866-707c-89db-117aa6141ef0-b7ed5103e7577015492e6a92185f33f3650a9ba6.jpg",

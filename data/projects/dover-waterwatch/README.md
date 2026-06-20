@@ -20,3 +20,7 @@ Dover Waterwatch, Tasmania, Australia - Collecting long term scientific observat
 ## Files & resources
 
 - [Huon Valley Water Quality Data 1996-2000](../../files/photos_and_files/019ee283-9163-7a06-94ce-5ec429d63dfe-542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx) — `542689af6756c8ff11d77a2e06dc6ff65d429af0.xlsx`
+- [part_3_developing_a_monitoring_plan](../../files/photos_and_files/019ee2d3-63db-71c4-8523-7c439fa392aa-4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf) — `4cdc01ec98c67c8133b058cc16f2108619cccd83.pdf`
+- [Huon Waterwatch report 2022_23 Final 31July23](../../files/photos_and_files/019ee2d4-199b-7b65-94fa-5d78ad97ff33-b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf) — `b8c0ccc2312555af4a6f0acc7342c2d0ebf55b0d.pdf`
+- [The short monitoring plan](../../files/photos_and_files/019ee2e0-eb37-7f4c-b650-c98e52b2d857-0daf3ae652320891a099fddf0ae61ed60d592fda.pdf) — `0daf3ae652320891a099fddf0ae61ed60d592fda.pdf`
+- [Water Watch Physcio-chemical Monitoring Data Sheet](../../files/photos_and_files/019ee2e2-a917-7473-b09f-deeadb8e06d5-667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf) — `667edca6b99f4a6a7966454c91a3356e7dec5f72.pdf`
