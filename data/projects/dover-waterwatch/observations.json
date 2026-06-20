@@ -785,8 +785,8 @@
       "updatedAt": "2026-06-20T11:38:27+00:00"
     },
     "observationEndedAt": null,
-    "observedAt": "2026-06-20T20:54:51+00:00",
-    "updatedAt": "2026-06-20T10:55:45+00:00",
+    "observedAt": "2024-02-17T18:37:00+00:00",
+    "updatedAt": "2026-06-20T11:49:07+00:00",
     "user": {
       "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
       "@type": "User",

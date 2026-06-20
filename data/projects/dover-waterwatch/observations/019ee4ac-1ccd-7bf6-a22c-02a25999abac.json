@@ -42,7 +42,7 @@
     "updatedAt": "2026-06-20T11:38:27+00:00"
   },
   "observationEndedAt": null,
-  "observedAt": "2026-06-20T20:54:51+00:00",
+  "observedAt": "2024-02-17T18:37:00+00:00",
   "project": {
     "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
     "@type": "Project",
@@ -85,12 +85,12 @@
         "updatedAt": "2024-06-19T22:19:14+00:00",
         "value": "Open - Flowing Out to Sea"
       },
-      "orderNumber": 1,
+      "orderNumber": 0,
       "organism": null,
       "parentRecord": null,
       "recordType": "radio",
       "records": [],
-      "updatedAt": "2026-06-20T10:55:45+00:00",
+      "updatedAt": "2026-06-20T11:48:55+00:00",
       "value": "Open - Flowing Out to Sea"
     },
     {
@@ -110,13 +110,13 @@
       "label": "Observations",
       "multiSelectOptionValues": [],
       "optionValue": null,
-      "orderNumber": 5,
+      "orderNumber": 1,
       "organism": null,
       "parentRecord": null,
       "recordType": "textarea",
       "records": [],
-      "updatedAt": "2026-06-20T10:55:45+00:00",
-      "value": "Some opened it"
+      "updatedAt": "2026-06-20T11:49:07+00:00",
+      "value": "Someone opened it"
     },
     {
       "@id": "/observation_records/2681971",
@@ -144,16 +144,16 @@
       "label": "Noteworthy Photograph",
       "multiSelectOptionValues": [],
       "optionValue": null,
-      "orderNumber": 6,
+      "orderNumber": 2,
       "organism": null,
       "parentRecord": null,
       "recordType": "image",
       "records": [],
-      "updatedAt": "2026-06-20T10:55:45+00:00",
+      "updatedAt": "2026-06-20T11:48:55+00:00",
       "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/929f56459399f148e0f222c9548d47f3fde21ea1.jpg"
     }
   ],
-  "updatedAt": "2026-06-20T10:55:45+00:00",
+  "updatedAt": "2026-06-20T11:49:07+00:00",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
     "@type": "User",

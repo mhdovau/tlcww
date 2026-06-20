@@ -15,17 +15,6 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 
 ## Observations
 
-### 2026-06-20T20:54:51+00:00 — Dover Rivulet Mouth
-**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019ee4ac-1ccd-7bf6-a22c-02a25999abac`
-
-[![019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)
-
-| Field | Value |
-| --- | --- |
-| Rivulet Mouth State | Open - Flowing Out to Sea |
-| Observations | Some opened it |
-| Noteworthy Photograph | [![019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg) |
-
 ### 2026-06-20T13:01:00+00:00 — Dover Rivulet Lower Lagoon
 **Observer:** mhdoverlc  ·  **Location:** -43.3158, 147.02321  ·  **ID:** `019ee41e-8957-759d-89d2-4110cb97e222`
 
@@ -511,6 +500,17 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 | --- | --- |
 | Rivulet Mouth State | Closed |
 | Noteworthy Photograph | [![019ee4ac-b03a-7b6f-b6e5-8abe20a5e59a-1c4eafb9925c28cd4794aaa294e8ff801790cfd5.jpg](../../../../files/photos_and_files/019ee4ac-b03a-7b6f-b6e5-8abe20a5e59a-1c4eafb9925c28cd4794aaa294e8ff801790cfd5.jpg)](../../../../files/photos_and_files/019ee4ac-b03a-7b6f-b6e5-8abe20a5e59a-1c4eafb9925c28cd4794aaa294e8ff801790cfd5.jpg) |
+
+### 2024-02-17T18:37:00+00:00 — Dover Rivulet Mouth
+**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019ee4ac-1ccd-7bf6-a22c-02a25999abac`
+
+[![019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Out to Sea |
+| Observations | Someone opened it |
+| Noteworthy Photograph | [![019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg)](../../../../files/photos_and_files/019ee4ab-ad98-7446-9ca1-4e3b8682613f-929f56459399f148e0f222c9548d47f3fde21ea1.jpg) |
 
 ### 2024-01-20T12:00:00+00:00 — Dover Rivulet Mouth
 **Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019ee4ab-1a77-7479-a5bf-821ccb64a170`
