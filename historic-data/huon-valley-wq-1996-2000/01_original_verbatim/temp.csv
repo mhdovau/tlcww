@@ -1,0 +1,112 @@
+Zone,Site,Parameter,No.samples,Median,Minimum,25%quartile,75%quartile,Maximum,Mean 
+East,AGN010,Water temperature (°C),15,10,6,8,12.5,18,10.6
+East,AGN016,Water temperature (°C),13,12.5,3.9,7.5,16,19,11.8
+East,AGN120,Water temperature (°C),11,13.5,6.5,7.5,18,20,13.4
+East,AGN130,Water temperature (°C),27,12.7,4.3,8,16.1,23,12.5
+East,AGN200,Water temperature (°C),11,15,7,10,21,25,15.1
+East,AGN245,Water temperature (°C),6,12,9.5,11,17.5,26,14.7
+East,AGN249,Water temperature (°C),10,13,6.5,10.5,15.5,20,13.2
+East,AGN250,Water temperature (°C),9,12.5,7,9.5,13,26,12.7
+East,AGN260,Water temperature (°C),6,12,8,10,14.5,20,12.8
+East,AGN300,Water temperature (°C),10,12,5.5,9,13,19.5,11.8
+East,AGN400,Water temperature (°C),11,16.5,5.5,9,21,30.5,15.7
+East,ALB100,Water  temperature (°C),7,9.5,7,14,8,12,10
+East,GDR100,Water  temperature (°C),7,10,8,15,8,14,10.5
+East,GDR150,Water  temperature (°C),7,13,7.5,20,8,16,12.4
+East,GDR200,Water  temperature (°C),7,11,7.6,17,8,13,11.2
+East,GVC115,Water temperature (°C),13,11,3.7,7,14,18,11.2
+East,HOL100,Water  temperature (°C),4,11,7,13.5,8,13.3,10.6
+East,SUP010,Water temperature (°C),10,12.5,8.5,9,15,20.4,13.2
+East,SUP020,Water temperature (°C),11,13,8.5,10,16,22.5,13.6
+East,SUP050,Water temperature (°C),11,12.5,8,10,16,20,13
+East,SUP100,Water temperature (°C),12,12,8,10.3,15.8,22,13.2
+East,SUP200,Water temperature (°C),12,15.3,9,11.5,19.8,23,15.6
+East,SUP300,Water temperature (°C),14,12.5,8,9.5,15,24.5,13.1
+East,SUP350,Water temperature (°C),11,12,6,8,14,18,11.9
+East,WOL100,Water  temperature (°C),6,11.3,9,17.5,9,16,12.3
+North,BAK025,Water temperature (°C),4,12.5,10,11,13,13,12
+North,BAK060,Water temperature (°C),5,13,8,11,14.5,15,12.3
+North,BAK150,Water temperature (°C),4,13.5,9.5,10.8,15,15,12.9
+North,BAK200,Water temperature (°C),8,12,5,10.3,15,16.5,12
+North,BAK250,Water temperature (°C),5,14.5,8,10,16.5,18,13.4
+North,CRB080,Water temperature (°C),6,11.3,6,6.5,16.5,20,11.9
+North,CRB100,Water temperature (°C),4,18.9,5.6,12.2,19.5,20,15.9
+North,CRB150,Water temperature (°C),7,14.5,6,8,18,19,13.1
+North,CRB250,Water temperature (°C),5,15,6.5,9,18.5,19,13.6
+North,CRB300,Water temperature (°C),12,12,4.5,7.5,16.5,19.6,12.2
+North,DIP060,Water temperature (°C),4,9.3,6,7.3,12,14,9.6
+North,DIP080,Water temperature (°C),4,8,5.5,6,10.3,11,8.1
+North,DIP100,Water temperature (°C),5,11.5,5,7,12,15,10.1
+North,FOU100,Water temperature (°C),9,10,4.8,5.5,11.8,18.2,9.5
+North,FOU120,Water temperature (°C),10,10.5,4.5,5.8,11.8,13.9,9.3
+North,FOU150,Water temperature (°C),10,10.5,5,6.3,11.5,12,9.1
+North,FOU200,Water temperature (°C),8,11,4.5,7,11.3,13.5,9.6
+North,MOU200,Water temperature (°C),19,10.9,5,7,16,18.5,11.5
+North,MOU250,Water temperature (°C),9,13,5.3,9.5,16,19.6,12.9
+North,MOU400,Water temperature (°C),20,12,5,8.3,15,20,12.2
+North,MOU600,Water temperature (°C),19,11,5,7,16.5,20.5,11.8
+North,MOU650,Water temperature (°C),11,11,5,6,16,20.5,11.5
+North,MOU700,Water temperature (°C),11,13,5.5,7,14,20.1,11.9
+North,MOU850,Water temperature (°C),27,11.5,5.4,8.3,14,21.1,11.7
+Upper,HU0140,Water  temperature (°C),17,9.6,5.6,7,13.2,19,10.5
+Upper,HU0150,Water  temperature (°C),6,8.3,4,6,10,10,7.8
+Upper,HU0200,Water temperature (°C),22,10,6,9,13,22,11.3
+Upper,HU0240,Water temperature (°C),21,10,6.4,9.5,13.8,23,12
+Upper,JUD020,Water temperature (°C),10,6,3,5.5,8,11.5,6.8
+Upper,JUD025,Water temperature (°C),9,7,3,6,10,12,7.4
+Upper,JUD070,Water temperature (°C),6,6,3,6,7.5,11,6.6
+Upper,JUD100,Water temperature (°C),6,6.5,3,6,10,12,7.3
+Upper,JUD180,Water temperature (°C),5,10,5,6,10,10,8.2
+Upper,JUD200,Water temperature (°C),7,7,3,5.5,13,16.6,9
+Upper,LDR001,Water temperature (°C),67,8,3,6,10,14,8.1
+Upper,LDR002,Water temperature (°C),65,9,3,7,11.5,15,9.2
+Upper,LDR100,Water temperature (°C),8,11.3,8,10,13.5,18.5,12
+Upper,LDR220,Water temperature (°C),5,13.5,8,11.5,16.5,20,13.9
+Upper,LDR300,Water temperature (°C),4,8.8,8,8,10.5,11.5,9.3
+Upper,RUS005,Water temperature (°C),70,8.5,3,6,11,16.5,8.6
+Upper,RUS010,Water temperature (°C),69,9,2.5,6,10.5,17,8.7
+Upper,RUS055,Water temperature (°C),14,12,7.5,10,17,18,12.9
+Upper,RUS060,Water temperature (°C),15,8,5,7,15,19,10.4
+Upper,RUS070,Water temperature (°C),12,9,5,7,12,19,10.1
+Upper,RUS075,Water temperature (°C),6,8.5,5,7,10,15,9
+Upper,RUS080,Water temperature (°C),16,10.5,5,6,15,19,10.9
+Upper,RUS100,Water temperature (°C),14,11,5,7,18,19,11.8
+Upper,WAT050,Water temperature (°C),8,15.3,9.5,10,18,20,14.5
+Upper,WAT055,Water temperature (°C),6,12.3,10,11,14,17,12.8
+Upper,WAT200,Water temperature (°C),27,11.7,4.7,9.5,14.7,19,12.3
+West,CFB010,Water temperature (°C),28,9,4.5,6.8,11,18.1,9.2
+West,CFB020,Water temperature (°C),30,9.8,5,7,11.5,18.1,10
+West,CFB030,Water temperature (°C),26,10.5,5.5,8.5,15,23,11.7
+West,DOV070,Water temperature (°C),4,12.9,4.5,7.5,15.4,15.5,11.4
+West,DOV090,Water temperature (°C),2,13.4,10.7,16,13.4,,
+West,DOV110,Water temperature (°C),2,13.9,10.8,17,13.9,,
+West,DOV120,Water temperature (°C),2,16,12.5,19.5,16,,
+West,DOV130,Water temperature (°C),2,16.2,11.8,20.5,16.2,,
+West,PCK010,Water temperature (°C),20,12.5,8,10,14.5,18,12.5
+West,PCK020,Water temperature (°C),20,12,8,9,13.5,15,11.5
+West,PCK030,Water temperature (°C),20,12.3,7.5,9.3,14.8,18.0 .,12.3
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
