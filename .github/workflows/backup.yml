@@ -12,8 +12,9 @@ name: CitSci Backup
 
 on:
   schedule:
-    # Every Monday at 06:00 UTC.
-    - cron: "0 6 * * 1"
+    # Daily at 06:00 UTC. Cheap to run: unchanged files are skipped via ETag
+    # conditional GETs, and no-op runs don't create commits.
+    - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
       download_files:

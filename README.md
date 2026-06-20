@@ -27,7 +27,7 @@ account and every project you own/manage, and commits a structured snapshot
 
 ## Schedule
 
-- **Weekly**, Mondays at 06:00 UTC (`.github/workflows/backup.yml`).
+- **Daily**, at 06:00 UTC (`.github/workflows/backup.yml`).
 - **On demand** via the *Run workflow* button, with an option to skip binary
   downloads (metadata only).
 
