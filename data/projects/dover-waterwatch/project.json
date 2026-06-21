@@ -3,7 +3,7 @@
   "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
   "@type": "Project",
   "announcement": null,
-  "announcementDate": "2026-06-14T13:57:26+00:00",
+  "announcementDate": "2026-06-21T09:53:21+00:00",
   "approveContacts": true,
   "bannerPicture": {
     "@id": "/file_objects/93da8382-7666-40cc-9d5a-df8bc0aeaa04",
@@ -47,7 +47,7 @@
       "zooniverseHistory": []
     }
   ],
-  "description": "Dover Waterwatch, Tasmania, Australia - Collecting long term scientific observations of Dover’s waterways.\n\nAll data, photos and other contents of Dover Landcare Water Watch project © 2024 by Dover Landcare Tasmania is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ - This license requires that reusers give credit to the creator (Dover Landcare Tasmania). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.",
+  "description": "Dover Waterwatch, Tasmania, Australia — collecting long-term scientific observations of Dover’s waterways.\n\nThe project’s own observations, measurements,  photos and other project content © 2024-2026 Dover Landcare Tasmania and contributors are licensed CC BY 4.0 (full license here: https://creativecommons.org/licenses/by/4.0/ ): credit Dover Landcare Tasmania, reuse/adapt freely. Your use must not suggest that Dover Landcare Tasmania or its contributors endorse you or your use, and this licence grants no rights to their names, logos or trademarks.\n\nUploaded third-party resources (reports, plans, spreadsheets, etc.) are not covered — they remain their owners’ copyright; seek permission before reuse.\n\nAll material (including but not limited to observations, measurements, documents and photos) is provided “as is” and “as available”, without warranty of any kind, express or implied — including as to accuracy, completeness, or fitness for any purpose — and may contain errors or omissions. To the fullest extent permitted by law, Dover Landcare Tasmania and its contributors accept no liability for any loss or damage arising from its use or from reliance on it. Use it at your own risk.",
   "facebookLink": null,
   "gettingStarted": "",
   "goals": "- Develop a record of the waterways and coast of Dover, Tasmania, Australia\n- Collect contemporary observations aligned with historic records for comparative analysis\n- Collect relevant observations and develop photographic records\n- Provide data and analysis to support decision making and support sustainable management of the environment and natural heritage of the area",
@@ -95,7 +95,7 @@
     }
   ],
   "twitterLink": null,
-  "updatedAt": "2026-06-20T11:38:27+00:00",
+  "updatedAt": "2026-06-21T09:53:21+00:00",
   "urlField": "dover-waterwatch",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
