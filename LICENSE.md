@@ -3,9 +3,12 @@
 This repository contains material under two different licenses, plus
 third-party material that is **not** licensed for reuse. In summary:
 
-- **Data and documents** (`data/`) — CC BY 4.0
+- **Data and documents created by the project** (`data/`) — CC BY 4.0
+  (this does **not** cover third-party files uploaded to the project — see below)
 - **Code** (e.g. `scripts/`, `.github/workflows/`) — MIT License
-- **Third-party material** (`historic-data/`) — see each dataset's `COPYRIGHT.md`
+- **Third-party material** — uploaded project resources within `data/`, and
+  everything under `historic-data/` — owned by others; see below / each
+  `COPYRIGHT.md`
 
 ## No warranty and limitation of liability
 
@@ -23,8 +26,9 @@ arising from use of, or reliance on, this material. You use it at your own risk.
 
 This disclaimer applies to all of Dover Landcare Tasmania's content regardless
 of which license below governs reuse, and reinforces the disclaimers already
-contained in the CC BY 4.0 license (its Section 5) and the MIT License. It does
-**not** extend to third-party material under `historic-data/` (see below).
+contained in the CC BY 4.0 license (its Section 5) and the MIT License. It
+governs only Dover Landcare Tasmania's own content; third-party material (see
+below) is not licensed here at all.
 
 ## Data and documents — CC BY 4.0
 
@@ -40,6 +44,17 @@ CC BY 4.0 includes a disclaimer of warranties and limitation of liability (its
 Section 5): the material is offered as-is and as-available, and Dover Landcare
 Tasmania makes no representations or warranties concerning it, to the fullest
 extent permitted by law.
+
+**This grant covers only content the project owns.** It applies to the
+project's own records and materials that Dover Landcare Tasmania holds rights to
+(e.g. observation records, project-authored text, and project-created media). It
+does **not** cover third-party works that were merely uploaded to the CitSci
+project and captured by this backup — in particular **project resource files**
+(uploaded reference documents such as PDFs and spreadsheets, listed in
+`data/projects/*/resources.json` with their binaries under
+`data/files/photos_and_files/`). Those remain the property of their respective
+authors/publishers, are retained here for archival/backup purposes only, and are
+**not** licensed for reuse — see "Third-party material" below.
 
 ## Code — MIT License
 
@@ -70,19 +85,40 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## Third-party material — `historic-data/`
+## Third-party material
 
-The licenses above apply only to Dover Landcare Tasmania's own content (the
-`data/` backup and the code). They do **not** apply to third-party material
-archived under `historic-data/`, which is owned by others and carries its own
-copyright and use terms. Each dataset there has its own `COPYRIGHT.md` — read
-it before reuse.
+**General principle.** The licenses above apply only to content Dover Landcare
+Tasmania owns. This repository also contains, and over time will continue to
+gather, material owned by others — historic datasets, reports, monitoring
+documents, spreadsheets, imagery and similar. **Any such third-party material is
+the copyright of its respective owner, is included here only for archival /
+reference purposes, and is NOT licensed for reuse under CC BY 4.0, the MIT
+License, or otherwise.** Seek permission from the rights holder before reusing
+it. Where the owner or terms of a particular item are unknown, assume it is
+third-party and all rights are reserved.
 
-In particular:
+Third-party material may appear in either of two places, now or in future:
 
-- **`historic-data/huon-valley-wq-1996-2000/`** — Huon Valley Water Quality
-  Report 1996–2000 data. © Helen Otley and/or the Huon Healthy Rivers Project.
-  Copyright is **not** held by Dover Landcare, and **no license is granted** for
-  its use. Anyone wishing to use this data must contact the original author / the
-  Huon Healthy Rivers Project to seek permission. See
-  [`historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md`](historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md).
+- **Uploaded project resources captured by the backup**, under `data/` —
+  documents and files uploaded to the CitSci project by anyone (see
+  `data/projects/*/resources.json`, with binaries under
+  `data/files/photos_and_files/`). These are reference materials the project
+  generally does **not** own.
+- **Archived datasets added under `historic-data/`** — historic or
+  externally-sourced data collected and stored here for preservation. Each
+  dataset carries its own `COPYRIGHT.md` describing its owner and terms; read it
+  before any reuse.
+
+Examples present at the time of writing (illustrative, **not** exhaustive — more
+may be added): Waterwatch program documents and reports (monitoring-plan guides,
+the physico-chemical monitoring datasheet, the *Huon Waterwatch Report 2022/23*),
+and the **Huon Valley Water Quality 1996–2000** material (© Helen Otley and/or
+the Huon Healthy Rivers Project), which appears both as an uploaded project
+resource and under
+[`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md)
+— copyright **not** held by Dover Landcare, **no license granted**, contact the
+original author / the Huon Healthy Rivers Project for permission.
+
+Note: hosting third-party files in a public repository does not grant any right
+to redistribute them. If that is a concern, make the repository private or
+exclude the affected items.
