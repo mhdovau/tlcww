@@ -54,7 +54,8 @@ private.**
 
 ## Schedule
 
-- **Daily**, at 06:00 UTC (`.github/workflows/backup.yml`).
+- **Daily**, at 10:51 UTC (`.github/workflows/backup.yml`) — evening in Tasmania,
+  after the day's observations are usually entered.
 - **On demand** via the *Run workflow* button, with an option to skip binary
   downloads (metadata only).
 
