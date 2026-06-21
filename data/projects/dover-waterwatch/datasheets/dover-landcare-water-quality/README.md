@@ -169,3 +169,8 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 | Electrical Conductivity Unit | uS micro-Siemens |
 | Turbidity (NTU) | 20 |
 | Turbidity Measurement Type | Tube |
+
+
+---
+
+_Licensing: project & contributor content is CC BY 4.0; uploaded third-party resources are not licensed for reuse; code is MIT. See [LICENSE.md](../../../../../LICENSE.md)._

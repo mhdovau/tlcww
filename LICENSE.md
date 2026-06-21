@@ -3,8 +3,9 @@
 This repository contains material under two different licenses, plus
 third-party material that is **not** licensed for reuse. In summary:
 
-- **Data and documents created by the project** (`data/`) — CC BY 4.0
-  (this does **not** cover third-party files uploaded to the project — see below)
+- **Data and documents created by the project and its contributors** (`data/`)
+  — CC BY 4.0 (this does **not** cover third-party files uploaded to the
+  project — see below)
 - **Code** (e.g. `scripts/`, `.github/workflows/`) — MIT License
 - **Third-party material** — uploaded project resources within `data/`, and
   everything under `historic-data/` — owned by others; see below / each
@@ -45,11 +46,13 @@ Section 5): the material is offered as-is and as-available, and Dover Landcare
 Tasmania makes no representations or warranties concerning it, to the fullest
 extent permitted by law.
 
-**This grant covers only content the project owns.** It applies to the
-project's own records and materials that Dover Landcare Tasmania holds rights to
-(e.g. observation records, project-authored text, and project-created media). It
-does **not** cover third-party works that were merely uploaded to the CitSci
-project and captured by this backup — in particular **project resource files**
+**This grant covers only content the project and its contributors created.** It
+applies to the records and materials produced within the project — e.g.
+observation records, measurements, contributor-submitted photos, and
+project-authored text — for which rights are held by Dover Landcare Tasmania
+and the project's contributors. It does **not** cover third-party works that
+were merely uploaded to the CitSci project and captured by this backup — in
+particular **project resource files**
 (uploaded reference documents such as PDFs and spreadsheets, listed in
 `data/projects/*/resources.json` with their binaries under
 `data/files/photos_and_files/`). Those remain the property of their respective
@@ -105,9 +108,14 @@ Third-party material may appear in either of two places, now or in future:
   `data/files/photos_and_files/`). These are reference materials the project
   generally does **not** own.
 - **Archived datasets added under `historic-data/`** — historic or
-  externally-sourced data collected and stored here for preservation. Each
-  dataset carries its own `COPYRIGHT.md` describing its owner and terms; read it
-  before any reuse.
+  externally-sourced data collected and stored here for preservation. Each such
+  dataset typically contains both the **original, unlicensed source data** and
+  Dover Landcare's **modernisations / reformatting / derivations** of it (e.g.
+  CSV conversions, cleaned tables, derived coordinates, documentation). Because
+  those derivatives are built from unlicensed third-party source data, **neither
+  the originals nor the derivatives are licensed for reuse** — the underlying
+  rights remain with the original owner. Each dataset carries its own
+  `COPYRIGHT.md` describing its owner and terms; read it before any reuse.
 
 Examples present at the time of writing (illustrative, **not** exhaustive — more
 may be added): Waterwatch program documents and reports (monitoring-plan guides,
@@ -118,7 +126,3 @@ resource and under
 [`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md)
 — copyright **not** held by Dover Landcare, **no license granted**, contact the
 original author / the Huon Healthy Rivers Project for permission.
-
-Note: hosting third-party files in a public repository does not grant any right
-to redistribute them. If that is a concern, make the repository private or
-exclude the affected items.

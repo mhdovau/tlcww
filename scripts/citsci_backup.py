@@ -834,6 +834,18 @@ def _iter_records(records, depth=0):
                 yield from _iter_records(r["records"], depth + 1)
 
 
+def _license_footer(base: str, md_dir: str) -> list[str]:
+    """Brief, general licensing note for generated pages, linking LICENSE.md."""
+    target = os.path.normpath(os.path.join(base, os.pardir, "LICENSE.md"))
+    rel = os.path.relpath(target, md_dir).replace(os.sep, "/")
+    return [
+        "", "---", "",
+        "_Licensing: project & contributor content is CC BY 4.0; uploaded "
+        "third-party resources are not licensed for reuse; code is MIT. "
+        f"See [LICENSE.md]({rel})._",
+    ]
+
+
 def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
     when = _txt(obs.get("observedAt")) or _txt(obs.get("createdAt")) or "(undated)"
     loc = (obs.get("location") or {}).get("name") if isinstance(obs.get("location"), dict) else None
@@ -896,6 +908,7 @@ def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
                           key=lambda o: o.get("observedAt") or "", reverse=True):
             lines += render_observation_md(obs, base, md_dir)
 
+    lines += _license_footer(base, md_dir)
     out = os.path.join(base, ds_dir, "README.md")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
@@ -998,6 +1011,7 @@ def render_project_md(base: str, slug: str) -> None:
         lines.append("_No project resources._")
     lines.append("")
 
+    lines += _license_footer(base, pdir)
     out = os.path.join(pdir, "README.md")
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")

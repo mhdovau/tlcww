@@ -186,26 +186,22 @@ Curated historic datasets that predate (or sit outside) the automated CitSci
 backup live under [`historic-data/`](historic-data/), kept separate from `data/`
 so a backup run never touches them. The backup script only ever writes under
 `data/`. See [`historic-data/README.md`](historic-data/README.md) for the
-catalogue.
+catalogue. This is third-party material (original source data plus Dover
+Landcare's reformatting/derivations) and is **not** licensed for reuse — see
+each dataset's `COPYRIGHT.md` and [`LICENSE.md`](LICENSE.md).
 
-### Licensing of historic data (important)
+## License
 
-See [`LICENSE.md`](LICENSE.md) for full terms. In short: the project's own
-**data and documents** (`data/`) are **CC BY 4.0**, and the **code**
-(`scripts/`, `.github/workflows/`) is **MIT**. All of it is provided **"as is",
-without warranty and with no liability** for use of or reliance on it.
+Brief summary — see [`LICENSE.md`](LICENSE.md) for authoritative terms:
 
-The licenses do **not** cover third-party material the project doesn't own:
-**uploaded project resources captured in the backup** (PDFs, spreadsheets, etc.
-under `data/`) and everything under `historic-data/`. Those remain their owners'
-copyright and are **not** licensed for reuse — seek permission first.
+- **Data & documents created by the project and its contributors** (`data/`) —
+  **CC BY 4.0**.
+- **Code** (`scripts/`, `.github/workflows/`) — **MIT**.
+- **Third-party material** — uploaded project resources captured in `data/`, and
+  everything under `historic-data/` — owned by others and **not** licensed for
+  reuse; seek permission first.
 
-- **Huon Valley Water Quality 1996–2000**
-  ([`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/)):
-  © Helen Otley and/or the Huon Healthy Rivers Project. Copyright is **not** held
-  by Dover Landcare, and **no license is granted** — seek permission from the
-  original author / project before any use. See its
-  [`COPYRIGHT.md`](historic-data/huon-valley-wq-1996-2000/COPYRIGHT.md).
+All of it is provided **as is, without warranty or liability**.
 
 ## API reference
 
