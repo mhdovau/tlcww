@@ -17,7 +17,11 @@ its own subdirectory with its own README, copyright/use notice, and provenance.
 
 ## Use / copyright
 
-These datasets are **not** Dover Landcare's work and are **not** covered by this
-repository's `LICENSE.md`. Each carries its own `COPYRIGHT.md` — read it before
-reusing the data. In particular, the Huon Valley dataset has **no licence
-granted**; permission must be sought from the original author / project.
+Each dataset here combines **original third-party source data** with Dover
+Landcare's **modernisations / reformatting** of it (e.g. CSV conversions, cleaned
+tables, derived coordinates, documentation). The originals remain their owners'
+copyright, and the derivatives are built from that unlicensed source — so
+**neither is licensed for reuse**. Read each dataset's `COPYRIGHT.md`, and see
+[`../LICENSE.md`](../LICENSE.md), before using anything. For the Huon Valley
+dataset specifically, **no licence is granted**; seek permission from the
+original author / the Huon Healthy Rivers Project.

@@ -531,3 +531,8 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 | --- | --- |
 | Rivulet Mouth State | Closed |
 | Noteworthy Photograph | [![019ee4a8-fcc1-7099-a622-61a38ec3e4ec-9548db97a3e7b0b9284d9dd30a99ec413be574e1.jpg](../../../../files/photos_and_files/019ee4a8-fcc1-7099-a622-61a38ec3e4ec-9548db97a3e7b0b9284d9dd30a99ec413be574e1.jpg)](../../../../files/photos_and_files/019ee4a8-fcc1-7099-a622-61a38ec3e4ec-9548db97a3e7b0b9284d9dd30a99ec413be574e1.jpg) |
+
+
+---
+
+_Licensing: project & contributor content is CC BY 4.0; uploaded third-party resources are not licensed for reuse; code is MIT. See [LICENSE.md](../../../../../LICENSE.md)._

@@ -23,10 +23,13 @@ Anyone wishing to use this data should contact the original author / the Huon
 Healthy Rivers Project to seek permission and to discuss appropriate terms of
 use.
 
-## Note on derived content
+## Note on derived and reformatted content
 
-The latitude/longitude coordinates and map links added in this archive are
-derived works produced from the original easting/northing data (see the
-coordinate methodology documentation). The underlying location data and all
-water-quality measurements remain the property of the original author / project
-as above.
+This archive also contains Dover Landcare's reformatting and modernisation of
+the original data — CSV conversions, cleaned tables, the derived
+latitude/longitude coordinates and map links, and the accompanying
+documentation. These are **derived from the original, unlicensed source data**;
+their inclusion grants **no licence** to the underlying data, which (along with
+all water-quality measurements and location data) remains the property of the
+original author / project as above. Seek permission before reusing either the
+original data or these derivatives.
