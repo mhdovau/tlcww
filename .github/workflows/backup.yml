@@ -12,9 +12,12 @@ name: CitSci Backup
 
 on:
   schedule:
-    # Daily at 06:00 UTC. Cheap to run: unchanged files are skipped via ETag
-    # conditional GETs, and no-op runs don't create commits.
-    - cron: "0 6 * * *"
+    # 10:51 UTC daily — an off-peak minute (not the congested top of the hour,
+    # which GitHub frequently delays/drops). 10:xx UTC is evening in Tasmania
+    # (20:xx AEST winter / 21:xx AEDT summer), after the day's observations are
+    # typically entered. Cheap to run: unchanged files skip via ETag conditional
+    # GETs, and no-op runs don't create commits.
+    - cron: "51 10 * * *"
   workflow_dispatch:
     inputs:
       download_files:
