@@ -7,7 +7,7 @@ Usage Terms [`LICENSE.md`](LICENSE.md)
 Archive Here [`historic-data/`](historic-data/)
 
 ## CitSci Project
-Backup Here [`data/projects/`](data/projects/)
+Backup / Extract Here [`data/projects/`](data/projects/)
 
 # Automated Backups
 
