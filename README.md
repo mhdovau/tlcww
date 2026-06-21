@@ -190,11 +190,15 @@ catalogue.
 
 ### Licensing of historic data (important)
 
-This repository's [`LICENSE.md`](LICENSE.md) (CC BY 4.0) covers **only** Dover
-Landcare Tasmania's own content — the CitSci backup under `data/` and the code.
-It does **not** cover the third-party material under `historic-data/`, which is
-owned by others. Each dataset there carries its own `COPYRIGHT.md`; read it
-before reusing the data.
+See [`LICENSE.md`](LICENSE.md) for full terms. In short: the project's own
+**data and documents** (`data/`) are **CC BY 4.0**, and the **code**
+(`scripts/`, `.github/workflows/`) is **MIT**. All of it is provided **"as is",
+without warranty and with no liability** for use of or reliance on it.
+
+The licenses do **not** cover third-party material the project doesn't own:
+**uploaded project resources captured in the backup** (PDFs, spreadsheets, etc.
+under `data/`) and everything under `historic-data/`. Those remain their owners'
+copyright and are **not** licensed for reuse — seek permission first.
 
 - **Huon Valley Water Quality 1996–2000**
   ([`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/)):
