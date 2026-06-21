@@ -13,19 +13,24 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Width (cm)** — `number`
 - **Flowing** — `dropdown`
 - **Rainfall Last 24h (mm)** — `number`
+- **Air Temperature (C)** — `number`
 - **Other Observations** — `multiple_choice`
 - **Further / ad-hoc Observations** — `textarea`
 - **Comments / Notes** — `textarea`
-- **Measurements** — `description`
+- **Equipment** — `description`
 - **Hanna Combo Meter #** — `text`
 - **Hanna Combo Last Calibrated** — `text`
 - **TDScan Meter #** — `text`
 - **TDScan Last Calibrated** — `text`
-- **Ph** — `number`
-- **Temperature (C)** — `number`
-- **Electrical Conductivity** — `number`
+- **Measurements** — `description`
+- **pH** — `number`
+- **TDS (ppm) / salinity** — `number`
+- **Water Temperature (C)** — `number`
+- **Electrical Conductivity (mS / uS)** — `number`
 - **Electrical Conductivity Unit** — `dropdown`
 - **Dissolved Oxygen %s** — `number`
+- **Dissolved Oxygen Temperature (C)** — `number`
+- **Dissolved Oxygen in mg/L** — `number`
 - **Turbidity (NTU)** — `number`
 - **Turbidity Measurement Type** — `dropdown`
 - **Nutrient Samples Collected** — `multiple_choice`

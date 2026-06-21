@@ -2,9 +2,9 @@
   "account_display_name": "DL W",
   "account_email": "stadia_strolls.2s@icloud.com",
   "api_base": "https://api.citsci.org",
-  "completed_at": "2026-06-20T11:50:19.538452+00:00",
+  "completed_at": "2026-06-21T08:20:41.967567+00:00",
   "counts": {
-    "datasheet_records": 31,
+    "datasheet_records": 36,
     "datasheets": 2,
     "files": 87,
     "files_downloaded": 0,
@@ -17,8 +17,8 @@
     "observations_orphaned": 0,
     "projects": 1
   },
-  "duration_seconds": 41.8,
-  "generated_at": "2026-06-20T11:49:37.768357+00:00",
+  "duration_seconds": 46.4,
+  "generated_at": "2026-06-21T08:19:55.581094+00:00",
   "include_private_fields": false,
   "orphaned_observations": [],
   "private_fields": {

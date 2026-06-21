@@ -103,92 +103,6 @@
     "validators": []
   },
   {
-    "@id": "/datasheet_records/13433",
-    "@type": "DatasheetRecord",
-    "allowAnyOrganism": false,
-    "allowReplica": false,
-    "appearanceOptions": [],
-    "createdAt": "2024-06-19T22:13:57+00:00",
-    "defaultValue": null,
-    "description": null,
-    "id": 13433,
-    "isPrivate": false,
-    "isReady": true,
-    "label": "Tide Height (m)",
-    "optionsSet": null,
-    "orderNumber": 2,
-    "organisms": [],
-    "parentRecord": null,
-    "recordType": "number",
-    "records": [],
-    "updatedAt": "2024-06-19T22:18:15+00:00",
-    "validators": [
-      {
-        "@id": "/field_validators/1945",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:13:57+00:00",
-        "id": 1945,
-        "options": null,
-        "updatedAt": "2024-06-19T22:13:57+00:00",
-        "validatorType": "max",
-        "value": "1.2"
-      },
-      {
-        "@id": "/field_validators/1944",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:13:57+00:00",
-        "id": 1944,
-        "options": null,
-        "updatedAt": "2024-06-19T22:13:57+00:00",
-        "validatorType": "min",
-        "value": "0"
-      }
-    ]
-  },
-  {
-    "@id": "/datasheet_records/13434",
-    "@type": "DatasheetRecord",
-    "allowAnyOrganism": false,
-    "allowReplica": false,
-    "appearanceOptions": [],
-    "createdAt": "2024-06-19T22:13:57+00:00",
-    "defaultValue": null,
-    "description": null,
-    "id": 13434,
-    "isPrivate": false,
-    "isReady": true,
-    "label": "Lagoon Height (m)",
-    "optionsSet": null,
-    "orderNumber": 3,
-    "organisms": [],
-    "parentRecord": null,
-    "recordType": "number",
-    "records": [],
-    "updatedAt": "2024-06-19T22:18:15+00:00",
-    "validators": [
-      {
-        "@id": "/field_validators/1947",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:13:57+00:00",
-        "id": 1947,
-        "options": null,
-        "updatedAt": "2024-06-19T22:13:57+00:00",
-        "validatorType": "max",
-        "value": "2"
-      },
-      {
-        "@id": "/field_validators/1946",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:13:57+00:00",
-        "id": 1946,
-        "options": null,
-        "updatedAt": "2024-06-19T22:13:57+00:00",
-        "validatorType": "min",
-        "value": "0"
-      }
-    ]
-  },
-  {
     "@id": "/datasheet_records/13435",
     "@type": "DatasheetRecord",
     "allowAnyOrganism": false,
@@ -207,7 +121,7 @@
     "parentRecord": null,
     "recordType": "textarea",
     "records": [],
-    "updatedAt": "2024-06-19T22:13:57+00:00",
+    "updatedAt": "2026-06-20T22:49:45+00:00",
     "validators": []
   },
   {
@@ -229,7 +143,7 @@
     "parentRecord": null,
     "recordType": "image",
     "records": [],
-    "updatedAt": "2024-06-19T22:25:53+00:00",
+    "updatedAt": "2026-06-20T22:49:45+00:00",
     "validators": [
       {
         "@id": "/field_validators/3416",
@@ -244,15 +158,59 @@
     ]
   },
   {
-    "@id": "/datasheet_records/13437",
+    "@id": "/datasheet_records/16883",
     "@type": "DatasheetRecord",
     "allowAnyOrganism": false,
     "allowReplica": false,
     "appearanceOptions": [],
-    "createdAt": "2024-06-19T22:18:14+00:00",
+    "createdAt": "2026-06-20T22:49:37+00:00",
     "defaultValue": null,
     "description": null,
-    "id": 13437,
+    "id": 16883,
+    "isPrivate": false,
+    "isReady": true,
+    "label": "Tide Height (m)",
+    "optionsSet": null,
+    "orderNumber": 2,
+    "organisms": [],
+    "parentRecord": null,
+    "recordType": "number",
+    "records": [],
+    "updatedAt": "2026-06-20T22:49:37+00:00",
+    "validators": []
+  },
+  {
+    "@id": "/datasheet_records/16884",
+    "@type": "DatasheetRecord",
+    "allowAnyOrganism": false,
+    "allowReplica": false,
+    "appearanceOptions": [],
+    "createdAt": "2026-06-20T22:49:37+00:00",
+    "defaultValue": null,
+    "description": null,
+    "id": 16884,
+    "isPrivate": false,
+    "isReady": true,
+    "label": "Lagoon Height (m)",
+    "optionsSet": null,
+    "orderNumber": 3,
+    "organisms": [],
+    "parentRecord": null,
+    "recordType": "number",
+    "records": [],
+    "updatedAt": "2026-06-20T22:49:37+00:00",
+    "validators": []
+  },
+  {
+    "@id": "/datasheet_records/16885",
+    "@type": "DatasheetRecord",
+    "allowAnyOrganism": false,
+    "allowReplica": false,
+    "appearanceOptions": [],
+    "createdAt": "2026-06-20T22:49:37+00:00",
+    "defaultValue": null,
+    "description": null,
+    "id": 16885,
     "isPrivate": false,
     "isReady": true,
     "label": "Dover Rainfall (24h to observation mm)",
@@ -262,28 +220,7 @@
     "parentRecord": null,
     "recordType": "number",
     "records": [],
-    "updatedAt": "2024-06-19T23:03:32+00:00",
-    "validators": [
-      {
-        "@id": "/field_validators/1949",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:18:14+00:00",
-        "id": 1949,
-        "options": null,
-        "updatedAt": "2024-06-19T22:18:14+00:00",
-        "validatorType": "max",
-        "value": "500"
-      },
-      {
-        "@id": "/field_validators/1948",
-        "@type": "FieldValidator",
-        "createdAt": "2024-06-19T22:18:14+00:00",
-        "id": 1948,
-        "options": null,
-        "updatedAt": "2024-06-19T22:18:14+00:00",
-        "validatorType": "min",
-        "value": "0"
-      }
-    ]
+    "updatedAt": "2026-06-20T22:49:45+00:00",
+    "validators": []
   }
 ]
