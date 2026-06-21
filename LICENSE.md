@@ -3,13 +3,30 @@
 This repository contains material under two different licenses, plus
 third-party material that is **not** licensed for reuse. In summary:
 
-- **Data and content** (`data/`) — CC BY 4.0
+- **Data and documents** (`data/`) — CC BY 4.0
 - **Code** (e.g. `scripts/`, `.github/workflows/`) — MIT License
 - **Third-party material** (`historic-data/`) — see each dataset's `COPYRIGHT.md`
 
-Both licenses provide the material **"as is", without warranty of any kind**.
+## No warranty and limitation of liability
 
-## Data and content — CC BY 4.0
+All of Dover Landcare Tasmania's material in this repository — the **data,
+documents and other content** under `data/`, and the **code** — is provided
+**"as is" and "as available", without warranty of any kind**, express or
+implied, including without limitation any warranty of accuracy, completeness,
+reliability, merchantability, fitness for a particular purpose, or
+non-infringement. The data and documents are an automated backup and may be
+incomplete, out of date, or contain errors.
+
+To the fullest extent permitted by law, Dover Landcare Tasmania and the
+contributors accept **no liability** for any claim, loss, or damage of any kind
+arising from use of, or reliance on, this material. You use it at your own risk.
+
+This disclaimer applies to all of Dover Landcare Tasmania's content regardless
+of which license below governs reuse, and reinforces the disclaimers already
+contained in the CC BY 4.0 license (its Section 5) and the MIT License. It does
+**not** extend to third-party material under `historic-data/` (see below).
+
+## Data and documents — CC BY 4.0
 
 All data, photos and other contents of the Dover Landcare Water Watch project
 (the CitSci.org backup under `data/`) © 2024 by Dover Landcare Tasmania is

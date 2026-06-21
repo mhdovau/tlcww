@@ -191,11 +191,12 @@ catalogue.
 ### Licensing of historic data (important)
 
 See [`LICENSE.md`](LICENSE.md) for full terms. In short: Dover Landcare
-Tasmania's own **data/content** (`data/`) is **CC BY 4.0**, and the **code**
-(`scripts/`, `.github/workflows/`) is **MIT** — both provided **as-is, without
-warranty**. Neither license covers the third-party material under
-`historic-data/`, which is owned by others; each dataset there carries its own
-`COPYRIGHT.md`, so read it before reusing the data.
+Tasmania's own **data and documents** (`data/`) are **CC BY 4.0**, and the
+**code** (`scripts/`, `.github/workflows/`) is **MIT**. All of it is provided
+**"as is", without warranty and with no liability** for use of or reliance on
+it. Neither license covers the third-party material under `historic-data/`,
+which is owned by others; each dataset there carries its own `COPYRIGHT.md`, so
+read it before reusing the data.
 
 - **Huon Valley Water Quality 1996–2000**
   ([`historic-data/huon-valley-wq-1996-2000/`](historic-data/huon-valley-wq-1996-2000/)):
