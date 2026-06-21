@@ -195,7 +195,8 @@ each dataset's `COPYRIGHT.md` and [`LICENSE.md`](LICENSE.md).
 Brief summary — see [`LICENSE.md`](LICENSE.md) for authoritative terms:
 
 - **Data & documents created by the project and its contributors** (`data/`) —
-  **CC BY 4.0**.
+  **CC BY 4.0** (credit Dover Landcare Tasmania; no implied endorsement; no
+  rights to names/logos/trademarks).
 - **Code** (`scripts/`, `.github/workflows/`) — **MIT**.
 - **Third-party material** — uploaded project resources captured in `data/`, and
   everything under `historic-data/` — owned by others and **not** licensed for

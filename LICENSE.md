@@ -34,12 +34,16 @@ below) is not licensed here at all.
 ## Data and documents — CC BY 4.0
 
 All data, photos and other contents of the Dover Landcare Water Watch project
-(the CitSci.org backup under `data/`) © 2024 by Dover Landcare Tasmania is
+(the CitSci.org backup under `data/`) © 2024–2026 by Dover Landcare Tasmania is
 licensed under CC BY 4.0. To view a copy of this license, visit
 https://creativecommons.org/licenses/by/4.0/ — This license requires that
 reusers give credit to the creator (Dover Landcare Tasmania). It allows reusers
 to distribute, remix, adapt, and build upon the material in any medium or
 format, even for commercial purposes.
+
+Attribution must not suggest that Dover Landcare Tasmania or its contributors
+endorse you or your use, and this license grants no rights to their names,
+logos or trademarks (CC BY 4.0 does not license trademark rights).
 
 CC BY 4.0 includes a disclaimer of warranties and limitation of liability (its
 Section 5): the material is offered as-is and as-available, and Dover Landcare
@@ -48,10 +52,11 @@ extent permitted by law.
 
 **This grant covers only content the project and its contributors created.** It
 applies to the records and materials produced within the project — e.g.
-observation records, measurements, contributor-submitted photos, and
-project-authored text — for which rights are held by Dover Landcare Tasmania
-and the project's contributors. It does **not** cover third-party works that
-were merely uploaded to the CitSci project and captured by this backup — in
+observation records, measurements, contributor-submitted photos, project-authored
+text, and other project-created content (such as site/location data, datasheet
+definitions, and project posts) — for which rights are held by Dover Landcare
+Tasmania and the project's contributors. It does **not** cover third-party works
+that were merely uploaded to the CitSci project and captured by this backup — in
 particular **project resource files**
 (uploaded reference documents such as PDFs and spreadsheets, listed in
 `data/projects/*/resources.json` with their binaries under
