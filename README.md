@@ -1,4 +1,15 @@
-# tlcww — CitSci.org Backup
+# tlcww — Dover Landcare Water Watch - CitSci.org Backup
+
+## License
+Usage Terms [`LICENSE.md`](LICENSE.md)
+
+## Historic Data
+Archive Here [`historic-data/`](historic-data/)
+
+## CitSci Project
+Backup Here [`data/projects/`](data/projects/)
+
+# Automated Backups
 
 Automated backups of a [CitSci.org](https://citsci.org) account and its
 projects, using the CitSci API (`https://api.citsci.org`).
