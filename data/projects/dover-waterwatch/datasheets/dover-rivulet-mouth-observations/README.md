@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 44
+**Observations:** 45
 
 ## Fields
 
@@ -14,6 +14,19 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Noteworthy Photograph** — `image`
 
 ## Observations
+
+### 2026-06-22T12:38:59+00:00 — Dover Rivulet Mouth
+**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019eed35-2dd3-7c57-b31e-cf3798f9ec7b`
+
+[![019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg](../../../../files/photos_and_files/019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg)](../../../../files/photos_and_files/019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Into Lagoon |
+| Tide Height (m) | 0.9 |
+| Lagoon Height (m) | 0.9 |
+| Dover Rainfall (24h to observation mm) | 0 |
+| Noteworthy Photograph | [![019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg](../../../../files/photos_and_files/019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg)](../../../../files/photos_and_files/019eed35-1c9e-7393-aa37-30bd2da59075-cd16301cbb2ae044dc136f0a039f98046948a6ad.jpg) [![019eed35-2564-7bc9-8410-f769f6e65f45-6a9d83d53660af7a98b6c98cd61cd457bb16b047.jpg](../../../../files/photos_and_files/019eed35-2564-7bc9-8410-f769f6e65f45-6a9d83d53660af7a98b6c98cd61cd457bb16b047.jpg)](../../../../files/photos_and_files/019eed35-2564-7bc9-8410-f769f6e65f45-6a9d83d53660af7a98b6c98cd61cd457bb16b047.jpg) [![019eed35-2bd3-7efd-9c04-83bef5d5c5f8-94157aabc1d69999df207eb676cadf877bd3f4b7.jpg](../../../../files/photos_and_files/019eed35-2bd3-7efd-9c04-83bef5d5c5f8-94157aabc1d69999df207eb676cadf877bd3f4b7.jpg)](../../../../files/photos_and_files/019eed35-2bd3-7efd-9c04-83bef5d5c5f8-94157aabc1d69999df207eb676cadf877bd3f4b7.jpg) |
 
 ### 2026-06-20T13:01:00+00:00 — Dover Rivulet Lower Lagoon
 **Observer:** mhdoverlc  ·  **Location:** -43.3158, 147.02321  ·  **ID:** `019ee41e-8957-759d-89d2-4110cb97e222`
