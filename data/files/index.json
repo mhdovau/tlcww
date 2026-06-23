@@ -420,6 +420,16 @@
     "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/5cab6354e6e405f634b4fc6f2db7ab05f10a129b.jpg"
   },
   {
+    "content_length": 440323,
+    "downloaded": true,
+    "etag": "\"49b7c7d1efbf76de9074cec7d1b93d28\"",
+    "filename": "97367509da5f9ca1587ce4877f8400f60a56cf6a.jpg",
+    "id": "019ef6c5-798d-7123-8bdb-05585853adfe",
+    "local_path": "files/photos_and_files/019ef6c5-798d-7123-8bdb-05585853adfe-97367509da5f9ca1587ce4877f8400f60a56cf6a.jpg",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/97367509da5f9ca1587ce4877f8400f60a56cf6a.jpg"
+  },
+  {
     "content_length": 61277,
     "downloaded": true,
     "etag": "\"e0a44894cc92128dcfbda6f3f25c5687\"",
@@ -898,6 +908,16 @@
     "local_path": "files/photos_and_files/019eed35-2bd3-7efd-9c04-83bef5d5c5f8-94157aabc1d69999df207eb676cadf877bd3f4b7.jpg",
     "orphaned": false,
     "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/94157aabc1d69999df207eb676cadf877bd3f4b7.jpg"
+  },
+  {
+    "content_length": 770399,
+    "downloaded": true,
+    "etag": "\"a7a7fc01f67716b24b7b72390dc11a33\"",
+    "filename": "2d551d0de69722df9678f774362bd498fe58f549.jpg",
+    "id": "019ef6c5-b793-735d-9834-e799fa9d38da",
+    "local_path": "files/photos_and_files/019ef6c5-b793-735d-9834-e799fa9d38da-2d551d0de69722df9678f774362bd498fe58f549.jpg",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/2d551d0de69722df9678f774362bd498fe58f549.jpg"
   },
   {
     "content_length": 122923,
