@@ -1507,6 +1507,17 @@
     "observationsTotal": 1
   },
   {
+    "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
+    "@type": "Area",
+    "id": "019ef742-d38e-7448-836b-3579657f8e7e",
+    "lngLat": {
+      "lat": -43.31235,
+      "lng": 147.04628
+    },
+    "name": "Glenbervie Rivulet",
+    "observationsTotal": 1
+  },
+  {
     "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
     "@type": "Area",
     "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",

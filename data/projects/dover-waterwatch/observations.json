@@ -2139,6 +2139,64 @@
     }
   },
   {
+    "@id": "/observations/019ef742-d390-75dc-b1ed-84e520818b6a",
+    "@type": "Observation",
+    "createdAt": "2026-06-24T01:33:32+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ef6d9-c87c-75ef-b265-185dce3506bd",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-23T23:38:48+00:00",
+      "name": "Dover and Surrounds Adhoc",
+      "updatedAt": "2026-06-23T23:46:40+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019ef742-bf93-7885-8bc1-d66391da8bdc",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-06-24T01:33:26+00:00",
+      "localFile": "files/photos_and_files/019ef742-bf93-7885-8bc1-d66391da8bdc-386475b397a769c78b4d72883148d593df2b4bae.jpg",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/386475b397a769c78b4d72883148d593df2b4bae.jpg",
+      "updatedAt": "2026-06-24T01:33:32+00:00"
+    },
+    "id": "019ef742-d390-75dc-b1ed-84e520818b6a",
+    "lngLat": {
+      "lat": -43.31235,
+      "lng": 147.04628
+    },
+    "location": {
+      "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
+      "@type": "Area",
+      "createdAt": "2026-06-24T01:33:32+00:00",
+      "id": "019ef742-d38e-7448-836b-3579657f8e7e",
+      "lngLat": {
+        "lat": -43.31235,
+        "lng": 147.04628
+      },
+      "name": "Glenbervie Rivulet",
+      "updatedAt": "2026-06-24T01:33:32+00:00"
+    },
+    "observationEndedAt": "2026-06-24T09:40:33+00:00",
+    "observedAt": "2026-06-24T09:40:00+00:00",
+    "updatedAt": "2026-06-24T01:33:32+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
     "@id": "/observations/30c48741-cac5-4f0c-8a3d-f064e40b8912",
     "@type": "Observation",
     "createdAt": "2024-06-25T02:31:11+00:00",
