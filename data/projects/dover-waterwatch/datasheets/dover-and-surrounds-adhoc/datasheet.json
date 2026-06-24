@@ -8,7 +8,7 @@
   "instructions": "",
   "isPrivate": false,
   "locationAutoAssign": 0,
-  "locationFormat": 0,
+  "locationFormat": 2,
   "name": "Dover and Surrounds Adhoc",
   "project": {
     "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
@@ -86,6 +86,6 @@
   "status": "published",
   "travelDurationDescription": "Duration spent traveling to the observation site. This includes driving, hiking, etc. When submitting multiple observations, please submit the travel duration since the last observation.",
   "travelDurationFormat": "optional",
-  "updatedAt": "2026-06-23T23:46:40+00:00",
+  "updatedAt": "2026-06-24T01:50:09+00:00",
   "zooniverseHistory": []
 }
