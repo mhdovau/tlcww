@@ -1,0 +1,57 @@
+[
+  {
+    "@id": "/datasheet_records/16901",
+    "@type": "DatasheetRecord",
+    "allowAnyOrganism": false,
+    "allowReplica": false,
+    "appearanceOptions": [],
+    "createdAt": "2026-06-23T23:44:14+00:00",
+    "defaultValue": null,
+    "description": null,
+    "id": 16901,
+    "isPrivate": false,
+    "isReady": true,
+    "label": "Observations",
+    "optionsSet": null,
+    "orderNumber": 1,
+    "organisms": [],
+    "parentRecord": null,
+    "recordType": "textarea",
+    "records": [],
+    "updatedAt": "2026-06-23T23:46:40+00:00",
+    "validators": []
+  },
+  {
+    "@id": "/datasheet_records/16902",
+    "@type": "DatasheetRecord",
+    "allowAnyOrganism": false,
+    "allowReplica": false,
+    "appearanceOptions": [],
+    "createdAt": "2026-06-23T23:44:14+00:00",
+    "defaultValue": null,
+    "description": null,
+    "id": 16902,
+    "isPrivate": false,
+    "isReady": true,
+    "label": "Photos",
+    "optionsSet": null,
+    "orderNumber": 2,
+    "organisms": [],
+    "parentRecord": null,
+    "recordType": "image",
+    "records": [],
+    "updatedAt": "2026-06-23T23:46:40+00:00",
+    "validators": [
+      {
+        "@id": "/field_validators/3426",
+        "@type": "FieldValidator",
+        "createdAt": "2026-06-23T23:44:14+00:00",
+        "id": 3426,
+        "options": null,
+        "updatedAt": "2026-06-23T23:44:14+00:00",
+        "validatorType": "max",
+        "value": "8"
+      }
+    ]
+  }
+]

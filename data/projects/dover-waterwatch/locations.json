@@ -1496,6 +1496,17 @@
     "observationsTotal": 0
   },
   {
+    "@id": "/areas/019ef6ea-2bac-751d-86de-2926cf1310b0",
+    "@type": "Area",
+    "id": "019ef6ea-2bac-751d-86de-2926cf1310b0",
+    "lngLat": {
+      "lat": -43.313011631,
+      "lng": 147.03889344
+    },
+    "name": "Bells Lagoon",
+    "observationsTotal": 1
+  },
+  {
     "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
     "@type": "Area",
     "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",

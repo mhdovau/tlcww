@@ -45,6 +45,21 @@
       "status": "published",
       "updatedAt": "2026-06-20T23:00:55+00:00",
       "zooniverseHistory": []
+    },
+    {
+      "@id": "/datasheets/019ef6d9-c87c-75ef-b265-185dce3506bd",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-23T23:38:48+00:00",
+      "id": "019ef6d9-c87c-75ef-b265-185dce3506bd",
+      "instructions": "",
+      "isPrivate": false,
+      "locationAutoAssign": 0,
+      "locationFormat": 0,
+      "name": "Dover and Surrounds Adhoc",
+      "published": true,
+      "status": "published",
+      "updatedAt": "2026-06-23T23:46:40+00:00",
+      "zooniverseHistory": []
     }
   ],
   "description": "Dover Waterwatch, Tasmania, Australia — collecting long-term scientific observations of Dover’s waterways.\n\nThe project’s own observations, measurements,  photos and other project content © 2024-2026 Dover Landcare Tasmania and contributors are licensed CC BY 4.0 (full license here: https://creativecommons.org/licenses/by/4.0/ ): credit Dover Landcare Tasmania, reuse/adapt freely. Your use must not suggest that Dover Landcare Tasmania or its contributors endorse you or your use, and this licence grants no rights to their names, logos or trademarks.\n\nUploaded third-party resources (reports, plans, spreadsheets, etc.) are not covered — they remain their owners’ copyright; seek permission before reuse.\n\nAll material (including but not limited to observations, measurements, documents and photos) is provided “as is” and “as available”, without warranty of any kind, express or implied — including as to accuracy, completeness, or fitness for any purpose — and may contain errors or omissions. To the fullest extent permitted by law, Dover Landcare Tasmania and its contributors accept no liability for any loss or damage arising from its use or from reliance on it. Use it at your own risk.",
@@ -60,7 +75,7 @@
   "isSciStarterParticipation": false,
   "isStripImageMetadata": false,
   "isZooniverse": true,
-  "lastObservationDatetime": "2026-06-23T23:16:53+00:00",
+  "lastObservationDatetime": "2026-06-23T23:56:42+00:00",
   "latitude": -43.31617,
   "longitude": 147.02354,
   "measurementsTotal": 68,
@@ -95,7 +110,7 @@
     }
   ],
   "twitterLink": null,
-  "updatedAt": "2026-06-23T23:16:53+00:00",
+  "updatedAt": "2026-06-23T23:56:42+00:00",
   "urlField": "dover-waterwatch",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
