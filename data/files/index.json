@@ -450,6 +450,16 @@
     "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/386475b397a769c78b4d72883148d593df2b4bae.jpg"
   },
   {
+    "content_length": 543197,
+    "downloaded": true,
+    "etag": "\"aaf888f6528e212c8bdb2c2fc6e6d9ee\"",
+    "filename": "3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+    "id": "019f104e-1227-7f7e-9791-cd62ed57968c",
+    "local_path": "files/photos_and_files/019f104e-1227-7f7e-9791-cd62ed57968c-3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+    "orphaned": false,
+    "url": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/3ff57377d55c3858279fc44f4046b60836996f02.jpg"
+  },
+  {
     "content_length": 61277,
     "downloaded": true,
     "etag": "\"e0a44894cc92128dcfbda6f3f25c5687\"",

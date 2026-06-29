@@ -1,9 +1,9 @@
 {
   "@context": "/contexts/Observation",
-  "@id": "/observations/b9ab6b05-d206-4efb-91ce-5990279fe8b0",
+  "@id": "/observations/019f104e-13d8-7ebd-a842-dce5e2b9ffa9",
   "@type": "Observation",
   "comments": null,
-  "createdAt": "2024-06-23T03:32:23+00:00",
+  "createdAt": "2026-06-28T22:16:20+00:00",
   "datasheet": {
     "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
     "@type": "Datasheet",
@@ -15,34 +15,34 @@
   "durationSetup": null,
   "durationTravel": null,
   "featuredPhoto": {
-    "@id": "/file_objects/0d782f55-a94d-41c7-a8b6-ea49ff0705de",
+    "@id": "/file_objects/019f104e-1227-7f7e-9791-cd62ed57968c",
     "@type": "https://schema.org/MediaObject",
-    "createdAt": "2024-06-23T03:32:22+00:00",
-    "localFile": "files/photos_and_files/0d782f55-a94d-41c7-a8b6-ea49ff0705de-c7eb1d9da909d10525764648f7c97e3e73c8b45f.heic",
-    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/c7eb1d9da909d10525764648f7c97e3e73c8b45f.HEIC",
-    "updatedAt": "2024-06-23T03:32:22+00:00"
+    "createdAt": "2026-06-28T22:16:18+00:00",
+    "localFile": "files/photos_and_files/019f104e-1227-7f7e-9791-cd62ed57968c-3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+    "updatedAt": "2026-06-28T22:16:20+00:00"
   },
   "files": [],
-  "id": "b9ab6b05-d206-4efb-91ce-5990279fe8b0",
+  "id": "019f104e-13d8-7ebd-a842-dce5e2b9ffa9",
   "isPrivate": false,
   "lngLat": {
-    "lat": -43.3158,
-    "lng": 147.02321
+    "lat": -43.31622,
+    "lng": 147.02357
   },
   "location": {
-    "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+    "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
     "@type": "Area",
-    "createdAt": "2024-06-22T05:49:58+00:00",
-    "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
+    "createdAt": "2024-06-22T05:49:46+00:00",
+    "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
     "lngLat": {
-      "lat": -43.3158,
-      "lng": 147.02321
+      "lat": -43.31622,
+      "lng": 147.02357
     },
-    "name": "Dover Rivulet Lower Lagoon",
-    "updatedAt": "2026-06-20T08:21:07+00:00"
+    "name": "Dover Rivulet Mouth",
+    "updatedAt": "2026-06-28T22:16:20+00:00"
   },
   "observationEndedAt": null,
-  "observedAt": "2024-06-23T13:29:50+00:00",
+  "observedAt": "2026-06-29T08:14:00+00:00",
   "project": {
     "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
     "@type": "Project",
@@ -58,9 +58,9 @@
   },
   "records": [
     {
-      "@id": "/observation_records/2071713",
+      "@id": "/observation_records/2688748",
       "@type": "ObservationRecord",
-      "createdAt": "2024-06-23T03:32:23+00:00",
+      "createdAt": "2026-06-28T22:16:20+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/13432",
         "@type": "DatasheetRecord",
@@ -69,43 +69,43 @@
       },
       "description": null,
       "files": [],
-      "id": 2071713,
+      "id": 2688748,
       "isPrivate": false,
       "label": "Rivulet Mouth State",
       "multiSelectOptionValues": [],
       "optionValue": {
-        "@id": "/option_values/18795",
+        "@id": "/option_values/18794",
         "@type": "OptionValue",
         "createdAt": "2024-06-19T22:13:57+00:00",
         "dataType": "text",
-        "id": 18795,
+        "id": 18794,
         "isCustomValue": false,
         "isDefault": false,
-        "orderNumber": 4,
+        "orderNumber": 3,
         "updatedAt": "2024-06-19T22:19:14+00:00",
-        "value": "Open - Flowing Into Lagoon"
+        "value": "Open - Flowing Out to Sea"
       },
       "orderNumber": 1,
       "organism": null,
       "parentRecord": null,
       "recordType": "radio",
       "records": [],
-      "updatedAt": "2024-06-23T03:32:23+00:00",
-      "value": "Open - Flowing Into Lagoon"
+      "updatedAt": "2026-06-28T22:16:20+00:00",
+      "value": "Open - Flowing Out to Sea"
     },
     {
-      "@id": "/observation_records/2071714",
+      "@id": "/observation_records/2688749",
       "@type": "ObservationRecord",
-      "createdAt": "2024-06-23T03:32:23+00:00",
+      "createdAt": "2026-06-28T22:16:20+00:00",
       "datasheetRecord": {
-        "@id": "/datasheet_records/13433",
+        "@id": "/datasheet_records/16883",
         "@type": "DatasheetRecord",
-        "createdAt": "2024-06-19T22:13:57+00:00",
+        "createdAt": "2026-06-20T22:49:37+00:00",
         "updatedAt": "2026-06-20T22:49:37+00:00"
       },
       "description": null,
       "files": [],
-      "id": 2071714,
+      "id": 2688749,
       "isPrivate": false,
       "label": "Tide Height (m)",
       "multiSelectOptionValues": [],
@@ -115,22 +115,22 @@
       "parentRecord": null,
       "recordType": "number",
       "records": [],
-      "updatedAt": "2024-06-23T03:32:23+00:00",
-      "value": "0.8"
+      "updatedAt": "2026-06-28T22:16:20+00:00",
+      "value": "0.5"
     },
     {
-      "@id": "/observation_records/2071715",
+      "@id": "/observation_records/2688750",
       "@type": "ObservationRecord",
-      "createdAt": "2024-06-23T03:32:23+00:00",
+      "createdAt": "2026-06-28T22:16:20+00:00",
       "datasheetRecord": {
-        "@id": "/datasheet_records/13434",
+        "@id": "/datasheet_records/16884",
         "@type": "DatasheetRecord",
-        "createdAt": "2024-06-19T22:13:57+00:00",
+        "createdAt": "2026-06-20T22:49:37+00:00",
         "updatedAt": "2026-06-20T22:49:37+00:00"
       },
       "description": null,
       "files": [],
-      "id": 2071715,
+      "id": 2688750,
       "isPrivate": false,
       "label": "Lagoon Height (m)",
       "multiSelectOptionValues": [],
@@ -140,22 +140,22 @@
       "parentRecord": null,
       "recordType": "number",
       "records": [],
-      "updatedAt": "2024-06-23T03:32:23+00:00",
-      "value": "0.8"
+      "updatedAt": "2026-06-28T22:16:20+00:00",
+      "value": "0.6"
     },
     {
-      "@id": "/observation_records/2071716",
+      "@id": "/observation_records/2688751",
       "@type": "ObservationRecord",
-      "createdAt": "2024-06-23T03:32:23+00:00",
+      "createdAt": "2026-06-28T22:16:20+00:00",
       "datasheetRecord": {
-        "@id": "/datasheet_records/13437",
+        "@id": "/datasheet_records/16885",
         "@type": "DatasheetRecord",
-        "createdAt": "2024-06-19T22:18:14+00:00",
+        "createdAt": "2026-06-20T22:49:37+00:00",
         "updatedAt": "2026-06-20T22:49:45+00:00"
       },
       "description": null,
       "files": [],
-      "id": 2071716,
+      "id": 2688751,
       "isPrivate": false,
       "label": "Dover Rainfall (24h to observation mm)",
       "multiSelectOptionValues": [],
@@ -165,13 +165,13 @@
       "parentRecord": null,
       "recordType": "number",
       "records": [],
-      "updatedAt": "2024-06-23T03:32:23+00:00",
-      "value": "1"
+      "updatedAt": "2026-06-28T22:16:20+00:00",
+      "value": "0"
     },
     {
-      "@id": "/observation_records/2071717",
+      "@id": "/observation_records/2688752",
       "@type": "ObservationRecord",
-      "createdAt": "2024-06-23T03:32:23+00:00",
+      "createdAt": "2026-06-28T22:16:20+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/13436",
         "@type": "DatasheetRecord",
@@ -181,15 +181,15 @@
       "description": null,
       "files": [
         {
-          "@id": "/file_objects/0d782f55-a94d-41c7-a8b6-ea49ff0705de",
+          "@id": "/file_objects/019f104e-1227-7f7e-9791-cd62ed57968c",
           "@type": "https://schema.org/MediaObject",
-          "createdAt": "2024-06-23T03:32:22+00:00",
-          "localFile": "files/photos_and_files/0d782f55-a94d-41c7-a8b6-ea49ff0705de-c7eb1d9da909d10525764648f7c97e3e73c8b45f.heic",
-          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/c7eb1d9da909d10525764648f7c97e3e73c8b45f.HEIC",
-          "updatedAt": "2024-06-23T03:32:22+00:00"
+          "createdAt": "2026-06-28T22:16:18+00:00",
+          "localFile": "files/photos_and_files/019f104e-1227-7f7e-9791-cd62ed57968c-3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/3ff57377d55c3858279fc44f4046b60836996f02.jpg",
+          "updatedAt": "2026-06-28T22:16:20+00:00"
         }
       ],
-      "id": 2071717,
+      "id": 2688752,
       "isPrivate": false,
       "label": "Noteworthy Photograph",
       "multiSelectOptionValues": [],
@@ -199,11 +199,11 @@
       "parentRecord": null,
       "recordType": "image",
       "records": [],
-      "updatedAt": "2024-06-23T03:32:23+00:00",
-      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/c7eb1d9da909d10525764648f7c97e3e73c8b45f.HEIC"
+      "updatedAt": "2026-06-28T22:16:20+00:00",
+      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/3ff57377d55c3858279fc44f4046b60836996f02.jpg"
     }
   ],
-  "updatedAt": "2024-06-23T03:32:23+00:00",
+  "updatedAt": "2026-06-28T22:16:20+00:00",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
     "@type": "User",
