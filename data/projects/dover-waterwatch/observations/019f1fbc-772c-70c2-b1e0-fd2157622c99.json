@@ -1,9 +1,9 @@
 {
   "@context": "/contexts/Observation",
-  "@id": "/observations/019ee4b2-aae9-74b8-af75-961d248b1ac0",
+  "@id": "/observations/019f1fbc-772c-70c2-b1e0-fd2157622c99",
   "@type": "Observation",
   "comments": null,
-  "createdAt": "2026-06-20T11:02:54+00:00",
+  "createdAt": "2026-07-01T22:11:12+00:00",
   "datasheet": {
     "@id": "/datasheets/603f9d6c-6701-40f6-a9d2-145f37d098cd",
     "@type": "Datasheet",
@@ -15,15 +15,15 @@
   "durationSetup": null,
   "durationTravel": null,
   "featuredPhoto": {
-    "@id": "/file_objects/019ee4b0-18d5-7a56-ad97-29e63d824d2e",
+    "@id": "/file_objects/019f1fbc-6c7c-7d2e-b527-3f1bd30ec6fd",
     "@type": "https://schema.org/MediaObject",
-    "createdAt": "2026-06-20T11:00:05+00:00",
-    "localFile": "files/photos_and_files/019ee4b0-18d5-7a56-ad97-29e63d824d2e-152927e2fbd440b3be42249edb5c69a11ed49919.jpg",
-    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/152927e2fbd440b3be42249edb5c69a11ed49919.jpg",
-    "updatedAt": "2026-06-20T11:02:54+00:00"
+    "createdAt": "2026-07-01T22:11:09+00:00",
+    "localFile": "files/photos_and_files/019f1fbc-6c7c-7d2e-b527-3f1bd30ec6fd-a2a0c31d8cde2bd31ce4ebb3857ea1b74f4ad1be.jpg",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/a2a0c31d8cde2bd31ce4ebb3857ea1b74f4ad1be.jpg",
+    "updatedAt": "2026-07-01T22:11:12+00:00"
   },
   "files": [],
-  "id": "019ee4b2-aae9-74b8-af75-961d248b1ac0",
+  "id": "019f1fbc-772c-70c2-b1e0-fd2157622c99",
   "isPrivate": false,
   "lngLat": {
     "lat": -43.31622,
@@ -42,7 +42,7 @@
     "updatedAt": "2026-07-01T22:11:12+00:00"
   },
   "observationEndedAt": null,
-  "observedAt": "2024-05-07T12:04:00+00:00",
+  "observedAt": "2026-07-02T08:09:53+00:00",
   "project": {
     "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
     "@type": "Project",
@@ -58,9 +58,9 @@
   },
   "records": [
     {
-      "@id": "/observation_records/2681978",
+      "@id": "/observation_records/2692755",
       "@type": "ObservationRecord",
-      "createdAt": "2026-06-20T11:02:54+00:00",
+      "createdAt": "2026-07-01T22:11:12+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/13432",
         "@type": "DatasheetRecord",
@@ -69,7 +69,7 @@
       },
       "description": null,
       "files": [],
-      "id": 2681978,
+      "id": 2692755,
       "isPrivate": false,
       "label": "Rivulet Mouth State",
       "multiSelectOptionValues": [],
@@ -90,38 +90,88 @@
       "parentRecord": null,
       "recordType": "radio",
       "records": [],
-      "updatedAt": "2026-06-20T11:02:54+00:00",
+      "updatedAt": "2026-07-01T22:11:12+00:00",
       "value": "Open - Flowing Out to Sea"
     },
     {
-      "@id": "/observation_records/2681979",
+      "@id": "/observation_records/2692756",
       "@type": "ObservationRecord",
-      "createdAt": "2026-06-20T11:02:54+00:00",
+      "createdAt": "2026-07-01T22:11:12+00:00",
       "datasheetRecord": {
-        "@id": "/datasheet_records/13435",
+        "@id": "/datasheet_records/16883",
         "@type": "DatasheetRecord",
-        "createdAt": "2024-06-19T22:13:57+00:00",
+        "createdAt": "2026-06-20T22:49:37+00:00",
+        "updatedAt": "2026-06-20T22:49:37+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2692756,
+      "isPrivate": false,
+      "label": "Tide Height (m)",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 2,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "number",
+      "records": [],
+      "updatedAt": "2026-07-01T22:11:12+00:00",
+      "value": "0.4"
+    },
+    {
+      "@id": "/observation_records/2692757",
+      "@type": "ObservationRecord",
+      "createdAt": "2026-07-01T22:11:12+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/16884",
+        "@type": "DatasheetRecord",
+        "createdAt": "2026-06-20T22:49:37+00:00",
+        "updatedAt": "2026-06-20T22:49:37+00:00"
+      },
+      "description": null,
+      "files": [],
+      "id": 2692757,
+      "isPrivate": false,
+      "label": "Lagoon Height (m)",
+      "multiSelectOptionValues": [],
+      "optionValue": null,
+      "orderNumber": 3,
+      "organism": null,
+      "parentRecord": null,
+      "recordType": "number",
+      "records": [],
+      "updatedAt": "2026-07-01T22:11:12+00:00",
+      "value": "0.45"
+    },
+    {
+      "@id": "/observation_records/2692758",
+      "@type": "ObservationRecord",
+      "createdAt": "2026-07-01T22:11:12+00:00",
+      "datasheetRecord": {
+        "@id": "/datasheet_records/16885",
+        "@type": "DatasheetRecord",
+        "createdAt": "2026-06-20T22:49:37+00:00",
         "updatedAt": "2026-06-20T22:49:45+00:00"
       },
       "description": null,
       "files": [],
-      "id": 2681979,
+      "id": 2692758,
       "isPrivate": false,
-      "label": "Observations",
+      "label": "Dover Rainfall (24h to observation mm)",
       "multiSelectOptionValues": [],
       "optionValue": null,
-      "orderNumber": 5,
+      "orderNumber": 4,
       "organism": null,
       "parentRecord": null,
-      "recordType": "textarea",
+      "recordType": "number",
       "records": [],
-      "updatedAt": "2026-06-20T11:02:54+00:00",
-      "value": "Lagoon very low, trickling out to sea, fish kill caused by low oxygen after sudden emptying\n\nSalmon farms and Tas EPA attended, salmon farm worker reportedly measured very low oxygen\n\nEPA concluded natural even"
+      "updatedAt": "2026-07-01T22:11:12+00:00",
+      "value": "1"
     },
     {
-      "@id": "/observation_records/2681980",
+      "@id": "/observation_records/2692759",
       "@type": "ObservationRecord",
-      "createdAt": "2026-06-20T11:02:54+00:00",
+      "createdAt": "2026-07-01T22:11:12+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/13436",
         "@type": "DatasheetRecord",
@@ -131,15 +181,23 @@
       "description": null,
       "files": [
         {
-          "@id": "/file_objects/019ee4b0-18d5-7a56-ad97-29e63d824d2e",
+          "@id": "/file_objects/019f1fbc-6c7c-7d2e-b527-3f1bd30ec6fd",
           "@type": "https://schema.org/MediaObject",
-          "createdAt": "2026-06-20T11:00:05+00:00",
-          "localFile": "files/photos_and_files/019ee4b0-18d5-7a56-ad97-29e63d824d2e-152927e2fbd440b3be42249edb5c69a11ed49919.jpg",
-          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/152927e2fbd440b3be42249edb5c69a11ed49919.jpg",
-          "updatedAt": "2026-06-20T11:02:54+00:00"
+          "createdAt": "2026-07-01T22:11:09+00:00",
+          "localFile": "files/photos_and_files/019f1fbc-6c7c-7d2e-b527-3f1bd30ec6fd-a2a0c31d8cde2bd31ce4ebb3857ea1b74f4ad1be.jpg",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/a2a0c31d8cde2bd31ce4ebb3857ea1b74f4ad1be.jpg",
+          "updatedAt": "2026-07-01T22:11:12+00:00"
+        },
+        {
+          "@id": "/file_objects/019f1fbc-742d-7e9d-b605-17268f69aaea",
+          "@type": "https://schema.org/MediaObject",
+          "createdAt": "2026-07-01T22:11:11+00:00",
+          "localFile": "files/photos_and_files/019f1fbc-742d-7e9d-b605-17268f69aaea-34b820b202843a1ab373d2871cc6afcfca189615.jpg",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/34b820b202843a1ab373d2871cc6afcfca189615.jpg",
+          "updatedAt": "2026-07-01T22:11:12+00:00"
         }
       ],
-      "id": 2681980,
+      "id": 2692759,
       "isPrivate": false,
       "label": "Noteworthy Photograph",
       "multiSelectOptionValues": [],
@@ -149,11 +207,11 @@
       "parentRecord": null,
       "recordType": "image",
       "records": [],
-      "updatedAt": "2026-06-20T11:02:54+00:00",
-      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/152927e2fbd440b3be42249edb5c69a11ed49919.jpg"
+      "updatedAt": "2026-07-01T22:11:12+00:00",
+      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/a2a0c31d8cde2bd31ce4ebb3857ea1b74f4ad1be.jpg, https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/34b820b202843a1ab373d2871cc6afcfca189615.jpg"
     }
   ],
-  "updatedAt": "2026-06-20T11:02:54+00:00",
+  "updatedAt": "2026-07-01T22:11:12+00:00",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
     "@type": "User",
