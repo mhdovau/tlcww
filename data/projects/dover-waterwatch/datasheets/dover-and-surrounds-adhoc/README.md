@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 2
+**Observations:** 3
 
 ## Fields
 
@@ -10,6 +10,16 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Photos** — `image`
 
 ## Observations
+
+### 2026-07-03T08:05:00+00:00 — Glenbervie Rivulet
+**Observer:** mhdoverlc  ·  **Location:** -43.31235, 147.04628  ·  **ID:** `019f24df-99d2-7811-89e2-f0ab2b6b8df6`
+
+[![019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg](../../../../files/photos_and_files/019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg)](../../../../files/photos_and_files/019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg)
+
+| Field | Value |
+| --- | --- |
+| Observations | Looking healthy, not smelly |
+| Photos | [![019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg](../../../../files/photos_and_files/019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg)](../../../../files/photos_and_files/019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg) |
 
 ### 2026-06-24T09:46:58+00:00 — Bells Lagoon
 **Observer:** mhdoverlc  ·  **Location:** -43.313011631, 147.03889344  ·  **ID:** `019ef6ea-2bae-7a8c-bf35-0948c745ab0d`

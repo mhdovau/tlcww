@@ -2174,7 +2174,7 @@
         "lng": 147.04628
       },
       "name": "Glenbervie Rivulet",
-      "updatedAt": "2026-06-24T01:33:32+00:00"
+      "updatedAt": "2026-07-02T22:07:41+00:00"
     },
     "observationEndedAt": "2026-06-24T09:40:33+00:00",
     "observedAt": "2026-06-24T09:40:00+00:00",
@@ -2353,6 +2353,64 @@
     "observationEndedAt": null,
     "observedAt": "2026-07-02T08:09:53+00:00",
     "updatedAt": "2026-07-01T22:11:12+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
+    "@id": "/observations/019f24df-99d2-7811-89e2-f0ab2b6b8df6",
+    "@type": "Observation",
+    "createdAt": "2026-07-02T22:07:41+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ef6d9-c87c-75ef-b265-185dce3506bd",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-23T23:38:48+00:00",
+      "name": "Dover and Surrounds Adhoc",
+      "updatedAt": "2026-06-24T01:50:09+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/019f24df-97dd-7f4a-88ef-4dada54612b6",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-07-02T22:07:40+00:00",
+      "localFile": "files/photos_and_files/019f24df-97dd-7f4a-88ef-4dada54612b6-8690ebfd046ec14d599bfae91da706d20709988a.jpg",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/8690ebfd046ec14d599bfae91da706d20709988a.jpg",
+      "updatedAt": "2026-07-02T22:07:41+00:00"
+    },
+    "id": "019f24df-99d2-7811-89e2-f0ab2b6b8df6",
+    "lngLat": {
+      "lat": -43.31235,
+      "lng": 147.04628
+    },
+    "location": {
+      "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
+      "@type": "Area",
+      "createdAt": "2026-06-24T01:33:32+00:00",
+      "id": "019ef742-d38e-7448-836b-3579657f8e7e",
+      "lngLat": {
+        "lat": -43.31235,
+        "lng": 147.04628
+      },
+      "name": "Glenbervie Rivulet",
+      "updatedAt": "2026-07-02T22:07:41+00:00"
+    },
+    "observationEndedAt": "2026-07-03T08:05:50+00:00",
+    "observedAt": "2026-07-03T08:05:00+00:00",
+    "updatedAt": "2026-07-02T22:07:41+00:00",
     "user": {
       "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
       "@type": "User",
