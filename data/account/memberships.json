@@ -31,6 +31,12 @@
         "@type": "NotificationPreference",
         "createdAt": "2026-06-19T15:32:49+00:00",
         "updatedAt": "2026-06-19T15:32:49+00:00"
+      },
+      {
+        "@id": "/notification_preferences/64914",
+        "@type": "NotificationPreference",
+        "createdAt": "2026-07-10T01:25:23+00:00",
+        "updatedAt": "2026-07-10T01:25:23+00:00"
       }
     ],
     "projectApproveContact": true,

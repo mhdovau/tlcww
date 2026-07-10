@@ -86,5 +86,27 @@
       "updatedAt": "2026-06-19T15:32:49+00:00"
     },
     "webNotify": true
+  },
+  {
+    "@id": "/notification_preferences/64914",
+    "@type": "NotificationPreference",
+    "createdAt": "2026-07-10T01:25:23+00:00",
+    "emailNotify": false,
+    "id": 64914,
+    "notificationType": "project_download",
+    "projectMember": {
+      "@id": "/project_members/17310",
+      "@type": "ProjectMember",
+      "createdAt": "2026-06-19T15:32:49+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "updatedAt": "2026-07-10T01:25:23+00:00",
+    "user": {
+      "@id": "/users/019ee083-5d66-7a17-83d4-5409fe68c389",
+      "@type": "User",
+      "createdAt": "2026-06-19T15:32:46+00:00",
+      "updatedAt": "2026-06-19T15:32:49+00:00"
+    },
+    "webNotify": true
   }
 ]
