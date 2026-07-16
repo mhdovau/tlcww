@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 3
+**Observations:** 4
 
 ## Fields
 
@@ -10,6 +10,16 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Photos** — `image`
 
 ## Observations
+
+### 2026-07-16T08:57:06+00:00 — Bells Lagoon
+**Observer:** mhdoverlc  ·  **Location:** -43.313011631, 147.03889344  ·  **ID:** `019f6801-37b7-723f-96a9-e2a5903c3c55`
+
+[![019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg](../../../../files/photos_and_files/019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg)](../../../../files/photos_and_files/019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg)
+
+| Field | Value |
+| --- | --- |
+| Observations | Bells lagoon open deeply to the bay and completely drained |
+| Photos | [![019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg](../../../../files/photos_and_files/019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg)](../../../../files/photos_and_files/019f6801-205d-76a3-bb73-f22b55ab617e-efdae86671c3e1b9615b5109eea447930ebb4f1d.jpg) [![019f6801-2795-7086-a985-100c822585c3-c12dc9d6456df7c56c7f6d0eec3c303e48b29860.jpg](../../../../files/photos_and_files/019f6801-2795-7086-a985-100c822585c3-c12dc9d6456df7c56c7f6d0eec3c303e48b29860.jpg)](../../../../files/photos_and_files/019f6801-2795-7086-a985-100c822585c3-c12dc9d6456df7c56c7f6d0eec3c303e48b29860.jpg) [![019f6801-2ec4-7c1e-80b4-876f946b732b-91af5b0b31bfd7ab4c9dcb048999b65fea1de571.jpg](../../../../files/photos_and_files/019f6801-2ec4-7c1e-80b4-876f946b732b-91af5b0b31bfd7ab4c9dcb048999b65fea1de571.jpg)](../../../../files/photos_and_files/019f6801-2ec4-7c1e-80b4-876f946b732b-91af5b0b31bfd7ab4c9dcb048999b65fea1de571.jpg) [![019f6801-34f3-79bd-9e2e-57a03c12e247-60413fa202adb2b69255dce6969fe693e7ee852a.jpg](../../../../files/photos_and_files/019f6801-34f3-79bd-9e2e-57a03c12e247-60413fa202adb2b69255dce6969fe693e7ee852a.jpg)](../../../../files/photos_and_files/019f6801-34f3-79bd-9e2e-57a03c12e247-60413fa202adb2b69255dce6969fe693e7ee852a.jpg) |
 
 ### 2026-07-03T08:05:00+00:00 — Glenbervie Rivulet
 **Observer:** mhdoverlc  ·  **Location:** -43.31235, 147.04628  ·  **ID:** `019f24df-99d2-7811-89e2-f0ab2b6b8df6`

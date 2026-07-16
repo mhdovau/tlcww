@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 54
+**Observations:** 55
 
 ## Fields
 
@@ -14,6 +14,19 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Noteworthy Photograph** — `image`
 
 ## Observations
+
+### 2026-07-16T08:40:00+00:00 — Dover Rivulet Mouth
+**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019f6802-8df7-7ae5-8e2c-00283d668e45`
+
+[![019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg](../../../../files/photos_and_files/019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg)](../../../../files/photos_and_files/019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Out to Sea |
+| Tide Height (m) | 0.4 |
+| Lagoon Height (m) | 0.45 |
+| Dover Rainfall (24h to observation mm) | 0 |
+| Noteworthy Photograph | [![019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg](../../../../files/photos_and_files/019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg)](../../../../files/photos_and_files/019f6802-8b10-7550-a006-1ee40c3a6e02-171b92fa5dc3989f2fbdee16188e137d199d3643.jpg) |
 
 ### 2026-07-15T13:22:00+00:00 — Dover Rivulet Mouth
 **Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019f63cf-87e5-7a79-8dd2-1c819f3268c7`
