@@ -1153,12 +1153,17 @@ def _field_key(ancestors: tuple, rec: dict) -> str:
 
 
 def _observation_photos(obs: dict) -> list[str]:
-    """Every distinct photo/file attached to an observation, in one list."""
-    paths = _local_paths([obs["featuredPhoto"]]) if isinstance(
-        obs.get("featuredPhoto"), dict) else []
-    paths += _local_paths(obs.get("files"))
+    """Every distinct photo/file attached to an observation, in one list.
+
+    Field order first, so this matches the per-field columns; the featured photo
+    is normally a pointer to one of those files rather than a separate upload,
+    and only appears here in its own right if it isn't."""
+    paths = []
     for _, rec in _walk_records(obs.get("records")):
         paths += _local_paths(rec.get("files"))
+    paths += _local_paths(obs.get("files"))
+    if isinstance(obs.get("featuredPhoto"), dict):
+        paths += _local_paths([obs["featuredPhoto"]])
     seen, out = set(), []
     for p in paths:
         if p not in seen:
@@ -1247,20 +1252,25 @@ def render_project_observations_csv(base: str, pdir: str, observations: list,
         ds = obs.get("datasheet") if isinstance(obs.get("datasheet"), dict) else {}
         fmap = field_maps.get((ds.get("id") or ds.get("@id", "")).rsplit("/", 1)[-1], {})
         emitted = 0
+        accounted: set = set()
         for ancestors, rec in _walk_records(obs.get("records")):
             value = _record_value_text(rec, include_files=False)
-            files = "; ".join(_local_paths(rec.get("files")))
+            paths = _local_paths(rec.get("files"))
+            accounted.update(paths)
+            files = "; ".join(paths)
             if not value and not files:
                 continue
             key = _field_key(ancestors, rec)
             rows.append(head + [fmap.get(key, key), key,
                                 rec.get("recordType") or "", value, files])
             emitted += 1
-        # Photos attached to the observation itself (featured photo / uploads)
-        # belong to no field, so they get their own row.
-        own = _local_paths([obs["featuredPhoto"]]) if isinstance(
-            obs.get("featuredPhoto"), dict) else []
-        own += _local_paths(obs.get("files"))
+        # Photos belonging to no field get their own row. The featured photo is
+        # normally a pointer to a photo already listed against its field, so
+        # only files not accounted for above are added — no duplicate rows.
+        own = [p for p in _local_paths(obs.get("files")) if p not in accounted]
+        if isinstance(obs.get("featuredPhoto"), dict):
+            own += [p for p in _local_paths([obs["featuredPhoto"]])
+                    if p not in accounted and p not in own]
         if own:
             rows.append(head + ["Observation photos", "Observation photos",
                                 "file", "", "; ".join(dict.fromkeys(own))])
