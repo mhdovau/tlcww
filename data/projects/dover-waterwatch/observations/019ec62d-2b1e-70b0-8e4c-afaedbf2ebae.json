@@ -39,7 +39,7 @@
       "lng": 147.0170049
     },
     "name": "DOV110 Dover Rivulet South Gate Market",
-    "updatedAt": "2026-06-19T00:04:43+00:00"
+    "updatedAt": "2026-08-02T00:33:45+00:00"
   },
   "observationEndedAt": null,
   "observedAt": "2026-06-14T10:20:00+00:00",
@@ -53,7 +53,7 @@
     "isSciStarterParticipation": false,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
-    "updatedAt": "2026-07-15T23:00:25+00:00",
+    "updatedAt": "2026-08-02T02:25:01+00:00",
     "urlField": "dover-waterwatch"
   },
   "records": [
