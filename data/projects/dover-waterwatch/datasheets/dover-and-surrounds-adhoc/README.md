@@ -4,6 +4,8 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 
 **Observations:** 4
 
+**Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
+
 ## Fields
 
 - **Observations** — `textarea`

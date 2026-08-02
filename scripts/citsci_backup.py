@@ -6,6 +6,12 @@ email/password, then walks the account, its projects, datasheets, records,
 observations and uploaded files, writing everything to an output directory in a
 stable, diffable structure.
 
+Alongside the raw JSON, each run renders human-readable views: markdown pages
+per project/datasheet, and CSV extracts (per-datasheet tables, a project-wide
+long table of every recorded value, and the project's locations) that the
+markdown pages link to. Pass `--render-only` to regenerate just those views from
+the JSON already on disk, with no API calls or credentials.
+
 Only the Python standard library is used so the script can run on a clean
 GitHub Actions runner with no `pip install` step.
 
@@ -26,6 +32,7 @@ CITSCI_DOWNLOAD_FILES (optional) "0" to skip binary photo/file downloads
 from __future__ import annotations
 
 import base64
+import csv
 import html
 import json
 import os
@@ -826,12 +833,19 @@ def _record_value_md(rec: dict, base: str, md_dir: str) -> str:
     return "—"
 
 
-def _iter_records(records, depth=0):
+def _walk_records(records, ancestors: tuple = ()):
+    """Yield (ancestor labels, record) for a record tree, in datasheet order."""
     for r in sorted(records or [], key=lambda x: (x.get("orderNumber") or 0)):
         if isinstance(r, dict):
-            yield depth, r
+            yield ancestors, r
             if r.get("records"):
-                yield from _iter_records(r["records"], depth + 1)
+                yield from _walk_records(r["records"],
+                                         ancestors + (_txt(r.get("label")),))
+
+
+def _iter_records(records):
+    for ancestors, rec in _walk_records(records):
+        yield len(ancestors), rec
 
 
 def _license_footer(base: str, md_dir: str) -> list[str]:
@@ -844,6 +858,206 @@ def _license_footer(base: str, md_dir: str) -> list[str]:
         "third-party resources are not licensed for reuse; code is MIT. "
         f"See [LICENSE.md]({rel})._",
     ]
+
+
+# ---------------------------------------------------------------------------
+# CSV extracts
+#
+# The same data as the markdown views, in a form spreadsheets and analysis tools
+# open directly. Per project we write:
+#   * datasheets/<ds>/observations.csv — wide: one row per observation, one
+#     column per field the datasheet defines;
+#   * observations.csv — long/tidy: one row per recorded field value across every
+#     datasheet (also covers observations whose datasheet is no longer backed up);
+#   * locations.csv — the project's monitoring sites.
+# File references are backup-root-relative paths, matching the `localFile` keys
+# in the JSON. Rows are sorted oldest-first so daily diffs stay small.
+# ---------------------------------------------------------------------------
+
+OBS_META_COLUMNS = ["observation_id", "observed_at", "created_at", "datasheet",
+                    "location", "latitude", "longitude", "observer", "comments",
+                    "photos"]
+
+OBS_LONG_COLUMNS = ["observation_id", "observed_at", "datasheet", "location",
+                    "latitude", "longitude", "observer", "field", "record_type",
+                    "value", "files"]
+
+LOCATION_COLUMNS = ["location_id", "name", "latitude", "longitude",
+                    "observations_total", "description"]
+
+
+def _write_csv(path: str, header: list, rows: list) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(header)
+        writer.writerows(rows)
+
+
+def _local_paths(files) -> list[str]:
+    """Backup-root-relative paths (or the remote URL, if never downloaded) for a
+    list of embedded file objects."""
+    out = []
+    for fobj in files or []:
+        if not isinstance(fobj, dict):
+            continue
+        p = fobj.get("localFile") or fobj.get("path") or fobj.get("file")
+        if isinstance(p, str) and p:
+            out.append(p)
+    return out
+
+
+def _record_value_text(rec: dict, include_files: bool = True) -> str:
+    """Plain-text rendering of whatever value a record holds — the CSV
+    counterpart of `_record_value_md`."""
+    if include_files:
+        files = _local_paths(rec.get("files"))
+        if files:
+            return "; ".join(files)
+    value = rec.get("value")
+    if value not in (None, ""):
+        return _txt(value)
+    opt = rec.get("optionValue")
+    if isinstance(opt, dict):
+        disp = opt.get("value") or opt.get("label") or opt.get("name")
+        if disp:
+            return _txt(disp)
+    multi = rec.get("multiSelectOptionValues")
+    if isinstance(multi, list) and multi:
+        vals = [o.get("value") or o.get("label") or o.get("name")
+                for o in multi if isinstance(o, dict)]
+        return "; ".join(_txt(v) for v in vals if v)
+    return ""
+
+
+def _field_key(ancestors: tuple, rec: dict) -> str:
+    """Column name for a record: its label, prefixed by any parent group."""
+    label = _txt(rec.get("label")) or f"field {rec.get('orderNumber') or ''}".strip()
+    return " > ".join([a for a in ancestors if a] + [label])
+
+
+def _observation_photos(obs: dict) -> list[str]:
+    """Every distinct photo/file attached to an observation, in one list."""
+    paths = _local_paths([obs["featuredPhoto"]]) if isinstance(
+        obs.get("featuredPhoto"), dict) else []
+    paths += _local_paths(obs.get("files"))
+    for _, rec in _walk_records(obs.get("records")):
+        paths += _local_paths(rec.get("files"))
+    seen, out = set(), []
+    for p in paths:
+        if p not in seen:
+            seen.add(p)
+            out.append(p)
+    return out
+
+
+def _obs_meta(obs: dict) -> dict:
+    def sub(key):
+        return obs.get(key) if isinstance(obs.get(key), dict) else {}
+    ll, loc, user, ds = sub("lngLat"), sub("location"), sub("user"), sub("datasheet")
+    return {
+        "observation_id": obs.get("id") or obs.get("@id", "").rsplit("/", 1)[-1],
+        "observed_at": obs.get("observedAt") or "",
+        "created_at": obs.get("createdAt") or "",
+        "datasheet": _txt(ds.get("name")),
+        "location": _txt(loc.get("name")),
+        "latitude": ll.get("lat", ""),
+        "longitude": ll.get("lng", ""),
+        "observer": _txt(user.get("displayName")),
+        "comments": _txt(obs.get("comments")),
+        "photos": "; ".join(_observation_photos(obs)),
+    }
+
+
+def _obs_sort_key(obs: dict):
+    return (obs.get("observedAt") or "", obs.get("id") or "")
+
+
+def render_datasheet_csv(base: str, ds_dir: str, field_defs: list,
+                         observations: list) -> str:
+    """Write the wide per-datasheet table. Returns the file name for linking."""
+    columns: list[str] = []
+    seen: set[str] = set()
+    for ancestors, fd in _walk_records(field_defs):
+        if fd.get("recordType") == "description":  # section header, never a value
+            continue
+        key = _field_key(ancestors, fd)
+        if key not in seen:
+            seen.add(key)
+            columns.append(key)
+    # Fields that carry data but are no longer defined (e.g. removed from the
+    # datasheet after observations were recorded) still get a column.
+    for obs in observations:
+        for ancestors, rec in _walk_records(obs.get("records")):
+            key = _field_key(ancestors, rec)
+            if key not in seen and _record_value_text(rec):
+                seen.add(key)
+                columns.append(key)
+
+    rows = []
+    for obs in sorted(observations, key=_obs_sort_key):
+        meta = _obs_meta(obs)
+        values: dict[str, str] = {}
+        for ancestors, rec in _walk_records(obs.get("records")):
+            text = _record_value_text(rec)
+            if not text:
+                continue
+            key = _field_key(ancestors, rec)
+            values[key] = f"{values[key]}; {text}" if key in values else text
+        rows.append([meta[c] for c in OBS_META_COLUMNS]
+                    + [values.get(c, "") for c in columns])
+
+    _write_csv(os.path.join(base, ds_dir, "observations.csv"),
+               OBS_META_COLUMNS + columns, rows)
+    return "observations.csv"
+
+
+def render_project_observations_csv(base: str, pdir: str,
+                                    observations: list) -> str:
+    """Write the long/tidy table covering every observation in the project."""
+    rows = []
+    for obs in sorted(observations, key=_obs_sort_key):
+        meta = _obs_meta(obs)
+        head = [meta[c] for c in OBS_LONG_COLUMNS[:7]]
+        emitted = 0
+        for ancestors, rec in _walk_records(obs.get("records")):
+            value = _record_value_text(rec, include_files=False)
+            files = "; ".join(_local_paths(rec.get("files")))
+            if not value and not files:
+                continue
+            rows.append(head + [_field_key(ancestors, rec),
+                                rec.get("recordType") or "", value, files])
+            emitted += 1
+        # Photos attached to the observation itself (featured photo / uploads)
+        # belong to no field, so they get their own row.
+        own = _local_paths([obs["featuredPhoto"]]) if isinstance(
+            obs.get("featuredPhoto"), dict) else []
+        own += _local_paths(obs.get("files"))
+        if own:
+            rows.append(head + ["Observation photos", "file", "",
+                                "; ".join(dict.fromkeys(own))])
+            emitted += 1
+        if not emitted:  # keep empty observations visible in the extract
+            rows.append(head + ["", "", "", ""])
+
+    _write_csv(os.path.join(base, pdir, "observations.csv"),
+               OBS_LONG_COLUMNS, rows)
+    return "observations.csv"
+
+
+def render_locations_csv(base: str, pdir: str, locations: list) -> str:
+    rows = []
+    for loc in locations if isinstance(locations, list) else []:
+        if not isinstance(loc, dict):
+            continue
+        ll = loc.get("lngLat") if isinstance(loc.get("lngLat"), dict) else {}
+        rows.append([(loc.get("id") or loc.get("@id", "")).rsplit("/", 1)[-1],
+                     _txt(loc.get("name")), ll.get("lat", ""), ll.get("lng", ""),
+                     loc.get("observationsTotal", ""),
+                     _txt(loc.get("description"))])
+    rows.sort(key=lambda r: (r[1], r[0]))
+    _write_csv(os.path.join(base, pdir, "locations.csv"), LOCATION_COLUMNS, rows)
+    return "locations.csv"
 
 
 def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
@@ -883,11 +1097,16 @@ def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
 
 
 def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
-                        field_defs: list, observations: list) -> None:
+                        field_defs: list, observations: list) -> str:
+    """Render the datasheet's markdown view and its CSV extract. Returns the
+    CSV's name (relative to the datasheet directory)."""
     md_dir = os.path.dirname(os.path.join(base, ds_dir, "README.md"))
+    csv_name = render_datasheet_csv(base, ds_dir, field_defs, observations)
     lines = [f"# {_txt(ds_name) or 'Datasheet'}", "",
              "_Auto-generated from the backup. Do not edit — regenerated each run._",
-             "", f"**Observations:** {len(observations)}", ""]
+             "", f"**Observations:** {len(observations)}", "",
+             f"**Spreadsheet:** [{csv_name}]({csv_name}) — every observation "
+             "below as a table, one row each, one column per field.", ""]
 
     if field_defs:
         lines += ["## Fields", ""]
@@ -913,6 +1132,7 @@ def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")
+    return csv_name
 
 
 def render_project_md(base: str, slug: str) -> None:
@@ -951,13 +1171,23 @@ def render_project_md(base: str, slug: str) -> None:
         did = (d.get("id") or d.get("@id", "")).rsplit("/", 1)[-1] if isinstance(d, dict) else ""
         grouped.setdefault(did, []).append(o)
 
-    # Render each datasheet view and collect links.
+    # Render each datasheet view (markdown + CSV) and collect links.
     ds_links = []
+    csv_count = 0
     for ds_slug, ds_name, ds_id, fields in datasheets:
         obs = grouped.get(ds_id, [])
-        render_datasheet_md(base, f"projects/{slug}/datasheets/{ds_slug}",
-                            ds_name, fields, obs)
-        ds_links.append((ds_name, f"datasheets/{ds_slug}/README.md", len(obs)))
+        ds_rel = f"datasheets/{ds_slug}"
+        csv_name = render_datasheet_md(base, f"projects/{slug}/{ds_rel}",
+                                       ds_name, fields, obs)
+        csv_count += 1
+        ds_links.append((ds_name, f"{ds_rel}/README.md", len(obs),
+                         f"{ds_rel}/{csv_name}"))
+
+    # Project-wide CSV extracts.
+    proj_rel = f"projects/{slug}"
+    obs_csv = render_project_observations_csv(base, proj_rel, observations)
+    loc_csv = render_locations_csv(base, proj_rel, locations)
+    csv_count += 2
 
     # Project summary.
     name = _txt(project.get("name")) or slug
@@ -975,10 +1205,19 @@ def render_project_md(base: str, slug: str) -> None:
         lines.append(f"- **CitSci URL:** https://citsci.org/projects/{project['urlField']}")
     lines.append("")
 
+    lines += ["## Spreadsheets (CSV)", "",
+              f"- [{obs_csv}]({obs_csv}) — every observation in the project, one "
+              "row per recorded field value (all datasheets combined).",
+              f"- [{loc_csv}]({loc_csv}) — every monitoring site, with "
+              "coordinates.",
+              "- Per-datasheet tables (a column per field) are linked below and "
+              "in each datasheet's page.", ""]
+
     lines += ["## Datasheets", ""]
     if ds_links:
-        for ds_name, link, n in ds_links:
-            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s)")
+        for ds_name, link, n, ds_csv in ds_links:
+            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s) "
+                         f"· [CSV]({ds_csv})")
     else:
         lines.append("_No datasheets._")
     lines.append("")
@@ -1015,24 +1254,32 @@ def render_project_md(base: str, slug: str) -> None:
     out = os.path.join(pdir, "README.md")
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")
+    return csv_count
 
 
-def render_markdown(base: str | None = None) -> int:
-    """Render human-readable markdown views for every backed-up project."""
+def render_markdown(base: str | None = None) -> tuple[int, int]:
+    """Render the human-readable views (markdown + CSV) for every backed-up
+    project. Returns (projects rendered, CSV files written)."""
     base = base or OUTPUT_DIR
     projects_dir = os.path.join(base, "projects")
     if not os.path.isdir(projects_dir):
-        return 0
-    n = 0
+        return 0, 0
+    n = csvs = 0
     for slug in sorted(os.listdir(projects_dir)):
         if os.path.isdir(os.path.join(projects_dir, slug)):
-            render_project_md(base, slug)
+            csvs += render_project_md(base, slug)
             n += 1
-    log(f"Rendered markdown views for {n} project(s).")
-    return n
+    log(f"Rendered markdown views and {csvs} CSV extract(s) for {n} project(s).")
+    return n, csvs
 
 
 def main() -> int:
+    if "--render-only" in sys.argv:
+        # Re-render the markdown views and CSV extracts from the JSON already on
+        # disk, without contacting the API (no credentials needed).
+        render_markdown()
+        return 0
+
     email = os.environ.get("CITSCI_USER")
     password = os.environ.get("CITSCI_PASS")
     if not email or not password:
@@ -1048,7 +1295,7 @@ def main() -> int:
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
               "observations": 0, "observation_records": 0, "locations": 0,
               "files": 0, "files_referenced": 0, "files_orphaned": 0,
-              "files_downloaded": 0, "files_unchanged": 0}
+              "files_downloaded": 0, "files_unchanged": 0, "csv_extracts": 0}
     manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)
@@ -1059,7 +1306,7 @@ def main() -> int:
     backup_account(client, uid, manifest)
     backup_projects(client, uid, counts)
     backup_files(client, counts)
-    render_markdown()
+    _, counts["csv_extracts"] = render_markdown()
 
     manifest["counts"] = counts
     manifest["private_fields"] = PRIVATE_STATS

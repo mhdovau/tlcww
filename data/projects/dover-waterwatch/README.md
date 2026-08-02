@@ -12,11 +12,17 @@ Dover Waterwatch, Tasmania, Australia — collecting long-term scientific observ
 - **Datasheets:** 3
 - **CitSci URL:** https://citsci.org/projects/dover-waterwatch
 
+## Spreadsheets (CSV)
+
+- [observations.csv](observations.csv) — every observation in the project, one row per recorded field value (all datasheets combined).
+- [locations.csv](locations.csv) — every monitoring site, with coordinates.
+- Per-datasheet tables (a column per field) are linked below and in each datasheet's page.
+
 ## Datasheets
 
-- [Dover and Surrounds Adhoc](datasheets/dover-and-surrounds-adhoc/README.md) — 4 observation(s)
-- [Dover Landcare Water Quality](datasheets/dover-landcare-water-quality/README.md) — 11 observation(s)
-- [Dover Rivulet Mouth Observations](datasheets/dover-rivulet-mouth-observations/README.md) — 55 observation(s)
+- [Dover and Surrounds Adhoc](datasheets/dover-and-surrounds-adhoc/README.md) — 4 observation(s) · [CSV](datasheets/dover-and-surrounds-adhoc/observations.csv)
+- [Dover Landcare Water Quality](datasheets/dover-landcare-water-quality/README.md) — 11 observation(s) · [CSV](datasheets/dover-landcare-water-quality/observations.csv)
+- [Dover Rivulet Mouth Observations](datasheets/dover-rivulet-mouth-observations/README.md) — 55 observation(s) · [CSV](datasheets/dover-rivulet-mouth-observations/observations.csv)
 
 ## Files & resources
 

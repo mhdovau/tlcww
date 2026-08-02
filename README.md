@@ -102,7 +102,10 @@ data/
 │               ├── datasheet.json
 │               └── records.json   # field definitions for the datasheet
 ├── projects/<project-slug>/README.md                  # rendered project summary
+├── projects/<project-slug>/observations.csv           # every value, long format
+├── projects/<project-slug>/locations.csv              # sites + coordinates
 ├── projects/<project-slug>/datasheets/<ds>/README.md  # rendered observations
+├── projects/<project-slug>/datasheets/<ds>/observations.csv  # wide table
 └── files/
     ├── index.json                 # URL → local_path map (+ download status)
     ├── _download_errors.json      # any binaries that couldn't be fetched
@@ -115,7 +118,7 @@ Each run also renders browsable markdown (so the archive is legible without
 parsing JSON, and GitHub shows it automatically when you open a folder):
 
 - `projects/<slug>/README.md` — project summary (description, counts) with links
-  to each datasheet's view.
+  to each datasheet's view and to the CSV extracts.
 - `projects/<slug>/datasheets/<ds>/README.md` — the datasheet's field list plus
   every observation, with all collected values in a table and inline photo
   thumbnails / document links resolved to the local copies under
@@ -123,6 +126,41 @@ parsing JSON, and GitHub shows it automatically when you open a folder):
 
 The renderer is generic: it reflects whatever fields and record types each
 datasheet defines, with no project-specific assumptions.
+
+### CSV extracts (spreadsheets)
+
+The same data is also written as CSV, so it can be opened directly in Excel /
+LibreOffice / Google Sheets or loaded with pandas/R without parsing JSON. Every
+markdown page links to its CSV, and GitHub renders CSVs as a sortable table in
+the browser.
+
+- `projects/<slug>/datasheets/<ds>/observations.csv` — **wide**: one row per
+  observation, one column per field that datasheet defines (plus any field that
+  holds data but has since been removed from the datasheet). Best for analysing
+  a single datasheet.
+- `projects/<slug>/observations.csv` — **long/tidy**: one row per recorded field
+  value (`observation_id`, `observed_at`, `datasheet`, `location`, `latitude`,
+  `longitude`, `observer`, `field`, `record_type`, `value`, `files`), covering
+  every datasheet in one file — including observations whose datasheet no longer
+  exists upstream. Best for combining datasheets or plotting one parameter over
+  time.
+- `projects/<slug>/locations.csv` — every monitoring site with its coordinates
+  and observation count; ready to import into a GIS or mapping tool.
+
+Both observation extracts carry the same metadata columns and are sorted
+oldest-first, so daily re-runs produce minimal diffs. Photo/document cells hold
+the backup-root-relative path of the local copy (e.g.
+`files/photos_and_files/<name>.jpg`), matching the `localFile` keys in the JSON;
+where a binary was never downloaded, the original URL is kept instead. Values of
+private-flagged fields are withheld in the CSVs exactly as they are in the JSON
+and markdown.
+
+To regenerate the markdown and CSV views from the JSON already in `data/`
+without contacting the API (no credentials needed):
+
+```bash
+python3 scripts/citsci_backup.py --render-only
+```
 
 Every file reference in the saved JSON (e.g. an observation's `featuredPhoto`,
 a record's attached photo, a project resource) keeps its original `path` URL
@@ -189,6 +227,13 @@ export CITSCI_PASS="your-password"
 # export CITSCI_USER_ID="..."        # if auto-resolution fails
 # export CITSCI_FILES_BASE="https://..."
 python3 scripts/citsci_backup.py     # writes to ./data
+```
+
+Re-render only the markdown views and CSV extracts from the JSON already in
+`./data` (no API calls, no credentials):
+
+```bash
+python3 scripts/citsci_backup.py --render-only
 ```
 
 ## Historic data
