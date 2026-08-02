@@ -39,6 +39,14 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Photo(s)** — `description`
 - **Site Conditions Photograph - PUBLIC** — `image`
 
+## Field name changes
+
+Older observations recorded some fields under different names. The CSV extract merges each into the current name below; the observation tables further down show names as they were recorded.
+
+- `Electrical Conductivity` → **Electrical Conductivity (mS / uS)** (unit/qualifier)
+- `Ph` → **pH** (normalised name)
+- `Temperature (C)` → **Water Temperature (C)** (alias)
+
 ## Observations
 
 ### 2026-08-02T11:55:11+00:00 — ESP050 Esperance River Conservation Area (maybe ESP010)

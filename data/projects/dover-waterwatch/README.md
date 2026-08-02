@@ -18,6 +18,8 @@ Dover Waterwatch, Tasmania, Australia — collecting long-term scientific observ
 - [locations.csv](locations.csv) — every monitoring site, with coordinates.
 - Per-datasheet tables (a column per field) are linked below and in each datasheet's page.
 
+Fields renamed over time are merged into one column under the current name (each datasheet's page lists what was merged); the long table also keeps the name each value was recorded under.
+
 ## Datasheets
 
 - [Dover and Surrounds Adhoc](datasheets/dover-and-surrounds-adhoc/README.md) — 4 observation(s) · [CSV](datasheets/dover-and-surrounds-adhoc/observations.csv)

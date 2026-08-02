@@ -1,0 +1,19 @@
+{
+  "_comment": [
+    "Hand-maintained — the backup script reads this file and never rewrites it.",
+    "Maps a field label recorded on older observations to the current field it",
+    "should be merged into for the CSV extracts. Only needed where the merge",
+    "needs human judgement: name variants that differ merely in case,",
+    "punctuation or a trailing unit (e.g. 'Ph' -> 'pH', 'Electrical",
+    "Conductivity' -> 'Electrical Conductivity (mS / uS)') are merged",
+    "automatically and must not be listed here.",
+    "",
+    "Sections are keyed by datasheet directory slug or datasheet name; '*'",
+    "applies to every datasheet in this project. Entries here win over the",
+    "automatic rules. Each datasheet's README.md lists any legacy field left",
+    "unmerged, with candidate targets to choose from."
+  ],
+  "dover-landcare-water-quality": {
+    "Temperature (C)": "Water Temperature (C)"
+  }
+}

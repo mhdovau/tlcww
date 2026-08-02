@@ -102,6 +102,7 @@ data/
 │               ├── datasheet.json
 │               └── records.json   # field definitions for the datasheet
 ├── projects/<project-slug>/README.md                  # rendered project summary
+├── projects/<project-slug>/field_aliases.json         # hand-maintained field merges
 ├── projects/<project-slug>/observations.csv           # every value, long format
 ├── projects/<project-slug>/locations.csv              # sites + coordinates
 ├── projects/<project-slug>/datasheets/<ds>/README.md  # rendered observations
@@ -146,6 +147,54 @@ the browser.
   time.
 - `projects/<slug>/locations.csv` — every monitoring site with its coordinates
   and observation count; ready to import into a GIS or mapping tool.
+
+#### Renamed fields are merged into one column
+
+Datasheets get edited: a field is renamed (`Ph` → `pH`), or deleted and re-added
+with a tweaked name — CitSci gives the replacement a **new** `datasheet_record`
+id, so the same measurement can sit under several labels across a project's
+history. The CSV extracts merge those variants into **one column named by the
+current datasheet definition**, so a parameter forms a single continuous series.
+Only rules that can't change meaning are applied automatically:
+
+| # | Rule | Example |
+| --- | --- | --- |
+| 1 | Same `datasheet_record` id — a rename in place, so it's the same field by definition | any label change on one field |
+| 2 | Labels equal once case, whitespace, quotes and punctuation are normalised | `Ph` → `pH` |
+| 3 | A legacy label matching a current label after each side's trailing unit/qualifier parenthetical is dropped — **and exactly one** current field matches | `Electrical Conductivity` → `Electrical Conductivity (mS / uS)` |
+
+Two guard rails keep this safe on scientific data:
+
+- **Live fields are never merged into each other.** If a rule would join two
+  fields the datasheet still defines, the whole group is left alone and the
+  collision is reported — distinct current fields are distinct on purpose.
+- **Ambiguity is never guessed.** A legacy label matching zero or several
+  current fields keeps its own column and is reported, in the log, in the
+  datasheet's page (with candidate targets) and under `field_name_merges` in
+  `manifest.json`.
+
+Those leftovers are resolved by hand in `projects/<slug>/field_aliases.json`,
+which overrides every rule above. The script reads it and never rewrites it:
+
+```jsonc
+{
+  "dover-landcare-water-quality": {          // datasheet slug, name, or "*"
+    "Temperature (C)": "Water Temperature (C)"
+  }
+}
+```
+
+This project needs exactly one such alias: the legacy `Temperature (C)` (6
+observations to Jun 2026) could be claimed by three current fields — `Water`,
+`Air` or `Dissolved Oxygen Temperature (C)`. It sat between `Ph` and `Electrical
+Conductivity`, i.e. in the Hanna combo meter's readings, so it is mapped to
+`Water Temperature (C)`.
+
+Each datasheet's `README.md` gains a **Field name changes** section listing every
+merge and its reason, so the CSV columns explain themselves. The markdown
+observation tables keep showing names exactly as recorded, and the long CSV
+keeps the recorded name in `field_as_recorded` beside the merged `field` — the
+raw JSON is never rewritten, so nothing is lost.
 
 Both observation extracts carry the same metadata columns and are sorted
 oldest-first, so daily re-runs produce minimal diffs. Photo/document cells hold
