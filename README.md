@@ -137,8 +137,8 @@ the browser.
 
 - `projects/<slug>/datasheets/<ds>/observations.csv` — **wide**: one row per
   observation, one column per field that datasheet defines (plus any field that
-  holds data but has since been removed from the datasheet). Best for analysing
-  a single datasheet.
+  holds data but has since been removed from the datasheet), with photo/file
+  columns pushed to the far right. Best for analysing a single datasheet.
 - `projects/<slug>/observations.csv` — **long/tidy**: one row per recorded field
   value (`observation_id`, `observed_at`, `datasheet`, `location`, `latitude`,
   `longitude`, `observer`, `field`, `record_type`, `value`, `files`), covering
@@ -203,6 +203,13 @@ the backup-root-relative path of the local copy (e.g.
 where a binary was never downloaded, the original URL is kept instead.
 
 #### Photo columns
+
+Media columns sit at the **far right** of the wide table: long file paths are
+the least useful thing in a spreadsheet, so the measurements stay together on
+screen and the photos follow after them. Ordering is by field *type*, not by
+name — any field CitSci types as image/file/video/audio (or that turns out to
+carry an attachment) is moved right, whatever it is called and wherever it sits
+in the datasheet. `photos` is the last column of all.
 
 Each photo field keeps its **own column under its own name** — a datasheet can
 define several (e.g. a site-conditions shot and a noteworthy shot), and which

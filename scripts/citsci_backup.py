@@ -1091,8 +1091,17 @@ def build_field_map(field_defs: list, observations: list,
 # ---------------------------------------------------------------------------
 
 OBS_META_COLUMNS = ["observation_id", "observed_at", "created_at", "datasheet",
-                    "location", "latitude", "longitude", "observer", "comments",
-                    "photos"]
+                    "location", "latitude", "longitude", "observer", "comments"]
+
+# Media columns are pushed to the far right of the wide table: long path strings
+# are the least useful thing in a spreadsheet, and leading with the measurements
+# keeps the readable/plottable columns together on screen. `photos` (the union
+# of the observation's media) goes last of all.
+OBS_PHOTO_COLUMN = "photos"
+
+# Record types whose value is a file rather than a measurement.
+MEDIA_RECORD_TYPES = {"image", "photo", "photos", "file", "files", "video",
+                      "audio", "attachment", "signature", "drawing"}
 
 OBS_LONG_COLUMNS = ["observation_id", "observed_at", "datasheet", "location",
                     "latitude", "longitude", "observer", "field",
@@ -1200,10 +1209,17 @@ def render_datasheet_csv(base: str, ds_dir: str, field_defs: list,
     field_map = field_map or {}
     columns: list[str] = []
     seen: set[str] = set()
+    media: set[str] = set()  # columns holding files rather than measurements
+
+    def note(key: str, rec: dict) -> None:
+        if rec.get("recordType") in MEDIA_RECORD_TYPES or rec.get("files"):
+            media.add(key)
+
     for ancestors, fd in _walk_records(field_defs):
         if fd.get("recordType") == "description":  # section header, never a value
             continue
         key = field_map.get(_field_key(ancestors, fd), _field_key(ancestors, fd))
+        note(key, fd)
         if key not in seen:
             seen.add(key)
             columns.append(key)
@@ -1214,9 +1230,15 @@ def render_datasheet_csv(base: str, ds_dir: str, field_defs: list,
         for ancestors, rec in _walk_records(obs.get("records")):
             key = _field_key(ancestors, rec)
             key = field_map.get(key, key)
+            note(key, rec)
             if key not in seen and _record_value_text(rec):
                 seen.add(key)
                 columns.append(key)
+
+    # Measurements first, then the media fields, then the aggregate `photos`.
+    columns = [c for c in columns if c not in media] + \
+              [c for c in columns if c in media]
+    header = OBS_META_COLUMNS + columns + [OBS_PHOTO_COLUMN]
 
     rows = []
     for obs in sorted(observations, key=_obs_sort_key):
@@ -1230,10 +1252,10 @@ def render_datasheet_csv(base: str, ds_dir: str, field_defs: list,
             key = field_map.get(key, key)
             values[key] = f"{values[key]}; {text}" if key in values else text
         rows.append([meta[c] for c in OBS_META_COLUMNS]
-                    + [values.get(c, "") for c in columns])
+                    + [values.get(c, "") for c in columns]
+                    + [meta[OBS_PHOTO_COLUMN]])
 
-    _write_csv(os.path.join(base, ds_dir, "observations.csv"),
-               OBS_META_COLUMNS + columns, rows)
+    _write_csv(os.path.join(base, ds_dir, "observations.csv"), header, rows)
     return "observations.csv"
 
 
