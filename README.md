@@ -200,7 +200,21 @@ Both observation extracts carry the same metadata columns and are sorted
 oldest-first, so daily re-runs produce minimal diffs. Photo/document cells hold
 the backup-root-relative path of the local copy (e.g.
 `files/photos_and_files/<name>.jpg`), matching the `localFile` keys in the JSON;
-where a binary was never downloaded, the original URL is kept instead. Values of
+where a binary was never downloaded, the original URL is kept instead.
+
+#### Photo columns
+
+Each photo field keeps its **own column under its own name** — a datasheet can
+define several (e.g. a site-conditions shot and a noteworthy shot), and which
+photo answers which prompt is part of the record. The wide CSV's `photos`
+column is the union of every photo on the observation, in field order, as a
+convenience handle whose name is the same in every datasheet; the per-field
+columns are what tell them apart. In the long CSV each photo field gets its own
+rows, so `record_type == "image"` selects every photo across the project
+without needing to know the field names. `featuredPhoto` is a pointer to a photo
+already attached to a field, not a separate upload, so it never produces a
+duplicate row; a genuine observation-level upload (attached to no field) is the
+only thing listed under `Observation photos`. Values of
 private-flagged fields are withheld in the CSVs exactly as they are in the JSON
 and markdown.
 
