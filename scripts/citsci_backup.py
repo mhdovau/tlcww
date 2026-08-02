@@ -6,6 +6,12 @@ email/password, then walks the account, its projects, datasheets, records,
 observations and uploaded files, writing everything to an output directory in a
 stable, diffable structure.
 
+Alongside the raw JSON, each run renders human-readable views: markdown pages
+per project/datasheet, and CSV extracts (per-datasheet tables, a project-wide
+long table of every recorded value, and the project's locations) that the
+markdown pages link to. Pass `--render-only` to regenerate just those views from
+the JSON already on disk, with no API calls or credentials.
+
 Only the Python standard library is used so the script can run on a clean
 GitHub Actions runner with no `pip install` step.
 
@@ -26,6 +32,7 @@ CITSCI_DOWNLOAD_FILES (optional) "0" to skip binary photo/file downloads
 from __future__ import annotations
 
 import base64
+import csv
 import html
 import json
 import os
@@ -826,12 +833,19 @@ def _record_value_md(rec: dict, base: str, md_dir: str) -> str:
     return "—"
 
 
-def _iter_records(records, depth=0):
+def _walk_records(records, ancestors: tuple = ()):
+    """Yield (ancestor labels, record) for a record tree, in datasheet order."""
     for r in sorted(records or [], key=lambda x: (x.get("orderNumber") or 0)):
         if isinstance(r, dict):
-            yield depth, r
+            yield ancestors, r
             if r.get("records"):
-                yield from _iter_records(r["records"], depth + 1)
+                yield from _walk_records(r["records"],
+                                         ancestors + (_txt(r.get("label")),))
+
+
+def _iter_records(records):
+    for ancestors, rec in _walk_records(records):
+        yield len(ancestors), rec
 
 
 def _license_footer(base: str, md_dir: str) -> list[str]:
@@ -844,6 +858,466 @@ def _license_footer(base: str, md_dir: str) -> list[str]:
         "third-party resources are not licensed for reuse; code is MIT. "
         f"See [LICENSE.md]({rel})._",
     ]
+
+
+# ---------------------------------------------------------------------------
+# Field-name reconciliation
+#
+# Datasheets are edited over time: a field gets renamed ("Ph" -> "pH"), or is
+# deleted and re-added with a tweaked name (CitSci then gives the replacement a
+# new datasheet_record id), so one measurement can appear under several labels
+# across a project's history. The CSV extracts merge those variants into a single
+# column named by the *current* datasheet definition — using only rules that
+# cannot change meaning:
+#
+#   1. same datasheet_record id — a rename in place, so the values are the same
+#      field by definition;
+#   2. labels equal once case, whitespace, quotes and punctuation are normalised
+#      ("Ph" == "pH");
+#   3. a legacy label that matches a current label after each side's trailing
+#      unit/qualifier parenthetical is dropped, and exactly one current field
+#      matches ("Electrical Conductivity" -> "Electrical Conductivity (mS / uS)").
+#
+# A group that would pull two *currently defined* fields together is never
+# merged — distinct live fields are distinct on purpose. Anything else is left
+# as its own column and reported (in the log, the datasheet page and the
+# manifest), because a merge needing judgement must not be guessed: e.g. a
+# legacy "Temperature (C)" that three current temperature fields could equally
+# claim. Those are resolved by hand in `projects/<slug>/field_aliases.json`,
+# which wins over every rule above.
+# ---------------------------------------------------------------------------
+
+# Hand-maintained, per project; never written by this script.
+FIELD_ALIASES_FILE = "field_aliases.json"
+
+# Field merges applied this run, reported in the manifest.
+FIELD_MERGES: dict = {}
+
+
+def _norm_label(label: str) -> str:
+    """Case/punctuation-insensitive form of a label, for comparison only."""
+    s = _txt(label).casefold()
+    s = s.replace("’", "'").replace("‘", "'")
+    s = re.sub(r"[‐-―]", "-", s)
+    return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+
+def _strip_qualifier(label: str) -> str:
+    """Drop trailing parenthesised/bracketed units or qualifiers:
+    "Electrical Conductivity (mS / uS)" -> "Electrical Conductivity"."""
+    s, prev = _txt(label), None
+    while prev != s:
+        prev = s
+        s = re.sub(r"[(\[][^()\[\]]*[)\]]\s*$", "", s).strip(" -:,")
+    return s
+
+
+def _words(label: str) -> set:
+    return {w for w in _norm_label(label).split() if len(w) > 2}
+
+
+def _def_id(rec: dict) -> str:
+    return str(rec.get("id") or rec.get("@id", "")).rsplit("/", 1)[-1]
+
+
+def _dsr_id(rec: dict) -> str:
+    """The datasheet field a submitted record belongs to."""
+    ds_rec = rec.get("datasheetRecord")
+    return _def_id(ds_rec) if isinstance(ds_rec, dict) else ""
+
+
+def _aliases_for(aliases: dict, ds_slug: str, ds_name: str) -> dict:
+    """Alias entries applying to one datasheet: the "*" section (all
+    datasheets) plus any section keyed by the datasheet's slug or name."""
+    out: dict = {}
+    for section in ("*", ds_slug, ds_name):
+        block = aliases.get(section) if isinstance(aliases, dict) else None
+        if isinstance(block, dict):
+            out.update({k: v for k, v in block.items() if isinstance(v, str)})
+    return out
+
+
+def _merge_reason(legacy: str, canonical: str, alias_map: dict,
+                  shared_ids: dict) -> str:
+    if alias_map.get(legacy) == canonical:
+        return "alias"
+    if canonical in shared_ids.get(legacy, ()):
+        return "same field id"
+    if _norm_label(legacy) == _norm_label(canonical):
+        return "normalised name"
+    if _norm_label(_strip_qualifier(legacy)) == _norm_label(_strip_qualifier(canonical)):
+        return "unit/qualifier"
+    return "merged via another variant"
+
+
+def build_field_map(field_defs: list, observations: list,
+                    aliases: dict | None = None):
+    """Work out which recorded field labels are the same column.
+
+    Returns (mapping, report). `mapping` holds only the labels that move — look
+    keys up with `.get(key, key)`. `report` describes what merged, what did not,
+    and any current fields a rule would have collided."""
+    aliases = aliases or {}
+    current: list[str] = []
+    current_by_id: dict[str, str] = {}
+    for ancestors, fd in _walk_records(field_defs):
+        key = _field_key(ancestors, fd)
+        if key not in current:
+            current.append(key)
+        fid = _def_id(fd)
+        if fid:
+            current_by_id.setdefault(fid, key)
+
+    last_seen: dict[str, str] = {}
+    by_id: dict[str, set] = {}
+    for obs in observations:
+        when = obs.get("observedAt") or ""
+        for ancestors, rec in _walk_records(obs.get("records")):
+            key = _field_key(ancestors, rec)
+            if when > last_seen.get(key, ""):
+                last_seen[key] = when
+            rid = _dsr_id(rec)
+            if rid:
+                by_id.setdefault(rid, set()).add(key)
+
+    keys = list(dict.fromkeys(current + sorted(last_seen)))
+    parent = {k: k for k in keys}
+
+    def find(k: str) -> str:
+        while parent[k] != k:
+            parent[k] = parent[parent[k]]
+            k = parent[k]
+        return k
+
+    def union(a: str, b: str) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    # 0. Hand-written aliases first; those keys are then left alone by the
+    #    automatic rules, so a deliberate choice can't be overridden.
+    alias_map: dict[str, str] = {}
+    alias_targets: set = set()
+    for key in keys:
+        target = aliases.get(key) or aliases.get(key.rsplit(" > ", 1)[-1])
+        if target and target != key:
+            parent.setdefault(target, target)
+            alias_map[key] = target
+            alias_targets.add(target)
+            union(key, target)
+
+    # 1. Same datasheet_record id: a field renamed in place.
+    shared_ids: dict[str, set] = {}
+    for rid, group in by_id.items():
+        members = sorted(group)
+        if rid in current_by_id:
+            members.append(current_by_id[rid])
+        members = [m for m in dict.fromkeys(members) if m not in alias_map]
+        for member in members[1:]:
+            shared_ids.setdefault(members[0], set()).add(member)
+            shared_ids.setdefault(member, set()).add(members[0])
+            union(members[0], member)
+
+    # 2. Labels that differ only in case / whitespace / punctuation.
+    by_norm: dict[str, list] = {}
+    for key in keys:
+        if key not in alias_map:
+            by_norm.setdefault(_norm_label(key), []).append(key)
+    for group in by_norm.values():
+        for member in group[1:]:
+            union(group[0], member)
+
+    # 3. A legacy label matching exactly one current field once each side's
+    #    trailing unit/qualifier is dropped.
+    by_stripped: dict[str, list] = {}
+    for key in current:
+        by_stripped.setdefault(_norm_label(_strip_qualifier(key)), []).append(key)
+    for key in keys:
+        if key in current or key in alias_map:
+            continue
+        candidates = by_stripped.get(_norm_label(_strip_qualifier(key)), [])
+        if len(candidates) == 1:
+            union(key, candidates[0])
+
+    groups: dict[str, list] = {}
+    for key in parent:
+        groups.setdefault(find(key), []).append(key)
+
+    mapping: dict[str, str] = {}
+    merged: dict[str, list] = {}
+    conflicts: list = []
+    for members in groups.values():
+        members = sorted(set(members))
+        live = [k for k in current if k in members]
+        if len(live) > 1:
+            # Two live fields: whatever pulled them together is not a rename.
+            conflicts.append(live)
+            continue
+        if live:
+            canonical = live[0]
+        else:
+            pinned = [k for k in members if k in alias_targets]
+            canonical = pinned[0] if pinned else max(
+                members, key=lambda k: (last_seen.get(k, ""), k))
+        for key in members:
+            if key != canonical:
+                mapping[key] = canonical
+                merged[key] = [canonical,
+                               _merge_reason(key, canonical, alias_map, shared_ids)]
+
+    unresolved = {}
+    for key in sorted(last_seen):
+        if key in current or key in mapping:
+            continue
+        # Offer the human a shortlist for field_aliases.json.
+        unresolved[key] = [c for c in current if _words(key) & _words(c)]
+
+    return mapping, {"merged": merged, "unresolved": unresolved,
+                     "conflicts": conflicts}
+
+
+# ---------------------------------------------------------------------------
+# CSV extracts
+#
+# The same data as the markdown views, in a form spreadsheets and analysis tools
+# open directly. Per project we write:
+#   * datasheets/<ds>/observations.csv — wide: one row per observation, one
+#     column per field the datasheet defines;
+#   * observations.csv — long/tidy: one row per recorded field value across every
+#     datasheet (also covers observations whose datasheet is no longer backed up);
+#   * locations.csv — the project's monitoring sites.
+# File references are backup-root-relative paths, matching the `localFile` keys
+# in the JSON. Rows are sorted oldest-first so daily diffs stay small.
+# ---------------------------------------------------------------------------
+
+OBS_META_COLUMNS = ["observation_id", "observed_at", "created_at", "datasheet",
+                    "location", "latitude", "longitude", "observer", "comments"]
+
+# Media columns are pushed to the far right of the wide table: long path strings
+# are the least useful thing in a spreadsheet, and leading with the measurements
+# keeps the readable/plottable columns together on screen. `photos` (the union
+# of the observation's media) goes last of all.
+OBS_PHOTO_COLUMN = "photos"
+
+# Record types whose value is a file rather than a measurement.
+MEDIA_RECORD_TYPES = {"image", "photo", "photos", "file", "files", "video",
+                      "audio", "attachment", "signature", "drawing"}
+
+OBS_LONG_COLUMNS = ["observation_id", "observed_at", "datasheet", "location",
+                    "latitude", "longitude", "observer", "field",
+                    "field_as_recorded", "record_type", "value", "files"]
+
+LOCATION_COLUMNS = ["location_id", "name", "latitude", "longitude",
+                    "observations_total", "description"]
+
+
+def _write_csv(path: str, header: list, rows: list) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(header)
+        writer.writerows(rows)
+
+
+def _local_paths(files) -> list[str]:
+    """Backup-root-relative paths (or the remote URL, if never downloaded) for a
+    list of embedded file objects."""
+    out = []
+    for fobj in files or []:
+        if not isinstance(fobj, dict):
+            continue
+        p = fobj.get("localFile") or fobj.get("path") or fobj.get("file")
+        if isinstance(p, str) and p:
+            out.append(p)
+    return out
+
+
+def _record_value_text(rec: dict, include_files: bool = True) -> str:
+    """Plain-text rendering of whatever value a record holds — the CSV
+    counterpart of `_record_value_md`."""
+    if include_files:
+        files = _local_paths(rec.get("files"))
+        if files:
+            return "; ".join(files)
+    value = rec.get("value")
+    if value not in (None, ""):
+        return _txt(value)
+    opt = rec.get("optionValue")
+    if isinstance(opt, dict):
+        disp = opt.get("value") or opt.get("label") or opt.get("name")
+        if disp:
+            return _txt(disp)
+    multi = rec.get("multiSelectOptionValues")
+    if isinstance(multi, list) and multi:
+        vals = [o.get("value") or o.get("label") or o.get("name")
+                for o in multi if isinstance(o, dict)]
+        return "; ".join(_txt(v) for v in vals if v)
+    return ""
+
+
+def _field_key(ancestors: tuple, rec: dict) -> str:
+    """Column name for a record: its label, prefixed by any parent group."""
+    label = _txt(rec.get("label")) or f"field {rec.get('orderNumber') or ''}".strip()
+    return " > ".join([a for a in ancestors if a] + [label])
+
+
+def _observation_photos(obs: dict) -> list[str]:
+    """Every distinct photo/file attached to an observation, in one list.
+
+    Field order first, so this matches the per-field columns; the featured photo
+    is normally a pointer to one of those files rather than a separate upload,
+    and only appears here in its own right if it isn't."""
+    paths = []
+    for _, rec in _walk_records(obs.get("records")):
+        paths += _local_paths(rec.get("files"))
+    paths += _local_paths(obs.get("files"))
+    if isinstance(obs.get("featuredPhoto"), dict):
+        paths += _local_paths([obs["featuredPhoto"]])
+    seen, out = set(), []
+    for p in paths:
+        if p not in seen:
+            seen.add(p)
+            out.append(p)
+    return out
+
+
+def _obs_meta(obs: dict) -> dict:
+    def sub(key):
+        return obs.get(key) if isinstance(obs.get(key), dict) else {}
+    ll, loc, user, ds = sub("lngLat"), sub("location"), sub("user"), sub("datasheet")
+    return {
+        "observation_id": obs.get("id") or obs.get("@id", "").rsplit("/", 1)[-1],
+        "observed_at": obs.get("observedAt") or "",
+        "created_at": obs.get("createdAt") or "",
+        "datasheet": _txt(ds.get("name")),
+        "location": _txt(loc.get("name")),
+        "latitude": ll.get("lat", ""),
+        "longitude": ll.get("lng", ""),
+        "observer": _txt(user.get("displayName")),
+        "comments": _txt(obs.get("comments")),
+        "photos": "; ".join(_observation_photos(obs)),
+    }
+
+
+def _obs_sort_key(obs: dict):
+    return (obs.get("observedAt") or "", obs.get("id") or "")
+
+
+def render_datasheet_csv(base: str, ds_dir: str, field_defs: list,
+                         observations: list, field_map: dict | None = None) -> str:
+    """Write the wide per-datasheet table. Returns the file name for linking."""
+    field_map = field_map or {}
+    columns: list[str] = []
+    seen: set[str] = set()
+    media: set[str] = set()  # columns holding files rather than measurements
+
+    def note(key: str, rec: dict) -> None:
+        if rec.get("recordType") in MEDIA_RECORD_TYPES or rec.get("files"):
+            media.add(key)
+
+    for ancestors, fd in _walk_records(field_defs):
+        if fd.get("recordType") == "description":  # section header, never a value
+            continue
+        key = field_map.get(_field_key(ancestors, fd), _field_key(ancestors, fd))
+        note(key, fd)
+        if key not in seen:
+            seen.add(key)
+            columns.append(key)
+    # Fields that carry data but are no longer defined (e.g. removed from the
+    # datasheet after observations were recorded) still get a column, unless
+    # they merged into a current one.
+    for obs in observations:
+        for ancestors, rec in _walk_records(obs.get("records")):
+            key = _field_key(ancestors, rec)
+            key = field_map.get(key, key)
+            note(key, rec)
+            if key not in seen and _record_value_text(rec):
+                seen.add(key)
+                columns.append(key)
+
+    # Measurements first, then the media fields, then the aggregate `photos`.
+    columns = [c for c in columns if c not in media] + \
+              [c for c in columns if c in media]
+    header = OBS_META_COLUMNS + columns + [OBS_PHOTO_COLUMN]
+
+    rows = []
+    for obs in sorted(observations, key=_obs_sort_key):
+        meta = _obs_meta(obs)
+        values: dict[str, str] = {}
+        for ancestors, rec in _walk_records(obs.get("records")):
+            text = _record_value_text(rec)
+            if not text:
+                continue
+            key = _field_key(ancestors, rec)
+            key = field_map.get(key, key)
+            values[key] = f"{values[key]}; {text}" if key in values else text
+        rows.append([meta[c] for c in OBS_META_COLUMNS]
+                    + [values.get(c, "") for c in columns]
+                    + [meta[OBS_PHOTO_COLUMN]])
+
+    _write_csv(os.path.join(base, ds_dir, "observations.csv"), header, rows)
+    return "observations.csv"
+
+
+def render_project_observations_csv(base: str, pdir: str, observations: list,
+                                    field_maps: dict | None = None) -> str:
+    """Write the long/tidy table covering every observation in the project.
+
+    `field` carries the current (merged) name so a parameter can be filtered
+    across the project's whole history; `field_as_recorded` keeps the label the
+    observation was actually submitted under."""
+    field_maps = field_maps or {}
+    rows = []
+    for obs in sorted(observations, key=_obs_sort_key):
+        meta = _obs_meta(obs)
+        head = [meta[c] for c in OBS_LONG_COLUMNS[:7]]
+        ds = obs.get("datasheet") if isinstance(obs.get("datasheet"), dict) else {}
+        fmap = field_maps.get((ds.get("id") or ds.get("@id", "")).rsplit("/", 1)[-1], {})
+        emitted = 0
+        accounted: set = set()
+        for ancestors, rec in _walk_records(obs.get("records")):
+            value = _record_value_text(rec, include_files=False)
+            paths = _local_paths(rec.get("files"))
+            accounted.update(paths)
+            files = "; ".join(paths)
+            if not value and not files:
+                continue
+            key = _field_key(ancestors, rec)
+            rows.append(head + [fmap.get(key, key), key,
+                                rec.get("recordType") or "", value, files])
+            emitted += 1
+        # Photos belonging to no field get their own row. The featured photo is
+        # normally a pointer to a photo already listed against its field, so
+        # only files not accounted for above are added — no duplicate rows.
+        own = [p for p in _local_paths(obs.get("files")) if p not in accounted]
+        if isinstance(obs.get("featuredPhoto"), dict):
+            own += [p for p in _local_paths([obs["featuredPhoto"]])
+                    if p not in accounted and p not in own]
+        if own:
+            rows.append(head + ["Observation photos", "Observation photos",
+                                "file", "", "; ".join(dict.fromkeys(own))])
+            emitted += 1
+        if not emitted:  # keep empty observations visible in the extract
+            rows.append(head + ["", "", "", "", ""])
+
+    _write_csv(os.path.join(base, pdir, "observations.csv"),
+               OBS_LONG_COLUMNS, rows)
+    return "observations.csv"
+
+
+def render_locations_csv(base: str, pdir: str, locations: list) -> str:
+    rows = []
+    for loc in locations if isinstance(locations, list) else []:
+        if not isinstance(loc, dict):
+            continue
+        ll = loc.get("lngLat") if isinstance(loc.get("lngLat"), dict) else {}
+        rows.append([(loc.get("id") or loc.get("@id", "")).rsplit("/", 1)[-1],
+                     _txt(loc.get("name")), ll.get("lat", ""), ll.get("lng", ""),
+                     loc.get("observationsTotal", ""),
+                     _txt(loc.get("description"))])
+    rows.sort(key=lambda r: (r[1], r[0]))
+    _write_csv(os.path.join(base, pdir, "locations.csv"), LOCATION_COLUMNS, rows)
+    return "locations.csv"
 
 
 def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
@@ -882,12 +1356,49 @@ def render_observation_md(obs: dict, base: str, md_dir: str) -> list[str]:
     return lines
 
 
-def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
-                        field_defs: list, observations: list) -> None:
+def _field_changes_md(report: dict) -> list[str]:
+    """Note which older field names were folded into which current column, and
+    which were left alone — so the CSV's columns are self-explaining."""
+    merged, unresolved = report.get("merged") or {}, report.get("unresolved") or {}
+    conflicts = report.get("conflicts") or []
+    if not merged and not unresolved and not conflicts:
+        return []
+    lines = ["## Field name changes", "",
+             "Older observations recorded some fields under different names. The "
+             "CSV extract merges each into the current name below; the "
+             "observation tables further down show names as they were recorded.",
+             ""]
+    for legacy, (canonical, reason) in sorted(merged.items()):
+        lines.append(f"- `{legacy}` → **{canonical}** ({reason})")
+    if unresolved:
+        lines += ["", "Not merged — kept as their own columns because no single "
+                  "current field is an unambiguous match. Map them by hand in "
+                  f"`../../{FIELD_ALIASES_FILE}` if they should merge:", ""]
+        for legacy, candidates in sorted(unresolved.items()):
+            hint = ", ".join(f"`{c}`" for c in candidates[:4])
+            lines.append(f"- `{legacy}`" + (f" — candidates: {hint}" if hint else ""))
+    if conflicts:
+        lines += ["", "Not merged — a rule would have joined two fields that "
+                  "both still exist:", ""]
+        for group in conflicts:
+            lines.append("- " + " / ".join(f"`{c}`" for c in group))
+    lines.append("")
+    return lines
+
+
+def render_datasheet_md(base: str, ds_dir: str, ds_name: str, field_defs: list,
+                        observations: list, field_map: dict | None = None,
+                        report: dict | None = None) -> str:
+    """Render the datasheet's markdown view and its CSV extract. Returns the
+    CSV's name (relative to the datasheet directory)."""
     md_dir = os.path.dirname(os.path.join(base, ds_dir, "README.md"))
+    csv_name = render_datasheet_csv(base, ds_dir, field_defs, observations,
+                                    field_map)
     lines = [f"# {_txt(ds_name) or 'Datasheet'}", "",
              "_Auto-generated from the backup. Do not edit — regenerated each run._",
-             "", f"**Observations:** {len(observations)}", ""]
+             "", f"**Observations:** {len(observations)}", "",
+             f"**Spreadsheet:** [{csv_name}]({csv_name}) — every observation "
+             "below as a table, one row each, one column per field.", ""]
 
     if field_defs:
         lines += ["## Fields", ""]
@@ -899,6 +1410,8 @@ def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
             priv = " _(private)_" if fd.get("isPrivate") else ""
             lines.append(f"- **{label}**" + (f" — `{t}`" if t else "") + priv)
         lines.append("")
+
+    lines += _field_changes_md(report or {})
 
     lines += ["## Observations", ""]
     if not observations:
@@ -913,6 +1426,7 @@ def render_datasheet_md(base: str, ds_dir: str, ds_name: str,
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")
+    return csv_name
 
 
 def render_project_md(base: str, slug: str) -> None:
@@ -951,13 +1465,45 @@ def render_project_md(base: str, slug: str) -> None:
         did = (d.get("id") or d.get("@id", "")).rsplit("/", 1)[-1] if isinstance(d, dict) else ""
         grouped.setdefault(did, []).append(o)
 
-    # Render each datasheet view and collect links.
+    # Reconcile field labels that changed over the project's history, so each
+    # measurement lands in one column named by the current datasheet.
+    aliases = _load(os.path.join(pdir, FIELD_ALIASES_FILE)) or {}
+    defs_by_id = {ds_id: fields for _, _, ds_id, fields in datasheets}
+    slug_by_id = {ds_id: ds_slug for ds_slug, _, ds_id, _ in datasheets}
+    name_by_id = {ds_id: ds_name for _, ds_name, ds_id, _ in datasheets}
+    field_maps: dict[str, dict] = {}
+    reports: dict[str, dict] = {}
+    for ds_id, obs_group in grouped.items():
+        field_maps[ds_id], reports[ds_id] = build_field_map(
+            defs_by_id.get(ds_id, []), obs_group,
+            _aliases_for(aliases, slug_by_id.get(ds_id, ""),
+                         name_by_id.get(ds_id, "")))
+        report = reports[ds_id]
+        if report["merged"] or report["conflicts"]:
+            FIELD_MERGES[f"{slug}/{slug_by_id.get(ds_id) or ds_id}"] = report
+            log(f"  {name_by_id.get(ds_id) or ds_id}: merged "
+                f"{len(report['merged'])} legacy field name(s); "
+                f"{len(report['unresolved'])} left unmerged.")
+
+    # Render each datasheet view (markdown + CSV) and collect links.
     ds_links = []
+    csv_count = 0
     for ds_slug, ds_name, ds_id, fields in datasheets:
         obs = grouped.get(ds_id, [])
-        render_datasheet_md(base, f"projects/{slug}/datasheets/{ds_slug}",
-                            ds_name, fields, obs)
-        ds_links.append((ds_name, f"datasheets/{ds_slug}/README.md", len(obs)))
+        ds_rel = f"datasheets/{ds_slug}"
+        csv_name = render_datasheet_md(base, f"projects/{slug}/{ds_rel}",
+                                       ds_name, fields, obs,
+                                       field_maps.get(ds_id), reports.get(ds_id))
+        csv_count += 1
+        ds_links.append((ds_name, f"{ds_rel}/README.md", len(obs),
+                         f"{ds_rel}/{csv_name}"))
+
+    # Project-wide CSV extracts.
+    proj_rel = f"projects/{slug}"
+    obs_csv = render_project_observations_csv(base, proj_rel, observations,
+                                              field_maps)
+    loc_csv = render_locations_csv(base, proj_rel, locations)
+    csv_count += 2
 
     # Project summary.
     name = _txt(project.get("name")) or slug
@@ -975,10 +1521,23 @@ def render_project_md(base: str, slug: str) -> None:
         lines.append(f"- **CitSci URL:** https://citsci.org/projects/{project['urlField']}")
     lines.append("")
 
+    lines += ["## Spreadsheets (CSV)", "",
+              f"- [{obs_csv}]({obs_csv}) — every observation in the project, one "
+              "row per recorded field value (all datasheets combined).",
+              f"- [{loc_csv}]({loc_csv}) — every monitoring site, with "
+              "coordinates.",
+              "- Per-datasheet tables (a column per field) are linked below and "
+              "in each datasheet's page.", "",
+              "Fields renamed over time are merged into one column under the "
+              "current name (each datasheet's page lists what was merged); the "
+              "long table also keeps the name each value was recorded under.",
+              ""]
+
     lines += ["## Datasheets", ""]
     if ds_links:
-        for ds_name, link, n in ds_links:
-            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s)")
+        for ds_name, link, n, ds_csv in ds_links:
+            lines.append(f"- [{_txt(ds_name)}]({link}) — {n} observation(s) "
+                         f"· [CSV]({ds_csv})")
     else:
         lines.append("_No datasheets._")
     lines.append("")
@@ -1015,24 +1574,32 @@ def render_project_md(base: str, slug: str) -> None:
     out = os.path.join(pdir, "README.md")
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")
+    return csv_count
 
 
-def render_markdown(base: str | None = None) -> int:
-    """Render human-readable markdown views for every backed-up project."""
+def render_markdown(base: str | None = None) -> tuple[int, int]:
+    """Render the human-readable views (markdown + CSV) for every backed-up
+    project. Returns (projects rendered, CSV files written)."""
     base = base or OUTPUT_DIR
     projects_dir = os.path.join(base, "projects")
     if not os.path.isdir(projects_dir):
-        return 0
-    n = 0
+        return 0, 0
+    n = csvs = 0
     for slug in sorted(os.listdir(projects_dir)):
         if os.path.isdir(os.path.join(projects_dir, slug)):
-            render_project_md(base, slug)
+            csvs += render_project_md(base, slug)
             n += 1
-    log(f"Rendered markdown views for {n} project(s).")
-    return n
+    log(f"Rendered markdown views and {csvs} CSV extract(s) for {n} project(s).")
+    return n, csvs
 
 
 def main() -> int:
+    if "--render-only" in sys.argv:
+        # Re-render the markdown views and CSV extracts from the JSON already on
+        # disk, without contacting the API (no credentials needed).
+        render_markdown()
+        return 0
+
     email = os.environ.get("CITSCI_USER")
     password = os.environ.get("CITSCI_PASS")
     if not email or not password:
@@ -1048,7 +1615,7 @@ def main() -> int:
     counts = {"projects": 0, "datasheets": 0, "datasheet_records": 0,
               "observations": 0, "observation_records": 0, "locations": 0,
               "files": 0, "files_referenced": 0, "files_orphaned": 0,
-              "files_downloaded": 0, "files_unchanged": 0}
+              "files_downloaded": 0, "files_unchanged": 0, "csv_extracts": 0}
     manifest["include_private_fields"] = INCLUDE_PRIVATE
 
     client = CitSciClient(email, password)
@@ -1059,10 +1626,11 @@ def main() -> int:
     backup_account(client, uid, manifest)
     backup_projects(client, uid, counts)
     backup_files(client, counts)
-    render_markdown()
+    _, counts["csv_extracts"] = render_markdown()
 
     manifest["counts"] = counts
     manifest["private_fields"] = PRIVATE_STATS
+    manifest["field_name_merges"] = FIELD_MERGES
     manifest["orphaned_observations"] = sorted(
         ORPHANED_OBSERVATIONS, key=lambda e: e["id"])
     manifest["completed_at"] = datetime.now(timezone.utc).isoformat()

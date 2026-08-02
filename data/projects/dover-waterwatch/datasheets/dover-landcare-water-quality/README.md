@@ -4,6 +4,8 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 
 **Observations:** 11
 
+**Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
+
 ## Fields
 
 - **Waterwatch Physcio-chemical Monitoring Data Sheet** — `description`
@@ -36,6 +38,14 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Nutrient Samples Collected** — `multiple_choice`
 - **Photo(s)** — `description`
 - **Site Conditions Photograph - PUBLIC** — `image`
+
+## Field name changes
+
+Older observations recorded some fields under different names. The CSV extract merges each into the current name below; the observation tables further down show names as they were recorded.
+
+- `Electrical Conductivity` → **Electrical Conductivity (mS / uS)** (unit/qualifier)
+- `Ph` → **pH** (normalised name)
+- `Temperature (C)` → **Water Temperature (C)** (alias)
 
 ## Observations
 
