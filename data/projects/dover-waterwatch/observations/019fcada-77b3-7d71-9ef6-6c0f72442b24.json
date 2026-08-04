@@ -1,9 +1,9 @@
 {
   "@context": "/contexts/Observation",
-  "@id": "/observations/019ef742-d390-75dc-b1ed-84e520818b6a",
+  "@id": "/observations/019fcada-77b3-7d71-9ef6-6c0f72442b24",
   "@type": "Observation",
   "comments": null,
-  "createdAt": "2026-06-24T01:33:32+00:00",
+  "createdAt": "2026-08-04T03:39:02+00:00",
   "datasheet": {
     "@id": "/datasheets/019ef6d9-c87c-75ef-b265-185dce3506bd",
     "@type": "Datasheet",
@@ -15,15 +15,15 @@
   "durationSetup": null,
   "durationTravel": null,
   "featuredPhoto": {
-    "@id": "/file_objects/019ef742-bf93-7885-8bc1-d66391da8bdc",
+    "@id": "/file_objects/019fcada-6de6-713f-9a4d-8635ace999e3",
     "@type": "https://schema.org/MediaObject",
-    "createdAt": "2026-06-24T01:33:26+00:00",
-    "localFile": "files/photos_and_files/019ef742-bf93-7885-8bc1-d66391da8bdc-386475b397a769c78b4d72883148d593df2b4bae.jpg",
-    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/386475b397a769c78b4d72883148d593df2b4bae.jpg",
-    "updatedAt": "2026-06-24T01:33:32+00:00"
+    "createdAt": "2026-08-04T03:38:59+00:00",
+    "localFile": "files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg",
+    "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d9803b74b496f601d0bc26a0c013010677fff5a0.jpg",
+    "updatedAt": "2026-08-04T03:39:02+00:00"
   },
   "files": [],
-  "id": "019ef742-d390-75dc-b1ed-84e520818b6a",
+  "id": "019fcada-77b3-7d71-9ef6-6c0f72442b24",
   "isPrivate": false,
   "lngLat": {
     "lat": -43.31235,
@@ -41,8 +41,8 @@
     "name": "Glenbervie Rivulet",
     "updatedAt": "2026-08-04T03:39:03+00:00"
   },
-  "observationEndedAt": "2026-06-24T09:40:33+00:00",
-  "observedAt": "2026-06-24T09:40:00+00:00",
+  "observationEndedAt": null,
+  "observedAt": "2026-08-04T13:36:18+00:00",
   "project": {
     "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
     "@type": "Project",
@@ -58,9 +58,9 @@
   },
   "records": [
     {
-      "@id": "/observation_records/2685100",
+      "@id": "/observation_records/2718863",
       "@type": "ObservationRecord",
-      "createdAt": "2026-06-24T01:33:32+00:00",
+      "createdAt": "2026-08-04T03:39:02+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/16901",
         "@type": "DatasheetRecord",
@@ -69,7 +69,7 @@
       },
       "description": null,
       "files": [],
-      "id": 2685100,
+      "id": 2718863,
       "isPrivate": false,
       "label": "Observations",
       "multiSelectOptionValues": [],
@@ -79,13 +79,13 @@
       "parentRecord": null,
       "recordType": "textarea",
       "records": [],
-      "updatedAt": "2026-06-24T01:33:32+00:00",
-      "value": "Flowing out to bay, tide 0.7m"
+      "updatedAt": "2026-08-04T03:39:02+00:00",
+      "value": "Mouth still open to bay\n\n tide about 1 m \n\nflowing out just \n\nthe rivulet being maybe 50 or 100 mm above the level of the bay"
     },
     {
-      "@id": "/observation_records/2685101",
+      "@id": "/observation_records/2718864",
       "@type": "ObservationRecord",
-      "createdAt": "2026-06-24T01:33:32+00:00",
+      "createdAt": "2026-08-04T03:39:02+00:00",
       "datasheetRecord": {
         "@id": "/datasheet_records/16902",
         "@type": "DatasheetRecord",
@@ -95,23 +95,23 @@
       "description": null,
       "files": [
         {
-          "@id": "/file_objects/019ef742-bf93-7885-8bc1-d66391da8bdc",
+          "@id": "/file_objects/019fcada-6de6-713f-9a4d-8635ace999e3",
           "@type": "https://schema.org/MediaObject",
-          "createdAt": "2026-06-24T01:33:26+00:00",
-          "localFile": "files/photos_and_files/019ef742-bf93-7885-8bc1-d66391da8bdc-386475b397a769c78b4d72883148d593df2b4bae.jpg",
-          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/386475b397a769c78b4d72883148d593df2b4bae.jpg",
-          "updatedAt": "2026-06-24T01:33:32+00:00"
+          "createdAt": "2026-08-04T03:38:59+00:00",
+          "localFile": "files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d9803b74b496f601d0bc26a0c013010677fff5a0.jpg",
+          "updatedAt": "2026-08-04T03:39:02+00:00"
         },
         {
-          "@id": "/file_objects/019ef742-d107-7989-a022-2dfbb752c611",
+          "@id": "/file_objects/019fcada-749c-7701-9004-de1327fb8921",
           "@type": "https://schema.org/MediaObject",
-          "createdAt": "2026-06-24T01:33:30+00:00",
-          "localFile": "files/photos_and_files/019ef742-d107-7989-a022-2dfbb752c611-87fe54b395850a2e471073f3406ce2c7852d09d2.jpg",
-          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/87fe54b395850a2e471073f3406ce2c7852d09d2.jpg",
-          "updatedAt": "2026-06-24T01:33:32+00:00"
+          "createdAt": "2026-08-04T03:39:01+00:00",
+          "localFile": "files/photos_and_files/019fcada-749c-7701-9004-de1327fb8921-d8775658ccc997978fee4531844c606dfdb0029b.jpg",
+          "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d8775658ccc997978fee4531844c606dfdb0029b.jpg",
+          "updatedAt": "2026-08-04T03:39:03+00:00"
         }
       ],
-      "id": 2685101,
+      "id": 2718864,
       "isPrivate": false,
       "label": "Photos",
       "multiSelectOptionValues": [],
@@ -121,11 +121,11 @@
       "parentRecord": null,
       "recordType": "image",
       "records": [],
-      "updatedAt": "2026-06-24T01:33:32+00:00",
-      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/386475b397a769c78b4d72883148d593df2b4bae.jpg, https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/87fe54b395850a2e471073f3406ce2c7852d09d2.jpg"
+      "updatedAt": "2026-08-04T03:39:02+00:00",
+      "value": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d9803b74b496f601d0bc26a0c013010677fff5a0.jpg, https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/d8775658ccc997978fee4531844c606dfdb0029b.jpg"
     }
   ],
-  "updatedAt": "2026-06-24T01:33:32+00:00",
+  "updatedAt": "2026-08-04T03:39:02+00:00",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
     "@type": "User",

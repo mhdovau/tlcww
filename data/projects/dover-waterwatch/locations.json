@@ -1515,7 +1515,18 @@
       "lng": 147.04628
     },
     "name": "Glenbervie Rivulet",
-    "observationsTotal": 2
+    "observationsTotal": 3
+  },
+  {
+    "@id": "/areas/019fcad1-555f-7e6b-bd09-fcc42ef8f9b7",
+    "@type": "Area",
+    "id": "019fcad1-555f-7e6b-bd09-fcc42ef8f9b7",
+    "lngLat": {
+      "lat": -43.313011631,
+      "lng": 147.03889344
+    },
+    "name": "be",
+    "observationsTotal": 1
   },
   {
     "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
@@ -1526,7 +1537,7 @@
       "lng": 147.02357
     },
     "name": "Dover Rivulet Mouth",
-    "observationsTotal": 47
+    "observationsTotal": 48
   },
   {
     "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",

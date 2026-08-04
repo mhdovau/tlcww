@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 56
+**Observations:** 57
 
 **Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
 
@@ -16,6 +16,20 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Noteworthy Photograph** — `image`
 
 ## Observations
+
+### 2026-08-04T13:06:35+00:00 — Dover Rivulet Mouth
+**Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019fcabe-db32-7d1d-8a8f-0e4f0366de1b`
+
+[![019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg](../../../../files/photos_and_files/019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg)](../../../../files/photos_and_files/019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg)
+
+| Field | Value |
+| --- | --- |
+| Rivulet Mouth State | Open - Flowing Out to Sea |
+| Tide Height (m) | 1 |
+| Lagoon Height (m) | 1.05 |
+| Dover Rainfall (24h to observation mm) | 6 |
+| Observations | Extra opaque / brown, no smell |
+| Noteworthy Photograph | [![019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg](../../../../files/photos_and_files/019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg)](../../../../files/photos_and_files/019fcabe-d28f-7c57-a7ba-2e3c985848d6-bb9b2c5eb394a40500aa3cb1a796a2f929397a49.jpg) [![019fcabe-d997-705e-b04c-e0205a2a0324-e67ac7c27ef22b5fc74731ca5a868d62f5187ae4.jpg](../../../../files/photos_and_files/019fcabe-d997-705e-b04c-e0205a2a0324-e67ac7c27ef22b5fc74731ca5a868d62f5187ae4.jpg)](../../../../files/photos_and_files/019fcabe-d997-705e-b04c-e0205a2a0324-e67ac7c27ef22b5fc74731ca5a868d62f5187ae4.jpg) |
 
 ### 2026-08-02T15:02:20+00:00 — Dover Rivulet Mouth
 **Observer:** mhdoverlc  ·  **Location:** -43.31622, 147.02357  ·  **ID:** `019fc0db-6f0f-7728-ac9b-8244a9a37773`

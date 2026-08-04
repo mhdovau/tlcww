@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 4
+**Observations:** 6
 
 **Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
 
@@ -12,6 +12,26 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Photos** — `image`
 
 ## Observations
+
+### 2026-08-04T13:36:18+00:00 — Glenbervie Rivulet
+**Observer:** mhdoverlc  ·  **Location:** -43.31235, 147.04628  ·  **ID:** `019fcada-77b3-7d71-9ef6-6c0f72442b24`
+
+[![019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg](../../../../files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg)](../../../../files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg)
+
+| Field | Value |
+| --- | --- |
+| Observations | Mouth still open to bay tide about 1 m flowing out just the rivulet being maybe 50 or 100 mm above the level of the bay |
+| Photos | [![019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg](../../../../files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg)](../../../../files/photos_and_files/019fcada-6de6-713f-9a4d-8635ace999e3-d9803b74b496f601d0bc26a0c013010677fff5a0.jpg) [![019fcada-749c-7701-9004-de1327fb8921-d8775658ccc997978fee4531844c606dfdb0029b.jpg](../../../../files/photos_and_files/019fcada-749c-7701-9004-de1327fb8921-d8775658ccc997978fee4531844c606dfdb0029b.jpg)](../../../../files/photos_and_files/019fcada-749c-7701-9004-de1327fb8921-d8775658ccc997978fee4531844c606dfdb0029b.jpg) |
+
+### 2026-08-04T13:26:55+00:00 — be
+**Observer:** mhdoverlc  ·  **Location:** -43.313011631, 147.03889344  ·  **ID:** `019fcad1-5563-73de-b058-a0a0f63313ca`
+
+[![019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg](../../../../files/photos_and_files/019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg)](../../../../files/photos_and_files/019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg)
+
+| Field | Value |
+| --- | --- |
+| Observations | Lagoon mouth no longer open to bay Tide at 1.0 m |
+| Photos | [![019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg](../../../../files/photos_and_files/019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg)](../../../../files/photos_and_files/019fcad1-4721-7209-823a-b5833fb22cc1-895c3562980bc9f0d173b08e05de238680b4d224.jpg) [![019fcad1-4d9f-75dd-b3ab-0e76b3069dca-0647074f83d5f250d7a1f70d7e0046670c6cc6ff.jpg](../../../../files/photos_and_files/019fcad1-4d9f-75dd-b3ab-0e76b3069dca-0647074f83d5f250d7a1f70d7e0046670c6cc6ff.jpg)](../../../../files/photos_and_files/019fcad1-4d9f-75dd-b3ab-0e76b3069dca-0647074f83d5f250d7a1f70d7e0046670c6cc6ff.jpg) [![019fcad1-53cb-7e50-ad24-2c29665fb6dc-65b36235abe98b976e8501dc61b096974a091252.jpg](../../../../files/photos_and_files/019fcad1-53cb-7e50-ad24-2c29665fb6dc-65b36235abe98b976e8501dc61b096974a091252.jpg)](../../../../files/photos_and_files/019fcad1-53cb-7e50-ad24-2c29665fb6dc-65b36235abe98b976e8501dc61b096974a091252.jpg) |
 
 ### 2026-07-16T08:57:06+00:00 — Bells Lagoon
 **Observer:** mhdoverlc  ·  **Location:** -43.313011631, 147.03889344  ·  **ID:** `019f6801-37b7-723f-96a9-e2a5903c3c55`
