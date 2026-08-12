@@ -71,6 +71,7 @@
   "isAirtable": false,
   "isFeatured": false,
   "isPrivate": false,
+  "isRichText": false,
   "isSciStarter": true,
   "isSciStarterParticipation": false,
   "isStripImageMetadata": false,
