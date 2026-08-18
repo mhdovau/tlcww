@@ -36,7 +36,13 @@
     "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
     "lngLat": {
       "lat": -43.3155877,
-      "lng": 147.0230454
+      "lng": 147.0230454,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.3155877,
+      "lng": 147.0230454,
+      "privacy": null
     },
     "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
     "updatedAt": "2026-08-02T00:50:42+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

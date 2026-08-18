@@ -36,7 +36,13 @@
     "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.31622,
+      "lng": 147.02357,
+      "privacy": null
     },
     "name": "Dover Rivulet Mouth",
     "updatedAt": "2026-08-04T03:08:53+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

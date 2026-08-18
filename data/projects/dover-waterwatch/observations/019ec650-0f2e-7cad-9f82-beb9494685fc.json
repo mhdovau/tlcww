@@ -36,7 +36,13 @@
     "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
     "lngLat": {
       "lat": -43.334185,
-      "lng": 146.9657096
+      "lng": 146.9657096,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.334185,
+      "lng": 146.9657096,
+      "privacy": null
     },
     "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
     "updatedAt": "2026-08-02T01:39:19+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

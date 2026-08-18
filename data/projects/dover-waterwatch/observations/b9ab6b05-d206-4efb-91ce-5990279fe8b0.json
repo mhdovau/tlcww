@@ -36,7 +36,13 @@
     "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.3158,
+      "lng": 147.02321,
+      "privacy": null
     },
     "name": "Dover Rivulet Lower Lagoon",
     "updatedAt": "2026-06-20T08:21:07+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

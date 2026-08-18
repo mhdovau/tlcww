@@ -36,7 +36,13 @@
     "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.3105898,
+      "lng": 147.0170049,
+      "privacy": null
     },
     "name": "DOV110 Dover Rivulet South Gate Market",
     "updatedAt": "2026-08-02T00:33:45+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

@@ -36,7 +36,13 @@
     "id": "019ef742-d38e-7448-836b-3579657f8e7e",
     "lngLat": {
       "lat": -43.31235,
-      "lng": 147.04628
+      "lng": 147.04628,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.31235,
+      "lng": 147.04628,
+      "privacy": null
     },
     "name": "Glenbervie Rivulet",
     "updatedAt": "2026-08-04T03:39:03+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

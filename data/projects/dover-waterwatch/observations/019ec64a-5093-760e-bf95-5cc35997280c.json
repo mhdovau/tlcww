@@ -36,7 +36,13 @@
     "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
     "lngLat": {
       "lat": -43.298965,
-      "lng": 146.9134378
+      "lng": 146.9134378,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.298965,
+      "lng": 146.9134378,
+      "privacy": null
     },
     "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
     "updatedAt": "2026-08-02T02:25:01+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

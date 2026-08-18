@@ -36,7 +36,13 @@
     "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
     "lngLat": {
       "lat": -43.2976765,
-      "lng": 147.0103537
+      "lng": 147.0103537,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.2976765,
+      "lng": 147.0103537,
+      "privacy": null
     },
     "name": "DOV070 Dover Rivulet Huon Highway",
     "updatedAt": "2026-08-02T01:15:38+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",

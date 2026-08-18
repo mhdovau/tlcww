@@ -36,7 +36,13 @@
     "id": "019ef6ea-2bac-751d-86de-2926cf1310b0",
     "lngLat": {
       "lat": -43.313011631,
-      "lng": 147.03889344
+      "lng": 147.03889344,
+      "privacy": null
+    },
+    "lngLatPrivate": {
+      "lat": -43.313011631,
+      "lng": 147.03889344,
+      "privacy": null
     },
     "name": "Bells Lagoon",
     "updatedAt": "2026-07-15T22:58:58+00:00"
@@ -51,6 +57,7 @@
     "isPrivate": false,
     "isSciStarter": true,
     "isSciStarterParticipation": false,
+    "locationPrivacy": null,
     "name": "Dover Waterwatch",
     "sciStarterID": 100009222,
     "updatedAt": "2026-08-04T03:39:03+00:00",
