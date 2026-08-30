@@ -3,8 +3,8 @@
   "@id": "/projects/ac46a1a9-6755-486d-847c-a4249734819d",
   "@type": "Project",
   "announcement": null,
-  "announcementDate": "2026-06-21T09:53:21+00:00",
-  "approveContacts": true,
+  "announcementDate": "2026-08-30T07:07:10+00:00",
+  "approveContacts": false,
   "bannerPicture": {
     "@id": "/file_objects/93da8382-7666-40cc-9d5a-df8bc0aeaa04",
     "@type": "https://schema.org/MediaObject",
@@ -112,7 +112,7 @@
     }
   ],
   "twitterLink": null,
-  "updatedAt": "2026-08-04T03:39:03+00:00",
+  "updatedAt": "2026-08-30T07:07:10+00:00",
   "urlField": "dover-waterwatch",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",

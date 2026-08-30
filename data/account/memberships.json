@@ -39,7 +39,7 @@
         "updatedAt": "2026-07-10T01:25:23+00:00"
       }
     ],
-    "projectApproveContact": true,
+    "projectApproveContact": false,
     "projectId": "ac46a1a9-6755-486d-847c-a4249734819d",
     "projectName": "Dover Waterwatch",
     "projectState": 1,
