@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 11
+**Observations:** 16
 
 **Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
 
@@ -48,6 +48,123 @@ Older observations recorded some fields under different names. The CSV extract m
 - `Temperature (C)` → **Water Temperature (C)** (alias)
 
 ## Observations
+
+### 2026-09-20T11:54:00+00:00 — ESP050 Esperance River Conservation Area (maybe ESP010)
+**Observer:** Erika B  ·  **Location:** -43.298965, 146.9134378  ·  **ID:** `01a0bcc6-6346-78e4-b0cd-fa3486abbe15`
+
+[![01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg](../../../../files/photos_and_files/01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg)](../../../../files/photos_and_files/01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & DD |
+| Water Depth (cm) | 100 |
+| Width (cm) | 900 |
+| Flowing | High |
+| Rainfall Last 24h (mm) | 0 |
+| Air Temperature (C) | 24.3 |
+| Other Observations | Bubbles |
+| pH | 6.7 |
+| Electrical Conductivity (mS / uS) | 56.1 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 101 |
+| Dissolved Oxygen Temperature (C) | 9.3 |
+| Turbidity (NTU) | 5.82 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg](../../../../files/photos_and_files/01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg)](../../../../files/photos_and_files/01a0bcc6-4f90-7c72-aa7b-5d0b4c756a2b-7f914b2ad38cb604c9f6f4e06e8541ff53adbde6.jpg) [![01a0bcc6-60e0-70d8-982a-695267afafb3-01525e55bc0c99e3945c3462c632d444a0ced52e.jpg](../../../../files/photos_and_files/01a0bcc6-60e0-70d8-982a-695267afafb3-01525e55bc0c99e3945c3462c632d444a0ced52e.jpg)](../../../../files/photos_and_files/01a0bcc6-60e0-70d8-982a-695267afafb3-01525e55bc0c99e3945c3462c632d444a0ced52e.jpg) |
+
+### 2026-09-20T11:20:42+00:00 — ESP100 Esperance River Cableway Above Dover Water Intake
+**Observer:** Erika B  ·  **Location:** -43.334185, 146.9657096  ·  **ID:** `01a0bc73-91c3-7c20-8874-63112396698f`
+
+[![01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg](../../../../files/photos_and_files/01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg)](../../../../files/photos_and_files/01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB |
+| Water Depth (cm) | 160 |
+| Width (cm) | 2500 |
+| Flowing | Medium / High |
+| Rainfall Last 24h (mm) | 0 |
+| Air Temperature (C) | 23 |
+| Other Observations | Debris, Foam |
+| pH | 7.30 |
+| Electrical Conductivity (mS / uS) | 79.3 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 100 |
+| Dissolved Oxygen Temperature (C) | 9 |
+| Turbidity (NTU) | 5.96 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg](../../../../files/photos_and_files/01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg)](../../../../files/photos_and_files/01a0bc73-72ec-7391-8e97-9125e91446f5-810bf1d1cc39b0905ddb0106cf821b9ee6dac0e5.jpg) [![01a0bc73-828c-7e7c-b9b8-042b9ac47a75-96da95a07a7e7073a2a8b02c7e4d22a37dea5f1d.jpg](../../../../files/photos_and_files/01a0bc73-828c-7e7c-b9b8-042b9ac47a75-96da95a07a7e7073a2a8b02c7e4d22a37dea5f1d.jpg)](../../../../files/photos_and_files/01a0bc73-828c-7e7c-b9b8-042b9ac47a75-96da95a07a7e7073a2a8b02c7e4d22a37dea5f1d.jpg) [![01a0bc73-8f37-75a1-8c7d-90feafa8ed23-44ffa5dedc075dd51d35a21ebdc7ead9ead9d15b.jpg](../../../../files/photos_and_files/01a0bc73-8f37-75a1-8c7d-90feafa8ed23-44ffa5dedc075dd51d35a21ebdc7ead9ead9d15b.jpg)](../../../../files/photos_and_files/01a0bc73-8f37-75a1-8c7d-90feafa8ed23-44ffa5dedc075dd51d35a21ebdc7ead9ead9d15b.jpg) |
+
+### 2026-09-20T10:54:59+00:00 — DOV130 Dover Rivulet Lagoon Kent Beach Rd
+**Observer:** Erika B  ·  **Location:** -43.3155877, 147.0230454  ·  **ID:** `01a0bc5b-01a7-7942-903d-9f24273aea58`
+
+[![01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg](../../../../files/photos_and_files/01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg)](../../../../files/photos_and_files/01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB |
+| Water Depth (cm) | 100 |
+| Width (cm) | 1500 |
+| Flowing | Medium |
+| Rainfall Last 24h (mm) | 22 |
+| Air Temperature (C) | 22 |
+| pH | 7.25 |
+| Electrical Conductivity (mS / uS) | 5.9 |
+| Electrical Conductivity Unit | mS milli-Siemens |
+| Dissolved Oxygen %s | 95.9 |
+| Dissolved Oxygen Temperature (C) | 13.4 |
+| Turbidity (NTU) | 19.8 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg](../../../../files/photos_and_files/01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg)](../../../../files/photos_and_files/01a0bc5a-fe80-7591-9ae9-129e8588330c-e85b6a667ccb57d1c4c4ebd8d2783ded6c82406f.jpg) |
+
+### 2026-09-20T10:36:10+00:00 — DOV110 Dover Rivulet South Gate Market
+**Observer:** Erika B  ·  **Location:** -43.3105898, 147.0170049  ·  **ID:** `01a0bc4b-e80e-792f-a703-d3bf33cab636`
+
+[![01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg](../../../../files/photos_and_files/01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg)](../../../../files/photos_and_files/01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & DD |
+| Water Depth (cm) | 50 |
+| Width (cm) | 300 |
+| Flowing | High |
+| Rainfall Last 24h (mm) | 0 |
+| Air Temperature (C) | 22 |
+| Other Observations | Rubbish, Foam, Bubbles |
+| pH | 7.3 |
+| Electrical Conductivity (mS / uS) | 278 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 94.4 |
+| Dissolved Oxygen Temperature (C) | 13.4 |
+| Turbidity (NTU) | 22.8 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg](../../../../files/photos_and_files/01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg)](../../../../files/photos_and_files/01a0bc4b-dd26-7d28-aa88-a30fa0f599d8-0177f39b2ebb719abbd357de7245007ad13140d4.jpg) [![01a0bc4b-e53e-7144-aa21-f0545d719f67-89a79118c5f7b3b9689fecdb1312b04cfb184669.jpg](../../../../files/photos_and_files/01a0bc4b-e53e-7144-aa21-f0545d719f67-89a79118c5f7b3b9689fecdb1312b04cfb184669.jpg)](../../../../files/photos_and_files/01a0bc4b-e53e-7144-aa21-f0545d719f67-89a79118c5f7b3b9689fecdb1312b04cfb184669.jpg) |
+
+### 2026-09-20T09:39:14+00:00 — DOV070 Dover Rivulet Huon Highway
+**Observer:** Erika B  ·  **Location:** -43.2976765, 147.0103537  ·  **ID:** `01a0bcb2-94e1-79b0-8797-2513af2c10e9`
+
+[![01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg](../../../../files/photos_and_files/01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg)](../../../../files/photos_and_files/01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & DD |
+| Water Depth (cm) | 50 |
+| Width (cm) | 150 |
+| Flowing | High |
+| Rainfall Last 24h (mm) | 0 |
+| Air Temperature (C) | 19 |
+| Other Observations | Foam, Bubbles |
+| pH | 7.7 |
+| TDS (ppm) / salinity | — |
+| Water Temperature (C) | 12.1 |
+| Electrical Conductivity (mS / uS) | 148.6 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 89.3 |
+| Dissolved Oxygen Temperature (C) | 11 |
+| Dissolved Oxygen in mg/L | — |
+| Turbidity (NTU) | 30.5 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg](../../../../files/photos_and_files/01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg)](../../../../files/photos_and_files/01a0bcb2-88a7-7483-8f50-e0ef28a7f60b-dc0a9f882693b8bb2d13e6f277fc91b9a9071105.jpg) [![01a0bcb2-92cb-7e15-b3e8-e00b32a060f3-1744f726c77899eacb75bcde8f2ed73975f897cc.jpg](../../../../files/photos_and_files/01a0bcb2-92cb-7e15-b3e8-e00b32a060f3-1744f726c77899eacb75bcde8f2ed73975f897cc.jpg)](../../../../files/photos_and_files/01a0bcb2-92cb-7e15-b3e8-e00b32a060f3-1744f726c77899eacb75bcde8f2ed73975f897cc.jpg) |
 
 ### 2026-08-02T11:55:11+00:00 — ESP050 Esperance River Conservation Area (maybe ESP010)
 **Observer:** Erika B  ·  **Location:** -43.298965, 146.9134378  ·  **ID:** `019fc049-f839-708e-a983-13be679ac74f`
