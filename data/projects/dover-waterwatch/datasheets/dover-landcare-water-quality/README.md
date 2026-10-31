@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 16
+**Observations:** 20
 
 **Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
 
@@ -48,6 +48,101 @@ Older observations recorded some fields under different names. The CSV extract m
 - `Temperature (C)` → **Water Temperature (C)** (alias)
 
 ## Observations
+
+### 2026-10-31T14:55:32+00:00 — DOV070 Dover Rivulet Huon Highway
+**Observer:** Erika B  ·  **Location:** -43.2976765, 147.0103537  ·  **ID:** `01a1901f-2aec-7f8c-a229-c25c8b71672e`
+
+[![01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg](../../../../files/photos_and_files/01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg)](../../../../files/photos_and_files/01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & MH |
+| Water Depth (cm) | 30 |
+| Width (cm) | 100 |
+| Flowing | Low / Medium |
+| Rainfall Last 24h (mm) | 1 |
+| Air Temperature (C) | 18.4 |
+| Other Observations | Debris |
+| pH | 7.7 |
+| Water Temperature (C) | 12.9 |
+| Electrical Conductivity (mS / uS) | 285 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 65.5 |
+| Dissolved Oxygen Temperature (C) | 12.2 |
+| Turbidity (NTU) | 17.8 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg](../../../../files/photos_and_files/01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg)](../../../../files/photos_and_files/01a1901f-175b-7036-a503-c32d06f91ea7-4615843f4e70bcad598a447e25434005e457f17e.jpg) [![01a1901f-2136-7aaf-8a0b-594055224306-9c54a29508c15b0ec5fe4e0340764b659742f3ab.jpg](../../../../files/photos_and_files/01a1901f-2136-7aaf-8a0b-594055224306-9c54a29508c15b0ec5fe4e0340764b659742f3ab.jpg)](../../../../files/photos_and_files/01a1901f-2136-7aaf-8a0b-594055224306-9c54a29508c15b0ec5fe4e0340764b659742f3ab.jpg) [![01a1901f-2894-77be-8ab0-1ee8587e4b76-bfb0f0834bd27669156171fecd29b631a8d9baa5.jpg](../../../../files/photos_and_files/01a1901f-2894-77be-8ab0-1ee8587e4b76-bfb0f0834bd27669156171fecd29b631a8d9baa5.jpg)](../../../../files/photos_and_files/01a1901f-2894-77be-8ab0-1ee8587e4b76-bfb0f0834bd27669156171fecd29b631a8d9baa5.jpg) |
+
+### 2026-10-31T14:45:23+00:00 — DOV110 Dover Rivulet South Gate Market
+**Observer:** Erika B  ·  **Location:** -43.3105898, 147.0170049  ·  **ID:** `01a19014-9203-71de-8663-08716a39676e`
+
+[![01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg](../../../../files/photos_and_files/01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg)](../../../../files/photos_and_files/01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & MH |
+| Water Depth (cm) | 30 |
+| Width (cm) | 200 |
+| Flowing | Medium |
+| Rainfall Last 24h (mm) | 1 |
+| Air Temperature (C) | 18.3 |
+| Other Observations | Rubbish, Debris |
+| pH | 7.98 |
+| Water Temperature (C) | 12.2 |
+| Electrical Conductivity (mS / uS) | 452 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 74.4 |
+| Dissolved Oxygen Temperature (C) | 11.7 |
+| Turbidity (NTU) | 7.58 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg](../../../../files/photos_and_files/01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg)](../../../../files/photos_and_files/01a19014-7e9e-758f-84c2-6beba6455932-4718f8c7f109e1998c0d753fcb3444b0299ed6f5.jpg) [![01a19014-87e6-79ae-957e-ce609731e8f5-54646108bd6f00cd526763d78555a83278d24c6a.jpg](../../../../files/photos_and_files/01a19014-87e6-79ae-957e-ce609731e8f5-54646108bd6f00cd526763d78555a83278d24c6a.jpg)](../../../../files/photos_and_files/01a19014-87e6-79ae-957e-ce609731e8f5-54646108bd6f00cd526763d78555a83278d24c6a.jpg) [![01a19014-8ff9-7792-8a0c-fa342ea0b6f5-6875bd0b7894372c46610bbcb0c8974f4c77a334.jpg](../../../../files/photos_and_files/01a19014-8ff9-7792-8a0c-fa342ea0b6f5-6875bd0b7894372c46610bbcb0c8974f4c77a334.jpg)](../../../../files/photos_and_files/01a19014-8ff9-7792-8a0c-fa342ea0b6f5-6875bd0b7894372c46610bbcb0c8974f4c77a334.jpg) |
+
+### 2026-10-31T14:09:12+00:00 — ESP100 Esperance River Cableway Above Dover Water Intake
+**Observer:** Erika B  ·  **Location:** -43.334185, 146.9657096  ·  **ID:** `01a19003-8d51-796a-aabe-a0c50a7e83cd`
+
+[![01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg](../../../../files/photos_and_files/01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg)](../../../../files/photos_and_files/01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & MH |
+| Water Depth (cm) | 97 |
+| Width (cm) | 1800 |
+| Flowing | Low |
+| Rainfall Last 24h (mm) | 1 |
+| Air Temperature (C) | 18.4 |
+| Other Observations | Debris, Foam, Bubbles |
+| pH | 8.3 |
+| Water Temperature (C) | 12.5 |
+| Electrical Conductivity (mS / uS) | 81 |
+| Electrical Conductivity Unit | uS micro-Siemens |
+| Dissolved Oxygen %s | 102 |
+| Dissolved Oxygen Temperature (C) | 11.9 |
+| Turbidity (NTU) | 2.01 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a19003-7d6f-7f42-989b-0ee2b2377434-9a270160c67cfc42176ac3d577651967a47f5301.jpg](../../../../files/photos_and_files/01a19003-7d6f-7f42-989b-0ee2b2377434-9a270160c67cfc42176ac3d577651967a47f5301.jpg)](../../../../files/photos_and_files/01a19003-7d6f-7f42-989b-0ee2b2377434-9a270160c67cfc42176ac3d577651967a47f5301.jpg) [![01a19003-8b1e-72df-ad0d-8f5afe830d6b-df18d2bffa5f4fee570e9a22cdd8ba0cae39b38d.jpg](../../../../files/photos_and_files/01a19003-8b1e-72df-ad0d-8f5afe830d6b-df18d2bffa5f4fee570e9a22cdd8ba0cae39b38d.jpg)](../../../../files/photos_and_files/01a19003-8b1e-72df-ad0d-8f5afe830d6b-df18d2bffa5f4fee570e9a22cdd8ba0cae39b38d.jpg) [![01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg](../../../../files/photos_and_files/01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg)](../../../../files/photos_and_files/01a19003-6ebc-78c8-a03e-dade084a1d23-5f36ff2ab9a7a3e000b6c235e834a4e6b595a6e5.jpg) |
+
+### 2026-10-31T13:53:48+00:00 — DOV130 Dover Rivulet Lagoon Kent Beach Rd
+**Observer:** Erika B  ·  **Location:** -43.3155877, 147.0230454  ·  **ID:** `01a18fee-ae46-74d7-ae49-f8aefe63a4ac`
+
+[![01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg](../../../../files/photos_and_files/01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg)](../../../../files/photos_and_files/01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg)
+
+| Field | Value |
+| --- | --- |
+| Monitor's Initials (or alias) - PUBLIC | EB & MH |
+| Water Depth (cm) | 150 |
+| Width (cm) | 1500 |
+| Flowing | Low |
+| Rainfall Last 24h (mm) | 1 |
+| Air Temperature (C) | 18.4 |
+| pH | 8.16 |
+| Water Temperature (C) | 15.5 |
+| Electrical Conductivity (mS / uS) | 41.2 |
+| Electrical Conductivity Unit | mS milli-Siemens |
+| Dissolved Oxygen %s | 55 |
+| Dissolved Oxygen Temperature (C) | 14.5 |
+| Turbidity (NTU) | 11.8 |
+| Turbidity Measurement Type | 2100P Turbidimeter |
+| Site Conditions Photograph - PUBLIC | [![01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg](../../../../files/photos_and_files/01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg)](../../../../files/photos_and_files/01a18fee-a47f-7594-b3a6-c73b37b16220-a9e4381c5cc621fdce357984d60b9a2d6c8859e3.jpg) [![01a18fee-aafd-77dc-8171-4ef64f330341-fab2016046038752fd4157169c44cddaf2fa6aab.jpg](../../../../files/photos_and_files/01a18fee-aafd-77dc-8171-4ef64f330341-fab2016046038752fd4157169c44cddaf2fa6aab.jpg)](../../../../files/photos_and_files/01a18fee-aafd-77dc-8171-4ef64f330341-fab2016046038752fd4157169c44cddaf2fa6aab.jpg) |
 
 ### 2026-09-20T11:54:00+00:00 — ESP050 Esperance River Conservation Area (maybe ESP010)
 **Observer:** Erika B  ·  **Location:** -43.298965, 146.9134378  ·  **ID:** `01a0bcc6-6346-78e4-b0cd-fa3486abbe15`

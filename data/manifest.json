@@ -2,23 +2,23 @@
   "account_display_name": "DL W",
   "account_email": "stadia_strolls.2s@icloud.com",
   "api_base": "https://api.citsci.org",
-  "completed_at": "2026-10-22T15:42:23.279716+00:00",
+  "completed_at": "2026-10-31T10:48:16.535309+00:00",
   "counts": {
     "csv_extracts": 5,
     "datasheet_records": 38,
     "datasheets": 3,
-    "files": 150,
-    "files_downloaded": 1,
+    "files": 161,
+    "files_downloaded": 11,
     "files_orphaned": 1,
-    "files_referenced": 149,
-    "files_unchanged": 148,
+    "files_referenced": 160,
+    "files_unchanged": 149,
     "locations": 141,
-    "observation_records": 494,
-    "observations": 80,
+    "observation_records": 557,
+    "observations": 84,
     "observations_orphaned": 0,
     "projects": 1
   },
-  "duration_seconds": 73.5,
+  "duration_seconds": 72.1,
   "field_name_merges": {
     "dover-waterwatch/dover-landcare-water-quality": {
       "conflicts": [],
@@ -39,7 +39,7 @@
       "unresolved": {}
     }
   },
-  "generated_at": "2026-10-22T15:41:09.741944+00:00",
+  "generated_at": "2026-10-31T10:47:04.465674+00:00",
   "include_private_fields": false,
   "orphaned_observations": [],
   "private_fields": {

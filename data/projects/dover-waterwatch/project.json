@@ -76,11 +76,11 @@
   "isSciStarterParticipation": false,
   "isStripImageMetadata": false,
   "isZooniverse": false,
-  "lastObservationDatetime": "2026-10-21T01:23:13+00:00",
+  "lastObservationDatetime": "2026-10-31T04:02:04+00:00",
   "latitude": -43.31617,
   "locationPrivacy": null,
   "longitude": 147.02354,
-  "measurementsTotal": 510,
+  "measurementsTotal": 577,
   "name": "Dover Waterwatch",
   "organizationProjects": [],
   "organizations": [],
@@ -112,7 +112,7 @@
     }
   ],
   "twitterLink": null,
-  "updatedAt": "2026-10-21T01:23:13+00:00",
+  "updatedAt": "2026-10-31T04:02:04+00:00",
   "urlField": "dover-waterwatch",
   "user": {
     "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",

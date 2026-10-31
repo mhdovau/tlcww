@@ -6,7 +6,7 @@ Dover Waterwatch, Tasmania, Australia — collecting long-term scientific observ
 
 ## Overview
 
-- **Observations:** 80
+- **Observations:** 84
 - **Locations:** 141
 - **Members:** 3
 - **Datasheets:** 3
@@ -23,7 +23,7 @@ Fields renamed over time are merged into one column under the current name (each
 ## Datasheets
 
 - [Dover and Surrounds Adhoc](datasheets/dover-and-surrounds-adhoc/README.md) — 6 observation(s) · [CSV](datasheets/dover-and-surrounds-adhoc/observations.csv)
-- [Dover Landcare Water Quality](datasheets/dover-landcare-water-quality/README.md) — 16 observation(s) · [CSV](datasheets/dover-landcare-water-quality/observations.csv)
+- [Dover Landcare Water Quality](datasheets/dover-landcare-water-quality/README.md) — 20 observation(s) · [CSV](datasheets/dover-landcare-water-quality/observations.csv)
 - [Dover Rivulet Mouth Observations](datasheets/dover-rivulet-mouth-observations/README.md) — 58 observation(s) · [CSV](datasheets/dover-rivulet-mouth-observations/observations.csv)
 
 ## Files & resources
