@@ -2,7 +2,7 @@
 
 _Auto-generated from the backup. Do not edit — regenerated each run._
 
-**Observations:** 6
+**Observations:** 7
 
 **Spreadsheet:** [observations.csv](observations.csv) — every observation below as a table, one row each, one column per field.
 
@@ -12,6 +12,16 @@ _Auto-generated from the backup. Do not edit — regenerated each run._
 - **Photos** — `image`
 
 ## Observations
+
+### 2026-11-03T18:50:47+00:00
+**Observer:** mhdoverlc  ·  **Location:** -43.313011631, 147.03889344  ·  **ID:** `01a1a064-cff5-7377-be1f-a7356ffbd041`
+
+[![01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg](../../../../files/photos_and_files/01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg)](../../../../files/photos_and_files/01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg)
+
+| Field | Value |
+| --- | --- |
+| Observations | Swan(s?) back at Bell’s |
+| Photos | [![01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg](../../../../files/photos_and_files/01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg)](../../../../files/photos_and_files/01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg) |
 
 ### 2026-08-04T13:36:18+00:00 — Glenbervie Rivulet
 **Observer:** mhdoverlc  ·  **Location:** -43.31235, 147.04628  ·  **ID:** `019fcada-77b3-7d71-9ef6-6c0f72442b24`

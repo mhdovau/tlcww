@@ -4204,6 +4204,70 @@
     }
   },
   {
+    "@id": "/observations/01a1a064-cff5-7377-be1f-a7356ffbd041",
+    "@type": "Observation",
+    "createdAt": "2026-11-03T07:52:03+00:00",
+    "datasheet": {
+      "@id": "/datasheets/019ef6d9-c87c-75ef-b265-185dce3506bd",
+      "@type": "Datasheet",
+      "createdAt": "2026-06-23T23:38:48+00:00",
+      "name": "Dover and Surrounds Adhoc",
+      "updatedAt": "2026-06-24T01:50:09+00:00"
+    },
+    "durationSetup": null,
+    "durationTravel": null,
+    "featuredPhoto": {
+      "@id": "/file_objects/01a1a064-cde4-73f0-8958-006c283931c8",
+      "@type": "https://schema.org/MediaObject",
+      "createdAt": "2026-11-03T07:52:02+00:00",
+      "localFile": "files/photos_and_files/01a1a064-cde4-73f0-8958-006c283931c8-ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg",
+      "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/ea0eb56ff47e91152b0314c7cd8c0f1dfc2672fb.jpg",
+      "updatedAt": "2026-11-03T07:52:03+00:00"
+    },
+    "id": "01a1a064-cff5-7377-be1f-a7356ffbd041",
+    "lngLat": {
+      "lat": -43.313011631,
+      "lng": 147.03889344
+    },
+    "location": {
+      "@id": "/areas/01a1a064-cff3-71fd-9853-fe14e8430fe5",
+      "@type": "Area",
+      "createdAt": "2026-11-03T07:52:03+00:00",
+      "id": "01a1a064-cff3-71fd-9853-fe14e8430fe5",
+      "lngLat": {
+        "lat": -43.313011631,
+        "lng": 147.03889344,
+        "privacy": null
+      },
+      "lngLatPrivate": {
+        "lat": -43.313011631,
+        "lng": 147.03889344,
+        "privacy": null
+      },
+      "name": "",
+      "updatedAt": "2026-11-03T07:52:03+00:00"
+    },
+    "observationEndedAt": "2026-11-03T18:48:13+00:00",
+    "observedAt": "2026-11-03T18:50:47+00:00",
+    "updatedAt": "2026-11-03T07:52:03+00:00",
+    "user": {
+      "@id": "/users/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "@type": "User",
+      "createdAt": "2024-06-18T04:24:45+00:00",
+      "displayName": "mhdoverlc",
+      "id": "02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff",
+      "picture": {
+        "@id": "/file_objects/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb",
+        "@type": "https://schema.org/MediaObject",
+        "createdAt": "2024-06-18T11:38:35+00:00",
+        "localFile": "files/photos_and_files/d0052a0a-f729-41f5-ad2b-d2e15b2de9fb-1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "path": "https://citsci-prod2.s3.amazonaws.com/uploads/02c6b8db-77c7-40b1-96d2-ce97d7d4f1ff/1abf568e8577ea3004cdac634e488f223527c0ff.jpeg",
+        "updatedAt": "2024-06-18T11:38:35+00:00"
+      },
+      "updatedAt": "2026-06-19T12:59:47+00:00"
+    }
+  },
+  {
     "@id": "/observations/30c48741-cac5-4f0c-8a3d-f064e40b8912",
     "@type": "Observation",
     "createdAt": "2024-06-25T02:31:11+00:00",
