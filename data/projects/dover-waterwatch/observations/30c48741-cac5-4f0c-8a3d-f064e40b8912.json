@@ -27,7 +27,8 @@
   "isPrivate": false,
   "lngLat": {
     "lat": -43.3158,
-    "lng": 147.02321
+    "lng": 147.02321,
+    "privacy": null
   },
   "location": {
     "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
@@ -35,11 +36,6 @@
     "createdAt": "2024-06-22T05:49:58+00:00",
     "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
     "lngLat": {
-      "lat": -43.3158,
-      "lng": 147.02321,
-      "privacy": null
-    },
-    "lngLatPrivate": {
       "lat": -43.3158,
       "lng": 147.02321,
       "privacy": null

@@ -23,23 +23,14 @@
     "id": "019ec62d-2b1e-70b0-8e4c-afaedbf2ebae",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
       "@type": "Area",
       "createdAt": "2026-06-14T10:49:47+00:00",
       "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
-      "lngLat": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
       "name": "DOV110 Dover Rivulet South Gate Market",
       "updatedAt": "2026-10-31T03:50:29+00:00"
     },
@@ -87,23 +78,14 @@
     "id": "019ec637-17d2-74db-b524-e148df0e251a",
     "lngLat": {
       "lat": -43.2976765,
-      "lng": 147.0103537
+      "lng": 147.0103537,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
       "@type": "Area",
       "createdAt": "2026-06-14T11:00:50+00:00",
       "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
-      "lngLat": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
       "name": "DOV070 Dover Rivulet Huon Highway",
       "updatedAt": "2026-10-31T04:02:04+00:00"
     },
@@ -151,23 +133,14 @@
     "id": "019ec63f-1b33-7206-8be6-94b3d18c8812",
     "lngLat": {
       "lat": -43.3155877,
-      "lng": 147.0230454
+      "lng": 147.0230454,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
       "@type": "Area",
       "createdAt": "2026-06-14T10:44:34+00:00",
       "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
-      "lngLat": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
       "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
       "updatedAt": "2026-10-31T03:09:06+00:00"
     },
@@ -215,23 +188,14 @@
     "id": "019ec64a-5093-760e-bf95-5cc35997280c",
     "lngLat": {
       "lat": -43.298965,
-      "lng": 146.9134378
+      "lng": 146.9134378,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5dc-10f0-7cc0-a687-192ac165ba8e",
       "@type": "Area",
       "createdAt": "2026-06-14T11:19:54+00:00",
       "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
-      "lngLat": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
       "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
       "updatedAt": "2026-09-20T03:05:13+00:00"
     },
@@ -279,23 +243,14 @@
     "id": "019ec650-0f2e-7cad-9f82-beb9494685fc",
     "lngLat": {
       "lat": -43.334185,
-      "lng": 146.9657096
+      "lng": 146.9657096,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
       "@type": "Area",
       "createdAt": "2026-06-14T11:17:02+00:00",
       "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
-      "lngLat": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
       "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
       "updatedAt": "2026-10-31T03:31:54+00:00"
     },
@@ -343,23 +298,14 @@
     "id": "019ed2a1-440c-7f53-bb45-18d8c8590863",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -407,23 +353,14 @@
     "id": "019ed989-865d-77f6-8200-9a713ef2ecce",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -464,23 +401,14 @@
     "id": "019edd31-b841-79d1-bb48-e7b21a2d1822",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
       "@type": "Area",
       "createdAt": "2026-06-14T10:49:47+00:00",
       "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
-      "lngLat": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
       "name": "DOV110 Dover Rivulet South Gate Market",
       "updatedAt": "2026-10-31T03:50:29+00:00"
     },
@@ -528,23 +456,14 @@
     "id": "019ede2a-9619-7b7b-828b-d98714849f07",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -592,23 +511,14 @@
     "id": "019ee41e-8957-759d-89d2-4110cb97e222",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -656,23 +566,14 @@
     "id": "019ee41f-ea50-7f3f-ba75-72771f6ad4fb",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -720,23 +621,14 @@
     "id": "019ee4a9-df07-78fe-bc19-161026216eb1",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -784,23 +676,14 @@
     "id": "019ee4ab-1a77-7479-a5bf-821ccb64a170",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -848,23 +731,14 @@
     "id": "019ee4ac-1ccd-7bf6-a22c-02a25999abac",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -912,23 +786,14 @@
     "id": "019ee4ad-2ab3-7868-9d7b-cfbe4744fbab",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -976,23 +841,14 @@
     "id": "019ee4ae-5bb3-71ab-9e97-0ee70ce2f172",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1040,23 +896,14 @@
     "id": "019ee4af-948c-7941-9cdf-006d1aabc462",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1104,23 +951,14 @@
     "id": "019ee4b2-aae9-74b8-af75-961d248b1ac0",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1168,23 +1006,14 @@
     "id": "019ee4b7-a8b8-7a48-a5ef-82108b991a37",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1232,23 +1061,14 @@
     "id": "019ee4b9-b680-708d-bd91-10c31c27c285",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1296,23 +1116,14 @@
     "id": "019ee4bb-5764-72bd-af0d-4ab01a8a81e0",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1360,23 +1171,14 @@
     "id": "019ee4bc-658b-7344-86fa-ffcb9db44027",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1424,23 +1226,14 @@
     "id": "019ee4be-bff1-7cd2-bd10-456d929eabf3",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1488,23 +1281,14 @@
     "id": "019ee4c1-3bd3-7ddd-beda-7005bf4b402a",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1552,23 +1336,14 @@
     "id": "019ee4c2-74e3-71d8-8495-7997fe167334",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1616,23 +1391,14 @@
     "id": "019ee4c3-8d74-7177-b3f2-6b9cf8d4d2a1",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1680,23 +1446,14 @@
     "id": "019ee4c4-e969-7323-ae23-6466314319f2",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1744,23 +1501,14 @@
     "id": "019ee4c6-3f73-717d-9783-ab20d3e3b545",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1808,23 +1556,14 @@
     "id": "019ee4c7-9fe6-705e-b9a9-edebeba88735",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1872,23 +1611,14 @@
     "id": "019ee4c8-997c-7ded-8dba-9368320f34de",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -1936,23 +1666,14 @@
     "id": "019ee4cb-b601-7963-aa5b-d4d037b483f7",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2000,23 +1721,14 @@
     "id": "019ee4ce-eda1-74f4-920b-51e2113791c5",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2064,23 +1776,14 @@
     "id": "019ee4d3-363e-7c51-a601-8abf8a0b2ce1",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2128,23 +1831,14 @@
     "id": "019eed35-2dd3-7c57-b31e-cf3798f9ec7b",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2192,23 +1886,14 @@
     "id": "019ef1a3-4cde-756a-8c6f-ce8aba69c060",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2256,23 +1941,14 @@
     "id": "019ef6c5-ba27-7bee-80e9-7a38dd76bd2b",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2320,23 +1996,14 @@
     "id": "019ef6ea-2bae-7a8c-bf35-0948c745ab0d",
     "lngLat": {
       "lat": -43.313011631,
-      "lng": 147.03889344
+      "lng": 147.03889344,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ef6ea-2bac-751d-86de-2926cf1310b0",
       "@type": "Area",
       "createdAt": "2026-06-23T23:56:42+00:00",
       "id": "019ef6ea-2bac-751d-86de-2926cf1310b0",
-      "lngLat": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
       "name": "Bells Lagoon",
       "updatedAt": "2026-07-15T22:58:58+00:00"
     },
@@ -2384,23 +2051,14 @@
     "id": "019ef742-d390-75dc-b1ed-84e520818b6a",
     "lngLat": {
       "lat": -43.31235,
-      "lng": 147.04628
+      "lng": 147.04628,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
       "@type": "Area",
       "createdAt": "2026-06-24T01:33:32+00:00",
       "id": "019ef742-d38e-7448-836b-3579657f8e7e",
-      "lngLat": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
       "name": "Glenbervie Rivulet",
       "updatedAt": "2026-08-04T03:39:03+00:00"
     },
@@ -2448,23 +2106,14 @@
     "id": "019f104e-13d8-7ebd-a842-dce5e2b9ffa9",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2512,23 +2161,14 @@
     "id": "019f181c-1fc8-7509-b4fd-1e45f4e0c73e",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2576,23 +2216,14 @@
     "id": "019f1fbc-772c-70c2-b1e0-fd2157622c99",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2640,23 +2271,14 @@
     "id": "019f24df-99d2-7811-89e2-f0ab2b6b8df6",
     "lngLat": {
       "lat": -43.31235,
-      "lng": 147.04628
+      "lng": 147.04628,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
       "@type": "Area",
       "createdAt": "2026-06-24T01:33:32+00:00",
       "id": "019ef742-d38e-7448-836b-3579657f8e7e",
-      "lngLat": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
       "name": "Glenbervie Rivulet",
       "updatedAt": "2026-08-04T03:39:03+00:00"
     },
@@ -2704,23 +2326,14 @@
     "id": "019f3a7c-adb6-7b9a-9669-a949d01b99e2",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2768,23 +2381,14 @@
     "id": "019f43bc-7d10-7ec9-9ea1-f5b9fefc5406",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2832,23 +2436,14 @@
     "id": "019f48d0-aca2-7d64-b879-5ed1e61248f0",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2896,23 +2491,14 @@
     "id": "019f63cf-87e5-7a79-8dd2-1c819f3268c7",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -2960,23 +2546,14 @@
     "id": "019f6801-37b7-723f-96a9-e2a5903c3c55",
     "lngLat": {
       "lat": -43.313011631,
-      "lng": 147.03889344
+      "lng": 147.03889344,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ef6ea-2bac-751d-86de-2926cf1310b0",
       "@type": "Area",
       "createdAt": "2026-06-23T23:56:42+00:00",
       "id": "019ef6ea-2bac-751d-86de-2926cf1310b0",
-      "lngLat": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
       "name": "Bells Lagoon",
       "updatedAt": "2026-07-15T22:58:58+00:00"
     },
@@ -3024,23 +2601,14 @@
     "id": "019f6802-8df7-7ae5-8e2c-00283d668e45",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -3088,23 +2656,14 @@
     "id": "019fbfe4-1aa4-7f16-838a-ae6e260ef51c",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
       "@type": "Area",
       "createdAt": "2026-06-14T10:49:47+00:00",
       "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
-      "lngLat": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
       "name": "DOV110 Dover Rivulet South Gate Market",
       "updatedAt": "2026-10-31T03:50:29+00:00"
     },
@@ -3152,23 +2711,14 @@
     "id": "019fbff3-a20e-70f9-a6b3-3b1b33744935",
     "lngLat": {
       "lat": -43.3155877,
-      "lng": 147.0230454
+      "lng": 147.0230454,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
       "@type": "Area",
       "createdAt": "2026-06-14T10:44:34+00:00",
       "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
-      "lngLat": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
       "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
       "updatedAt": "2026-10-31T03:09:06+00:00"
     },
@@ -3216,23 +2766,14 @@
     "id": "019fc00a-73f7-7261-bf5a-fd04ec3c9232",
     "lngLat": {
       "lat": -43.2976765,
-      "lng": 147.0103537
+      "lng": 147.0103537,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
       "@type": "Area",
       "createdAt": "2026-06-14T11:00:50+00:00",
       "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
-      "lngLat": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
       "name": "DOV070 Dover Rivulet Huon Highway",
       "updatedAt": "2026-10-31T04:02:04+00:00"
     },
@@ -3280,23 +2821,14 @@
     "id": "019fc020-24cc-7649-b730-2d101fbf443d",
     "lngLat": {
       "lat": -43.334185,
-      "lng": 146.9657096
+      "lng": 146.9657096,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
       "@type": "Area",
       "createdAt": "2026-06-14T11:17:02+00:00",
       "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
-      "lngLat": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
       "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
       "updatedAt": "2026-10-31T03:31:54+00:00"
     },
@@ -3337,23 +2869,14 @@
     "id": "019fc049-f839-708e-a983-13be679ac74f",
     "lngLat": {
       "lat": -43.298965,
-      "lng": 146.9134378
+      "lng": 146.9134378,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5dc-10f0-7cc0-a687-192ac165ba8e",
       "@type": "Area",
       "createdAt": "2026-06-14T11:19:54+00:00",
       "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
-      "lngLat": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
       "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
       "updatedAt": "2026-09-20T03:05:13+00:00"
     },
@@ -3394,23 +2917,14 @@
     "id": "019fc0db-6f0f-7728-ac9b-8244a9a37773",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -3458,23 +2972,14 @@
     "id": "019fcabe-db32-7d1d-8a8f-0e4f0366de1b",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -3522,23 +3027,14 @@
     "id": "019fcad1-5563-73de-b058-a0a0f63313ca",
     "lngLat": {
       "lat": -43.313011631,
-      "lng": 147.03889344
+      "lng": 147.03889344,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019fcad1-555f-7e6b-bd09-fcc42ef8f9b7",
       "@type": "Area",
       "createdAt": "2026-08-04T03:29:04+00:00",
       "id": "019fcad1-555f-7e6b-bd09-fcc42ef8f9b7",
-      "lngLat": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
       "name": "be",
       "updatedAt": "2026-08-04T03:29:04+00:00"
     },
@@ -3586,23 +3082,14 @@
     "id": "019fcada-77b3-7d71-9ef6-6c0f72442b24",
     "lngLat": {
       "lat": -43.31235,
-      "lng": 147.04628
+      "lng": 147.04628,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ef742-d38e-7448-836b-3579657f8e7e",
       "@type": "Area",
       "createdAt": "2026-06-24T01:33:32+00:00",
       "id": "019ef742-d38e-7448-836b-3579657f8e7e",
-      "lngLat": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31235,
-        "lng": 147.04628,
-        "privacy": null
-      },
       "name": "Glenbervie Rivulet",
       "updatedAt": "2026-08-04T03:39:03+00:00"
     },
@@ -3650,23 +3137,14 @@
     "id": "01a0bc4b-e80e-792f-a703-d3bf33cab636",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
       "@type": "Area",
       "createdAt": "2026-06-14T10:49:47+00:00",
       "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
-      "lngLat": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
       "name": "DOV110 Dover Rivulet South Gate Market",
       "updatedAt": "2026-10-31T03:50:29+00:00"
     },
@@ -3707,23 +3185,14 @@
     "id": "01a0bc5b-01a7-7942-903d-9f24273aea58",
     "lngLat": {
       "lat": -43.3155877,
-      "lng": 147.0230454
+      "lng": 147.0230454,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
       "@type": "Area",
       "createdAt": "2026-06-14T10:44:34+00:00",
       "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
-      "lngLat": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
       "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
       "updatedAt": "2026-10-31T03:09:06+00:00"
     },
@@ -3764,23 +3233,14 @@
     "id": "01a0bc73-91c3-7c20-8874-63112396698f",
     "lngLat": {
       "lat": -43.334185,
-      "lng": 146.9657096
+      "lng": 146.9657096,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
       "@type": "Area",
       "createdAt": "2026-06-14T11:17:02+00:00",
       "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
-      "lngLat": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
       "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
       "updatedAt": "2026-10-31T03:31:54+00:00"
     },
@@ -3821,23 +3281,14 @@
     "id": "01a0bcb2-94e1-79b0-8797-2513af2c10e9",
     "lngLat": {
       "lat": -43.2976765,
-      "lng": 147.0103537
+      "lng": 147.0103537,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
       "@type": "Area",
       "createdAt": "2026-06-14T11:00:50+00:00",
       "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
-      "lngLat": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
       "name": "DOV070 Dover Rivulet Huon Highway",
       "updatedAt": "2026-10-31T04:02:04+00:00"
     },
@@ -3878,23 +3329,14 @@
     "id": "01a0bcc6-6346-78e4-b0cd-fa3486abbe15",
     "lngLat": {
       "lat": -43.298965,
-      "lng": 146.9134378
+      "lng": 146.9134378,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5dc-10f0-7cc0-a687-192ac165ba8e",
       "@type": "Area",
       "createdAt": "2026-06-14T11:19:54+00:00",
       "id": "019ec5dc-10f0-7cc0-a687-192ac165ba8e",
-      "lngLat": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.298965,
-        "lng": 146.9134378,
-        "privacy": null
-      },
       "name": "ESP050 Esperance River Conservation Area (maybe ESP010)",
       "updatedAt": "2026-09-20T03:05:13+00:00"
     },
@@ -3935,23 +3377,14 @@
     "id": "01a15c0e-24ec-7c29-a203-7f0fb55c9525",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -3999,23 +3432,14 @@
     "id": "01a18fee-ae46-74d7-ae49-f8aefe63a4ac",
     "lngLat": {
       "lat": -43.3155877,
-      "lng": 147.0230454
+      "lng": 147.0230454,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5bb-b999-7cef-919c-4589f22998a1",
       "@type": "Area",
       "createdAt": "2026-06-14T10:44:34+00:00",
       "id": "019ec5bb-b999-7cef-919c-4589f22998a1",
-      "lngLat": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3155877,
-        "lng": 147.0230454,
-        "privacy": null
-      },
       "name": "DOV130 Dover Rivulet Lagoon Kent Beach Rd",
       "updatedAt": "2026-10-31T03:09:06+00:00"
     },
@@ -4056,23 +3480,14 @@
     "id": "01a19003-8d51-796a-aabe-a0c50a7e83cd",
     "lngLat": {
       "lat": -43.334185,
-      "lng": 146.9657096
+      "lng": 146.9657096,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
       "@type": "Area",
       "createdAt": "2026-06-14T11:17:02+00:00",
       "id": "019ec5d9-6fd2-72dc-9bc1-35074ae3001b",
-      "lngLat": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.334185,
-        "lng": 146.9657096,
-        "privacy": null
-      },
       "name": "ESP100 Esperance River Cableway Above Dover Water Intake",
       "updatedAt": "2026-10-31T03:31:54+00:00"
     },
@@ -4113,23 +3528,14 @@
     "id": "01a19014-9203-71de-8663-08716a39676e",
     "lngLat": {
       "lat": -43.3105898,
-      "lng": 147.0170049
+      "lng": 147.0170049,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5c0-7ea6-7e65-b786-0439fb02a024",
       "@type": "Area",
       "createdAt": "2026-06-14T10:49:47+00:00",
       "id": "019ec5c0-7ea6-7e65-b786-0439fb02a024",
-      "lngLat": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3105898,
-        "lng": 147.0170049,
-        "privacy": null
-      },
       "name": "DOV110 Dover Rivulet South Gate Market",
       "updatedAt": "2026-10-31T03:50:29+00:00"
     },
@@ -4170,23 +3576,14 @@
     "id": "01a1901f-2aec-7f8c-a229-c25c8b71672e",
     "lngLat": {
       "lat": -43.2976765,
-      "lng": 147.0103537
+      "lng": 147.0103537,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
       "@type": "Area",
       "createdAt": "2026-06-14T11:00:50+00:00",
       "id": "019ec5ca-9c7d-7ec4-ab75-b6ee95856445",
-      "lngLat": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.2976765,
-        "lng": 147.0103537,
-        "privacy": null
-      },
       "name": "DOV070 Dover Rivulet Huon Highway",
       "updatedAt": "2026-10-31T04:02:04+00:00"
     },
@@ -4227,23 +3624,14 @@
     "id": "01a1a064-cff5-7377-be1f-a7356ffbd041",
     "lngLat": {
       "lat": -43.313011631,
-      "lng": 147.03889344
+      "lng": 147.03889344,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/01a1a064-cff3-71fd-9853-fe14e8430fe5",
       "@type": "Area",
       "createdAt": "2026-11-03T07:52:03+00:00",
       "id": "01a1a064-cff3-71fd-9853-fe14e8430fe5",
-      "lngLat": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.313011631,
-        "lng": 147.03889344,
-        "privacy": null
-      },
       "name": "",
       "updatedAt": "2026-11-03T07:52:03+00:00"
     },
@@ -4291,23 +3679,14 @@
     "id": "30c48741-cac5-4f0c-8a3d-f064e40b8912",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4355,23 +3734,14 @@
     "id": "474af194-3376-42a3-a0b1-a9ad97403ad0",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4419,23 +3789,14 @@
     "id": "4fdc1c47-2dda-404a-bb5f-4f3384b41a73",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4483,23 +3844,14 @@
     "id": "8aac3014-0fdd-4b70-8cf6-c501caf06b3e",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4547,23 +3899,14 @@
     "id": "962476b6-baed-4da2-8ef8-53584eb9843b",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4611,23 +3954,14 @@
     "id": "a28cd0c6-97fc-472e-a7df-644a024ec551",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4675,23 +4009,14 @@
     "id": "a9462e59-0bb7-432d-a69e-ce22151e535c",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -4739,23 +4064,14 @@
     "id": "b0e9f7e8-292b-462a-99a1-a500bf54c9e0",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4803,23 +4119,14 @@
     "id": "b20337f9-f937-4ec0-8a9b-b64d9a748587",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -4867,23 +4174,14 @@
     "id": "b26c74ec-48ef-4bfd-a2b6-04c26f10a3d2",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -4931,23 +4229,14 @@
     "id": "b9ab6b05-d206-4efb-91ce-5990279fe8b0",
     "lngLat": {
       "lat": -43.3158,
-      "lng": 147.02321
+      "lng": 147.02321,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:58+00:00",
       "id": "f5ff31ef-9aac-4c4a-92cb-993cb3b19406",
-      "lngLat": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.3158,
-        "lng": 147.02321,
-        "privacy": null
-      },
       "name": "Dover Rivulet Lower Lagoon",
       "updatedAt": "2026-06-20T08:21:07+00:00"
     },
@@ -4995,23 +4284,14 @@
     "id": "bc3f4dbd-968a-4a1c-aac2-6e768fee4b04",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -5059,23 +4339,14 @@
     "id": "bdf16026-1354-451b-a554-8853414ba6db",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -5123,23 +4394,14 @@
     "id": "c1f89577-7d15-4b34-8270-f4966f4edd6d",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -5187,23 +4449,14 @@
     "id": "e814ec6a-87ab-408d-8c08-9395c4862244",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -5251,23 +4504,14 @@
     "id": "e91e15bc-be06-442a-ad76-92438bb52f6a",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
@@ -5315,23 +4559,14 @@
     "id": "f09810d8-2698-4261-97f4-32e1d117fde4",
     "lngLat": {
       "lat": -43.31622,
-      "lng": 147.02357
+      "lng": 147.02357,
+      "privacy": null
     },
     "location": {
       "@id": "/areas/3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
       "@type": "Area",
       "createdAt": "2024-06-22T05:49:46+00:00",
       "id": "3d374a55-1f74-4eef-ae17-2627a1ecb4a3",
-      "lngLat": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
-      "lngLatPrivate": {
-        "lat": -43.31622,
-        "lng": 147.02357,
-        "privacy": null
-      },
       "name": "Dover Rivulet Mouth",
       "updatedAt": "2026-10-21T01:23:13+00:00"
     },
